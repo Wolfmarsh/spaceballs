@@ -12,6 +12,7 @@ config:
     - devices.yaml
     - keyboard.yaml
     - virtual.yaml
+    - images.yaml
 
 dmd:
     physical: yes
@@ -36,12 +37,12 @@ window:
         color: aaaaaa
         thickness: 2
 
-slide_player:
-    mode_attract_started:
-        type: text
-        text: PRESS START
-        slide_priority: 10
-        color: 0099ff
+#slide_player:
+#    mode_attract_started:
+#        type: text
+#        text: PRESS START
+#        slide_priority: 10
+#        color: 0099ff
 
 modes:
     - base
