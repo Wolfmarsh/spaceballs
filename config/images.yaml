@@ -3,3 +3,7 @@
 images:
     fast_logo:
         file: fast_logo.png
+    mpf_logo:
+        file: mpf_logo.png
+    sb_logo_1:
+        file: spaceballs_logo_1.png
