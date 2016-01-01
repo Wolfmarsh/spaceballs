@@ -15,7 +15,7 @@ config:
     - images.yaml
 
 dmd:
-    physical: yes
+    physical: no
     width: 128
     height: 32
     type: color
@@ -39,3 +39,24 @@ window:
 
 modes:
     - base
+
+sound_system:
+    buffer: 512
+    frequency: 44100
+    channels: 1
+    initial_volume: 1
+    volume_steps: 20
+    tracks:
+        voice:
+            volume: 1
+            priority: 2
+            simultaneous_sounds: 1
+            preload: no
+        sfx:
+            volume: 1
+            priority: 1
+            preload: no
+            simultaneous_sounds: 3
+    stream:
+        name: music
+        priority: 0

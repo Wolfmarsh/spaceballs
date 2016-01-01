@@ -24,3 +24,14 @@ slide_player:
       h_pos: right
       font: small
       color: 0099ff
+
+scoring:
+    s_left_slingshot_active:
+        score: 10000
+    s_right_slingshot_active:
+        score: 10000
+
+sound_player:
+    ball_launch_whoosh:
+        sound: greathelmet
+        start_events: balldevice_bd_trough_ball_eject_attempt

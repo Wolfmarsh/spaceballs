@@ -1,21 +1,21 @@
 events:
   ball_search_begin_phase1: 0
   game_ended: 0
-  game_started: 8
+  game_started: 13
 player:
   score:
     average: 0
     top: []
     total: 0
 switches:
-  s_launch_button: 0
+  s_launch_button: 2
   s_left_flipper: 0
   s_left_slingshot: 0
-  s_plunger_lane: 8
+  s_plunger_lane: 13
   s_right_flipper: 0
   s_right_inlane: 0
   s_right_slingshot: 0
-  s_start: 8
+  s_start: 13
   s_trough1: 0
   s_trough2: 0
   s_trough3: 0
