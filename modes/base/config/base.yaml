@@ -35,3 +35,16 @@ sound_player:
     ball_launch_whoosh:
         sound: greathelmet
         start_events: balldevice_bd_trough_ball_eject_attempt
+
+logic_blocks:
+    sequences:
+        airlock_unlock:
+            events:
+                - s_airlock_1_active
+                - s_airlock_2_active
+                - s_airlock_3_active
+                - s_airlock_4_active
+                - s_airlock_5_active
+            events_when_complete: start_airlock_multiball
+            enable_events: ball_started
+            disable_events: ball_ended

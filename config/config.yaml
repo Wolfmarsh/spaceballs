@@ -39,6 +39,7 @@ window:
 
 modes:
     - base
+    - airlock_multiball
 
 sound_system:
     buffer: 512

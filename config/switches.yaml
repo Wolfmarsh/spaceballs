@@ -36,3 +36,13 @@ switches:
     s_right_slingshot:
         number: 14
         tags: playfield_active, slingshot
+    s_airlock_1:
+        number: 15
+    s_airlock_2:
+        number: 16
+    s_airlock_3:
+        number: 17
+    s_airlock_4:
+        number: 18
+    s_airlock_5:
+        number: 19
