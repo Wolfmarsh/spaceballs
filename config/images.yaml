@@ -7,3 +7,17 @@ images:
         file: mpf_logo.png
     sb_logo_1:
         file: spaceballs_logo_1.png
+    goneplaid_frame1:
+        file: plaid_frame1.png
+    goneplaid_frame2:
+        file: plaid_frame2.png
+    goneplaid_frame3:
+        file: plaid_frame3.png
+    goneplaid_frame4:
+        file: plaid_frame4.png
+    goneplaid_frame5:
+        file: plaid_frame5.png
+    goneplaid_frame6:
+        file: plaid_frame6.png
+    goneplaid_frame7:
+        file: plaid_frame7.png

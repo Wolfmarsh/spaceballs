@@ -18,11 +18,16 @@ timers:
           - event: start_airlock_multiball
             action: start
 
-slide_player:
+show_player:
   mode_airlock_multiball_started:
-    - type: text
-      text: "AIRLOCK MULTIBALL"
-      v_pos: center
-      transition:
-          type: move_in
+    - show: gone_to_plaid
+      repeat: yes
+      tocks_per_sec: 20
+#slide_player:
+#  mode_airlock_multiball_started:
+#    - type: text
+#      text: "AIRLOCK MULTIBALL"
+#      v_pos: center
+#      transition:
+#          type: move_in
 

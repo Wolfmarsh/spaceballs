@@ -6,13 +6,13 @@ hardware:
     dmd: smartmatrix
 
 config:
-    - portconfig.yaml
-    - switches.yaml
-    - coils.yaml
-    - devices.yaml
-    - keyboard.yaml
-    - virtual.yaml
-    - images.yaml
+- portconfig.yaml
+- switches.yaml
+- coils.yaml
+- devices.yaml
+- keyboard.yaml
+- virtual.yaml
+- images.yaml
 
 dmd:
     physical: no
