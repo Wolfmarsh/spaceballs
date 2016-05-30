@@ -1,28 +1,37 @@
-- tocks: 1
-  display:
-    - type: Image
+# show_version=4
+- time: 0
+  slides:
+    gone_to_plaid_slide_1:
+    - type: image
       image: goneplaid_frame1
-- tocks: 1
-  display:
-    - type: Image
+- time: '+1'
+  slides:
+    gone_to_plaid_slide_2:
+    - type: image
       image: goneplaid_frame2
-- tocks: 1
-  display:
-    - type: Image
+- time: '+1'
+  slides:
+    gone_to_plaid_slide_3:
+    - type: image
       image: goneplaid_frame3
-- tocks: 1
-  display:
-    - type: Image
+- time: '+1'
+  slides:
+    gone_to_plaid_slide_4:
+    - type: image
       image: goneplaid_frame4
-- tocks: 1
-  display:
-    - type: Image
+- time: '+1'
+  slides:
+    gone_to_plaid_slide_5:
+    - type: image
       image: goneplaid_frame5
-- tocks: 1
-  display:
-    - type: Image
+- time: '+1'
+  slides:
+    gone_to_plaid_slide_6:
+    - type: image
       image: goneplaid_frame6
-- tocks: 1
-  display:
-    - type: Image
+- time: '+1'
+  slides:
+    gone_to_plaid_slide_7:
+    - type: image
       image: goneplaid_frame7
+- time: '+1'

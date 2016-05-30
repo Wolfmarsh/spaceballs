@@ -1,0 +1,29 @@
+# config_version=3
+
+flippers:
+    left_flipper:
+        main_coil: c_flipper_left_main
+        hold_coil: c_flipper_left_hold
+        activation_switch: s_left_flipper
+        enable_events: machine_reset_phase_3
+    right_flipper:
+        main_coil: c_flipper_right_main
+        hold_coil: c_flipper_right_hold
+        activation_switch: s_right_flipper
+        enable_events: machine_reset_phase_3
+
+ball_devices:
+    bd_trough:
+        ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+        entrance_count_delay: 300ms
+        eject_coil: c_trough_eject
+        eject_targets: bd_plunger
+        tags: trough, home, drain
+        debug: yes
+    bd_plunger:
+        ball_switches: s_plunger_lane
+        entrance_count_delay: 300ms
+        eject_timeouts: 3s
+        tags: ball_add_live
+        eject_coil: c_plunger_eject
+        player_controlled_eject_event: sw_launch

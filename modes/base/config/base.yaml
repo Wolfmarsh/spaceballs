@@ -1,50 +1,41 @@
-#config_version=3
+#config_version=4
 mode:
-    start_events: ball_starting
-    priority: 100
+  start_events: ball_starting
+  priority: 100
 
 slide_player:
   mode_base_started:
-    - type: text
-      text: "%score%"
-      number_grouping: true
-      min_digits: 2
-      v_pos: center
+    slide_1:
       transition:
-          type: move_in
-    - type: text
-      text: PLAYER %number%
-      v_pos: bottom
-      h_pos: left
-      font: small
-      color: 0099ff
-    - type: text
-      text: BALL %ball%
-      v_pos: bottom
-      h_pos: right
-      font: small
-      color: 0099ff
-
+        type: move_in
 scoring:
-    s_left_slingshot_active:
-        score: 10000
-    s_right_slingshot_active:
-        score: 10000
+  s_left_slingshot_active:
+    score: 10000
+  s_right_slingshot_active:
+    score: 10000
 
 sound_player:
-    ball_launch_whoosh:
-        sound: greathelmet
-        start_events: balldevice_bd_trough_ball_eject_attempt
+  balldevice_bd_trough_ball_eject_attempt: greathelmet
+slides:
+  slide_1:
+  - type: text
+    text: (score)
+    number_grouping: true
+    min_digits: 2
+  - type: text
+    text: PLAYER (number)
+    anchor_y: bottom
+    anchor_x: left
+    style: small
+    color: 0099ff
+    x: left
+    y: bottom
+  - type: text
+    text: BALL (ball)
+    anchor_y: bottom
+    anchor_x: right
+    style: small
+    color: 0099ff
 
-logic_blocks:
-    sequences:
-        airlock_unlock:
-            events:
-                - s_airlock_1_active
-                - s_airlock_2_active
-                - s_airlock_3_active
-                - s_airlock_4_active
-                - s_airlock_5_active
-            events_when_complete: start_airlock_multiball
-            enable_events: ball_started
-            disable_events: ball_ended
+    x: right
+    y: bottom

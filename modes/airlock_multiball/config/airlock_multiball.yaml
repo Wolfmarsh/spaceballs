@@ -1,33 +1,25 @@
-# config_version=3
+# config_version=4
 
 
 mode:
-    start_events: start_airlock_multiball
-    stop_events: timer_mode_timer_complete, ball_ended
-    priority: 300
+  start_events: start_airlock_multiball
+  stop_events: timer_mode_timer_complete, ball_ended
+  priority: 300
 
 timers:
-    mode_timer:
-        start_events: start_airlock_multiball
-        start_value: 10
-        start_paused: yes
-        end_value: 0
-        direction: down
-        tick_interval: 1s
-        control_events:
-          - event: start_airlock_multiball
-            action: start
+  mode_timer:
+    start_events: start_airlock_multiball
+    start_value: 10
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+    - event: start_airlock_multiball
+      action: start 
 
+    start_running: false
 show_player:
   mode_airlock_multiball_started:
-    - show: gone_to_plaid
-      repeat: yes
-      tocks_per_sec: 20
-#slide_player:
-#  mode_airlock_multiball_started:
-#    - type: text
-#      text: "AIRLOCK MULTIBALL"
-#      v_pos: center
-#      transition:
-#          type: move_in
-
+    gone_to_plaid:
+      loops: -1
+      speed: 20

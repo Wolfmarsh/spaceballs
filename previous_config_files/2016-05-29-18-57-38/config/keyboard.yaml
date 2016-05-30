@@ -1,0 +1,48 @@
+# config_version=3
+
+keyboard:
+    z:
+        switch: s_left_flipper
+    /:
+        switch: s_right_flipper
+    1:
+        switch: s_trough1
+        toggle: true
+    2:
+        switch: s_trough2
+        toggle: true
+    3:
+        switch: s_trough3
+        toggle: true
+    4:
+        switch: s_trough4
+        toggle: true
+    5:
+        switch: s_trough5
+        toggle: true
+    6:
+        switch: s_trough6
+        toggle: true
+    p:
+        switch: s_plunger_lane
+        toggle: true
+    L:
+        switch: s_launch_button
+    s:
+        switch: s_start
+    q:
+        switch: s_right_inlane
+    x:
+        switch: s_left_slingshot
+    .:
+        switch: s_right_slingshot
+    7:
+        switch: s_airlock_1
+    8:
+        switch: s_airlock_2
+    9:
+        switch: s_airlock_3
+    0:
+        switch: s_airlock_4
+    =:
+        switch: s_airlock_5

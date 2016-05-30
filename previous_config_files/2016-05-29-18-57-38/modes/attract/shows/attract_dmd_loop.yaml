@@ -1,0 +1,67 @@
+# - tocks: 3
+  # display:
+    # - type: text
+      # text: SPACEBALLS
+    # - type: Text
+      # text: THE PINBALL MACHINE
+      # v_pos: bottom
+      # font: small
+      # transition:
+        # type: move_out
+        # duration: 1s
+        # direction: left
+
+- tocks: 3
+  display:
+    - type: Image
+      image: sb_logo_1
+      # transition:
+        # type: move_out
+        # duration: 1s
+        # direction: left
+
+- tocks: 3
+  display:
+    - type: Text
+      text: PRESS START TO PLAY
+      color: 0099ff
+      decorators:
+        type: blink
+        repeats: -1
+        on_secs: .5
+        off_secs: .5
+
+- tocks: 1
+  display:
+    - type: Text
+      text: Powered By
+      color: ff4002
+
+- tocks: 2
+  display:
+    - type: Image
+      image: mpf_logo
+      transition:
+        type: move_out
+        duration: 1s
+        direction: left
+
+- tocks: 2
+  display:
+    - type: Image
+      image: fast_logo
+      transition:
+        type: move_out
+        duration: 1s
+        direction: right
+
+- tocks: 3
+  display:
+    - type: Text
+      text: PRESS START TO PLAY
+      color: 0099ff
+      decorators:
+        type: blink
+        repeats: -1
+        on_secs: .5
+        off_secs: .5

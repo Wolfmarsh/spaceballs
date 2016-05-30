@@ -1,9 +1,9 @@
-#config_version=3
+#config_version=4
 
 hardware:
-    platform: smart_virtual
-    driverboards: virtual
-    dmd: smartmatrix
+  platform: smart_virtual
+  driverboards: virtual
+  dmd: smartmatrix
 
 config:
 - portconfig.yaml
@@ -14,50 +14,79 @@ config:
 - virtual.yaml
 - images.yaml
 
-dmd:
-    physical: no
-    width: 128
-    height: 32
-    type: color
-
-window:
-    elements:
-      - type: virtualdmd
-        width: 512
-        height: 128
-        h_pos: center
-        v_pos: center
-        pixel_color: ff6600
-        dark_color: 220000
-        pixel_spacing: 1
-      - type: shape
-        shape: box
-        width: 516
-        height: 132
-        color: aaaaaa
-        thickness: 2
-
+window: {}
 modes:
-    - base
-    - airlock_multiball
+- base
 
 sound_system:
-    buffer: 512
-    frequency: 44100
-    channels: 1
-    initial_volume: 1
-    volume_steps: 20
-    tracks:
-        voice:
-            volume: 1
-            priority: 2
-            simultaneous_sounds: 1
-            preload: no
-        sfx:
-            volume: 1
-            priority: 1
-            preload: no
-            simultaneous_sounds: 3
-    stream:
-        name: music
-        priority: 0
+  buffer: 2048  # previous value was 512
+  frequency: 44100
+  channels: 1
+  master_volume: 1
+  tracks:
+    voice:
+      volume: 1
+      priority: 2
+      simultaneous_sounds: 1
+      preload: false
+    sfx:
+      volume: 1
+      priority: 1
+      preload: false
+      simultaneous_sounds: 3
+    music:
+      volume: 0.5
+      simultaneous_sounds: 1
+  enabled: true
+displays:
+  lcd:
+    height: 600
+    width: 800
+  dmd:
+    width: 128
+    height: 32
+    default: true
+slides:
+  window_slide_1:
+  - type: color_dmd
+    width: 512
+    height: 128
+  - type: rectangle
+    width: 516
+    height: 132
+    color: aaaaaa
+slide_player:
+  machine_reset_phase_3:
+    window_slide_1:
+      target: window
+widget_styles:
+  default:
+    font_name: Quadrit
+    font_size: 10
+    adjust_top: 2
+    adjust_bottom: 3
+  space title huge:
+    font_name: DEADJIM
+    font_size: 29
+    antialias: true
+    adjust_top: 3
+    adjust_bottom: 3
+  space title:
+    font_name: DEADJIM
+    font_size: 21
+    antialias: true
+    adjust_top: 2
+    adjust_bottom: 3
+  medium:
+    font_name: pixelmix
+    font_size: 8
+    adjust_top: 1
+    adjust_bottom: 1
+  small:
+    font_name: smallest_pixel-7
+    font_size: 9
+    adjust_top: 2
+    adjust_bottom: 3
+  tall title:
+    font_name: big_noodle_titling
+    font_size: 20

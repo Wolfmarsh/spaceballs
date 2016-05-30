@@ -1,0 +1,48 @@
+# config_version=3
+
+switches:
+    s_left_flipper:
+        number: 00
+    s_right_flipper:
+        number: 01
+    s_trough1:
+        number: 02
+    s_trough2:
+        number: 03
+    s_trough3:
+        number: 04
+    s_trough4:
+        number: 05
+    s_trough5:
+        number: 06
+    s_trough6:
+        number: 07
+    s_trough_jam:
+        number: 08
+    s_plunger_lane:
+        number: 09
+    s_launch_button:
+        number: 10
+        tags: launch
+    s_start:
+        number: 11
+        tags: start
+    s_right_inlane:
+        number: 12
+        tags: playfield_active
+    s_left_slingshot:
+        number: 13
+        tags: playfield_active, slingshot
+    s_right_slingshot:
+        number: 14
+        tags: playfield_active, slingshot
+    s_airlock_1:
+        number: 15
+    s_airlock_2:
+        number: 16
+    s_airlock_3:
+        number: 17
+    s_airlock_4:
+        number: 18
+    s_airlock_5:
+        number: 19

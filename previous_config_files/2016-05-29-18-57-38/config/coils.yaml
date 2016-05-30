@@ -1,0 +1,29 @@
+# config_version=3
+
+coils:
+    c_flipper_left_main:
+        number: 0
+    c_flipper_left_hold:
+        number: 1
+    c_flipper_right_main:
+        number: 2
+    c_flipper_right_hold:
+        number: 3
+    c_trough_eject:
+        number: 04
+        pulse_ms: 20
+    c_plunger_eject:
+        number: 05
+        pulse_ms: 25
+    c_right_slingshot:
+        number: 06
+    c_left_slingshot:
+        number: 07
+
+autofire_coils:
+    left_slingshot:
+        coil: c_left_slingshot
+        switch: s_left_slingshot
+    right_slingshot:
+        coil: c_right_slingshot
+        switch: s_right_slingshot

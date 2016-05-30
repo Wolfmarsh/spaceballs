@@ -1,7 +1,7 @@
 events:
   ball_search_begin_phase1: 0
   game_ended: 0
-  game_started: 24
+  game_started: 25
 player:
   score:
     average: 0
@@ -13,15 +13,15 @@ switches:
   s_airlock_3: 0
   s_airlock_4: 0
   s_airlock_5: 0
-  s_launch_button: 10
+  s_launch_button: 11
   s_left_flipper: 0
   s_left_slingshot: 0
-  s_plunger_lane: 25
+  s_plunger_lane: 27
   s_right_flipper: 0
   s_right_inlane: 0
   s_right_slingshot: 0
   s_start: 24
-  s_trough1: 1
+  s_trough1: 3
   s_trough2: 0
   s_trough3: 0
   s_trough4: 0
