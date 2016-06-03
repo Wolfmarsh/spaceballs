@@ -1,7 +1,7 @@
 events:
   ball_search_begin_phase1: 0
   game_ended: 0
-  game_started: 25
+  game_started: 30
 player:
   score:
     average: 0
@@ -20,6 +20,8 @@ switches:
   s_right_flipper: 0
   s_right_inlane: 0
   s_right_slingshot: 0
+  s_saucer: 0
+  s_scoop: 0
   s_start: 24
   s_trough1: 3
   s_trough2: 0

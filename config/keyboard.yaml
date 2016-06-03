@@ -30,19 +30,3 @@ keyboard:
     switch: s_launch_button
   s:
     switch: s_start
-  q:
-    switch: s_right_inlane
-  x:
-    switch: s_left_slingshot
-  .:
-    switch: s_right_slingshot
-  7:
-    switch: s_airlock_1
-  8:
-    switch: s_airlock_2
-  9:
-    switch: s_airlock_3
-  0:
-    switch: s_airlock_4
-  '=':
-    switch: s_airlock_5

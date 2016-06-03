@@ -2,28 +2,41 @@
 
 coils:
   c_flipper_left_main:
-    number: 0
-  c_flipper_left_hold:
-    number: 1
-  c_flipper_right_main:
-    number: 2
-  c_flipper_right_hold:
-    number: 3
-  c_trough_eject:
-    number: 4
-    pulse_ms: 20
-  c_plunger_eject:
-    number: 5
-    pulse_ms: 25
-  c_right_slingshot:
     number: 6
-  c_left_slingshot:
-    number: 7   
+  c_flipper_left_hold:
+    number: 7
+    allow_enable: true
+  c_flipper_right_main:
+    number: 4
+  c_flipper_right_hold:
+    number: 5
+    allow_enable: true
+  c_trough_eject:
+    number: 10
+    pulse_ms: 25
+  c_plunger_eject:
+    number: 11
+    pulse_ms: 25
+  c_saucer_eject:
+    number: 25
+    pulse_ms: 25
+  c_scoop_eject:
+    number: 26
+    pulse_ms: 25
+  c_sling_right:
+    number: 8
+    pulse_ms: 25
+  c_sling_left:
+    number: 9
+    pulse_ms: 25
+  c_pop_1:
+    number: 22
+    pulse_ms: 25
+  c_pop_2:
+    number: 23
+    pulse_ms: 25
+  c_pop_3:
+    number: 24
+    pulse_ms: 25
 
-autofire_coils:
-  left_slingshot:
-    coil: c_left_slingshot
-    switch: s_left_slingshot
-  right_slingshot:
-    coil: c_right_slingshot
-    switch: s_right_slingshot
+ 

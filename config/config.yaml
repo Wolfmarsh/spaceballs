@@ -1,10 +1,13 @@
 #config_version=4
 
 hardware:
-  platform: smart_virtual
-  driverboards: virtual
+  platform: fast
+  driverboards: fast
   dmd: smartmatrix
 
+fast:
+  config_number_format: int
+  
 config:
 - portconfig.yaml
 - switches.yaml
@@ -39,7 +42,7 @@ sound_system:
       simultaneous_sounds: 1
   enabled: true
 displays:
-  lcd:
+  window:
     height: 600
     width: 800
   dmd:

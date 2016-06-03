@@ -3,3 +3,6 @@
 smartmatrix:
   port: com3
   use_separate_thread: true
+
+fast:
+  ports: com5, com6
