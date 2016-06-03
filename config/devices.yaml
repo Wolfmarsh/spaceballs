@@ -29,6 +29,31 @@ autofire_coils:
     coil: c_pop_3
     switch: s_pop_3
 
+drop_targets:
+   airlock_drop1:
+     debug: True
+     switch: s_drop_1
+   airlock_drop2:
+     debug: True
+     switch: s_drop_2
+   airlock_drop3:
+     debug: True
+     switch: s_drop_3
+   airlock_drop4:
+     debug: True
+     switch: s_drop_4
+   airlock_drop5:
+     debug: True
+     switch: s_drop_5
+
+drop_target_banks:
+   airlock_bank:
+     debug: True
+     drop_targets: airlock_drop1, airlock_drop2, airlock_drop3, airlock_drop4, airlock_drop5
+     reset_coils: c_drop_reset
+     reset_events:
+       drop_target_bank_airlock_bank_down: 1s
+
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam

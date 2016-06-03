@@ -38,10 +38,20 @@ switches:
     number: 16
   s_scoop:
     number: 17
-  s_sling_right:
+  s_drop_1:
     number: 18
-  s_sling_left:
+  s_drop_2:
     number: 19
+  s_drop_3:
+    number: 20
+  s_drop_4:
+    number: 21
+  s_drop_5:
+    number: 22
+  s_sling_right:
+    number: 24
+  s_sling_left:
+    number: 25
   s_pop_1:
     number: 40
   s_pop_2:
