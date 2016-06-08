@@ -1,8 +1,7 @@
 # config_version=4
 
 smartmatrix:
-  port: com1
-  use_separate_thread: true
-
+  port: com7
+  
 fast:
   ports: com4, com5

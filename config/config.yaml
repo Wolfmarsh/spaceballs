@@ -5,6 +5,11 @@ hardware:
   driverboards: fast
   dmd: smartmatrix
 
+physical_rgb_dmd:
+  fps: 30
+  only_send_changes: true
+  brightness: .6
+
 fast:
   config_number_format: int
   
@@ -59,10 +64,12 @@ slides:
     width: 516
     height: 132
     color: aaaaaa
+    
 slide_player:
   machine_reset_phase_3:
     window_slide_1:
       target: window
+
 widget_styles:
   default:
     font_name: Quadrit
