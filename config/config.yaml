@@ -12,6 +12,7 @@ config:
 - portconfig.yaml
 - switches.yaml
 - coils.yaml
+- leds.yaml
 - devices.yaml
 - keyboard.yaml
 - virtual.yaml

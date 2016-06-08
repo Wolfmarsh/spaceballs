@@ -1,0 +1,17 @@
+#config_version=4
+led_settings:
+#  brightness_compensation: 1.0, 1.0, 1.0
+  default_led_fade_ms: 100
+
+leds:
+  rgb_a_lane:
+    label: A Lane
+    number: 2
+
+  rgb_i_lane:
+    label: I Lane
+    number: 1
+  
+  rgb_r_lane:
+    label: R Lane
+    number: 0
