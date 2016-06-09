@@ -1,4 +1,3 @@
-{}
-er1_score: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
+player1_score: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
   dictitems:
-    value: 0
+    value: 10000

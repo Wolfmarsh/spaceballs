@@ -37,16 +37,44 @@ sound_system:
       volume: 1
       priority: 2
       simultaneous_sounds: 1
-      preload: false
     sfx:
       volume: 1
       priority: 1
-      preload: false
       simultaneous_sounds: 3
     music:
       volume: 0.5
       simultaneous_sounds: 1
   enabled: true
+
+assets:
+    sounds:
+        default:
+            load: preload
+        voice:
+            load: preload
+            track: voice
+        sfx:
+            load: preload
+            track: sfx
+        music:
+            load: preload
+            track: music
+
+sounds:
+    spaceballs_song:
+        target: music
+
+sound_player:
+  mode_base_started:
+    spaceballs_song:
+      action: play
+  
+  mode_base_stopping:
+    spaceballs_song:
+      action: stop  
+
+
+            
 displays:
   window:
     height: 600
@@ -101,3 +129,5 @@ widget_styles:
   tall title:
     font_name: big_noodle_titling
     font_size: 20
+    
+    

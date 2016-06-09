@@ -27,6 +27,7 @@
     attract_dmd_loop_slide_2:
     - type: text
       text: PRESS START TO PLAY
+      font_size: 12
       color: 0099ff
       animations:
         entrance:
@@ -37,7 +38,7 @@
           value: 0
           duration: 0.5s
           repeat: true
-- time: '+1'
+- time: '+3'
   slides:
     attract_dmd_loop_slide_3:
     - type: text
@@ -72,6 +73,7 @@
     - type: text
       text: PRESS START TO PLAY
       color: 0099ff
+      font_size: 12
       animations:
         entrance:
         - property: opacity

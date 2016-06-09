@@ -6,16 +6,30 @@ mode:
 slide_player:
   mode_base_started:
     slide_1:
-      transition:
-        type: move_in
-scoring:
-  s_left_slingshot_active:
-    score: 10000
-  s_right_slingshot_active:
-    score: 10000
+      target: dmd
 
-sound_player:
-  balldevice_bd_trough_ball_eject_attempt: greathelmet
+scoring:
+  s_sling_right_active:
+    score: 10000
+  s_sling_left_active:
+    score: 10000
+  s_pop_1_active:
+    score: 10000
+  s_pop_2_active:
+    score: 10000
+  s_pop_3_active:
+    score: 10000
+  s_drop_1_active:
+    score: 50000
+  s_drop_2_active:
+    score: 50000
+  s_drop_3_active:
+    score: 50000
+  s_drop_4_active:
+    score: 50000
+  s_drop_5_active:
+    score: 50000
+
 slides:
   slide_1:
   - type: text
@@ -36,6 +50,5 @@ slides:
     anchor_x: right
     style: small
     color: 0099ff
-
     x: right
     y: bottom

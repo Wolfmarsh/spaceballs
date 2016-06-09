@@ -7,12 +7,76 @@ leds:
   rgb_a_lane:
     label: A Lane
     number: 0
-    fade_ms: 500ms
 
   rgb_i_lane:
     label: I Lane
     number: 1
-  
+
   rgb_r_lane:
     label: R Lane
     number: 2
+  
+  rgb_rightorbit_1:
+    label: Right Orbit 1
+    number: 3
+
+  rgb_rightorbit_2:
+    label: Right Orbit 2
+    number: 4
+
+  rgb_rightorbit_arrow_1:
+    label: Right Orbit Arrow 1
+    number: 5
+
+  rgb_right_ramp_entry:
+    label: Right Ramp Entry
+    number: 6
+    
+  rgb_varitarget_arrow1:
+    label: Varitarget Arrow 1
+    number: 7
+
+  rgb_leftorbit_1:
+    label: Left Orbit 1
+    number: 8
+
+  rgb_leftorbit_2:
+    label: Left Orbit 2
+    number: 9
+
+  rgb_leftorbit_arrow_2:
+    label: Left Orbit Arrow 2
+    number: 10
+    
+  rgb_leftorbit_arrow_1:
+    label: Left Orbit Arrow 1
+    number: 11
+
+  rgb_drop_5:
+    label: Drop 5
+    number: 12
+    
+  rgb_drop_main:
+    label: Drop Main
+    number: 14
+
+  rgb_drop_1:
+    label: Drop 1
+    number: 13
+
+  rgb_scoop:
+    label: Scoop
+    number: 15
+
+  rgb_saucer:
+    label: Saucer
+    number: 16
+
+  rgb_drain:
+    label: Drain
+    number: 17
+        
+    
+    
+    
+    
