@@ -1,7 +1,7 @@
 events:
   ball_search_begin_phase1: 0
-  game_ended: 4
-  game_started: 39
+  game_ended: 5
+  game_started: 41
 jam: 15
 player:
   score:
@@ -11,37 +11,38 @@ player:
     - 0
     - 0
     - 0
-    total: 4
+    - 0
+    total: 5
 switches:
   s_airlock_1: 0
   s_airlock_2: 0
   s_airlock_3: 0
   s_airlock_4: 0
   s_airlock_5: 0
-  s_drop_1: 1
-  s_drop_2: 1
+  s_drop_1: 2
+  s_drop_2: 2
   s_drop_3: 1
-  s_drop_4: 1
-  s_drop_5: 1
-  s_launch_button: 27
-  s_left_flipper: 66
+  s_drop_4: 2
+  s_drop_5: 2
+  s_launch_button: 32
+  s_left_flipper: 74
   s_left_slingshot: 0
-  s_plunger_lane: 47
+  s_plunger_lane: 52
   s_pop_1: 4
   s_pop_2: 6
-  s_pop_3: 10
-  s_right_flipper: 69
+  s_pop_3: 11
+  s_right_flipper: 76
   s_right_inlane: 0
   s_right_slingshot: 0
   s_saucer: 7
-  s_scoop: 6
+  s_scoop: 8
   s_sling_left: 4
   s_sling_right: 5
   s_start: 25
-  s_trough1: 20
+  s_trough1: 25
   s_trough2: 15
-  s_trough3: 17
-  s_trough4: 18
-  s_trough5: 18
-  s_trough6: 17
-  s_trough_jam: 16
+  s_trough3: 22
+  s_trough4: 24
+  s_trough5: 23
+  s_trough6: 21
+  s_trough_jam: 22

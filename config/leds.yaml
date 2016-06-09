@@ -6,7 +6,8 @@ led_settings:
 leds:
   rgb_a_lane:
     label: A Lane
-    number: 2
+    number: 0
+    fade_ms: 500ms
 
   rgb_i_lane:
     label: I Lane
@@ -14,4 +15,4 @@ leds:
   
   rgb_r_lane:
     label: R Lane
-    number: 0
+    number: 2

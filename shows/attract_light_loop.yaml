@@ -1,0 +1,13 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_a_lane: 00ff00
+
+- time: '+1'
+  leds:
+    rgb_a_lane: 000000
+    rgb_i_lane: 00ff00
+
+- time: '+1'
+  leds:
+    rgb_i_lane: 000000

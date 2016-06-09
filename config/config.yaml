@@ -3,12 +3,12 @@
 hardware:
   platform: fast
   driverboards: fast
-  dmd: smartmatrix
+  rgb_dmd: smartmatrix
 
 physical_rgb_dmd:
   fps: 30
   only_send_changes: true
-  brightness: .6
+  brightness: 1.0
 
 fast:
   config_number_format: int
