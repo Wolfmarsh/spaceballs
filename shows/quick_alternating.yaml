@@ -1,0 +1,16 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_saucer_arrow_1: 0000ff-f100ms
+    rgb_saucer_arrow_2: 000000-f100ms
+
+    rgb_saucer_left_circle: ffffff-f100ms
+    rgb_saucer_right_circle: 000000-f100ms
+
+- time: '+1'
+  leds:
+    rgb_saucer_arrow_1: 000000-f100ms
+    rgb_saucer_arrow_2: 0000ff-f100ms
+
+    rgb_saucer_left_circle: 000000-f100ms
+    rgb_saucer_right_circle: ffffff-f100ms

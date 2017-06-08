@@ -5,6 +5,18 @@ show_player:
     attract_dmd_loop:
       loops: -1
       speed: 1
-    attract_light_loop:
+    # attract_light_loop:
+      # loops: -1
+      # speed: 1
+    flowing_s_loop:
       loops: -1
       speed: 1
+    quick_alternating:
+      loops: -1
+      speed: 2
+    three_crawl:
+      loops: -1
+      speed: 3
+#    attract_lcd_loop:
+#      loops: -1
+#      speed: 1

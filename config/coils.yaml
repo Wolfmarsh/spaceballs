@@ -13,36 +13,36 @@ coils:
   c_flipper_left_hold:
     number: 7
     allow_enable: true
-  c_sling_right:
-    number: 8
-    pulse_ms: 25
-  c_sling_left:
-    number: 9
-    pulse_ms: 25
+  # c_sling_right:
+    # number: 8
+    # pulse_ms: 25
+  # c_sling_left:
+    # number: 9
+    # pulse_ms: 25
   c_trough_eject:
     number: 10
     pulse_ms: 25
   c_plunger_eject:
     number: 11
-    pulse_ms: 25
-  c_orbit_post:
-    number: 21
-    pulse_ms: 25
-  c_pop_1:
-    number: 22
-    pulse_ms: 25
-  c_pop_2:
-    number: 23
-    pulse_ms: 25
-  c_pop_3:
-    number: 24
-    pulse_ms: 25
-  c_saucer_eject:
-    number: 25
-    pulse_ms: 25
-  c_scoop_eject:
-    number: 26
-    pulse_ms: 25
-  c_drop_reset:
-    number: 27
-    pulse_ms: 25 
+    pulse_ms: 15
+  # c_orbit_post:
+    # number: 21
+    # pulse_ms: 25
+  # c_pop_1:
+    # number: 22
+    # pulse_ms: 25
+  # c_pop_2:
+    # number: 23
+    # pulse_ms: 25
+  # c_pop_3:
+    # number: 24
+    # pulse_ms: 25
+  # c_saucer_eject:
+    # number: 25
+    # pulse_ms: 25
+  # c_scoop_eject:
+    # number: 26
+    # pulse_ms: 25
+  # c_drop_reset:
+    # number: 27
+    # pulse_ms: 25 

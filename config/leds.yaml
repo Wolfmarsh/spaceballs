@@ -3,79 +3,84 @@ led_settings:
 #  brightness_compensation: 1.0, 1.0, 1.0
   default_led_fade_ms: 100
 
-leds:
+leds:  
+        
   rgb_a_lane:
     label: A Lane
-    number: 0
+    number: 30
 
   rgb_i_lane:
     label: I Lane
-    number: 1
+    number: 29
 
   rgb_r_lane:
     label: R Lane
-    number: 2
-  
-  rgb_rightorbit_1:
-    label: Right Orbit 1
-    number: 3
+    number: 25
 
-  rgb_rightorbit_2:
-    label: Right Orbit 2
-    number: 4
+  rgb_a_can:
+    label: A Can
+    number: 28
 
-  rgb_rightorbit_arrow_1:
-    label: Right Orbit Arrow 1
-    number: 5
+  rgb_i_can:
+    label: I Can
+    number: 27
 
-  rgb_right_ramp_entry:
-    label: Right Ramp Entry
-    number: 6
-    
-  rgb_varitarget_arrow1:
-    label: Varitarget Arrow 1
-    number: 7
+  rgb_r_can:
+    label: R Can
+    number: 26
 
-  rgb_leftorbit_1:
-    label: Left Orbit 1
-    number: 8
-
-  rgb_leftorbit_2:
-    label: Left Orbit 2
-    number: 9
-
-  rgb_leftorbit_arrow_2:
-    label: Left Orbit Arrow 2
-    number: 10
-    
-  rgb_leftorbit_arrow_1:
-    label: Left Orbit Arrow 1
+  rgb_saucer_arrow_1:
+    label: Saucer Arrow 1
     number: 11
 
-  rgb_drop_5:
-    label: Drop 5
-    number: 12
-    
-  rgb_drop_main:
-    label: Drop Main
-    number: 14
+  rgb_saucer_arrow_2:
+    label: Saucer Arrow 2
+    number: 18
 
-  rgb_drop_1:
-    label: Drop 1
-    number: 13
+  rgb_saucer_left_circle:
+    label: Saucer Left Circle
+    number: 19
 
-  rgb_scoop:
-    label: Scoop
-    number: 15
-
-  rgb_saucer:
-    label: Saucer
-    number: 16
-
-  rgb_drain:
-    label: Drain
+  rgb_saucer_right_circle:
+    label: Saucer Right Circle
     number: 17
-        
+
+  rgb_insignia_1:
+    label: RGB Insignia 1
+    number: 82
+   
+  rgb_insignia_2:
+    label: RGB Insignia 2
+    number: 83
+
+  rgb_insignia_3:
+    label: RGB Insignia 3
+    number: 84
+
+  rgb_insignia_4:
+    label: RGB Insignia 4
+    number: 85
+
+  rgb_insignia_5:
+    label: RGB Insignia 5
+    number: 86
+
+  rgb_insignia_6:
+    label: RGB Insignia 6
+    number: 87
+
+  rgb_insignia_7:
+    label: RGB Insignia 7
+    number: 88
+
+  rgb_insignia_8:
+    label: RGB Insignia 8
+    number: 90
+
+  rgb_insignia_9:
+    label: RGB Insignia 9
+    number: 89
+
     
     
     

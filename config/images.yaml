@@ -21,3 +21,5 @@ images:
     file: plaid_frame6.png
   goneplaid_frame7:
     file: plaid_frame7.png
+  splash_screen:
+    file: spaceballs_spash_screen.jpg

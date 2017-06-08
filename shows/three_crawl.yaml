@@ -1,0 +1,24 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_a_lane: 00ff00-f100ms
+    rgb_a_can: ffffff-f100ms
+
+- time: '+2'
+  leds:
+    rgb_a_lane: 000000-f100ms
+    rgb_i_lane: 00ff00-f100ms
+    rgb_a_can: 000000-f100ms
+    rgb_i_can: ffffff-f100ms
+
+- time: '+2'
+  leds:
+    rgb_i_lane: 000000-f100ms
+    rgb_r_lane: 00ff00-f100ms
+    rgb_i_can: 000000-f100ms
+    rgb_r_can: ffffff-f100ms
+
+- time: '+2'
+  leds:
+    rgb_r_lane: 000000-f100ms
+    rgb_r_can: 000000-f100ms

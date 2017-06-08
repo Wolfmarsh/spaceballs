@@ -2,6 +2,7 @@
 
 smartmatrix:
   port: com7
+  baud: 2500000  
   
 fast:
   ports: com4, com5

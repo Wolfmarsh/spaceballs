@@ -1,0 +1,52 @@
+#show_version=4
+
+- time: 0
+  slides:
+    attract_lcd_loop_slide_1:
+      target: lcd
+      widgets:
+        - type: image
+          image: splash_screen
+          width: 1280
+          height: 720
+
+- time: +30s
+  slides:
+    attract_lcd_loop_slide_2:
+      target: lcd
+      widgets:
+        - type: video
+          video: introcrawl
+          width: 1280
+          height: 720
+          expire: 102s
+
+- time: +102s
+  slides:
+    attract_lcd_loop_slide_3:
+      target: lcd
+      widgets:
+        - type: image
+          image: splash_screen
+          width: 1280
+          height: 720
+
+- time: +30s
+  slides:
+    attract_lcd_loop_slide_4:
+      target: lcd
+      widgets:
+        - type: video
+          video: introship
+          width: 1280
+          height: 720
+
+- time: +103s
+  slides:
+    attract_lcd_loop_slide_5:
+      target: lcd
+      widgets:
+        - type: image
+          image: splash_screen
+          width: 1280
+          height: 720

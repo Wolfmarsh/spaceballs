@@ -1,0 +1,12 @@
+#config_version=4
+
+assets:
+  videos:
+    default:
+      load: preload
+
+videos:
+  introcrawl:
+    file: IntroCrawl.mp4
+  introship:
+    file: IntroShip.mp4

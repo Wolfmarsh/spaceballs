@@ -29,7 +29,7 @@ scoring:
     score: 50000
   s_drop_5_active:
     score: 50000
-
+    
 slides:
   slide_1:
   - type: text
