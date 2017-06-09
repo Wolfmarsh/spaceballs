@@ -5,83 +5,184 @@ led_settings:
 
 leds:  
         
-  rgb_a_lane:
-    label: A Lane
-    number: 30
-
-  rgb_i_lane:
-    label: I Lane
-    number: 29
-
-  rgb_r_lane:
-    label: R Lane
-    number: 25
-
-  rgb_a_can:
-    label: A Can
-    number: 28
-
-  rgb_i_can:
-    label: I Can
-    number: 27
-
-  rgb_r_can:
-    label: R Can
-    number: 26
-
+  rgb_varitarget:
+    label: Vari Target Arrow
+    number: 0
+  rgb_ramplevel_4:
+    label: Ramp Level Plaid
+    number: 1
+  rgb_ramplevel_3:
+    label: Ramp Level Ludicrous
+    number: 2
+  rgb_ramplevel_2:
+    label: Ramp Level Ridiculous
+    number: 3
+  rgb_ramplevel_1:
+    label: Ramp Level Light
+    number: 4
+  rgb_schwartzlevel_6:
+    label: Schwartz Level 6
+    number: 5
+  rgb_schwartzlevel_5:
+    label: Schwartz Level 5
+    number: 6
+  rgb_schwartzlevel_4:
+    label: Schwartz Level 4
+    number: 7
+  rgb_schwartzlevel_3:
+    label: Schwartz Level 3
+    number: 8
+  rgb_schwartzlevel_2:
+    label: Schwartz Level 2
+    number: 9
+  rgb_schwartzlevel_1:
+    label: Schwartz Level 1
+    number: 10
   rgb_saucer_arrow_1:
     label: Saucer Arrow 1
     number: 11
-
-  rgb_saucer_arrow_2:
-    label: Saucer Arrow 2
-    number: 18
-
-  rgb_saucer_left_circle:
-    label: Saucer Left Circle
-    number: 19
-
+  rgb_right_inlane:
+    label: Right Inlane
+    number: 12
+  rgb_right_oulane:
+    label: Right Outlane
+    number: 13
+  rgb_shooter_arrow_1:
+    label: Shooter Arrow 1
+    number: 14
+  rgb_shooter_arrow_2:
+    label: Shooter Arrow 2
+    number: 15
+  rgb_shooter_arrow_3:
+    label: Shooter Arrow 2
+    number: 16
   rgb_saucer_right_circle:
     label: Saucer Right Circle
     number: 17
-
+  rgb_saucer_arrow_2:
+    label: Saucer Arrow 2
+    number: 18
+  rgb_saucer_left_circle:
+    label: Saucer Left Circle
+    number: 19
+  rgb_scoop_arrow_1:
+    label: Scoop Arrow 1
+    number: 20
+  rgb_scoop_arrow_2:
+    label: Scoop Arrow 2
+    number: 21
+  rgb_right_orbit_arrow_1:
+    label: Right Orbit Arrow 1
+    number: 22
+  rgb_right_orbit_arrow_2:
+    label: Right Orbit Arrow 2
+    number: 23
+  rgb_pop_bottom_right:
+    label: Pop Insert Bottom Right
+    number: 24
+  rgb_r_lane:
+    label: R Lane
+    number: 25
+  rgb_r_can:
+    label: R Can
+    number: 26
+  rgb_i_can:
+    label: I Can
+    number: 27
+  rgb_a_can:
+    label: A Can
+    number: 28
+  rgb_i_lane:
+    label: I Lane
+    number: 29
+  rgb_a_lane:
+    label: A Lane
+    number: 30
+  rgb_pop_top_middle:
+    label: Pop Insert Top Middle
+    number: 31
+  rgb_pop_bottom_right:
+    label: Pop Insert Bottom Left
+    number: 32
+  rgb_center_target_circle:
+    label: Center Target Circle
+    number: 64
+  rgb_sbone_right_orbit_arrow:
+    label: SBOne Right Orbit Arrow
+    number: 65
+  rgb_sbone_bottom_right_arrow:
+    label: SBOne Bottom Right Arrow
+    number: 66
+  rgb_sbone_top_arrow:
+    label: SBOne Top Arrow
+    number: 67
+  rgb_sbone_bottom_left_arrow:
+    label: SBOne Bottom Left Arrow
+    number: 68
+  rgb_sbone_left_orbit_arrow:
+    label: SBOne Left Orbit Arrow
+    number: 69
+  rgb_left_orbit_arrow_2:
+    label: Left Orbit Arrow 2
+    number: 70
+  rgb_left_orbit_arrow_1:
+    label: Left Orbit Arrow 1
+    number: 71
+  rgb_drop_5:
+    label: Drop 5
+    number: 72
+  rgb_drop_4:
+    label: Drop 4
+    number: 73
+  rgb_drop_3:
+    label: Drop 3
+    number: 74
+  rgb_drop_2:
+    label: Drop 2
+    number: 75
+  rgb_drop_1:
+    label: Drop 1
+    number: 76
+  rgb_left_inlane:
+    label: Left Inlane
+    number: 77
+  rgb_left_oulane:
+    label: Left Outlane
+    number: 78
+  rgb_ball_saver_left:
+    label: Ball Saver Left
+    number: 79
+  rgb_ball_saver_right:
+    label: Ball Saver Right
+    number: 80
+  rgb_extra_ball:
+    label: Extra Ball
+    number: 81
   rgb_insignia_1:
     label: RGB Insignia 1
     number: 82
-   
   rgb_insignia_2:
     label: RGB Insignia 2
     number: 83
-
   rgb_insignia_3:
     label: RGB Insignia 3
     number: 84
-
   rgb_insignia_4:
     label: RGB Insignia 4
     number: 85
-
   rgb_insignia_5:
     label: RGB Insignia 5
     number: 86
-
   rgb_insignia_6:
     label: RGB Insignia 6
     number: 87
-
   rgb_insignia_7:
     label: RGB Insignia 7
     number: 88
-
   rgb_insignia_8:
     label: RGB Insignia 8
     number: 90
-
   rgb_insignia_9:
     label: RGB Insignia 9
     number: 89
-
-    
-    
-    
     
