@@ -34,8 +34,8 @@ switches:
     type: NC
   s_plunger_lane:
     number: 15
-  # s_saucer:
-    # number: 16
+  s_saucer:
+    number: 16
   # s_scoop:
     # number: 17
   # s_drop_1:
@@ -48,19 +48,29 @@ switches:
     # number: 21
   # s_drop_5:
     # number: 22
-  # s_sling_right:
-    # number: 24
-  # s_sling_left:
-    # number: 25
+  s_sling_right:
+    number: 24
+  s_sling_left:
+    number: 25
+  s_left_inlane:
+    number: 26
+  s_left_outlane:
+    number: 27
+  s_right_inlane:
+    number: 28
+  s_right_outlane:
+    number: 29
   # s_pop_1:
     # number: 40
   # s_pop_2:
     # number: 41
   # s_pop_3:
     # number: 42
-  # s_air_a_lane:
-    # number: 43
-  # s_air_i_lane:
-    # number: 44
-  # s_air_r_lane:
-    # number: 45
+  s_air_a_lane:
+    number: 43
+  s_air_i_lane:
+    number: 44
+  s_air_r_lane:
+    number: 45
+  s_left_spinner:
+    number: 46

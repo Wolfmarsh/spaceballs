@@ -101,7 +101,7 @@ leds:
   rgb_pop_top_middle:
     label: Pop Insert Top Middle
     number: 31
-  rgb_pop_bottom_right:
+  rgb_pop_bottom_left:
     label: Pop Insert Bottom Left
     number: 32
   rgb_center_target_circle:
@@ -185,4 +185,3 @@ leds:
   rgb_insignia_9:
     label: RGB Insignia 9
     number: 89
-    
