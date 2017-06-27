@@ -1,6 +1,7 @@
 # config_version=4
 
 coils:
+#BEGIN 0804 (0-3)
   c_launch_light:
     number: 0
   c_right_shaker:
@@ -9,6 +10,7 @@ coils:
     number: 2
   c_start_light:
     number: 3
+#BEGIN 3208 (4-11)
   c_flipper_right_main:
     number: 4
     pulse_ms: 50ms
@@ -33,6 +35,7 @@ coils:
   c_plunger_eject:
     number: 11
     pulse_ms: 15
+#BEGIN 1616 (12-27)
   c_left_orbit_flasher:
     number: 17
   c_backboard_activate:

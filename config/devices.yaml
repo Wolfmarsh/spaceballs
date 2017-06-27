@@ -10,48 +10,42 @@ flippers:
     hold_coil: c_flipper_right_hold
     activation_switch: s_right_flipper
 
-# autofire_coils:
-  # af_leftsling:
-    # coil: c_sling_left  
-    # switch: s_sling_left
-  # af_rightsling:
-    # coil: c_sling_right  
-    # switch: s_sling_right
-  # af_pop_1:
-    # coil: c_pop_1
-    # switch: s_pop_1
-  # af_pop_2:
-    # coil: c_pop_2
-    # switch: s_pop_2
-  # af_pop_3:
-    # coil: c_pop_3
-    # switch: s_pop_3
+autofire_coils:
+  af_leftsling:
+    coil: c_sling_left  
+    switch: s_sling_left
+  af_rightsling:
+    coil: c_sling_right  
+    switch: s_sling_right
+  af_pop_1:
+    coil: c_pop_1
+    switch: s_pop_1
+  af_pop_2:
+    coil: c_pop_2
+    switch: s_pop_2
+  af_pop_3:
+    coil: c_pop_3
+    switch: s_pop_3
 
-# drop_targets:
-   # airlock_drop1:
-     # debug: True
-     # switch: s_drop_1
-   # airlock_drop2:
-     # debug: True
-     # switch: s_drop_2
-   # airlock_drop3:
-     # debug: True
-     # switch: s_drop_3
-   # airlock_drop4:
-     # debug: True
-     # switch: s_drop_4
-   # airlock_drop5:
-     # debug: True
-     # switch: s_drop_5
+drop_targets:
+   airlock_drop1:
+     switch: s_drop_1
+   airlock_drop2:
+     switch: s_drop_2
+   airlock_drop3:
+     switch: s_drop_3
+   airlock_drop4:
+     switch: s_drop_4
+   airlock_drop5:
+     switch: s_drop_5
 
-# drop_target_banks:
-   # airlock_bank:
-     # debug: True
-     # drop_targets: airlock_drop1, airlock_drop2, airlock_drop3, airlock_drop4, airlock_drop5
-     # reset_coils: c_drop_reset
-     # reset_events:
-       # drop_target_bank_airlock_bank_down: 1s
-       # player_turn_start: 0s
+drop_target_banks:
+   airlock_bank:
+     drop_targets: airlock_drop1, airlock_drop2, airlock_drop3, airlock_drop4, airlock_drop5
+     reset_coils: c_drop_reset
+     reset_events:
+       drop_target_bank_airlock_bank_down: 1s
+       player_turn_start: 0s
 
 ball_devices:
   bd_trough:
@@ -68,16 +62,16 @@ ball_devices:
     tags: ball_add_live
     eject_coil: c_plunger_eject
     player_controlled_eject_event: sw_launch
-  # bd_saucer:
-    # label: Saucer Kickout
-    # ball_switches: s_saucer
-    # entrance_count_delay: 1.0s
-    # eject_coil: c_saucer_eject
-    # exit_count_delay: 250ms
-  # bd_scoop:
-    # label: Scoop Kickout
-    # ball_switches: s_scoop
-    # entrance_count_delay: 1.0s
-    # eject_coil: c_scoop_eject
-    # exit_count_delay: 250ms
+  bd_saucer:
+    label: Saucer Kickout
+    ball_switches: s_saucer
+    entrance_count_delay: 1.0s
+    eject_coil: c_saucer_eject
+    exit_count_delay: 250ms
+  bd_scoop:
+    label: Scoop Kickout
+    ball_switches: s_scoop
+    entrance_count_delay: 1.0s
+    eject_coil: c_scoop_eject
+    exit_count_delay: 250ms
 

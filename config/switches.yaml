@@ -1,6 +1,7 @@
 # config_version=4
 
 switches:
+#BEGIN 0804 (0-7)
   s_right_flipper:
     number: 0
   s_launch_button:
@@ -11,6 +12,7 @@ switches:
   s_start:
     number: 3
     tags: start
+#BEGIN 3208 (8-39)
   s_trough1:
     number: 8
     type: NC
@@ -36,18 +38,18 @@ switches:
     number: 15
   s_saucer:
     number: 16
-  # s_scoop:
-    # number: 17
-  # s_drop_1:
-    # number: 18
-  # s_drop_2:
-    # number: 19
-  # s_drop_3:
-    # number: 20
-  # s_drop_4:
-    # number: 21
-  # s_drop_5:
-    # number: 22
+  s_scoop:
+    number: 17
+  s_drop_2:
+    number: 18
+  s_drop_1:
+    number: 19
+  s_drop_3:
+    number: 20
+  s_drop_5:
+    number: 21
+  s_drop_4:
+    number: 22
   s_sling_right:
     number: 24
   s_sling_left:
@@ -60,12 +62,34 @@ switches:
     number: 28
   s_right_outlane:
     number: 29
-  # s_pop_1:
-    # number: 40
-  # s_pop_2:
-    # number: 41
-  # s_pop_3:
-    # number: 42
+  s_sbone_lock_3:
+    number: 32
+    type: NC
+  s_sbone_lock_2:
+    number: 33
+    type: NC
+  s_sbone_lock_1:
+    number: 34
+    type: NC
+  s_ramp_entry:
+    number: 35
+    type: NC
+  s_sbone_entry:
+    number: 36
+    type: NC
+  s_ramp_exit:
+    number: 37
+    type: NC
+  s_right_orbit:
+    number: 38
+    type: NC
+#BEGIN 1616 (40-55)
+  s_pop_1:
+    number: 40
+  s_pop_2:
+    number: 41
+  s_pop_3:
+    number: 42
   s_air_a_lane:
     number: 43
   s_air_i_lane:
@@ -74,3 +98,17 @@ switches:
     number: 45
   s_left_spinner:
     number: 46
+  s_schwartz_power_1:
+    number: 48
+  s_schwartz_power_2:
+    number: 49
+  s_schwartz_power_3:
+    number: 50
+  s_schwartz_power_4:
+    number: 51
+  s_schwartz_power_5:
+    number: 52
+  s_schwartz_power_6:
+    number: 53
+  s_schwartz_power_7:
+    number: 54
