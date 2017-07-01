@@ -2,7 +2,8 @@
 
 smartmatrix:
   port: com7
-  baud: 2500000  
+  baud: 2500000
+  old_cookie: true
   
 fast:
   ports: com4, com5

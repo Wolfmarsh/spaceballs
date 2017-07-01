@@ -2,9 +2,9 @@
 
 show_player:
   mode_attract_started:
-    attract_dmd_loop:
-      loops: -1
-      speed: 1
+#    attract_dmd_loop:
+#      loops: -1
+#      speed: 1
     flowing_s_loop:
       loops: -1
       speed: 1

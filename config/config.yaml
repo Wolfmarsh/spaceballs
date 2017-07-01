@@ -5,10 +5,10 @@ hardware:
   driverboards: fast
   rgb_dmd: smartmatrix
 
-physical_rgb_dmd:
-  fps: 30
-  only_send_changes: true
-  brightness: 1.0
+physical_rgb_dmds:
+  my_dmd:
+     platform: smartmatrix
+     brightness: .50
 
 fast:
   config_number_format: int
@@ -75,7 +75,17 @@ sound_player:
     spaceballs_song:
       action: stop  
 
-
+slides:
+  dmd_slide_1:  # slide we'll show on the physical DMD
+  - type: text
+    text: IT WORKS!
+    font_size: 30
+    color: red
+    
+slide_player:
+  init_done:
+    dmd_slide_1:
+      target: dmd
             
 displays:
   lcd:
@@ -112,37 +122,3 @@ window:
 #  machine_reset_phase_3:
 #    lcd_main_video:
 #      target: lcd
-
-widget_styles:
-  default:
-    font_name: Quadrit
-    font_size: 10
-    adjust_top: 2
-    adjust_bottom: 3
-  space title huge:
-    font_name: DEADJIM
-    font_size: 29
-    antialias: true
-    adjust_top: 3
-    adjust_bottom: 3
-  space title:
-    font_name: DEADJIM
-    font_size: 21
-    antialias: true
-    adjust_top: 2
-    adjust_bottom: 3
-  medium:
-    font_name: pixelmix
-    font_size: 8
-    adjust_top: 1
-    adjust_bottom: 1
-  small:
-    font_name: smallest_pixel-7
-    font_size: 9
-    adjust_top: 2
-    adjust_bottom: 3
-  tall title:
-    font_name: big_noodle_titling
-    font_size: 20
-    
-    
