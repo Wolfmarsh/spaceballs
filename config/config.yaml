@@ -8,7 +8,7 @@ hardware:
 physical_rgb_dmds:
   my_dmd:
      platform: smartmatrix
-     brightness: .50
+     brightness: 1.0
 
 fast:
   config_number_format: int
@@ -74,18 +74,6 @@ sound_player:
   mode_base_stopping:
     spaceballs_song:
       action: stop  
-
-slides:
-  dmd_slide_1:  # slide we'll show on the physical DMD
-  - type: text
-    text: IT WORKS!
-    font_size: 30
-    color: red
-    
-slide_player:
-  init_done:
-    dmd_slide_1:
-      target: dmd
             
 displays:
   lcd:

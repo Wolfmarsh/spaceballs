@@ -40,7 +40,6 @@ slides:
     text: PLAYER (number)
     anchor_y: bottom
     anchor_x: left
-    style: small
     color: 0099ff
     x: left
     y: bottom
@@ -48,7 +47,6 @@ slides:
     text: BALL (ball)
     anchor_y: bottom
     anchor_x: right
-    style: small
     color: 0099ff
     x: right
     y: bottom

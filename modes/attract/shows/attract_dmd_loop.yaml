@@ -1,69 +1,52 @@
 #show_version=4
-# - tocks: 3
-  # display:
-    # - type: text
-      # text: SPACEBALLS
-    # - type: Text
-      # text: THE PINBALL MACHINE
-      # v_pos: bottom
-      # font: small
-      # transition:
-        # type: move_out
-        # duration: 1s
-        # direction: left
 
-- time: 0
+- duration: 3s
   slides:
-    attract_dmd_loop_slide_1:
-    - type: image
-      image: sb_logo_1
-      # transition:
-        # type: move_out
-        # duration: 1s
-        # direction: left
+    spaceballs_slide:
+      widgets:
+      - type: image
+        image: sb_logo_1
 
-- time: '+3'
+- duration: 4s
   slides:
-    attract_dmd_loop_slide_2:
-    - type: text
-      text: PRESS START TO PLAY
-      font_size: 12
-      color: 0099ff
-- time: '+3'
-  slides:
-    attract_dmd_loop_slide_3:
-    - type: text
-      text: Powered By
-      color: ff4002
+    press_start:
+      widgets:
+      - type: Text
+        text: PRESS START
+        font_size: 20
+        color: 0099ff
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0.5
+              duration: .25s
+            - property: opacity
+              value: 1
+              duration: .5s
+              repeat: -1
+      transition:
+         type: move_in
+         duration: 1s
+         direction: right
 
-- time: '+2'
+- duration: 2s
   slides:
-    attract_dmd_loop_slide_4:
+    powered_by_slide:
+      widgets:
+      - type: Text
+        text: POWERED BY
+        color: red
+
+- duration: 2s
+  slides:
+    mpf_slide:
       widgets:
       - type: image
         image: mpf_logo
-      transition:
-        type: move_out
-        duration: 1s
-        direction: left
-
-- time: '+2'
+       
+- duration: 2s
   slides:
-    attract_dmd_loop_slide_5:
+    fast_slide:
       widgets:
       - type: image
         image: fast_logo
-      transition:
-        type: move_out
-        duration: 1s
-        direction: right
-
-- time: '+3'
-  slides:
-    attract_dmd_loop_slide_6:
-    - type: text
-      text: PRESS START TO PLAY
-      color: 0099ff
-      font_size: 12
-      
-- time: '+3'
