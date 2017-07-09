@@ -3,12 +3,100 @@
 mode_settings:
   keep_multiplier: True
   bonus_entries:
-      - event: bonus_ramps
-        score: 1000
-        player_score_entry: ramps
+      - event: bonus_pops
+        score: 10000
+        player_score_entry: pophits
         reset_player_score_entry: True
         skip_if_zero: false
-      - event: bonus_modes
-        score: 5000
-        player_score_entry: modes
-        reset_player_score_entry: False
+
+slide_player:
+  bonus_start:
+    bonus_award_start:
+      target: dmd
+  bonus_pops:
+    bonus_award_pops:
+      target: dmd
+  bonus_subtotal:
+    bonus_award_subtotal:
+      target: dmd
+  bonus_multiplier:
+    bonus_award_multiplier:
+      target: dmd
+  bonus_total:
+    bonus_award_total:
+      target: dmd
+
+slides:
+  bonus_award_start:
+    widgets:
+      - type: text
+        text: END OF BALL BONUS
+        style: dmd_big
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+  bonus_award_pops:
+    widgets:
+      - type: text
+        text: POP HITS
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: (hits) x 1,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 10
+        x: center
+  bonus_award_subtotal:
+    widgets:
+      - type: text
+        text: BONUS SUBTOTAL
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: (score)
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 10
+        x: center
+  bonus_award_multiplier:
+    widgets:
+      - type: text
+        text: BONUS MULTIPLIER
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: (multiplier)X
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 10
+        x: center
+  bonus_award_total:
+    widgets:
+      - type: text
+        text: BONUS TOTAL
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: (score)
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 10
+        x: center

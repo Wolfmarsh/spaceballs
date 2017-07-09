@@ -1,6 +1,7 @@
 #config_version=4
 mode:
     start_events: ball_starting
+    stop_events: s_launch_button_inactive
     priority: 2000
 
 scoring:
@@ -16,6 +17,9 @@ coil_player:
       c_launch_light:
          action: enable
          power: 1.0
+  sw_launch:
+      c_launch_light:
+         action: disable
 
 show_player:
   mode_skillshot_timing_started:

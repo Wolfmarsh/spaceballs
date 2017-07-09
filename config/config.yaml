@@ -104,6 +104,8 @@ window:
 player_vars:
   bonus_multiplier:
     initial_value: 1
+  pophits:
+    initial_value: 0
   
 #slides:
 #  lcd_main_video:

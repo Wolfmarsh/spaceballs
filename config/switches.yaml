@@ -86,10 +86,13 @@ switches:
 #BEGIN 1616 (40-55)
   s_pop_1:
     number: 40
+    tags: pop_hit
   s_pop_2:
     number: 41
+    tags: pop_hit
   s_pop_3:
     number: 42
+    tags: pop_hit
   s_air_a_lane:
     number: 43
   s_air_i_lane:
