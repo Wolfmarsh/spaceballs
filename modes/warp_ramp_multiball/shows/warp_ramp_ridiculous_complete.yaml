@@ -1,0 +1,4 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_ramplevel_2: ffff00-f100ms

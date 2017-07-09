@@ -1,65 +1,67 @@
 events:
-  game_ended: 27
-  game_started: 37
+  game_ended: 32
+  game_started: 44
 player:
   score:
-    average: 233214.2857142857
+    average: 260000.0
     top:
     - 816000
+    - 550000
     - 530000
+    - 500000
+    - 460000
     - 460000
     - 406000
     - 400000
     - 360000
-    - 350000
-    - 308000
-    - 280000
-    - 280000
-    total: 28
+    - 360000
+    total: 33
+shots:
+  warp_ramp_shot: 22
 switches:
   s_air_a_lane: 5
-  s_air_i_lane: 6
+  s_air_i_lane: 8
   s_air_r_lane: 4
-  s_drop_1: 16
-  s_drop_2: 12
-  s_drop_3: 14
-  s_drop_4: 14
-  s_drop_5: 16
-  s_launch_button: 162
-  s_left_flipper: 449
-  s_left_inlane: 18
-  s_left_outlane: 12
-  s_left_spinner: 544
-  s_plunger_lane: 134
-  s_pop_1: 19
-  s_pop_2: 29
+  s_drop_1: 21
+  s_drop_2: 16
+  s_drop_3: 16
+  s_drop_4: 20
+  s_drop_5: 23
+  s_launch_button: 185
+  s_left_flipper: 500
+  s_left_inlane: 22
+  s_left_outlane: 15
+  s_left_spinner: 665
+  s_plunger_lane: 168
+  s_pop_1: 24
+  s_pop_2: 30
   s_pop_3: 3
-  s_ramp_entry: 13
-  s_ramp_exit: 7
-  s_right_flipper: 419
-  s_right_inlane: 36
-  s_right_orbit: 27
-  s_right_outlane: 10
-  s_saucer: 30
-  s_sbone_entry: 59
-  s_sbone_lock_1: 12
-  s_sbone_lock_2: 12
-  s_sbone_lock_3: 11
+  s_ramp_entry: 43
+  s_ramp_exit: 30
+  s_right_flipper: 504
+  s_right_inlane: 50
+  s_right_orbit: 33
+  s_right_outlane: 11
+  s_saucer: 40
+  s_sbone_entry: 67
+  s_sbone_lock_1: 16
+  s_sbone_lock_2: 16
+  s_sbone_lock_3: 15
   s_schwartz_power_1: 0
   s_schwartz_power_2: 0
   s_schwartz_power_3: 0
   s_schwartz_power_4: 0
   s_schwartz_power_5: 0
   s_schwartz_power_6: 0
-  s_schwartz_power_7: 22
-  s_scoop: 23
-  s_sling_left: 40
-  s_sling_right: 45
+  s_schwartz_power_7: 34
+  s_scoop: 36
+  s_sling_left: 50
+  s_sling_right: 55
   s_start: 6
-  s_trough1: 91
-  s_trough2: 91
-  s_trough3: 91
-  s_trough4: 91
-  s_trough5: 91
-  s_trough6: 90
-  s_trough_jam: 101
+  s_trough1: 115
+  s_trough2: 115
+  s_trough3: 115
+  s_trough4: 114
+  s_trough5: 114
+  s_trough6: 116
+  s_trough_jam: 126

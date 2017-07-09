@@ -31,6 +31,33 @@ show_player:
     skillshot_maxlevel_flash:
       loops: 0
       speed: 8
+  skillshot_timing_bonusaward2:
+    skillshot_timing_crawl:
+      action: stop
+    skillshot_award_flash:
+      loops: 1
+      speed: 8
+      show_tokens:
+        award_led: rgb_shooter_arrow_3
+        award_color: ffff00
+  skillshot_timing_bonusaward1:
+    skillshot_timing_crawl:
+      action: stop
+    skillshot_award_flash:
+      loops: 1
+      speed: 8
+      show_tokens:
+        award_led: rgb_shooter_arrow_2
+        award_color: ffff00
+  skillshot_timing_bonusawardfail:
+    skillshot_timing_crawl:
+      action: stop
+    skillshot_award_flash:
+      loops: 1
+      speed: 8
+      show_tokens:
+        award_led: rgb_shooter_arrow_1
+        award_color: ff0000
 
 slide_player:
   skillshot_timing_bonusawardmax:

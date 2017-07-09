@@ -1,0 +1,13 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_shooter_arrow_1: 000000-f25ms
+    rgb_shooter_arrow_2: 000000-f25ms
+    rgb_shooter_arrow_3: 000000-f25ms
+    (award_led): (award_color)-f25ms
+
+- time: '+2'
+  leds:
+    (award_led): 000000-f25ms
+
+- time: '+2'

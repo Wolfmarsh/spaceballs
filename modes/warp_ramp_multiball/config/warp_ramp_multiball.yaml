@@ -1,0 +1,64 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 1000
+
+show_player:
+  mode_warp_ramp_multiball_started:
+    warp_ramp_level_pending:
+      loops: -1
+      speed: 8
+      show_tokens:
+        ramp_level: rgb_ramplevel_1
+  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==1}:
+    warp_ramp_level_pending:
+      loops: -1
+      speed: 8
+      show_tokens:
+        ramp_level: rgb_ramplevel_2
+    warp_ramp_lightspeed_complete:
+      loops: -1
+  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==2}:
+    warp_ramp_level_pending:
+      loops: -1
+      speed: 8
+      show_tokens:
+        ramp_level: rgb_ramplevel_3
+    warp_ramp_ridiculous_complete:
+      loops: -1
+  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==3}:
+    warp_ramp_level_pending:
+      loops: -1
+      speed: 8
+      show_tokens:
+        ramp_level: rgb_ramplevel_4
+    warp_ramp_ludicrous_complete:
+      loops: -1
+  logicblock_warp_ramp_level_counter_complete:
+    warp_ramp_level_pending:
+      action: stop
+    warp_ramp_plaid_complete:
+      loops: -1
+
+multiballs:
+    plaid_multiball:
+        ball_count: 3
+        ball_count_type: total
+        shoot_again: 20s
+        start_events: logicblock_warp_ramp_level_counter_complete
+    
+logic_blocks:
+  counters:
+    warp_ramp_level_counter:
+      count_events: warp_ramp_shot_hit
+      count_complete_value: 4
+      disable_on_complete: false
+      enable_events: mode_warp_ramp_multiball_started
+      disable_events: mode_warp_ramp_multiball_stopped
+      reset_events: mode_warp_ramp_multiball_started
+
+
+shots:
+  warp_ramp_shot:
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    time: 3s

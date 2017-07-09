@@ -30,7 +30,7 @@ slides:
   bonus_award_start:
     widgets:
       - type: text
-        text: END OF BALL BONUS
+        text: BONUS
         style: dmd_big
         anchor_y: center
         anchor_x: center
@@ -50,24 +50,24 @@ slides:
         style: dmd_big
         anchor_y: bottom
         anchor_x: center
-        y: 10
+        y: 5
         x: center
   bonus_award_subtotal:
     widgets:
       - type: text
         text: BONUS SUBTOTAL
         style: dmd_big
-        number_grouping: True
         anchor_y: top
         anchor_x: center
         y: top
         x: center
       - type: text
         text: (score)
+        number_grouping: True
         style: dmd_big
         anchor_y: bottom
         anchor_x: center
-        y: 10
+        y: 5
         x: center
   bonus_award_multiplier:
     widgets:
@@ -83,22 +83,22 @@ slides:
         style: dmd_big
         anchor_y: bottom
         anchor_x: center
-        y: 10
+        y: 5
         x: center
   bonus_award_total:
     widgets:
       - type: text
         text: BONUS TOTAL
         style: dmd_big
-        number_grouping: True
         anchor_y: top
         anchor_x: center
         y: top
         x: center
       - type: text
         text: (score)
+        number_grouping: True
         style: dmd_big
         anchor_y: bottom
         anchor_x: center
-        y: 10
+        y: 5
         x: center
