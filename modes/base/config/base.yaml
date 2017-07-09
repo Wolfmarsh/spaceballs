@@ -32,21 +32,27 @@ scoring:
     
 slides:
   slide_1:
-  - type: text
-    text: (score)
-    number_grouping: true
-    min_digits: 2
-  - type: text
-    text: PLAYER (number)
-    anchor_y: bottom
-    anchor_x: left
-    color: 0099ff
-    x: left
-    y: bottom
-  - type: text
-    text: BALL (ball)
-    anchor_y: bottom
-    anchor_x: right
-    color: 0099ff
-    x: right
-    y: bottom
+    widgets:
+      - type: text
+        text: (score)
+        number_grouping: true
+        min_digits: 2
+        style: dmd_big
+      - type: text
+        text: PLAYER (number)
+        y: 10
+        x: 10
+        style: dmd_small
+        anchor_x: left
+        anchor_y: bottom
+      - type: text
+        text: BALL (ball)
+        y: 10
+        x: right-10
+        anchor_x: right
+        anchor_y: bottom
+        style: dmd_small
+      - type: text
+        text: "ss: (skillshot_level_counter_count)"
+        style: dmd_small
+        y: 40%

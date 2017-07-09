@@ -13,13 +13,13 @@ coils:
 #BEGIN 3208 (4-11)
   c_flipper_right_main:
     number: 4
-    pulse_ms: 30ms
+    pulse_ms: 20ms
   c_flipper_right_hold:
     number: 5
     allow_enable: true
   c_flipper_left_main:
     number: 6
-    pulse_ms: 30ms
+    pulse_ms: 20ms
   c_flipper_left_hold:
     number: 7
     allow_enable: true
@@ -34,7 +34,7 @@ coils:
     pulse_ms: 25
   c_plunger_eject:
     number: 11
-    pulse_ms: 20
+    pulse_ms: 25
 #BEGIN 1616 (12-27)
   c_left_orbit_flasher:
     number: 17

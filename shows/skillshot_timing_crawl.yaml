@@ -1,0 +1,32 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_shooter_arrow_1: ff0000-f25ms
+    rgb_shooter_arrow_2: 000000-f25ms
+    rgb_shooter_arrow_3: 000000-f25ms
+
+- time: '+2'
+  leds:
+    rgb_shooter_arrow_1: 000000-f25ms
+    rgb_shooter_arrow_2: ffff00-f25ms
+  events:
+    - skillshot_timing_step
+
+- time: '+2'
+  leds:
+    rgb_shooter_arrow_2: 000000-f25ms
+    rgb_shooter_arrow_3: ffff00-f25ms
+  events:
+    - skillshot_timing_step
+
+- time: '+2'
+  leds:
+    rgb_shooter_arrow_1: 00ff00-f25ms
+    rgb_shooter_arrow_2: 00ff00-f25ms
+    rgb_shooter_arrow_3: 00ff00-f25ms
+  events:
+    - skillshot_timing_step
+
+- time: '+2'
+  events:
+    - skillshot_timing_step

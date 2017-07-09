@@ -9,6 +9,7 @@ physical_rgb_dmds:
   my_dmd:
      platform: smartmatrix
      brightness: 1.0
+     fps: 20
 
 fast:
   config_number_format: int
@@ -28,6 +29,8 @@ config:
 
 modes:
 - base
+- skillshot_timing
+- bonus
 
 sound_system:
   buffer: 2048  # previous value was 512
@@ -97,6 +100,10 @@ window:
   resizable: false
   exit_on_escape: true
   source_display: lcd
+
+player_vars:
+  bonus_multiplier:
+    initial_value: 1
   
 #slides:
 #  lcd_main_video:
