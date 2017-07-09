@@ -4,6 +4,7 @@ coils:
 #BEGIN 0804 (0-3)
   c_launch_light:
     number: 0
+    allow_enable: true
   c_right_shaker:
     number: 1
   c_left_shaker:

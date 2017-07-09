@@ -13,7 +13,7 @@
       widgets:
       - type: Text
         text: PRESS START
-        font_size: 20
+        style: dmd_big
         color: 0099ff
         animations:
           pre_show_slide:
@@ -35,6 +35,7 @@
       widgets:
       - type: Text
         text: POWERED BY
+        style: dmd_big
         color: red
 
 - duration: 2s

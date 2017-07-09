@@ -1,7 +1,7 @@
 #config_version=4
 mode:
     start_events: ball_starting
-    priority: 200
+    priority: 2000
 
 scoring:
   skillshot_timing_bonusawardmax:
@@ -11,12 +11,23 @@ scoring:
   skillshot_timing_bonusaward1:
     score: 100000
 
+coil_player:
+  mode_skillshot_timing_started:
+      c_launch_light:
+         action: enable
+         power: 1.0
 
 show_player:
   mode_skillshot_timing_started:
     skillshot_timing_crawl:
       loops: -1
       speed: 4
+  skillshot_timing_bonusawardmax:
+    skillshot_timing_crawl:
+      action: stop
+    skillshot_maxlevel_flash:
+      loops: 1
+      speed: 8
 
 slide_player:
   skillshot_timing_bonusawardmax:
@@ -60,10 +71,16 @@ slides:
         text: SKILL SHOT MAXED
         style: dmd_big
         anchor_y: top
+        anchor_x: middle
+        y: top
+        x: center
       - type: text
-        text: 4X BONUS
+        text: +4X BONUS
         style: dmd_big
         anchor_y: bottom
+        anchor_x: middle
+        y: bottom
+        x: center
   skillshot_bonus_award_secondlevel:
     widgets:
       - type: text

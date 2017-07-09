@@ -38,21 +38,25 @@ slides:
         number_grouping: true
         min_digits: 2
         style: dmd_big
+        x: center
+        y: top - 5
+        anchor_x: center
+        anchor_y: top
       - type: text
         text: PLAYER (number)
-        y: 10
-        x: 10
+        y: 0
+        x: 0
         style: dmd_small
         anchor_x: left
         anchor_y: bottom
       - type: text
         text: BALL (ball)
-        y: 10
-        x: right-10
+        y: 0
+        x: right
         anchor_x: right
         anchor_y: bottom
         style: dmd_small
-      - type: text
-        text: "ss: (skillshot_level_counter_count)"
-        style: dmd_small
-        y: 40%
+#      - type: text
+#        text: "ss: (skillshot_level_counter_count)"
+#        style: dmd_small
+#        y: 40%
