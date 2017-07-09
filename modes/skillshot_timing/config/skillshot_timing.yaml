@@ -1,7 +1,6 @@
 #config_version=4
 mode:
     start_events: ball_starting
-    stop_events: s_launch_button_inactive
     priority: 2000
 
 scoring:
@@ -30,7 +29,7 @@ show_player:
     skillshot_timing_crawl:
       action: stop
     skillshot_maxlevel_flash:
-      loops: 1
+      loops: 0
       speed: 8
 
 slide_player:
@@ -52,11 +51,11 @@ slide_player:
       expire: 1
 
 event_player:
-  sw_launch{current_player.skillshot_level_counter_count==4}: skillshot_timing_bonusawardmax
-  sw_launch{current_player.skillshot_level_counter_count==3}: skillshot_timing_bonusawardmax
-  sw_launch{current_player.skillshot_level_counter_count==2}: skillshot_timing_bonusaward2
-  sw_launch{current_player.skillshot_level_counter_count==1}: skillshot_timing_bonusaward1
-  sw_launch{current_player.skillshot_level_counter_count==0}: skillshot_timing_bonusawardfail
+  sw_launch{current_player.skillshot_level_counter_count==4 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardmax skillshot_award_step
+  sw_launch{current_player.skillshot_level_counter_count==3 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardmax skillshot_award_step
+  sw_launch{current_player.skillshot_level_counter_count==2 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusaward2 skillshot_award_step
+  sw_launch{current_player.skillshot_level_counter_count==1 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusaward1 skillshot_award_step
+  sw_launch{current_player.skillshot_level_counter_count==0 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardfail skillshot_award_step
 
 logic_blocks:
   counters:
@@ -66,6 +65,10 @@ logic_blocks:
       disable_on_complete: false
       enable_events: mode_skillshot_timing_started
       disable_events: mode_skillshot_timing_stopped sw_launch
+      reset_events: mode_skillshot_timing_started
+    skillshot_award_counter:
+      count_events: skillshot_award_step
+      enable_events: mode_skillshot_timing_started
       reset_events: mode_skillshot_timing_started
 
 slides:

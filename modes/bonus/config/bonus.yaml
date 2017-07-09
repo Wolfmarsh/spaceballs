@@ -1,7 +1,7 @@
 #config_version=4
 
 mode_settings:
-  keep_multiplier: True
+  keep_multiplier: false
   bonus_entries:
       - event: bonus_pops
         score: 10000
@@ -46,7 +46,7 @@ slides:
         y: top
         x: center
       - type: text
-        text: (hits) x 1,000
+        text: (hits) x 10,000
         style: dmd_big
         anchor_y: bottom
         anchor_x: center
@@ -57,6 +57,7 @@ slides:
       - type: text
         text: BONUS SUBTOTAL
         style: dmd_big
+        number_grouping: True
         anchor_y: top
         anchor_x: center
         y: top
@@ -89,6 +90,7 @@ slides:
       - type: text
         text: BONUS TOTAL
         style: dmd_big
+        number_grouping: True
         anchor_y: top
         anchor_x: center
         y: top
