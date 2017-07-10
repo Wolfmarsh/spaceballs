@@ -39,6 +39,16 @@ show_player:
       action: stop
     warp_ramp_plaid_complete:
       loops: -1
+    
+scoring:
+  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==1}:
+    score: 100000
+  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==2}:
+    score: 200000
+  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==3}:
+    score: 300000
+  logicblock_warp_ramp_level_counter_complete:
+    score: 1000000
 
 slide_player:
   logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==1}:
@@ -51,6 +61,10 @@ slide_player:
       expire: 2
   logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==3}:
     warp_ramp_ludicrousspeed_achieved_slide:
+      target: dmd
+      expire: 2
+  logicblock_warp_ramp_level_counter_complete:
+    warp_ramp_plaid_achieved_slide:
       target: dmd
       expire: 2
 
@@ -77,9 +91,17 @@ slides:
       - type: text
         text: LIGHT SPEED
         style: dmd_big
-        anchor_y: center
+        anchor_y: top
         anchor_x: center
-        y: center
+        y: top - 3
+        x: center
+        color: ffffff
+      - type: text
+        text: 100,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 3
         x: center
         color: ffffff
       - type: rectangle
@@ -95,9 +117,17 @@ slides:
       - type: text
         text: RIDICULOUS SPEED
         style: dmd_big
-        anchor_y: center
+        anchor_y: top
         anchor_x: center
-        y: center
+        y: top - 3
+        x: center
+        color: ffffff
+      - type: text
+        text: 200,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 3
         x: center
         color: ffffff
       - type: rectangle
@@ -113,9 +143,17 @@ slides:
       - type: text
         text: LUDICROUS SPEED
         style: dmd_big
-        anchor_y: center
+        anchor_y: top
         anchor_x: center
-        y: center
+        y: top - 3
+        x: center
+        color: ffffff
+      - type: text
+        text: 300,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 3
         x: center
         color: ffffff
       - type: rectangle
@@ -126,6 +164,30 @@ slides:
         width: 128
         height: 32
         color: 880000
+  warp_ramp_plaid_achieved_slide:
+    widgets:
+      - type: text
+        text: PLAID MULTIBALL
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top - 3
+        x: center
+        color: ffffff
+      - type: text
+        text: 1,000,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 3
+        x: center
+        color: ffffff
+      - type: image
+        image: goneplaid_frame1
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
 
 
 shots:
