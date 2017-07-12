@@ -1,0 +1,20 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 500
+    
+scoring:
+  s_left_spinner_active:
+    score: 1000
+    spinnerhits: 1
+
+show_player:
+  s_left_spinner_active:
+    spinner_flash:
+      loops: 0
+      speed: 1
+
+sound_player:
+  s_left_spinner_active:
+    spinner_beep_1:
+      action: play

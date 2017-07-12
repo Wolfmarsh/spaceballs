@@ -1,0 +1,17 @@
+#config_version=4
+high_score:
+  _overwrite: True
+  categories:
+  - score:
+      - GRAND CHAMPION
+      - HIGH SCORE 1
+      - HIGH SCORE 2
+      - HIGH SCORE 3
+      - HIGH SCORE 4
+  defaults:
+    score:
+      - BRI: 10000000
+      - JK: 8000000
+      - GHK: 9500000
+      - QC: 7500000
+      - JAM: 100000

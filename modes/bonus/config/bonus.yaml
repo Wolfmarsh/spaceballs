@@ -8,6 +8,11 @@ mode_settings:
         player_score_entry: pophits
         reset_player_score_entry: True
         skip_if_zero: false
+      - event: bonus_spins
+        score: 2000
+        player_score_entry: spinnerhits
+        reset_player_score_entry: True
+        skip_if_zero: false
 
 slide_player:
   bonus_start:
@@ -15,6 +20,9 @@ slide_player:
       target: dmd
   bonus_pops:
     bonus_award_pops:
+      target: dmd
+  bonus_spins:
+    bonus_award_spins:
       target: dmd
   bonus_subtotal:
     bonus_award_subtotal:
@@ -47,6 +55,22 @@ slides:
         x: center
       - type: text
         text: (hits) x 10,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 5
+        x: center
+  bonus_award_spins:
+    widgets:
+      - type: text
+        text: SPINNER HITS
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: (hits) x 2,000
         style: dmd_big
         anchor_y: bottom
         anchor_x: center

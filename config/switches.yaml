@@ -4,11 +4,13 @@ switches:
 #BEGIN 0804 (0-7)
   s_right_flipper:
     number: 0
+    tags: right_flipper
   s_launch_button:
     number: 1
     tags: launch
   s_left_flipper:
     number: 2
+    tags: left_flipper
   s_start:
     number: 3
     tags: start

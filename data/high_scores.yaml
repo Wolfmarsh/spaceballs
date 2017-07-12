@@ -1,0 +1,16 @@
+score:
+- !!python/tuple
+  - BRI
+  - 10000000
+- !!python/tuple
+  - GHK
+  - 9500000
+- !!python/tuple
+  - JK
+  - 8000000
+- !!python/tuple
+  - QC
+  - 7500000
+- !!python/tuple
+  - JAM
+  - 1092000

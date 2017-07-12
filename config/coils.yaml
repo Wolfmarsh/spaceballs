@@ -39,6 +39,7 @@ coils:
 #BEGIN 1616 (12-27)
   c_left_orbit_flasher:
     number: 17
+    allow_enable: true
   c_backboard_activate:
     number: 19
   c_orbit_post:
