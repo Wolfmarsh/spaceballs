@@ -52,6 +52,8 @@ switches:
     number: 21
   s_drop_4:
     number: 22
+  s_sbone_left_orbit:
+    number: 23
   s_sling_right:
     number: 24
   s_sling_left:
@@ -64,6 +66,10 @@ switches:
     number: 28
   s_right_outlane:
     number: 29
+  s_sbone_right_orbit:
+    number: 30
+  s_pop_sneak:
+    number: 31
   s_sbone_lock_3:
     number: 32
     type: NC
@@ -117,3 +123,5 @@ switches:
     number: 53
   s_schwartz_power_7:
     number: 54
+  s_middle_target:
+    number: 55

@@ -1,6 +1,8 @@
 # config_version=4
 
 images:
+  eagle_one:
+    file: eagleone.png
   fast_logo:
     file: fast_logo.png
   mpf_logo:
@@ -21,5 +23,11 @@ images:
     file: plaid_frame6.png
   goneplaid_frame7:
     file: plaid_frame7.png
+  perriair_logo:
+    file: perriair_logo.png
+  planet_druidia:
+    file: planetdruidia.png
   splash_screen:
     file: spaceballs_spash_screen.jpg
+  virgin_alarm:
+    file: virgin_alarm.png

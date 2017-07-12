@@ -1,0 +1,172 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_ball_saver_left: 00ff00
+    rgb_ball_saver_right: 000000
+
+- time: '+500ms' #0.5s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: 00ff00
+
+- time: '+500ms' #1.0s
+  leds:
+    rgb_ball_saver_left: 00ff00
+    rgb_ball_saver_right: 000000
+
+- time: '+500ms' #1.5s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: 00ff00
+
+#next color
+- time: '+450ms' #1.95s
+  leds:
+    rgb_ball_saver_left: 65ff00
+    rgb_ball_saver_right: 000000
+
+- time: '+450ms' #2.4s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: 65ff00
+
+- time: '+450ms' #2.85s
+  leds:
+    rgb_ball_saver_left: 65ff00
+    rgb_ball_saver_right: 000000
+
+- time: '+450ms' #3.3s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: 65ff00
+    
+#next color
+- time: '+400ms' #3.7s
+  leds:
+    rgb_ball_saver_left: c3ff00
+    rgb_ball_saver_right: 000000
+
+- time: '+400ms' #4.1s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: c3ff00
+
+- time: '+400ms' #4.5s
+  leds:
+    rgb_ball_saver_left: c3ff00
+    rgb_ball_saver_right: 000000
+
+- time: '+400ms' #4.9s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: c3ff00
+
+#next color
+- time: '+350ms' #5.25s
+  leds:
+    rgb_ball_saver_left: ffff00
+    rgb_ball_saver_right: 000000
+
+- time: '+350ms' #5.6s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: ffff00
+
+- time: '+350ms' #5.95s
+  leds:
+    rgb_ball_saver_left: ffff00
+    rgb_ball_saver_right: 000000
+
+- time: '+350ms' #6.3s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: ffff00
+
+#next color
+- time: '+300ms' #6.6s
+  leds:
+    rgb_ball_saver_left: ffd000
+    rgb_ball_saver_right: 000000
+
+- time: '+300ms' #6.9s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: ffd000
+
+- time: '+300ms' #7.2s
+  leds:
+    rgb_ball_saver_left: ffd000
+    rgb_ball_saver_right: 000000
+
+- time: '+300ms' #7.5s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: ffd000
+    
+#next color
+- time: '+250ms' #7.75s
+  leds:
+    rgb_ball_saver_left: ff9d00
+    rgb_ball_saver_right: 000000
+
+- time: '+250ms' #8.0s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: ff9d00
+
+- time: '+250ms' #8.25s
+  leds:
+    rgb_ball_saver_left: ff9d00
+    rgb_ball_saver_right: 000000
+
+- time: '+250ms' #8.5s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: ff9d00
+
+#next color
+- time: '+200ms' #8.7s
+  leds:
+    rgb_ball_saver_left: ff6a00
+    rgb_ball_saver_right: 000000
+
+- time: '+200ms' #8.9s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: ff6a00
+
+- time: '+200ms' #9.1s
+  leds:
+    rgb_ball_saver_left: ff6a00
+    rgb_ball_saver_right: 000000
+
+- time: '+200ms' #9.3s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: ff6a00
+
+#next color
+- time: '+150ms' #9.45s
+  leds:
+    rgb_ball_saver_left: ff0000
+    rgb_ball_saver_right: 000000
+
+- time: '+150ms' #9.6s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: ff0000
+
+- time: '+150ms' #9.75s
+  leds:
+    rgb_ball_saver_left: ff0000
+    rgb_ball_saver_right: 000000
+
+- time: '+150ms' #9.9s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: ff0000
+
+- time: '+100ms' #10s
+  leds:
+    rgb_ball_saver_left: 000000
+    rgb_ball_saver_right: 000000

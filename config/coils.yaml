@@ -7,10 +7,13 @@ coils:
     allow_enable: true
   c_right_shaker:
     number: 1
+    allow_enable: true
   c_left_shaker:
     number: 2
+    allow_enable: true
   c_start_light:
     number: 3
+    allow_enable: true
 #BEGIN 3208 (4-11)
   c_flipper_right_main:
     number: 4
@@ -42,6 +45,7 @@ coils:
     allow_enable: true
   c_backboard_activate:
     number: 19
+    allow_enable: true
   c_orbit_post:
     number: 21
   c_pop_1:
@@ -55,10 +59,10 @@ coils:
     pulse_ms: 25
   c_saucer_eject:
     number: 25
-    pulse_ms: 25
+    pulse_ms: 50
   c_scoop_eject:
     number: 26
-    pulse_ms: 25
+    pulse_ms: 50
   c_drop_reset:
     number: 27
     pulse_ms: 25 

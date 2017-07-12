@@ -1,8 +1,0 @@
-# config_version=4
-
-shows:
-  green_lights:
-  - time: 0
-    leds:
-      rgb_drop_1: green
-  - duration: -1

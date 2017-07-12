@@ -1,5 +1,0 @@
-# config_version=3
-
-smartmatrix:
-    port: com3
-    use_separate_thread: yes
