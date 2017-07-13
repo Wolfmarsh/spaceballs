@@ -10,6 +10,26 @@ show_player:
       speed: 8
       show_tokens:
         ramp_level: rgb_ramplevel_1
+  multiball_plaid_multiball_started:
+    ball_saver_timer_show:
+      loops: 0
+      speed: 1    
+  multiball_plaid_multiball_ended:
+    ball_saver_timer_show:
+      action: stop
+    warp_ramp_lightspeed_complete:
+      action: stop
+    warp_ramp_ridiculous_complete:
+      action: stop
+    warp_ramp_ludicrous_complete:
+      action: stop
+    warp_ramp_plaid_complete:
+      action: stop
+    warp_ramp_level_pending:
+      loops: -1
+      speed: 8
+      show_tokens:
+        ramp_level: rgb_ramplevel_1
   logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==1}:
     warp_ramp_level_pending:
       loops: -1
@@ -39,7 +59,23 @@ show_player:
       action: stop
     warp_ramp_plaid_complete:
       loops: -1
-    
+
+sound_player:
+  warp_ramp_level_lightspeed_achieved:
+    lightspeed_2:
+      action: play
+  warp_ramp_level_ridiculousspeed_achieved:
+    ridiculous_speed_1:
+      action: play
+  warp_ramp_level_ludicrousspeed_achieved:
+    ludicrous_speed_1:
+      action: play
+
+event_player:
+  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==1}: warp_ramp_level_lightspeed_achieved
+  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==2}: warp_ramp_level_ridiculousspeed_achieved
+  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==3}: warp_ramp_level_ludicrousspeed_achieved
+  
 scoring:
   logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==1}:
     score: 100000
@@ -72,7 +108,7 @@ multiballs:
     plaid_multiball:
         ball_count: 3
         ball_count_type: total
-        shoot_again: 20s
+        shoot_again: 10s
         start_events: logicblock_warp_ramp_level_counter_complete
     
 logic_blocks:
@@ -81,9 +117,9 @@ logic_blocks:
       count_events: warp_ramp_shot_hit
       count_complete_value: 4
       disable_on_complete: true
-      enable_events: mode_warp_ramp_multiball_started
-      disable_events: mode_warp_ramp_multiball_stopped
-      reset_events: mode_warp_ramp_multiball_started
+      enable_events: mode_warp_ramp_multiball_started multiball_plaid_multiball_ended
+      disable_events: multiball_plaid_multiball_started
+      reset_events: multiball_plaid_multiball_ended
 
 slides:
   warp_ramp_lightspeed_achieved_slide:

@@ -5,8 +5,12 @@ mode:
 
 slide_player:
   mode_base_started:
-    slide_1:
+    player_info_slide:
       target: dmd
+  ball_save_default_save_saving_ball:
+    ball_saved_slide:
+      target: dmd
+      expire: 1
 
 show_player:
   ball_save_default_save_timer_start:
@@ -38,9 +42,23 @@ scoring:
     score: 50000
   s_drop_5_active:
     score: 50000
-    
+
+sound_player:
+  ball_save_default_save_saving_ball:
+    ball_saved_2:
+      action: play
+
 slides:
-  slide_1:
+  ball_saved_slide:
+    widgets:
+      - type: text
+        text: BALL SAVED
+        style: dmd_big
+        x: center
+        y: center
+        anchor_x: center
+        anchor_y: center
+  player_info_slide:
     widgets:
       - type: text
         text: (score)

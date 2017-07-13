@@ -20,6 +20,11 @@ coil_player:
       c_launch_light:
          action: disable
 
+sound_player:
+  skillshot_timing_bonusawardmax:
+    skillshot_2:
+      action: play
+
 show_player:
   mode_skillshot_timing_started:
     skillshot_timing_crawl:

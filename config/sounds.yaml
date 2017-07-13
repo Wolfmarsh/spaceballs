@@ -1,0 +1,71 @@
+#config_version=4
+
+sound_player:
+  mode_base_started:
+    spaceballs_song:
+      action: play
+  ball_ending:
+    spaceballs_song:
+      action: stop
+  game_ending:
+    game_over_3:
+      action: play
+
+sounds:
+  spaceballs_song:
+    target: music
+    volume: 0.70
+  skillshot_2:
+    target: voice
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.45
+      release_point: 0.5 sec
+      release: 1.0 sec
+  game_over_3:
+    target: voice
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.45
+      release_point: 1.0 sec
+      release: 1.0 sec
+  lightspeed_2:
+    target: voice
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.45
+      release_point: 0.5 sec
+      release: 1.0 sec
+  ridiculous_speed_1:
+    target: voice
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.45
+      release_point: 0.5 sec
+      release: 1.0 sec
+  ludicrous_speed_1:
+    target: voice
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.45
+      release_point: 0.5 sec
+      release: 1.0 sec
+  ball_saved_2:
+    target: voice
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.45
+      release_point: 0.5 sec
+      release: 1.0 sec

@@ -27,6 +27,7 @@ config:
 - virtual.yaml
 - images.yaml
 - videos.yaml
+- sounds.yaml
 
 modes:
 - base
@@ -35,6 +36,7 @@ modes:
 - high_score
 - warp_ramp_multiball
 - spinner
+- diner
 
 sound_system:
   buffer: 2048  # previous value was 512
@@ -69,19 +71,6 @@ assets:
             load: preload
             track: music
 
-sounds:
-  spaceballs_song:
-    target: music
-
-sound_player:
-  mode_base_started:
-    spaceballs_song:
-      action: play
-
-  ball_ending:
-    spaceballs_song:
-      action: stop
-
 displays:
   lcd:
     width: 1360
@@ -96,10 +85,6 @@ window:
   height: 768
   #fullscreen: true
   borderless: true
-  #width: 640
-  #height: 360
-  #fullscreen: false
-  #borderless: false
   title: Spaceballs
   resizable: false
   exit_on_escape: true
@@ -115,7 +100,7 @@ ball_saves:
   default_save:
     active_time: 10s
     hurry_up_time: 2s
-    grace_period: 2s
+    grace_period: 1s
     enable_events: mode_base_started
     timer_start_events: balldevice_bd_trough_ball_eject_success
     auto_launch: yes

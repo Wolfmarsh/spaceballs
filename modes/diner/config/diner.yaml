@@ -1,0 +1,102 @@
+#config_version=4
+mode:
+    start_events: ball_starting
+    priority: 1200
+
+show_player:
+  mode_diner_started:
+    diner_target_blink:
+      loops: -1
+      speed: 1
+  logicblock_diner_target_hit_counter_complete:
+    diner_target_blink:
+      action: stop
+    diner_scoop_light_lit:
+      loops: -1
+      speed: 1
+
+slide_player:
+  counter_diner_target_hit_counter_hit:
+    diner_target_hits_remaining:
+      target: dmd
+      expire: 1
+  logicblock_diner_target_hit_counter_complete:
+    diner_mode_lit:
+      target: dmd
+      expire: 1
+  start_diner_scoring:
+    diner_mode_active:
+      target: dmd
+      expire: 2
+
+event_player:
+  s_scoop_active{current_player.diner_mode_state_counter_count == 1}: start_diner_scoring
+
+scoring:
+  s_middle_target_active:
+    score: 20000
+
+logic_blocks:
+  counters:
+    diner_target_hit_counter:
+      count_events: s_middle_target_active
+      count_complete_value: 10
+      disable_on_complete: true
+      enable_events: mode_diner_started
+      disable_events: mode_diner_stopped
+      reset_events: mode_diner_started
+    diner_mode_state_counter:
+      count_events: logicblock_diner_target_hit_counter_complete
+      enable_events: mode_diner_started
+      disable_events: mode_diner_stopped
+      reset_events: mode_diner_started
+
+slides:
+  diner_target_hits_remaining:
+    widgets:
+      - type: text
+        text: (remaining) HITS LEFT
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: TO LIGHT DINER
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+  diner_mode_lit:
+    widgets:
+      - type: text
+        text: DINER MODE LIT
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: HIT THE SCOOP
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+  diner_mode_active:
+    widgets:
+      - type: text
+        text: DINER MODE ACTIVE
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: ALL SCORING 2X
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center

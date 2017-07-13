@@ -1,71 +1,71 @@
 events:
-  game_ended: 51
-  game_started: 65
+  game_ended: 61
+  game_started: 75
 player:
   score:
-    average: 346568.96551724133
+    average: 913038.9610389611
     top:
+    - 4479000
+    - 3479000
+    - 3235000
+    - 1943000
     - 1830000
+    - 1562000
     - 1092000
     - 870000
     - 816000
-    - 550000
-    - 530000
-    - 520000
-    - 500000
-    - 460000
-    - 460000
-    total: 58
+    - 754000
+    total: 77
 shots:
-  warp_ramp_shot: 39
+  warp_ramp_shot: 54
 switches:
-  s_air_a_lane: 12
-  s_air_i_lane: 15
-  s_air_r_lane: 5
-  s_drop_1: 26
-  s_drop_2: 20
-  s_drop_3: 25
-  s_drop_4: 26
-  s_drop_5: 28
-  s_launch_button: 213
-  s_left_flipper: 592
-  s_left_inlane: 29
-  s_left_outlane: 16
-  s_left_spinner: 1103
-  s_middle_target: 0
-  s_plunger_lane: 220
-  s_pop_1: 41
-  s_pop_2: 38
-  s_pop_3: 12
-  s_pop_sneak: 3
-  s_ramp_entry: 62
-  s_ramp_exit: 47
-  s_right_flipper: 650
-  s_right_inlane: 59
-  s_right_orbit: 51
-  s_right_outlane: 13
-  s_saucer: 52
-  s_sbone_entry: 83
-  s_sbone_left_orbit: 0
-  s_sbone_lock_1: 22
-  s_sbone_lock_2: 22
-  s_sbone_lock_3: 22
-  s_sbone_right_orbit: 0
+  s_air_a_lane: 20
+  s_air_i_lane: 21
+  s_air_r_lane: 9
+  s_drop_1: 40
+  s_drop_2: 35
+  s_drop_3: 40
+  s_drop_4: 39
+  s_drop_5: 43
+  s_launch_button: 223
+  s_left_flipper: 658
+  s_left_inlane: 31
+  s_left_outlane: 20
+  s_left_spinner: 1359
+  s_middle_target: 27
+  s_plunger_lane: 241
+  s_pop_1: 83
+  s_pop_2: 66
+  s_pop_3: 29
+  s_pop_sneak: 40
+  s_ramp_entry: 80
+  s_ramp_exit: 62
+  s_right_flipper: 753
+  s_right_inlane: 68
+  s_right_orbit: 61
+  s_right_outlane: 15
+  s_saucer: 57
+  s_sbone_entry: 87
+  s_sbone_left_orbit: 3
+  s_sbone_lock_1: 24
+  s_sbone_lock_2: 24
+  s_sbone_lock_3: 24
+  s_sbone_right_orbit: 3
   s_schwartz_power_1: 0
   s_schwartz_power_2: 0
   s_schwartz_power_3: 0
   s_schwartz_power_4: 0
   s_schwartz_power_5: 0
   s_schwartz_power_6: 0
-  s_schwartz_power_7: 67
-  s_scoop: 47
-  s_sling_left: 62
-  s_sling_right: 66
-  s_start: 12
-  s_trough1: 148
-  s_trough2: 148
-  s_trough3: 148
-  s_trough4: 145
-  s_trough5: 145
-  s_trough6: 147
-  s_trough_jam: 159
+  s_schwartz_power_7: 85
+  s_scoop: 51
+  s_sling_left: 75
+  s_sling_right: 80
+  s_start: 21
+  s_trough1: 166
+  s_trough2: 166
+  s_trough3: 166
+  s_trough4: 163
+  s_trough5: 163
+  s_trough6: 166
+  s_trough_jam: 177

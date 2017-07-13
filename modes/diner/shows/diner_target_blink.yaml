@@ -1,0 +1,10 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_center_target_circle: ffffff
+
+- time: '+500ms' #0.5s
+  leds:
+    rgb_center_target_circle: 000000
+
+- time: '+500ms' #0.5s
