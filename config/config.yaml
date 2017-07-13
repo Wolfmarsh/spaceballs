@@ -37,6 +37,7 @@ modes:
 - warp_ramp_multiball
 - spinner
 - diner
+- airlock_multiball
 
 sound_system:
   buffer: 2048  # previous value was 512

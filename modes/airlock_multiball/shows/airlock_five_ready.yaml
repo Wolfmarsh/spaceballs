@@ -1,0 +1,11 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_drop_5: 00ffff
+
+- time: '+350ms'
+  leds:
+    rgb_drop_5: 000000
+
+- time: '+350ms'
+

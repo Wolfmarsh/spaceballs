@@ -1,0 +1,4 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_drop_2: 00ff00

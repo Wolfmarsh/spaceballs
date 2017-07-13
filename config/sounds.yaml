@@ -1,16 +1,5 @@
 #config_version=4
 
-sound_player:
-  mode_base_started:
-    spaceballs_song:
-      action: play
-  ball_ending:
-    spaceballs_song:
-      action: stop
-  game_ending:
-    game_over_3:
-      action: play
-
 sounds:
   spaceballs_song:
     target: music

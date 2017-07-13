@@ -1,25 +1,170 @@
 # config_version=4
 
-
+#config_version=4
 mode:
-  start_events: start_airlock_multiball
-  stop_events: timer_mode_timer_complete, ball_ended
-  priority: 300
+  start_events: ball_starting
+  priority: 1400
 
-timers:
-  mode_timer:
-    start_events: start_airlock_multiball
-    start_value: 10
-    end_value: 0
-    direction: down
-    tick_interval: 1s
-    control_events:
-    - event: start_airlock_multiball
-      action: start 
-
-    start_running: false
 show_player:
   mode_airlock_multiball_started:
-    gone_to_plaid:
+    airlock_one_ready:
       loops: -1
-      speed: 20
+      speed: 1
+    airlock_two_ready:
+      loops: -1
+      speed: 1
+    airlock_three_ready:
+      loops: -1
+      speed: 1
+    airlock_four_ready:
+      loops: -1
+      speed: 1
+    airlock_five_ready:
+      loops: -1
+      speed: 1
+  s_drop_1_active:
+    airlock_one_ready:
+      action: stop
+    airlock_one_lit:
+      loops: -1
+      speed: 1
+  s_drop_2_active:
+    airlock_two_ready:
+      action: stop
+    airlock_two_lit:
+      loops: -1
+      speed: 1
+  s_drop_3_active:
+    airlock_three_ready:
+      action: stop
+    airlock_three_lit:
+      loops: -1
+      speed: 1
+  s_drop_4_active:
+    airlock_four_ready:
+      action: stop
+    airlock_four_lit:
+      loops: -1
+      speed: 1
+  s_drop_5_active:
+    airlock_five_ready:
+      action: stop
+    airlock_five_lit:
+      loops: -1
+      speed: 1
+
+slide_player:
+  s_drop_1_active:
+    airlock_one_complete_slide:
+      target: dmd
+      expire: 1
+  s_drop_2_active:
+    airlock_one_complete_slide:
+      target: dmd
+      expire: 1
+  s_drop_3_active:
+    airlock_one_complete_slide:
+      target: dmd
+      expire: 1
+  s_drop_4_active:
+    airlock_one_complete_slide:
+      target: dmd
+      expire: 1
+  s_drop_5_active:
+    airlock_one_complete_slide:
+      target: dmd
+      expire: 1
+
+scoring:
+  s_drop_1_active:
+    score: 50000
+  s_drop_2_active:
+    score: 50000
+  s_drop_3_active:
+    score: 50000
+  s_drop_4_active:
+    score: 50000
+  s_drop_5_active:
+    score: 50000
+
+slides:
+  airlock_one_complete_slide:
+    widgets:
+      - type: text
+        text: 1
+        style: dmd_big
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+  airlock_two_complete_slide:
+    widgets:
+      - type: text
+        text: 2
+        style: dmd_big
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+  airlock_three_complete_slide:
+    widgets:
+      - type: text
+        text: 3
+        style: dmd_big
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+  airlock_four_complete_slide:
+    widgets:
+      - type: text
+        text: 4
+        style: dmd_big
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+  airlock_five_complete_slide:
+    widgets:
+      - type: text
+        text: 5
+        style: dmd_big
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
