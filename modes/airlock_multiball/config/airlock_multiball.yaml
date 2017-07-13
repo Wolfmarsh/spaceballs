@@ -1,6 +1,5 @@
-# config_version=4
-
 #config_version=4
+
 mode:
   start_events: ball_starting
   priority: 1400
@@ -58,22 +57,37 @@ slide_player:
     airlock_one_complete_slide:
       target: dmd
       expire: 1
+    airlock_one_complete_slide_king:
+      target: lcd
+      expire: 800ms
   s_drop_2_active:
-    airlock_one_complete_slide:
+    airlock_two_complete_slide:
       target: dmd
       expire: 1
+    airlock_two_complete_slide_king:
+      target: lcd
+      expire: 800ms
   s_drop_3_active:
-    airlock_one_complete_slide:
+    airlock_three_complete_slide:
       target: dmd
       expire: 1
+    airlock_three_complete_slide_king:
+      target: lcd
+      expire: 800ms
   s_drop_4_active:
-    airlock_one_complete_slide:
+    airlock_four_complete_slide:
       target: dmd
       expire: 1
+    airlock_four_complete_slide_king:
+      target: lcd
+      expire: 800ms
   s_drop_5_active:
-    airlock_one_complete_slide:
+    airlock_five_complete_slide:
       target: dmd
       expire: 1
+    airlock_five_complete_slide_king:
+      target: lcd
+      expire: 1000ms
 
 scoring:
   s_drop_1_active:
@@ -88,6 +102,12 @@ scoring:
     score: 50000
 
 slides:
+  airlock_one_complete_slide_king:
+    widgets:
+      - type: video
+        video: airlock_king_one
+        width: 1280
+        height: 720
   airlock_one_complete_slide:
     widgets:
       - type: text
@@ -104,6 +124,12 @@ slides:
         anchor_x: left
         y: 0
         x: 0
+  airlock_two_complete_slide_king:
+    widgets:
+      - type: video
+        video: airlock_king_two
+        width: 1280
+        height: 720
   airlock_two_complete_slide:
     widgets:
       - type: text
@@ -120,6 +146,12 @@ slides:
         anchor_x: left
         y: 0
         x: 0
+  airlock_three_complete_slide_king:
+    widgets:
+      - type: video
+        video: airlock_king_three
+        width: 1280
+        height: 720
   airlock_three_complete_slide:
     widgets:
       - type: text
@@ -136,6 +168,12 @@ slides:
         anchor_x: left
         y: 0
         x: 0
+  airlock_four_complete_slide_king:
+    widgets:
+      - type: video
+        video: airlock_king_four
+        width: 1280
+        height: 720
   airlock_four_complete_slide:
     widgets:
       - type: text
@@ -152,6 +190,12 @@ slides:
         anchor_x: left
         y: 0
         x: 0
+  airlock_five_complete_slide_king:
+    widgets:
+      - type: video
+        video: airlock_king_five
+        width: 1280
+        height: 720
   airlock_five_complete_slide:
     widgets:
       - type: text

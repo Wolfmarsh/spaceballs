@@ -10,3 +10,13 @@ videos:
     file: IntroCrawl.mp4
   introship:
     file: IntroShip.mp4
+  airlock_king_one:
+    file: Airlock_Combination_1_King.mp4
+  airlock_king_two:
+    file: Airlock_Combination_2_King.mp4
+  airlock_king_three:
+    file: Airlock_Combination_3_King.mp4
+  airlock_king_four:
+    file: Airlock_Combination_4_King.mp4
+  airlock_king_five:
+    file: Airlock_Combination_5_King.mp4

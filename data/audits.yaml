@@ -1,9 +1,9 @@
 events:
-  game_ended: 64
-  game_started: 78
+  game_ended: 65
+  game_started: 80
 player:
   score:
-    average: 905912.5
+    average: 895481.4814814815
     top:
     - 4479000
     - 3479000
@@ -15,25 +15,25 @@ player:
     - 1092000
     - 870000
     - 816000
-    total: 80
+    total: 81
 shots:
   warp_ramp_shot: 58
 switches:
   s_air_a_lane: 20
   s_air_i_lane: 22
   s_air_r_lane: 10
-  s_drop_1: 42
+  s_drop_1: 43
   s_drop_2: 36
   s_drop_3: 41
   s_drop_4: 40
   s_drop_5: 44
-  s_launch_button: 226
+  s_launch_button: 228
   s_left_flipper: 660
   s_left_inlane: 31
   s_left_outlane: 20
-  s_left_spinner: 1398
+  s_left_spinner: 1399
   s_middle_target: 27
-  s_plunger_lane: 245
+  s_plunger_lane: 248
   s_pop_1: 84
   s_pop_2: 75
   s_pop_3: 31
@@ -62,10 +62,10 @@ switches:
   s_sling_left: 75
   s_sling_right: 82
   s_start: 21
-  s_trough1: 169
-  s_trough2: 169
-  s_trough3: 169
-  s_trough4: 166
-  s_trough5: 166
-  s_trough6: 169
-  s_trough_jam: 180
+  s_trough1: 171
+  s_trough2: 171
+  s_trough3: 171
+  s_trough4: 167
+  s_trough5: 167
+  s_trough6: 170
+  s_trough_jam: 182

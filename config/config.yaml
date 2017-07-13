@@ -84,7 +84,7 @@ displays:
 window:
   width: 1360 
   height: 768
-  #fullscreen: true
+  fullscreen: true
   borderless: true
   title: Spaceballs
   resizable: false
@@ -106,17 +106,4 @@ ball_saves:
     timer_start_events: balldevice_bd_trough_ball_eject_success
     auto_launch: yes
     balls_to_save: 1
-    debug: yes
-  
-#slides:
-#  lcd_main_video:
-#    widgets:
-#      - type: video
-#        video: introcrawl
-#        width: 1280
-#        height: 720
-    
-#slide_player:
-#  machine_reset_phase_3:
-#    lcd_main_video:
-#      target: lcd
+
