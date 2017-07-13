@@ -13,7 +13,7 @@
       widgets:
       - type: Text
         text: PRESS START
-        style: dmd_big
+        style: dmd_xl
         color: 0099ff
         animations:
           pre_show_slide:

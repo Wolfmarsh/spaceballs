@@ -1,0 +1,10 @@
+#show_version=4
+- time: 0
+  coils:
+      c_start_light: enable
+
+- time: '+300ms'
+  coils:
+      c_start_light: disable
+
+- time: '+300ms'

@@ -59,6 +59,7 @@ slides:
       - type: text
         text: (score)
         number_grouping: true
+        color: ffffff
         min_digits: 2
         style: dmd_big
         x: center

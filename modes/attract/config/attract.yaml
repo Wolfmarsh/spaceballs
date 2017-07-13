@@ -2,6 +2,9 @@
 
 show_player:
   mode_attract_started:
+    flash_start_button:
+      loops: -1
+      speed: 1
     attract_dmd_loop:
       loops: -1
       speed: 1

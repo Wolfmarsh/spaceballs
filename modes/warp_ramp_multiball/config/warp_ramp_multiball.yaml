@@ -87,10 +87,13 @@ scoring:
     score: 1000000
 
 slide_player:
-  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==1}:
+  warp_ramp_level_lightspeed_achieved:
     warp_ramp_lightspeed_achieved_slide:
       target: dmd
       expire: 2
+    warp_ramp_lightspeed_achieved_videoslide:
+      target: lcd
+      expire: 3200ms
   logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==2}:
     warp_ramp_ridiculousspeed_achieved_slide:
       target: dmd
@@ -122,6 +125,12 @@ logic_blocks:
       reset_events: multiball_plaid_multiball_ended
 
 slides:
+  warp_ramp_lightspeed_achieved_videoslide:
+    widgets:
+      - type: video
+        video: start_lightspeed
+        width: 1280
+        height: 720
   warp_ramp_lightspeed_achieved_slide:
     widgets:
       - type: text

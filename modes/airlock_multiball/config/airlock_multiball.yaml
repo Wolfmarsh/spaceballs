@@ -112,7 +112,7 @@ slides:
     widgets:
       - type: text
         text: 1
-        style: dmd_big
+        style: dmd_xl
         anchor_y: center
         anchor_x: center
         y: center
@@ -134,7 +134,7 @@ slides:
     widgets:
       - type: text
         text: 2
-        style: dmd_big
+        style: dmd_xl
         anchor_y: center
         anchor_x: center
         y: center
@@ -156,7 +156,7 @@ slides:
     widgets:
       - type: text
         text: 3
-        style: dmd_big
+        style: dmd_xl
         anchor_y: center
         anchor_x: center
         y: center
@@ -178,7 +178,7 @@ slides:
     widgets:
       - type: text
         text: 4
-        style: dmd_big
+        style: dmd_xl
         anchor_y: center
         anchor_x: center
         y: center
@@ -200,7 +200,7 @@ slides:
     widgets:
       - type: text
         text: 5
-        style: dmd_big
+        style: dmd_xl
         anchor_y: center
         anchor_x: center
         y: center

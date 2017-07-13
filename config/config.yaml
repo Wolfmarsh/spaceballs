@@ -39,6 +39,13 @@ modes:
 - diner
 - airlock_multiball
 
+widget_styles:
+  dmd_xl:
+      font_name: Quadrit
+      font_size: 15
+      adjust_bottom: 7
+      adjust_top: 3
+
 sound_system:
   buffer: 2048  # previous value was 512
   frequency: 44100
@@ -84,7 +91,7 @@ displays:
 window:
   width: 1360 
   height: 768
-  fullscreen: true
+  #fullscreen: true
   borderless: true
   title: Spaceballs
   resizable: false
