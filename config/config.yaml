@@ -65,20 +65,6 @@ sound_system:
       simultaneous_sounds: 1
   enabled: true
 
-assets:
-    sounds:
-        default:
-            load: preload
-        voice:
-            load: preload
-            track: voice
-        sfx:
-            load: preload
-            track: sfx
-        music:
-            load: preload
-            track: music
-
 displays:
   lcd:
     width: 1360
@@ -91,7 +77,7 @@ displays:
 window:
   width: 1360 
   height: 768
-  #fullscreen: true
+  fullscreen: true
   borderless: true
   title: Spaceballs
   resizable: false
@@ -99,6 +85,8 @@ window:
   source_display: lcd
 
 player_vars:
+  game_scoring_multiplier:
+    initial_value: 1
   bonus_multiplier:
     initial_value: 1
   pophits:

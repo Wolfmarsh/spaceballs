@@ -1,5 +1,19 @@
 #config_version=4
 
+assets:
+  sounds:
+    default:
+      load: preload
+    voice:
+      load: preload
+      track: voice
+    sfx:
+      load: preload
+      track: sfx
+    music:
+      load: preload
+      track: music
+
 sounds:
   spaceballs_song:
     target: music
