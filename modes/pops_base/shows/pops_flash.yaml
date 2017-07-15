@@ -1,0 +1,8 @@
+#show_version=4
+- time: 0
+  coils:
+      c_pop_flasher: enable
+
+- time: '+50ms'
+  coils:
+      c_pop_flasher: disable

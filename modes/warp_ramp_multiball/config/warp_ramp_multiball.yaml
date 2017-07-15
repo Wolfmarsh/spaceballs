@@ -78,13 +78,13 @@ event_player:
   
 scoring:
   warp_ramp_level_lightspeed_achieved:
-    score: 100000
+    score: 100000 * current_player.game_scoring_multiplier
   warp_ramp_level_ridiculousspeed_achieved:
-    score: 200000
+    score: 200000 * current_player.game_scoring_multiplier
   warp_ramp_level_ludicrousspeed_achieved:
-    score: 300000
+    score: 300000 * current_player.game_scoring_multiplier
   logicblock_warp_ramp_level_counter_complete:
-    score: 1000000
+    score: 1000000 * current_player.game_scoring_multiplier
 
 slide_player:
   warp_ramp_level_lightspeed_achieved:

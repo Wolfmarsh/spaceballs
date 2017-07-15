@@ -14,6 +14,13 @@ show_player:
     diner_scoop_light_lit:
       loops: -1
       speed: 1
+  start_diner_scoring:
+    diner_scoop_light_lit:
+      action: stop
+  stop_diner_scoring:
+    diner_target_blink:
+      loops: -1
+      speed: 1
 
 slide_player:
   counter_diner_target_hit_counter_hit:
@@ -28,13 +35,58 @@ slide_player:
     diner_mode_active:
       target: dmd
       expire: 2
+    diner_chestburster_start_video:
+      target: lcd
+      expire: 12400ms
+
+coil_player:
+  start_diner_scoring:
+      c_backboard_activate:
+         action: enable
+         power: 1.0
+  stop_diner_scoring:
+      c_backboard_activate:
+         action: disable
+
+sound_player:
+  start_diner_mode_music:
+    hello_my_baby:
+      action: play
+  stop_diner_scoring:
+    hello_my_baby:
+      action: stop
 
 event_player:
-  s_scoop_active{current_player.diner_mode_state_counter_count == 1}: start_diner_scoring
+  balldevice_bd_scoop_ball_entered{current_player.diner_mode_state_counter_count == 1}: start_diner_scoring
+  timer_diner_scoring_timer_complete: stop_diner_scoring
+  ball_will_end: stop_diner_scoring
+  start_diner_scoring: start_diner_mode_music|3000ms
 
 scoring:
   s_middle_target_active:
-    score: 20000
+    score: 20000 * current_player.game_scoring_multiplier
+  start_diner_scoring:
+    game_scoring_multiplier:
+      score: 2
+      action: set
+  stop_diner_scoring:
+    game_scoring_multiplier:
+      score: 1
+      action: set
+
+timers:
+  diner_scoring_timer:
+    start_value: 30
+    end_value: 0
+    tick_interval: 1s
+    direction: down
+    control_events:
+      - action: start
+        event: start_diner_scoring
+      - action: stop
+        event: ball_will_end
+      - action: reset
+        event: stop_diner_scoring
 
 logic_blocks:
   counters:
@@ -42,14 +94,14 @@ logic_blocks:
       count_events: s_middle_target_active
       count_complete_value: 10
       disable_on_complete: true
-      enable_events: mode_diner_started
+      enable_events: mode_diner_started stop_diner_scoring
       disable_events: mode_diner_stopped
-      reset_events: mode_diner_started
+      reset_events: mode_diner_started stop_diner_scoring
     diner_mode_state_counter:
-      count_events: logicblock_diner_target_hit_counter_complete
+      count_events: logicblock_diner_target_hit_counter_complete start_diner_scoring
       enable_events: mode_diner_started
       disable_events: mode_diner_stopped
-      reset_events: mode_diner_started
+      reset_events: mode_diner_started stop_diner_scoring
 
 slides:
   diner_target_hits_remaining:
@@ -100,3 +152,10 @@ slides:
         anchor_x: center
         y: bottom
         x: center
+  diner_chestburster_start_video:
+    widgets:
+      - type: video
+        video: chestburster_start
+        width: 1280
+        height: 720
+        volume: 0.5

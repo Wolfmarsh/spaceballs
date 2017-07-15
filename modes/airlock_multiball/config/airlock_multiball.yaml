@@ -91,15 +91,15 @@ slide_player:
 
 scoring:
   s_drop_1_active:
-    score: 50000
+    score: 50000 * current_player.game_scoring_multiplier
   s_drop_2_active:
-    score: 50000
+    score: 50000 * current_player.game_scoring_multiplier
   s_drop_3_active:
-    score: 50000
+    score: 50000 * current_player.game_scoring_multiplier
   s_drop_4_active:
-    score: 50000
+    score: 50000 * current_player.game_scoring_multiplier
   s_drop_5_active:
-    score: 50000
+    score: 50000 * current_player.game_scoring_multiplier
 
 slides:
   airlock_one_complete_slide_king:

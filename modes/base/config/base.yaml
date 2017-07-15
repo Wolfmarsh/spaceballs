@@ -20,18 +20,9 @@ show_player:
 
 scoring:
   s_sling_right_active:
-    score: 10000
+    score: 10000 * current_player.game_scoring_multiplier
   s_sling_left_active:
-    score: 10000
-  s_pop_1_active:
-    score: 10000
-    pophits: 1
-  s_pop_2_active:
-    score: 10000
-    pophits: 1
-  s_pop_3_active:
-    score: 10000
-    pophits: 1
+    score: 10000 * current_player.game_scoring_multiplier
 
 sound_player:
   ball_save_default_save_saving_ball:

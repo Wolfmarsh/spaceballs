@@ -38,6 +38,7 @@ modes:
 - spinner
 - diner
 - airlock_multiball
+- pops_base
 
 widget_styles:
   dmd_xl:
@@ -77,7 +78,7 @@ displays:
 window:
   width: 1360 
   height: 768
-  fullscreen: true
+  #fullscreen: true
   borderless: true
   title: Spaceballs
   resizable: false

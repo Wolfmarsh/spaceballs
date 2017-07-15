@@ -40,9 +40,14 @@ coils:
     number: 11
     pulse_ms: 25
 #BEGIN 1616 (12-27)
+  c_pop_flasher:
+    number: 16
+    allow_enable: true
   c_left_orbit_flasher:
     number: 17
     allow_enable: true
+  c_varitarget_reset:
+    number: 18
   c_backboard_activate:
     number: 19
     allow_enable: true

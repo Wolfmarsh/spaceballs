@@ -18,6 +18,8 @@ sounds:
   spaceballs_song:
     target: music
     volume: 0.70
+  hello_my_baby:
+    target: music
   skillshot_2:
     target: voice
     ducking:
