@@ -38,7 +38,8 @@ slide_player:
     diner_chestburster_start_video:
       target: lcd
       expire: 12400ms
-    play_diner_chestburster_end_video{current_player.diner_mode_state_counter_count == 2}:
+  play_diner_chestburster_end_video{current_player.diner_mode_state_counter_count == 2}:
+    diner_chestburster_end_video:
       target: lcd
       expire: 10s
 
@@ -159,6 +160,13 @@ slides:
     widgets:
       - type: video
         video: chestburster_start
+        width: 1280
+        height: 720
+        volume: 0.1
+  diner_chestburster_end_video:
+    widgets:
+      - type: video
+        video: chestburster_end
         width: 1280
         height: 720
         volume: 0.1

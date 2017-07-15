@@ -1,0 +1,33 @@
+#config_version=4
+mode:
+    start_events: ball_starting
+    priority: 1900
+
+combo_switches:
+  pass_through_launch_combo:
+    switches_1: s_left_flipper
+    switches_2: s_launch_button
+
+coil_player:
+  pass_through_launch_combo_both:
+      c_orbit_post:
+         action: enable
+         power: 0.5
+  pass_through_launch_post_drop_request:
+      c_orbit_post:
+         action: disable  
+
+event_player:
+  timer_pass_through_launch_post_drop_timer_complete: pass_through_launch_post_drop_request
+
+timers:
+  pass_through_launch_post_drop_timer:
+    start_value: 3
+    end_value: 0
+    tick_interval: 1s
+    direction: down
+    control_events:
+      - action: start
+        event: pass_through_launch_combo_both
+      - action: reset
+        event: pass_through_launch_combo_both

@@ -1,6 +1,10 @@
 # config_version=4
 
 images:
+  dead_flip_center:
+    file: dead_flip_center.png
+  dead_flip_fill:
+    file: dead_flip_fill.png
   eagle_one:
     file: eagleone.png
   fast_logo:

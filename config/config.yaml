@@ -40,6 +40,7 @@ modes:
 - airlock_multiball
 - pops_base
 - air_lanes
+- orbit_post_launch_behavior
 
 widget_styles:
   dmd_xl:
@@ -94,11 +95,11 @@ player_vars:
   pophits:
     initial_value: 0
 
-#slide_player:
-#  player_add_request:
-#    player_add_videos:
-#      target: lcd
-#      expire: 2s
+slide_player:
+  player_add_request:
+    player_add_videos:
+      target: lcd
+      expire: 2s
 
 slides:
   player_add_video:

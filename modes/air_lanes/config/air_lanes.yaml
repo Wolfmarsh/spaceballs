@@ -3,14 +3,71 @@ mode:
   start_events: ball_starting
   priority: 800
 
-show_player:
-  mode_air_lanes_started:
-    air_lane_selected:
-      loops: -1
-      speed: 1
-      show_tokens:
-        can: rgb_a_can
-        lane: rgb_a_lane
+shots:
+    lane_a:
+        switch: s_air_a_lane
+        profile: air_lane_profile
+        show_tokens:
+            can: rgb_a_can
+            lane: rgb_a_lane
+    lane_i:
+        switch: s_air_i_lane
+        profile: air_lane_profile
+        show_tokens:
+            can: rgb_i_can
+            lane: rgb_i_lane
+    lane_r:
+        switch: s_air_r_lane
+        profile: air_lane_profile
+        show_tokens:
+            can: rgb_r_can
+            lane: rgb_r_lane
 
+shot_groups:
+    air_lanes:
+        shots: lane_a, lane_i, lane_r
+        rotate_left_events: sw_left_flipper
+        rotate_right_events: sw_right_flipper
+        reset_events: air_lanes_complete
+        enable_events: ball_started
+        disable_events: ball_ending
 
+shot_profiles:
+    air_lane_profile:
+      show: air_lane_selected
+      states:
+        - name: unlit
+          show: air_lane_off
+          loops: 0
+        - name: lit
+          show: air_lane_on
 
+slide_player:
+  air_lanes_complete:
+    airlanes_bonus_award_multiplier:
+      target: dmd
+      expire: 1s
+
+scoring:
+  air_lanes_complete:
+    bonus_multiplier: 1
+
+slides:
+  airlanes_bonus_award_multiplier:
+    widgets:
+      - type: text
+        text: AIR LANES COMPLETE
+        style: dmd_big
+        color: 00ff00
+        anchor_y: top
+        anchor_x: middle
+        y: top
+        x: center
+      - type: text
+        text: +1X BONUS
+        color: 00ff00
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: middle
+        y: bottom
+        x: center

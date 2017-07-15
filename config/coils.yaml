@@ -53,6 +53,7 @@ coils:
     allow_enable: true
   c_orbit_post:
     number: 21
+    allow_enable: true
   c_pop_1:
     number: 22
     pulse_ms: 25
