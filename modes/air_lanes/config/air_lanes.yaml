@@ -1,0 +1,16 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 800
+
+show_player:
+  mode_air_lanes_started:
+    air_lane_selected:
+      loops: -1
+      speed: 1
+      show_tokens:
+        can: rgb_a_can
+        lane: rgb_a_lane
+
+
+

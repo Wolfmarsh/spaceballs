@@ -1,0 +1,12 @@
+#show_version=4
+- time: 0
+  leds:
+    (lane): 00ff00-f100ms
+    (can): 00ff00-f100ms
+
+- time: '+300ms'
+  leds:
+    (lane): 000000-f100ms
+    (can): 000000-f100ms
+
+- time: '+300ms'

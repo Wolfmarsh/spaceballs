@@ -38,6 +38,9 @@ slide_player:
     diner_chestburster_start_video:
       target: lcd
       expire: 12400ms
+    play_diner_chestburster_end_video{current_player.diner_mode_state_counter_count == 2}:
+      target: lcd
+      expire: 10s
 
 coil_player:
   start_diner_scoring:
@@ -60,7 +63,7 @@ event_player:
   balldevice_bd_scoop_ball_entered{current_player.diner_mode_state_counter_count == 1}: start_diner_scoring
   timer_diner_scoring_timer_complete: stop_diner_scoring
   ball_will_end: stop_diner_scoring
-  start_diner_scoring: start_diner_mode_music|3000ms
+  start_diner_scoring: start_diner_mode_music|3000ms play_diner_chestburster_end_video|22s
 
 scoring:
   s_middle_target_active:
@@ -158,4 +161,4 @@ slides:
         video: chestburster_start
         width: 1280
         height: 720
-        volume: 0.5
+        volume: 0.1
