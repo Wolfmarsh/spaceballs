@@ -1,9 +1,9 @@
 events:
-  game_ended: 80
-  game_started: 110
+  game_ended: 83
+  game_started: 115
 player:
   score:
-    average: 873775.5102040817
+    average: 861504.9504950495
     top:
     - 4479000
     - 3479000
@@ -15,37 +15,42 @@ player:
     - 1830000
     - 1562000
     - 1504000
-    total: 98
+    total: 101
 shots:
+  airlock_shot_five: 1
+  airlock_shot_four: 1
+  airlock_shot_one: 1
+  airlock_shot_three: 1
+  airlock_shot_two: 1
   lane_a: 3
   lane_i: 9
   lane_r: 12
-  warp_ramp_shot: 66
+  warp_ramp_shot: 67
 switches:
   s_air_a_lane: 23
   s_air_i_lane: 33
   s_air_r_lane: 24
-  s_drop_1: 53
-  s_drop_2: 46
-  s_drop_3: 52
-  s_drop_4: 49
-  s_drop_5: 52
-  s_launch_button: 259
-  s_left_flipper: 695
-  s_left_inlane: 33
+  s_drop_1: 54
+  s_drop_2: 47
+  s_drop_3: 53
+  s_drop_4: 50
+  s_drop_5: 53
+  s_launch_button: 262
+  s_left_flipper: 697
+  s_left_inlane: 34
   s_left_outlane: 21
-  s_left_spinner: 1557
+  s_left_spinner: 1559
   s_middle_target: 87
-  s_plunger_lane: 290
+  s_plunger_lane: 296
   s_pop_1: 106
   s_pop_2: 120
   s_pop_3: 51
   s_pop_sneak: 59
-  s_ramp_entry: 93
-  s_ramp_exit: 74
+  s_ramp_entry: 94
+  s_ramp_exit: 75
   s_right_flipper: 806
   s_right_inlane: 75
-  s_right_orbit: 71
+  s_right_orbit: 72
   s_right_outlane: 16
   s_saucer: 61
   s_sbone_entry: 96
@@ -65,10 +70,10 @@ switches:
   s_sling_left: 77
   s_sling_right: 89
   s_start: 23
-  s_trough1: 206
-  s_trough2: 206
-  s_trough3: 207
-  s_trough4: 188
-  s_trough5: 187
-  s_trough6: 190
-  s_trough_jam: 217
+  s_trough1: 211
+  s_trough2: 211
+  s_trough3: 212
+  s_trough4: 191
+  s_trough5: 190
+  s_trough6: 193
+  s_trough_jam: 222

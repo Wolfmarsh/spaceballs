@@ -33,6 +33,8 @@ images:
     file: perriair_logo.png
   planet_druidia:
     file: planetdruidia.png
+  skillshot_instructions:
+    file: skillshot_instructions.png
   splash_screen:
     file: spaceballs_spash_screen.jpg
   virgin_alarm:

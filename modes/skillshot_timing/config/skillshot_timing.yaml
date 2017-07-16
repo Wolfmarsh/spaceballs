@@ -65,6 +65,9 @@ show_player:
         award_color: ff0000
 
 slide_player:
+  mode_skillshot_timing_started:
+    skillshot_instructions_slide:
+      target: lcd
   skillshot_timing_bonusawardmax:
     skillshot_bonus_award_multiplier:
       target: dmd
@@ -81,6 +84,10 @@ slide_player:
     skillshot_bonus_award_failure:
       target: dmd
       expire: 1
+  skillshot_award_step:
+    skillshot_instructions_slide:
+      target: lcd
+      action: remove
 
 event_player:
   sw_launch{current_player.skillshot_level_counter_count==4 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardmax skillshot_award_step
@@ -104,6 +111,14 @@ logic_blocks:
       reset_events: mode_skillshot_timing_started
 
 slides:
+  skillshot_instructions_slide:
+    widgets:
+      - type: image
+        image: skillshot_instructions
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0  
   skillshot_bonus_award_multiplier:
     widgets:
       - type: text
