@@ -1,0 +1,10 @@
+#show_version=4
+- time: 0
+  leds:
+    (targetled): 00ffff
+
+- time: '+350ms'
+  leds:
+    (targetled): 000000
+
+- time: '+350ms'

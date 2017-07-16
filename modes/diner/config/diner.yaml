@@ -38,10 +38,16 @@ slide_player:
     diner_chestburster_start_video:
       target: lcd
       expire: 12400ms
+      priority: 2
   play_diner_chestburster_end_video{current_player.diner_mode_state_counter_count == 2}:
     diner_chestburster_end_video:
       target: lcd
-      expire: 10s
+      expire: 8s
+      priority: 4
+  player_diner_diner_scoring_timer_tick(value < 19):
+    diner_scoring_instructions:
+      target: lcd
+      priority: 3
 
 coil_player:
   start_diner_scoring:
@@ -64,7 +70,7 @@ event_player:
   balldevice_bd_scoop_ball_entered{current_player.diner_mode_state_counter_count == 1}: start_diner_scoring
   timer_diner_scoring_timer_complete: stop_diner_scoring
   ball_will_end: stop_diner_scoring
-  start_diner_scoring: start_diner_mode_music|3000ms play_diner_chestburster_end_video|22s
+  start_diner_scoring: start_diner_mode_music|2000ms play_diner_chestburster_end_video|22000ms
 
 scoring:
   s_middle_target_active:
@@ -156,17 +162,33 @@ slides:
         anchor_x: center
         y: bottom
         x: center
+  diner_scoring_instructions:
+    widgets:
+      - type: text
+        text: (value)
+        color: ffffff
+        font_size: 50
+        anchor_y: top
+        anchor_x: center
+        y: center
+        x: center
+      - type: image
+        image: double_scoring_active
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
   diner_chestburster_start_video:
     widgets:
       - type: video
         video: chestburster_start
         width: 1280
         height: 720
-        volume: 0.1
+        volume: 0.08
   diner_chestburster_end_video:
     widgets:
       - type: video
         video: chestburster_end
         width: 1280
         height: 720
-        volume: 0.1
+        volume: 0.6

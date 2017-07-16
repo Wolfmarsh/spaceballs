@@ -4,53 +4,48 @@ mode:
   start_events: ball_starting
   priority: 1400
 
-show_player:
-  mode_airlock_multiball_started:
-    airlock_one_ready:
-      loops: -1
-      speed: 1
-    airlock_two_ready:
-      loops: -1
-      speed: 1
-    airlock_three_ready:
-      loops: -1
-      speed: 1
-    airlock_four_ready:
-      loops: -1
-      speed: 1
-    airlock_five_ready:
-      loops: -1
-      speed: 1
-  s_drop_1_active:
-    airlock_one_ready:
-      action: stop
-    airlock_one_lit:
-      loops: -1
-      speed: 1
-  s_drop_2_active:
-    airlock_two_ready:
-      action: stop
-    airlock_two_lit:
-      loops: -1
-      speed: 1
-  s_drop_3_active:
-    airlock_three_ready:
-      action: stop
-    airlock_three_lit:
-      loops: -1
-      speed: 1
-  s_drop_4_active:
-    airlock_four_ready:
-      action: stop
-    airlock_four_lit:
-      loops: -1
-      speed: 1
-  s_drop_5_active:
-    airlock_five_ready:
-      action: stop
-    airlock_five_lit:
-      loops: -1
-      speed: 1
+shots:
+  airlock_shot_one:
+    switch: s_drop_1
+    profile: airlock_target_profile
+    show_tokens:
+       targetled: rgb_drop_1
+  airlock_shot_two:
+    switch: s_drop_2
+    profile: airlock_target_profile
+    show_tokens:
+       targetled: rgb_drop_2
+  airlock_shot_three:
+    switch: s_drop_3
+    profile: airlock_target_profile
+    show_tokens:
+       targetled: rgb_drop_3
+  airlock_shot_four:
+    switch: s_drop_4
+    profile: airlock_target_profile
+    show_tokens:
+       targetled: rgb_drop_4
+  airlock_shot_five:
+    switch: s_drop_5
+    profile: airlock_target_profile
+    show_tokens:
+       targetled: rgb_drop_5
+
+shot_profiles:
+  airlock_target_profile:
+    states:
+      - name: unlit
+        show: airlock_target_pending
+        loops: -1
+      - name: lit
+        show: airlock_target_on
+
+shot_groups:
+  airlock_drops:
+    shots: airlock_shot_one, airlock_shot_two, airlock_shot_three, airlock_shot_four, airlock_shot_five
+    reset_events: airlock_drops_complete
+    enable_events: ball_started
+    disable_events: ball_ending
 
 slide_player:
   s_drop_1_active:
@@ -100,6 +95,8 @@ scoring:
     score: 50000 * current_player.game_scoring_multiplier
   s_drop_5_active:
     score: 50000 * current_player.game_scoring_multiplier
+  airlock_drops_complete:
+    score: 1000000 * current_player.game_scoring_multiplier
 
 slides:
   airlock_one_complete_slide_king:

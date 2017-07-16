@@ -42,13 +42,17 @@ modes:
 - air_lanes
 - orbit_post_launch_behavior
 
+
 widget_styles:
   dmd_xl:
-      font_name: Quadrit
-      font_size: 15
-      adjust_bottom: 7
-      adjust_top: 3
-
+    font_name: Quadrit
+    font_size: 15
+    adjust_bottom: 7
+    adjust_top: 3
+  large_lcd_text:
+    font_name: Quadrit
+    font_size: 80
+      
 sound_system:
   buffer: 2048  # previous value was 512
   frequency: 44100
@@ -80,7 +84,7 @@ displays:
 window:
   width: 1360 
   height: 768
-  #fullscreen: true
+  fullscreen: true
   borderless: true
   title: Spaceballs
   resizable: false

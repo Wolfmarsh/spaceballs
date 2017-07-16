@@ -19,7 +19,14 @@ sounds:
     target: music
     volume: 0.70
   hello_my_baby:
-    target: music
+    target: sfx
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 22 sec
+      release: 5.0 sec
   skillshot_2:
     target: voice
     ducking:

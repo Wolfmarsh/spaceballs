@@ -117,11 +117,11 @@ slide_player:
       expire: 4300ms
 
 multiballs:
-    plaid_multiball:
-        ball_count: 3
-        ball_count_type: total
-        shoot_again: 10s
-        start_events: logicblock_warp_ramp_level_counter_complete
+  plaid_multiball:
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    start_events: logicblock_warp_ramp_level_counter_complete
     
 logic_blocks:
   counters:
