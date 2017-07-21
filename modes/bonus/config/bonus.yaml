@@ -1,6 +1,7 @@
 #config_version=4
 
 mode_settings:
+  display_delay_ms: 1000ms
   keep_multiplier: false
   bonus_entries:
       - event: bonus_pops
@@ -33,6 +34,27 @@ slide_player:
   bonus_total:
     bonus_award_total:
       target: dmd
+
+sound_player:
+  bonus_start:
+    pinball_pop_bumper:
+      action: play
+  bonus_pops:
+    pinball_pop_bumper:
+      action: play
+  bonus_spins:
+    pinball_pop_bumper:
+      action: play
+  bonus_subtotal:
+    pinball_pop_bumper:
+      action: play
+  bonus_multiplier:
+    pinball_pop_bumper:
+      action: play
+  bonus_total:
+    pinball_pop_bumper:
+      action: play
+  
 
 slides:
   bonus_award_start:

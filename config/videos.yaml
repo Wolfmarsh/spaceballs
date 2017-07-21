@@ -28,7 +28,7 @@ videos:
     file: Chestburster_End.mp4
   chestburster_start:
     file: Chestburster_Start.mp4
-    #events_when_stopped: chestburster_start_video_stopped
+    events_when_stopped: chestburster_start_video_stopped
   darkhelmet_flying_forward:
     file: Dark_Helmet_Flying_Forward.mp4
   darkhelmet_lightspeed_flying:

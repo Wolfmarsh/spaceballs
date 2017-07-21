@@ -4,6 +4,8 @@ mode:
   stop_events: mode_attract_stopped
   priority: 400
   game_mode: false
+  code: dead_flip.dead_flip
+
 
 #dead flip code
 #Both, 4L, 1R, 5L, 1R, 1L, 2R

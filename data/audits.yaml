@@ -1,79 +1,81 @@
 events:
-  game_ended: 83
-  game_started: 115
+  game_ended: 100
+  game_started: 142
 player:
   score:
-    average: 861504.9504950495
+    average: 967016.393442623
     top:
+    - 5236000
     - 4479000
+    - 4315000
+    - 4221000
     - 3479000
     - 3235000
     - 2916000
-    - 1943000
-    - 1878000
-    - 1870000
-    - 1830000
-    - 1562000
-    - 1504000
-    total: 101
+    - 2808000
+    - 2438000
+    - 2342000
+    total: 122
 shots:
-  airlock_shot_five: 1
-  airlock_shot_four: 1
-  airlock_shot_one: 1
-  airlock_shot_three: 1
-  airlock_shot_two: 1
-  lane_a: 3
-  lane_i: 9
-  lane_r: 12
-  warp_ramp_shot: 67
+  airlock_shot_five: 22
+  airlock_shot_four: 24
+  airlock_shot_one: 19
+  airlock_shot_three: 24
+  airlock_shot_two: 19
+  lane_a: 12
+  lane_i: 18
+  lane_r: 20
+  left_orbit_complete_shot: 26
+  right_orbit_complete_shot: 29
+  warp_ramp_shot: 103
 switches:
-  s_air_a_lane: 23
-  s_air_i_lane: 33
-  s_air_r_lane: 24
-  s_drop_1: 54
-  s_drop_2: 47
-  s_drop_3: 53
-  s_drop_4: 50
-  s_drop_5: 53
-  s_launch_button: 262
-  s_left_flipper: 697
-  s_left_inlane: 34
-  s_left_outlane: 21
-  s_left_spinner: 1559
-  s_middle_target: 87
-  s_plunger_lane: 296
-  s_pop_1: 106
-  s_pop_2: 120
-  s_pop_3: 51
-  s_pop_sneak: 59
-  s_ramp_entry: 94
-  s_ramp_exit: 75
-  s_right_flipper: 806
-  s_right_inlane: 75
-  s_right_orbit: 72
-  s_right_outlane: 16
-  s_saucer: 61
-  s_sbone_entry: 96
-  s_sbone_left_orbit: 4
-  s_sbone_lock_1: 28
-  s_sbone_lock_2: 28
-  s_sbone_lock_3: 28
-  s_sbone_right_orbit: 4
+  s_air_a_lane: 32
+  s_air_i_lane: 42
+  s_air_r_lane: 32
+  s_drop_1: 72
+  s_drop_2: 65
+  s_drop_3: 76
+  s_drop_4: 73
+  s_drop_5: 74
+  s_launch_button: 317
+  s_left_flipper: 1025
+  s_left_inlane: 60
+  s_left_outlane: 33
+  s_left_spinner: 2255
+  s_middle_target: 133
+  s_plunger_lane: 395
+  s_pop_1: 142
+  s_pop_2: 151
+  s_pop_3: 75
+  s_pop_sneak: 96
+  s_ramp_entry: 139
+  s_ramp_exit: 111
+  s_right_flipper: 1257
+  s_right_inlane: 120
+  s_right_orbit: 125
+  s_right_outlane: 33
+  s_saucer: 109
+  s_sbone_entry: 137
+  s_sbone_left_orbit: 34
+  s_sbone_lock_1: 36
+  s_sbone_lock_2: 36
+  s_sbone_lock_3: 36
+  s_sbone_right_orbit: 25
   s_schwartz_power_1: 0
   s_schwartz_power_2: 0
   s_schwartz_power_3: 0
   s_schwartz_power_4: 0
   s_schwartz_power_5: 0
   s_schwartz_power_6: 0
-  s_schwartz_power_7: 86
-  s_scoop: 62
-  s_sling_left: 77
-  s_sling_right: 89
-  s_start: 23
-  s_trough1: 211
-  s_trough2: 211
-  s_trough3: 212
-  s_trough4: 191
-  s_trough5: 190
-  s_trough6: 193
-  s_trough_jam: 222
+  s_schwartz_power_7: 90
+  s_scoop: 103
+  s_sling_left: 134
+  s_sling_right: 141
+  s_start: 30
+  s_trough1: 293
+  s_trough2: 293
+  s_trough3: 294
+  s_trough4: 264
+  s_trough5: 263
+  s_trough6: 270
+  s_trough_jam: 304

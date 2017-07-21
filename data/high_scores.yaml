@@ -12,5 +12,5 @@ score:
   - QC
   - 7500000
 - !!python/tuple
-  - JAM
-  - 4479000
+  - BAD
+  - 5236000

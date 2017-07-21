@@ -1,0 +1,15 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 900
+
+shots:
+  left_orbit_complete_shot:
+    switch_sequence: s_left_spinner, s_right_orbit
+    time: 3s
+  right_orbit_complete_shot:
+    switch_sequence: s_right_orbit, s_left_spinner
+    time: 3s
+
+#left_orbit_complete_shot_hit
+#right_orbit_complete_shot_hit

@@ -31,23 +31,31 @@ slide_player:
     diner_mode_lit:
       target: dmd
       expire: 1
+  play_diner_chestburster_start_video:
+    diner_chestburster_start_video:
+      target: lcd
+      priority: 4
   start_diner_scoring:
     diner_mode_active:
       target: dmd
       expire: 2
+  chestburster_start_video_stopped:
     diner_chestburster_start_video:
       target: lcd
-      expire: 12400ms
-      priority: 2
+      action: remove
   play_diner_chestburster_end_video{current_player.diner_mode_state_counter_count == 2}:
     diner_chestburster_end_video:
       target: lcd
       expire: 8s
       priority: 4
-  player_diner_diner_scoring_timer_tick(value < 19):
+  timer_diner_scoring_timer_tick:
     diner_scoring_instructions:
       target: lcd
       priority: 3
+  timer_diner_scoring_timer_stopped:
+    diner_scoring_instructions:
+      target: lcd
+      action: remove
 
 coil_player:
   start_diner_scoring:
@@ -67,10 +75,12 @@ sound_player:
       action: stop
 
 event_player:
-  balldevice_bd_scoop_ball_entered{current_player.diner_mode_state_counter_count == 1}: start_diner_scoring
+  balldevice_bd_scoop_ball_entered{current_player.diner_mode_state_counter_count == 1}: play_diner_chestburster_start_video start_diner_mode_music|800ms
+  balldevice_bd_scoop_ejecting_ball{current_player.diner_mode_state_counter_count == 1}: start_diner_scoring
   timer_diner_scoring_timer_complete: stop_diner_scoring
+  timer_diner_scoring_timer_stopped: stop_diner_scoring
   ball_will_end: stop_diner_scoring
-  start_diner_scoring: start_diner_mode_music|2000ms play_diner_chestburster_end_video|22000ms
+  timer_diner_scoring_timer_tick{ticks == 5}: play_diner_chestburster_end_video
 
 scoring:
   s_middle_target_active:
@@ -86,7 +96,7 @@ scoring:
 
 timers:
   diner_scoring_timer:
-    start_value: 30
+    start_value: 25
     end_value: 0
     tick_interval: 1s
     direction: down
@@ -165,7 +175,7 @@ slides:
   diner_scoring_instructions:
     widgets:
       - type: text
-        text: (value)
+        text: (ticks)
         color: ffffff
         font_size: 50
         anchor_y: top

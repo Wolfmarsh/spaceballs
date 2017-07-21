@@ -1,7 +1,7 @@
 #config_version=4
 
 game:
-  balls_per_game: 1
+  balls_per_game: 3
 
 hardware:
   platform: fast
@@ -41,6 +41,8 @@ modes:
 - pops_base
 - air_lanes
 - orbit_post_launch_behavior
+- orbits_base
+- dead_flip
 
 
 widget_styles:
@@ -84,7 +86,7 @@ displays:
 window:
   width: 1360 
   height: 768
-  #fullscreen: true
+  fullscreen: true
   borderless: true
   title: Spaceballs
   resizable: false
@@ -99,11 +101,11 @@ player_vars:
   pophits:
     initial_value: 0
 
-slide_player:
-  player_add_request:
-    player_add_videos:
-      target: lcd
-      expire: 2s
+# slide_player:
+  # player_add_request:
+    # player_add_video:
+      # target: lcd
+      # expire: 2s
 
 slides:
   player_add_video:
@@ -134,7 +136,7 @@ ball_saves:
     hurry_up_time: 2s
     grace_period: 1s
     enable_events: mode_base_started
-    timer_start_events: balldevice_bd_trough_ball_eject_success
+    timer_start_events: skillshot_award_step
     auto_launch: yes
     balls_to_save: 1
-
+#balldevice_bd_trough_ball_eject_success

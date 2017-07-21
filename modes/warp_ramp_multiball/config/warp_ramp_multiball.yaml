@@ -118,7 +118,7 @@ slide_player:
 
 multiballs:
   plaid_multiball:
-    ball_count: 3
+    ball_count: 4
     ball_count_type: total
     shoot_again: 10s
     start_events: logicblock_warp_ramp_level_counter_complete
@@ -132,6 +132,7 @@ logic_blocks:
       enable_events: mode_warp_ramp_multiball_started multiball_plaid_multiball_ended
       disable_events: multiball_plaid_multiball_started
       reset_events: multiball_plaid_multiball_ended
+      persist_state: true
 
 slides:
   warp_ramp_lightspeed_achieved_videoslide:

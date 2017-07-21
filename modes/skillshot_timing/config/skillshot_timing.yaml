@@ -24,12 +24,19 @@ sound_player:
   skillshot_timing_bonusawardmax:
     skillshot_2:
       action: play
+  skillshot_timing_bonusaward2:
+    launchboom_1:
+      action: play
+  skillshot_timing_bonusaward1:
+    launchboom_1:
+      action: play
+  
 
 show_player:
   mode_skillshot_timing_started:
     skillshot_timing_crawl:
       loops: -1
-      speed: 4
+      speed: 6
   skillshot_timing_bonusawardmax:
     skillshot_timing_crawl:
       action: stop

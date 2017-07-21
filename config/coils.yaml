@@ -29,16 +29,16 @@ coils:
     allow_enable: true
   c_sling_right:
     number: 8
-    pulse_ms: 25
+    pulse_ms: 15
   c_sling_left:
     number: 9
-    pulse_ms: 25
+    pulse_ms: 15
   c_trough_eject:
     number: 10
     pulse_ms: 25
   c_plunger_eject:
     number: 11
-    pulse_ms: 25
+    pulse_ms: 30
 #BEGIN 1616 (12-27)
   c_pop_flasher:
     number: 16
@@ -48,6 +48,7 @@ coils:
     allow_enable: true
   c_varitarget_reset:
     number: 18
+    pulse_ms: 50
   c_backboard_activate:
     number: 19
     allow_enable: true
@@ -65,7 +66,7 @@ coils:
     pulse_ms: 25
   c_saucer_eject:
     number: 25
-    pulse_ms: 50
+    pulse_ms: 20
   c_scoop_eject:
     number: 26
     pulse_ms: 50

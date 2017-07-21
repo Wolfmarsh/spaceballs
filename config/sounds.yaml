@@ -15,6 +15,8 @@ assets:
       track: music
 
 sounds:
+  elevator_ding:
+    volume: 0.40
   spaceballs_song:
     target: music
     volume: 0.70
@@ -25,8 +27,8 @@ sounds:
       delay: 0
       attack: 0.3 sec
       attenuation: 0.15
-      release_point: 22 sec
-      release: 5.0 sec
+      release_point: 0.5 sec
+      release: 2.0 sec
   skillshot_2:
     target: voice
     ducking:

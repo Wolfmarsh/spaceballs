@@ -47,6 +47,17 @@ shot_groups:
     enable_events: ball_started
     disable_events: ball_ending
 
+multiballs:
+  add_a_ball:
+    ball_count: 1
+    ball_count_type: add
+    shoot_again: 10s
+    enable_events: mode_airlock_multiball_started
+    add_a_ball_events: airlock_multiball_gimme_another_ball
+    disable_events: ball_ending
+    start_events: airlock_drops_complete
+    stop_events: ball_ending
+
 slide_player:
   s_drop_1_active:
     airlock_one_complete_slide:

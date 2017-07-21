@@ -1,4 +1,4 @@
 #show_version=4
 - time: 0
   leds:
-    rgb_scoop_arrow_2: ffffff
+    rgb_scoop_arrow_1: ffffff
