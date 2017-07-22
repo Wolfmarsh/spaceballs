@@ -1,9 +1,9 @@
 events:
-  game_ended: 100
-  game_started: 142
+  game_ended: 104
+  game_started: 150
 player:
   score:
-    average: 967016.393442623
+    average: 955666.6666666666
     top:
     - 5236000
     - 4479000
@@ -15,46 +15,46 @@ player:
     - 2808000
     - 2438000
     - 2342000
-    total: 122
+    total: 126
 shots:
-  airlock_shot_five: 22
+  airlock_shot_five: 23
   airlock_shot_four: 24
-  airlock_shot_one: 19
-  airlock_shot_three: 24
-  airlock_shot_two: 19
+  airlock_shot_one: 23
+  airlock_shot_three: 25
+  airlock_shot_two: 22
   lane_a: 12
-  lane_i: 18
-  lane_r: 20
+  lane_i: 21
+  lane_r: 21
   left_orbit_complete_shot: 26
   right_orbit_complete_shot: 29
-  warp_ramp_shot: 103
+  warp_ramp_shot: 105
 switches:
   s_air_a_lane: 32
-  s_air_i_lane: 42
-  s_air_r_lane: 32
-  s_drop_1: 72
-  s_drop_2: 65
-  s_drop_3: 76
+  s_air_i_lane: 45
+  s_air_r_lane: 33
+  s_drop_1: 76
+  s_drop_2: 68
+  s_drop_3: 77
   s_drop_4: 73
-  s_drop_5: 74
-  s_launch_button: 317
+  s_drop_5: 75
+  s_launch_button: 329
   s_left_flipper: 1025
-  s_left_inlane: 60
-  s_left_outlane: 33
-  s_left_spinner: 2255
+  s_left_inlane: 63
+  s_left_outlane: 34
+  s_left_spinner: 2300
   s_middle_target: 133
-  s_plunger_lane: 395
-  s_pop_1: 142
-  s_pop_2: 151
-  s_pop_3: 75
-  s_pop_sneak: 96
-  s_ramp_entry: 139
-  s_ramp_exit: 111
-  s_right_flipper: 1257
-  s_right_inlane: 120
-  s_right_orbit: 125
+  s_plunger_lane: 408
+  s_pop_1: 144
+  s_pop_2: 157
+  s_pop_3: 81
+  s_pop_sneak: 97
+  s_ramp_entry: 141
+  s_ramp_exit: 113
+  s_right_flipper: 1258
+  s_right_inlane: 121
+  s_right_orbit: 128
   s_right_outlane: 33
-  s_saucer: 109
+  s_saucer: 112
   s_sbone_entry: 137
   s_sbone_left_orbit: 34
   s_sbone_lock_1: 36
@@ -67,15 +67,15 @@ switches:
   s_schwartz_power_4: 0
   s_schwartz_power_5: 0
   s_schwartz_power_6: 0
-  s_schwartz_power_7: 90
-  s_scoop: 103
-  s_sling_left: 134
-  s_sling_right: 141
+  s_schwartz_power_7: 91
+  s_scoop: 111
+  s_sling_left: 163
+  s_sling_right: 166
   s_start: 30
-  s_trough1: 293
-  s_trough2: 293
-  s_trough3: 294
-  s_trough4: 264
-  s_trough5: 263
-  s_trough6: 270
-  s_trough_jam: 304
+  s_trough1: 306
+  s_trough2: 304
+  s_trough3: 305
+  s_trough4: 275
+  s_trough5: 277
+  s_trough6: 283
+  s_trough_jam: 318

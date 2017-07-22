@@ -3,7 +3,6 @@ import random
 
 class dead_flip(Mode):
 
-# runs on MPF boot when the mode is read in and set up.
     def mode_init(self):
         self.log.info('dead_flip mode_init')
 
@@ -34,6 +33,7 @@ class dead_flip(Mode):
                 self.sequence_pos = 0
             if self.sequence_pos >= len(self.dead_flip_sequence):
                 self.machine.events.post('dead_flip_code_successfully_activated')
+                self.sequence_pos = 0
 
     def flipper_right(self, **kwargs):
         if self.sequence_pos > 0:
@@ -46,6 +46,7 @@ class dead_flip(Mode):
                 self.sequence_pos = 0
             if self.sequence_pos >= len(self.dead_flip_sequence):
                 self.machine.events.post('dead_flip_code_successfully_activated')
+                self.sequence_pos = 0
 
     def mode_stop(self, **kwargs):
         self.machine.events.post('dead_flip mode_ended')

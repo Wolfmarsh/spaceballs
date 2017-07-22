@@ -16,7 +16,7 @@ assets:
 
 sounds:
   elevator_ding:
-    volume: 0.40
+    volume: 0.30
   spaceballs_song:
     target: music
     volume: 0.70

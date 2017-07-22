@@ -37,22 +37,22 @@ slide_player:
 
 sound_player:
   bonus_start:
-    pinball_pop_bumper:
+    elevator_ding:
       action: play
   bonus_pops:
     pinball_pop_bumper:
       action: play
   bonus_spins:
-    pinball_pop_bumper:
+    spinner_beep_1:
       action: play
   bonus_subtotal:
-    pinball_pop_bumper:
+    elevator_ding:
       action: play
   bonus_multiplier:
-    pinball_pop_bumper:
+    elevator_ding:
       action: play
   bonus_total:
-    pinball_pop_bumper:
+    elevator_ding:
       action: play
   
 

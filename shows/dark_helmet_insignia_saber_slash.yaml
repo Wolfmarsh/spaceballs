@@ -1,0 +1,332 @@
+# show_version=4
+- time: 0
+  leds:
+      rgb_insignia_1: '008E00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '00A100'
+      rgb_insignia_7: '000700'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '00B300'
+      rgb_insignia_7: '002D00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '00C600'
+      rgb_insignia_6: '000300'
+      rgb_insignia_7: '005500'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '00DA00'
+      rgb_insignia_6: '002400'
+      rgb_insignia_7: '007D00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '00ED00'
+      rgb_insignia_6: '004500'
+      rgb_insignia_7: '00A500'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '00FF00'
+      rgb_insignia_6: '006600'
+      rgb_insignia_7: '00CD00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_6: '008700'
+      rgb_insignia_7: '00F600'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_6: '00A900'
+      rgb_insignia_7: '00FF00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_6: '00CB00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_6: '00EE00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_6: '00FF00'
+    
+#No change this frame - take another step
+#  leds:
+- time: '+1'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_8: '000D00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_8: '003A00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_8: '008600'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_7: '00EF00'
+      rgb_insignia_8: '00B300'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_5: '000500'
+      rgb_insignia_7: '00C200'
+      rgb_insignia_8: '00E100'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '001000'
+      rgb_insignia_5: '002900'
+      rgb_insignia_7: '009200'
+      rgb_insignia_8: '00FE00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '002400'
+      rgb_insignia_5: '004800'
+      rgb_insignia_7: '006800'
+      rgb_insignia_8: '00FF00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '003B00'
+      rgb_insignia_5: '006C00'
+      rgb_insignia_6: '00FE00'
+      rgb_insignia_7: '003D00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '00FE00'
+      rgb_insignia_2: '004F00'
+      rgb_insignia_5: '008D00'
+      rgb_insignia_6: '00E700'
+      rgb_insignia_7: '001700'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '006200'
+      rgb_insignia_5: '00AD00'
+      rgb_insignia_6: '00C200'
+      rgb_insignia_7: '000000'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '00E400'
+      rgb_insignia_2: '007B00'
+      rgb_insignia_5: '00D200'
+      rgb_insignia_6: '009800'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '00CD00'
+      rgb_insignia_2: '008F00'
+      rgb_insignia_5: '00F300'
+      rgb_insignia_6: '007300'
+      rgb_insignia_9: '000600'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '00B700'
+      rgb_insignia_2: '00A200'
+      rgb_insignia_5: '00FE00'
+      rgb_insignia_6: '005400'
+      rgb_insignia_8: '00FE00'
+      rgb_insignia_9: '003200'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '009900'
+      rgb_insignia_2: '00BD00'
+      rgb_insignia_5: '00FF00'
+      rgb_insignia_6: '002E00'
+      rgb_insignia_8: '00EB00'
+      rgb_insignia_9: '006300'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '008400'
+      rgb_insignia_2: '00D000'
+      rgb_insignia_6: '000E00'
+      rgb_insignia_8: '00BA00'
+      rgb_insignia_9: '008F00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '006800'
+      rgb_insignia_2: '00EB00'
+      rgb_insignia_6: '000000'
+      rgb_insignia_8: '008200'
+      rgb_insignia_9: '00C100'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '005500'
+      rgb_insignia_2: '00FE00'
+      rgb_insignia_8: '005600'
+      rgb_insignia_9: '00ED00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '002900'
+      rgb_insignia_2: '00FF00'
+      rgb_insignia_8: '001400'
+      rgb_insignia_9: '00FF00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '000F00'
+      rgb_insignia_8: '000000'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_1: '000000'
+      rgb_insignia_4: '001100'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_4: '003700'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_4: '005400'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_4: '007100'
+      rgb_insignia_5: '00F100'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_4: '009800'
+      rgb_insignia_5: '00C500'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_4: '00B500'
+      rgb_insignia_5: '00A400'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_3: '000500'
+      rgb_insignia_4: '00D100'
+      rgb_insignia_5: '008300'
+      rgb_insignia_9: '00D400'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_3: '002600'
+      rgb_insignia_4: '00F900'
+      rgb_insignia_5: '005B00'
+      rgb_insignia_9: '009B00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_3: '003D00'
+      rgb_insignia_4: '00FF00'
+      rgb_insignia_5: '003F00'
+      rgb_insignia_9: '007000'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_3: '005E00'
+      rgb_insignia_5: '001800'
+      rgb_insignia_9: '003E00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_3: '007400'
+      rgb_insignia_5: '000000'
+      rgb_insignia_9: '001800'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_3: '008A00'
+      rgb_insignia_9: '000000'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_3: '00AC00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '00E400'
+      rgb_insignia_3: '00DB00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '00C400'
+      rgb_insignia_3: '00FE00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '00B200'
+      rgb_insignia_3: '00FF00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '00A100'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '008100'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '007100'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '006300'
+      rgb_insignia_4: '00EE00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '004800'
+      rgb_insignia_4: '00C300'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '003B00'
+      rgb_insignia_4: '00A800'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '001F00'
+      rgb_insignia_4: '007C00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '001300'
+      rgb_insignia_4: '006400'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '000600'
+      rgb_insignia_4: '004E00'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_2: '000000'
+      rgb_insignia_4: '002900'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_4: '001400'
+    
+- time: '+1'
+  leds:
+      rgb_insignia_4: '000000'
+    

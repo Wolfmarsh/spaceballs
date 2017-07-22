@@ -16,13 +16,7 @@ show_player:
   ball_save_default_save_timer_start:
     ball_saver_timer_show:
       loops: 0
-      speed: 1    
-
-scoring:
-  s_sling_right_active:
-    score: 10000 * current_player.game_scoring_multiplier
-  s_sling_left_active:
-    score: 10000 * current_player.game_scoring_multiplier
+      speed: 1
 
 sound_player:
   ball_save_default_save_saving_ball:

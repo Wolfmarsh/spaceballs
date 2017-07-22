@@ -1,0 +1,38 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 500
+
+sound_player:
+  s_sling_right_active:
+    light_saber_swing_sound_pool:
+      action: play
+  s_sling_left_active:
+    light_saber_swing_sound_pool:
+      action: play
+
+show_player:
+  s_sling_left_active:
+    dark_helmet_insignia_saber_slash:
+      loops: 0
+      speed: 130
+  s_sling_right_active:
+    lonestar_insignia_saber_slash:
+      loops: 0
+      speed: 130
+
+scoring:
+  s_sling_right_active:
+    score: 10000 * current_player.game_scoring_multiplier
+  s_sling_left_active:
+    score: 10000 * current_player.game_scoring_multiplier
+
+sound_pools:
+  light_saber_swing_sound_pool:
+    load: preload
+    type: random
+    sounds:
+      - light_saber_swing_1
+      - light_saber_swing_2
+      - light_saber_swing_3
+      - light_saber_swing_4
