@@ -1,5 +1,22 @@
 #config_version=4
 
+slide_player:
+  dead_flip_code_successfully_activated:
+    dead_flip_mode_activated:
+      target: dmd
+      expire: 2s
+      priority: 2
+
+slides:
+  dead_flip_mode_activated:
+    widgets:
+      - type: image
+        image: dead_flip_fill
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+
 show_player:
   mode_attract_started:
     flash_start_button:
