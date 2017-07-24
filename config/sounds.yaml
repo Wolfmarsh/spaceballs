@@ -14,6 +14,14 @@ assets:
       load: preload
       track: music
 
+sound_pools:
+  multiball_callout_sound_pool:
+    load: preload
+    type: random
+    sounds:
+      - multiball_1
+      - multiball_2
+
 sounds:
   elevator_ding:
     volume: 0.30

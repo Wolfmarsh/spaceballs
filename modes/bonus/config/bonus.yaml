@@ -8,12 +8,12 @@ mode_settings:
         score: 10000
         player_score_entry: pophits
         reset_player_score_entry: True
-        skip_if_zero: false
+        skip_if_zero: true
       - event: bonus_spins
         score: 2000
         player_score_entry: spinnerhits
         reset_player_score_entry: True
-        skip_if_zero: false
+        skip_if_zero: true
 
 slide_player:
   bonus_start:
@@ -37,7 +37,7 @@ slide_player:
 
 sound_player:
   bonus_start:
-    elevator_ding:
+    tonal_stab_1:
       action: play
   bonus_pops:
     pinball_pop_bumper:
@@ -46,10 +46,10 @@ sound_player:
     spinner_beep_1:
       action: play
   bonus_subtotal:
-    elevator_ding:
+    tonal_stab_1:
       action: play
   bonus_multiplier:
-    elevator_ding:
+    tonal_stab_1:
       action: play
   bonus_total:
     elevator_ding:

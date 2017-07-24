@@ -3,6 +3,11 @@ mode:
   start_events: ball_starting
   priority: 800
 
+sound_player:
+  pop_bumpers_hit:
+    pop_bumper_hit_sound_pool:
+      action: play
+
 show_player:
   pop_bumpers_hit:
     pops_flash:
@@ -36,3 +41,14 @@ scoring:
   s_pop_3_active:
     score: 10000 * current_player.game_scoring_multiplier
     pophits: 1
+
+sound_pools:
+  pop_bumper_hit_sound_pool:
+    load: preload
+    type: random
+    sounds:
+      - pop_bumper_1
+      - pop_bumper_2
+      - pop_bumper_3
+      - pop_bumper_4
+      - pop_bumper_5

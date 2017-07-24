@@ -4,29 +4,44 @@ mode:
   start_events: ball_starting
   priority: 1400
 
+sound_player:
+  airlock_drops_complete:
+    multiball_callout_sound_pool:
+      action: play
+
 shots:
   airlock_shot_one:
     switch: s_drop_1
     profile: airlock_target_profile
+    disable_events: airlock_drops_complete
+    enable_events: multiball_airlock_add_a_ball_ended
     show_tokens:
        targetled: rgb_drop_1
   airlock_shot_two:
     switch: s_drop_2
+    disable_events: airlock_drops_complete
+    enable_events: multiball_airlock_add_a_ball_ended
     profile: airlock_target_profile
     show_tokens:
        targetled: rgb_drop_2
   airlock_shot_three:
     switch: s_drop_3
+    disable_events: airlock_drops_complete
+    enable_events: multiball_airlock_add_a_ball_ended
     profile: airlock_target_profile
     show_tokens:
        targetled: rgb_drop_3
   airlock_shot_four:
     switch: s_drop_4
+    disable_events: airlock_drops_complete
+    enable_events: multiball_airlock_add_a_ball_ended
     profile: airlock_target_profile
     show_tokens:
        targetled: rgb_drop_4
   airlock_shot_five:
     switch: s_drop_5
+    disable_events: airlock_drops_complete
+    enable_events: multiball_airlock_add_a_ball_ended
     profile: airlock_target_profile
     show_tokens:
        targetled: rgb_drop_5
@@ -48,7 +63,7 @@ shot_groups:
     disable_events: ball_ending
 
 multiballs:
-  add_a_ball:
+  airlock_add_a_ball:
     ball_count: 1
     ball_count_type: add
     shoot_again: 10s
@@ -59,35 +74,35 @@ multiballs:
     stop_events: ball_ending
 
 slide_player:
-  s_drop_1_active:
+  airlock_shot_one_hit:
     airlock_one_complete_slide:
       target: dmd
       expire: 1
     airlock_one_complete_slide_king:
       target: lcd
       expire: 800ms
-  s_drop_2_active:
+  airlock_shot_two_hit:
     airlock_two_complete_slide:
       target: dmd
       expire: 1
     airlock_two_complete_slide_king:
       target: lcd
       expire: 800ms
-  s_drop_3_active:
+  airlock_shot_three_hit:
     airlock_three_complete_slide:
       target: dmd
       expire: 1
     airlock_three_complete_slide_king:
       target: lcd
       expire: 800ms
-  s_drop_4_active:
+  airlock_shot_four_hit:
     airlock_four_complete_slide:
       target: dmd
       expire: 1
     airlock_four_complete_slide_king:
       target: lcd
       expire: 800ms
-  s_drop_5_active:
+  airlock_shot_five_hit:
     airlock_five_complete_slide:
       target: dmd
       expire: 1
@@ -96,15 +111,15 @@ slide_player:
       expire: 1000ms
 
 scoring:
-  s_drop_1_active:
+  airlock_shot_one_hit:
     score: 50000 * current_player.game_scoring_multiplier
-  s_drop_2_active:
+  airlock_shot_two_hit:
     score: 50000 * current_player.game_scoring_multiplier
-  s_drop_3_active:
+  airlock_shot_three_hit:
     score: 50000 * current_player.game_scoring_multiplier
-  s_drop_4_active:
+  airlock_shot_four_hit:
     score: 50000 * current_player.game_scoring_multiplier
-  s_drop_5_active:
+  airlock_shot_five_hit:
     score: 50000 * current_player.game_scoring_multiplier
   airlock_drops_complete:
     score: 1000000 * current_player.game_scoring_multiplier
