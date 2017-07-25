@@ -41,28 +41,37 @@ videos:
     file: Going_Plaid_Transition.mp4
   gunners_mate_phillip_asshole:
     file: Gunners_Mate_First_Class_Phillip_Asshole.mp4
+    events_when_stopped: player_add_video_1_ended
   hail_skroob:
     file: Hail_Skroob.mp4
+    events_when_stopped: player_add_video_2_ended
   hello_lonestar_1:
     file: Hello_Lonestar_1.mp4
+    events_when_stopped: player_add_video_3_ended
   hello_lonestar_2:
     file: Hello_Lonestar_2.mp4
+    events_when_stopped: player_add_video_4_ended
   here_it_is_spaceballs:
     file: Here_It_Is_Sir_Spaceballs.mp4
   hes_an_asshole_sir:
     file: Hes_An_Asshole_Sir.mp4
+    events_when_stopped: player_add_video_5_ended
   hes_an_asshole_too:
     file: Hes_An_Asshole_Too_Sir.mp4
+    events_when_stopped: player_add_video_6_ended
   how_many_assholes_we_got:
     file: How_Many_Assholes_We_Got_Anyhow.mp4
+    events_when_stopped: player_add_video_7_ended
   my_own_best_friend:
     file: Im_My_Own_Best_Friend.mp4
   surrounded_by_assholes:
     file: Im_Surrounded_By_Assholes.mp4
+    events_when_stopped: player_add_video_8_ended
   keep_firing_assholes:
     file: Keep_Firing_Assholes.mp4
   major_asshole:
     file: Major_Asshole.mp4
+    events_when_stopped: player_add_video_9_ended
   make_way_for_darkhelmet:
     file: Make_Way_For_Dark_Helmet.mp4
   brains_in_my_feet:
