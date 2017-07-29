@@ -5,10 +5,23 @@ mode:
 
 event_player:
   mode_sbone_base_started: sbone_lock_servo_closed 
+  balldevice_bd_sbone_ball_eject_attempt: sbone_lock_servo_open sbone_lock_servo_closed|200ms
+  sbone_lock_servo_closed: sbone_ball_has_probably_been_released|2000ms
+#  sbone_multiball_started: sbone_release_all_locked_balls_please|2000ms
 #stop_tractorbeam_toy|3000ms
+
+slide_player:
+  multiball_sbone_multiball_started:
+    sbone_multiball_started_slide:
+      target: dmd
+  multiball_sbone_multiball_ended:
+    sbone_multiball_started_slide:
+      target: dmd
+      action: remove
 
 multiball_locks:
   sbone_mb_lock:
+    debug: true
     balls_to_lock: 3
     lock_devices: bd_sbone
 
@@ -21,5 +34,22 @@ coil_player:
     c_tractorbeam_run:
       action: disable
 
+multiballs:
+  sbone_multiball:
+    ball_count: 4
+    ball_locks: bd_sbone
+    ball_count_type: total
+    shoot_again: 100ms
+    start_events: multiball_lock_sbone_mb_lock_full
 
-#multiball_lock_sbone_mb_lock_full
+slides:
+  sbone_multiball_started_slide:
+    widgets:
+      - type: text
+        text: SBONE MB
+        style: dmd_xl
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff

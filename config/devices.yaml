@@ -54,7 +54,6 @@ ball_devices:
     eject_coil: c_trough_eject
     eject_targets: bd_plunger
     tags: trough, home, drain
-    debug: true
   bd_plunger:
     ball_switches: s_plunger_lane
     entrance_count_delay: 300ms
@@ -78,5 +77,7 @@ ball_devices:
     label: Spaceball One
     eject_coil: c_pop_flasher
     ball_switches: s_sbone_lock_1, s_sbone_lock_2, s_sbone_lock_3
-    mechanical_eject: false
-
+    auto_fire_on_unexpected_ball: false
+    confirm_eject_type: event
+    confirm_eject_event: sbone_ball_has_probably_been_released
+    debug: true

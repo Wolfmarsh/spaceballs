@@ -1,9 +1,9 @@
 events:
-  game_ended: 107
-  game_started: 173
+  game_ended: 114
+  game_started: 188
 player:
   score:
-    average: 968821.7054263566
+    average: 955860.294117647
     top:
     - 5236000
     - 4479000
@@ -15,52 +15,53 @@ player:
     - 2916000
     - 2808000
     - 2438000
-    total: 129
+    total: 136
 shots:
-  airlock_shot_five: 25
-  airlock_shot_four: 27
-  airlock_shot_one: 26
-  airlock_shot_three: 28
-  airlock_shot_two: 25
+  airlock_addaball_shot_three: 1
+  airlock_shot_five: 27
+  airlock_shot_four: 30
+  airlock_shot_one: 29
+  airlock_shot_three: 32
+  airlock_shot_two: 29
   lane_a: 13
-  lane_i: 24
-  lane_r: 29
-  left_orbit_complete_shot: 26
-  right_orbit_complete_shot: 30
-  warp_ramp_shot: 111
+  lane_i: 25
+  lane_r: 32
+  left_orbit_complete_shot: 27
+  right_orbit_complete_shot: 32
+  warp_ramp_shot: 113
 switches:
   s_air_a_lane: 33
-  s_air_i_lane: 48
-  s_air_r_lane: 41
-  s_drop_1: 81
-  s_drop_2: 71
-  s_drop_3: 80
-  s_drop_4: 76
-  s_drop_5: 78
-  s_launch_button: 339
-  s_left_flipper: 1025
-  s_left_inlane: 63
-  s_left_outlane: 35
-  s_left_spinner: 2355
-  s_middle_target: 143
-  s_plunger_lane: 432
-  s_pop_1: 149
-  s_pop_2: 168
-  s_pop_3: 87
-  s_pop_sneak: 98
-  s_ramp_entry: 147
-  s_ramp_exit: 119
-  s_right_flipper: 1258
-  s_right_inlane: 121
-  s_right_orbit: 131
-  s_right_outlane: 33
-  s_saucer: 114
-  s_sbone_entry: 142
-  s_sbone_left_orbit: 36
-  s_sbone_lock_1: 38
-  s_sbone_lock_2: 39
-  s_sbone_lock_3: 39
-  s_sbone_right_orbit: 27
+  s_air_i_lane: 49
+  s_air_r_lane: 44
+  s_drop_1: 85
+  s_drop_2: 76
+  s_drop_3: 85
+  s_drop_4: 80
+  s_drop_5: 80
+  s_launch_button: 354
+  s_left_flipper: 1035
+  s_left_inlane: 66
+  s_left_outlane: 36
+  s_left_spinner: 2543
+  s_middle_target: 145
+  s_plunger_lane: 478
+  s_pop_1: 153
+  s_pop_2: 184
+  s_pop_3: 89
+  s_pop_sneak: 103
+  s_ramp_entry: 149
+  s_ramp_exit: 121
+  s_right_flipper: 1281
+  s_right_inlane: 130
+  s_right_orbit: 139
+  s_right_outlane: 36
+  s_saucer: 131
+  s_sbone_entry: 165
+  s_sbone_left_orbit: 38
+  s_sbone_lock_1: 64
+  s_sbone_lock_2: 70
+  s_sbone_lock_3: 69
+  s_sbone_right_orbit: 28
   s_schwartz_power_1: 0
   s_schwartz_power_2: 0
   s_schwartz_power_3: 0
@@ -68,14 +69,14 @@ switches:
   s_schwartz_power_5: 0
   s_schwartz_power_6: 0
   s_schwartz_power_7: 91
-  s_scoop: 113
-  s_sling_left: 171
-  s_sling_right: 171
+  s_scoop: 122
+  s_sling_left: 184
+  s_sling_right: 180
   s_start: 33
-  s_trough1: 336
-  s_trough2: 327
-  s_trough3: 328
-  s_trough4: 303
-  s_trough5: 311
-  s_trough6: 310
-  s_trough_jam: 349
+  s_trough1: 377
+  s_trough2: 368
+  s_trough3: 368
+  s_trough4: 341
+  s_trough5: 347
+  s_trough6: 337
+  s_trough_jam: 390
