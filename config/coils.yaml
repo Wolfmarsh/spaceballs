@@ -40,6 +40,9 @@ coils:
     number: 11
     pulse_ms: 30
 #BEGIN 1616 (12-27)
+  c_tractorbeam_run:
+    number: 15
+    allow_enable: true
   c_pop_flasher:
     number: 16
     allow_enable: true

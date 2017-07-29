@@ -1,0 +1,25 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 1000
+
+event_player:
+  mode_sbone_base_started: sbone_lock_servo_closed 
+#stop_tractorbeam_toy|3000ms
+
+multiball_locks:
+  sbone_mb_lock:
+    balls_to_lock: 3
+    lock_devices: bd_sbone
+
+coil_player:
+  mode_sbone_base_started:
+    c_tractorbeam_run:
+      action: enable
+      power: 1.0
+  stop_tractorbeam_toy:
+    c_tractorbeam_run:
+      action: disable
+
+
+#multiball_lock_sbone_mb_lock_full

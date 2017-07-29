@@ -16,6 +16,7 @@ physical_rgb_dmds:
 
 fast:
   config_number_format: int
+  #debug: true
   
 config:
 - portconfig.yaml
@@ -44,6 +45,7 @@ modes:
 - orbits_base
 - dead_flip
 - slings_base
+- sbone_base
 
 
 widget_styles:
@@ -83,6 +85,16 @@ displays:
     width: 128
     height: 32
     default: true
+
+servos:
+  sbone_lock_servo:
+    debug: true
+    positions:
+      0.6: sbone_lock_servo_open
+      0.0: sbone_lock_servo_closed
+    reset_position: 0.7
+    reset_events: machine_reset_phase_3 game_ending
+    number: 13
 
 window:
   width: 1360 

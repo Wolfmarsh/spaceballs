@@ -59,14 +59,50 @@ shots:
     enable_events: activate_airlock_addaball_shot_2
     show_tokens:
        targetled: rgb_drop_2
+  airlock_addaball_shot_three:
+    switch: s_drop_3
+    profile: airlock_addaball_target_profile
+    disable_events: activate_next_airlock_addaball_shot
+    enable_events: activate_airlock_addaball_shot_3
+    show_tokens:
+       targetled: rgb_drop_3
+  airlock_addaball_shot_four:
+    switch: s_drop_4
+    profile: airlock_addaball_target_profile
+    disable_events: activate_next_airlock_addaball_shot
+    enable_events: activate_airlock_addaball_shot_4
+    show_tokens:
+       targetled: rgb_drop_4
+  airlock_addaball_shot_five:
+    switch: s_drop_5
+    profile: airlock_addaball_target_profile
+    disable_events: activate_next_airlock_addaball_shot
+    enable_events: activate_airlock_addaball_shot_5
+    show_tokens:
+       targetled: rgb_drop_5
+  airlock_addaball_shot_six:
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    time: 3s
+    profile: airlock_addaball_warpramp_profile
+    disable_events: activate_next_airlock_addaball_shot
+    enable_events: activate_airlock_addaball_shot_6
 
 event_player:
   airlock_drops_complete: activate_next_airlock_addaball_shot
+  airlock_addaball_shot_one_hit: airlock_multiball_gimme_another_ball
+  airlock_addaball_shot_two_hit: airlock_multiball_gimme_another_ball
+  airlock_addaball_shot_three_hit: airlock_multiball_gimme_another_ball
+  airlock_addaball_shot_four_hit: airlock_multiball_gimme_another_ball
+  airlock_addaball_shot_five_hit: airlock_multiball_gimme_another_ball
+  airlock_addaball_shot_six_hit: airlock_multiball_gimme_another_ball
 
 random_event_player:
   activate_next_airlock_addaball_shot:
     - activate_airlock_addaball_shot_1
     - activate_airlock_addaball_shot_2
+    - activate_airlock_addaball_shot_3
+    - activate_airlock_addaball_shot_4
+    - activate_airlock_addaball_shot_5
 
 shot_groups:
   airlock_drops:
@@ -87,6 +123,11 @@ shot_profiles:
     states:
       - name: pending
         show: airlock_addaball_target_pending
+        loops: -1
+  airlock_addaball_warpramp_profile:
+    states:
+      - name: pending
+        show: airlock_addaball_warpramp_pending
         loops: -1
 
 multiballs:

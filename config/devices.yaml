@@ -74,4 +74,9 @@ ball_devices:
     entrance_count_delay: 1.0s
     eject_coil: c_scoop_eject
     exit_count_delay: 250ms
+  bd_sbone:
+    label: Spaceball One
+    eject_coil: c_pop_flasher
+    ball_switches: s_sbone_lock_1, s_sbone_lock_2, s_sbone_lock_3
+    mechanical_eject: false
 

@@ -3,6 +3,17 @@ mode:
   start_events: ball_starting
   priority: 1000
 
+shots:
+  warp_ramp_shot:
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    time: 3s
+  # warp_ramp_lightspeed_shot:
+    # switch_sequence: s_ramp_entry, s_ramp_exit
+    # time: 3s
+    # profile: warp_ramp_lightspeed_profile
+    # disable_events: airlock_drops_complete
+    # enable_events: multiball_airlock_add_a_ball_ended
+
 show_player:
   mode_warp_ramp_multiball_started:
     warp_ramp_level_pending:
@@ -261,9 +272,3 @@ slides:
         anchor_x: left
         y: 0
         x: 0
-
-
-shots:
-  warp_ramp_shot:
-    switch_sequence: s_ramp_entry, s_ramp_exit
-    time: 3s

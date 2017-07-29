@@ -177,7 +177,7 @@ slides:
       - type: text
         text: (ticks)
         color: ffffff
-        font_size: 50
+        font_size: 150
         anchor_y: top
         anchor_x: center
         y: center
