@@ -1,50 +1,47 @@
 #config_version=4
 
 mode:
-  start_events: ball_starting
-  priority: 1400
+  start_events: start_airlock_multiball_request
+  stop_events: multiball_airlock_add_a_ball_ended
+  priority: 1100
 
 sound_player:
-  airlock_drops_complete:
+  multiball_airlock_add_a_ball_started:
     multiball_callout_sound_pool:
       action: play
 
 shots:
-  airlock_shot_one:
+  airlock_mb_shot_one:
     switch: s_drop_1
-    profile: airlock_target_profile
-    disable_events: airlock_drops_complete
-    enable_events: multiball_airlock_add_a_ball_ended
-    show_tokens:
-       targetled: rgb_drop_1
-  airlock_shot_two:
+    profile: airlock_mb_target_one_profile
+    disable_events: activate_airlock_addaball_shot_1
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+  airlock_mb_shot_two:
     switch: s_drop_2
-    disable_events: airlock_drops_complete
-    enable_events: multiball_airlock_add_a_ball_ended
-    profile: airlock_target_profile
-    show_tokens:
-       targetled: rgb_drop_2
-  airlock_shot_three:
+    profile: airlock_mb_target_two_profile
+    disable_events: activate_airlock_addaball_shot_2
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+  airlock_mb_shot_three:
     switch: s_drop_3
-    disable_events: airlock_drops_complete
-    enable_events: multiball_airlock_add_a_ball_ended
-    profile: airlock_target_profile
-    show_tokens:
-       targetled: rgb_drop_3
-  airlock_shot_four:
+    profile: airlock_mb_target_three_profile
+    disable_events: activate_airlock_addaball_shot_3
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+  airlock_mb_shot_four:
     switch: s_drop_4
-    disable_events: airlock_drops_complete
-    enable_events: multiball_airlock_add_a_ball_ended
-    profile: airlock_target_profile
-    show_tokens:
-       targetled: rgb_drop_4
-  airlock_shot_five:
+    profile: airlock_mb_target_four_profile
+    disable_events: activate_airlock_addaball_shot_4
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+  airlock_mb_shot_five:
     switch: s_drop_5
-    disable_events: airlock_drops_complete
-    enable_events: multiball_airlock_add_a_ball_ended
-    profile: airlock_target_profile
-    show_tokens:
-       targetled: rgb_drop_5
+    profile: airlock_mb_target_five_profile
+    disable_events: activate_airlock_addaball_shot_5
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+  airlock_mb_warp_ramp_shot:
+    profile: airlock_mb_warpramp_target_profile
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    time: 3s
+    disable_events: activate_airlock_addaball_shot_6
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
   airlock_addaball_shot_one:
     switch: s_drop_1
     profile: airlock_addaball_target_profile
@@ -88,13 +85,13 @@ shots:
     enable_events: activate_airlock_addaball_shot_6
 
 event_player:
-  airlock_drops_complete: activate_next_airlock_addaball_shot
-  airlock_addaball_shot_one_hit: airlock_multiball_gimme_another_ball
-  airlock_addaball_shot_two_hit: airlock_multiball_gimme_another_ball
-  airlock_addaball_shot_three_hit: airlock_multiball_gimme_another_ball
-  airlock_addaball_shot_four_hit: airlock_multiball_gimme_another_ball
-  airlock_addaball_shot_five_hit: airlock_multiball_gimme_another_ball
-  airlock_addaball_shot_six_hit: airlock_multiball_gimme_another_ball
+  multiball_airlock_add_a_ball_started: activate_next_airlock_addaball_shot
+  airlock_addaball_shot_one_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
+  airlock_addaball_shot_two_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
+  airlock_addaball_shot_three_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
+  airlock_addaball_shot_four_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
+  airlock_addaball_shot_five_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
+  airlock_addaball_shot_six_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
 
 random_event_player:
   activate_next_airlock_addaball_shot:
@@ -104,29 +101,45 @@ random_event_player:
     - activate_airlock_addaball_shot_4
     - activate_airlock_addaball_shot_5
 
-shot_groups:
-  airlock_drops:
-    shots: airlock_shot_one, airlock_shot_two, airlock_shot_three, airlock_shot_four, airlock_shot_five
-    reset_events: airlock_drops_complete
-    enable_events: ball_started
-    disable_events: ball_ending
-
 shot_profiles:
-  airlock_target_profile:
-    states:
-      - name: unlit
-        show: airlock_target_pending
-        loops: -1
-      - name: lit
-        show: airlock_target_on
-  airlock_addaball_target_profile:
+  airlock_mb_target_one_profile:
     states:
       - name: pending
+        show: airlock_mb_target_one_pending
+        loops: -1
+  airlock_mb_target_two_profile:
+    states:
+      - name: pending
+        show: airlock_mb_target_two_pending
+        loops: -1
+  airlock_mb_target_three_profile:
+    states:
+      - name: pending
+        show: airlock_mb_target_three_pending
+        loops: -1
+  airlock_mb_target_four_profile:
+    states:
+      - name: pending
+        show: airlock_mb_target_four_pending
+        loops: -1
+  airlock_mb_target_five_profile:
+    states:
+      - name: pending
+        show: airlock_mb_target_five_pending
+        loops: -1
+  airlock_mb_warpramp_target_profile:
+    states:
+      - name: pending
+        show: airlock_mb_warpramp_pending
+        loops: -1
+  airlock_addaball_target_profile:
+    states:
+      - name: addaball_pending
         show: airlock_addaball_target_pending
         loops: -1
   airlock_addaball_warpramp_profile:
     states:
-      - name: pending
+      - name: addaball_pending
         show: airlock_addaball_warpramp_pending
         loops: -1
 
@@ -135,171 +148,5 @@ multiballs:
     ball_count: 1
     ball_count_type: add
     shoot_again: 10s
-    enable_events: mode_airlock_multiball_started
     add_a_ball_events: airlock_multiball_gimme_another_ball
-    disable_events: ball_ending
-    start_events: airlock_drops_complete
-    stop_events: ball_ending
-
-slide_player:
-  airlock_shot_one_hit:
-    airlock_one_complete_slide:
-      target: dmd
-      expire: 1
-    airlock_one_complete_slide_king:
-      target: lcd
-      expire: 800ms
-  airlock_shot_two_hit:
-    airlock_two_complete_slide:
-      target: dmd
-      expire: 1
-    airlock_two_complete_slide_king:
-      target: lcd
-      expire: 800ms
-  airlock_shot_three_hit:
-    airlock_three_complete_slide:
-      target: dmd
-      expire: 1
-    airlock_three_complete_slide_king:
-      target: lcd
-      expire: 800ms
-  airlock_shot_four_hit:
-    airlock_four_complete_slide:
-      target: dmd
-      expire: 1
-    airlock_four_complete_slide_king:
-      target: lcd
-      expire: 800ms
-  airlock_shot_five_hit:
-    airlock_five_complete_slide:
-      target: dmd
-      expire: 1
-    airlock_five_complete_slide_king:
-      target: lcd
-      expire: 1000ms
-
-scoring:
-  airlock_shot_one_hit:
-    score: 50000 * current_player.game_scoring_multiplier
-  airlock_shot_two_hit:
-    score: 50000 * current_player.game_scoring_multiplier
-  airlock_shot_three_hit:
-    score: 50000 * current_player.game_scoring_multiplier
-  airlock_shot_four_hit:
-    score: 50000 * current_player.game_scoring_multiplier
-  airlock_shot_five_hit:
-    score: 50000 * current_player.game_scoring_multiplier
-  airlock_drops_complete:
-    score: 1000000 * current_player.game_scoring_multiplier
-
-slides:
-  airlock_one_complete_slide_king:
-    widgets:
-      - type: video
-        video: airlock_king_one
-        width: 1280
-        height: 720
-  airlock_one_complete_slide:
-    widgets:
-      - type: text
-        text: 1
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-  airlock_two_complete_slide_king:
-    widgets:
-      - type: video
-        video: airlock_king_two
-        width: 1280
-        height: 720
-  airlock_two_complete_slide:
-    widgets:
-      - type: text
-        text: 2
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-  airlock_three_complete_slide_king:
-    widgets:
-      - type: video
-        video: airlock_king_three
-        width: 1280
-        height: 720
-  airlock_three_complete_slide:
-    widgets:
-      - type: text
-        text: 3
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-  airlock_four_complete_slide_king:
-    widgets:
-      - type: video
-        video: airlock_king_four
-        width: 1280
-        height: 720
-  airlock_four_complete_slide:
-    widgets:
-      - type: text
-        text: 4
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-  airlock_five_complete_slide_king:
-    widgets:
-      - type: video
-        video: airlock_king_five
-        width: 1280
-        height: 720
-  airlock_five_complete_slide:
-    widgets:
-      - type: text
-        text: 5
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
+    start_events: mode_airlock_multiball_started

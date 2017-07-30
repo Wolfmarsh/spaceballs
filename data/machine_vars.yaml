@@ -1,5 +1,5 @@
 player1_score: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
   dictitems:
-    value: 4984000
+    value: 2929000
 player4_score:
   value: 0

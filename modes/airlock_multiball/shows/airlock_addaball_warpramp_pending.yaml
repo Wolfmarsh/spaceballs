@@ -2,9 +2,15 @@
 - time: 0
   leds:
     rgb_ramplevel_4: 00ffff-f50ms
+    rgb_ramplevel_3: 00ffff-f50ms
+    rgb_ramplevel_2: 00ffff-f50ms
+    rgb_ramplevel_1: 00ffff-f50ms
 
 - time: '+350ms'
   leds:
     rgb_ramplevel_4: 000000-f50ms
+    rgb_ramplevel_3: 000000-f50ms
+    rgb_ramplevel_2: 000000-f50ms
+    rgb_ramplevel_1: 000000-f50ms
 
 - time: '+350ms'

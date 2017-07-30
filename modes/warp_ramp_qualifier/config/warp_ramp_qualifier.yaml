@@ -43,7 +43,7 @@ event_player:
   warp_ramp_shot_lightspeed_hit: warp_ramp_level_ridiculousspeed_achieved
   warp_ramp_shot_ridiculousspeed_hit: warp_ramp_level_ludicrousspeed_achieved
   warp_ramp_shot_ludicrousspeed_hit: warp_ramp_level_plaidspeed_achieved
-  logicblock_warp_ramp_level_counter_complete: start_sbone_multiball_request
+  logicblock_warp_ramp_level_counter_complete: start_warp_ramp_multiball_request
   
 scoring:
   warp_ramp_level_lightspeed_achieved:

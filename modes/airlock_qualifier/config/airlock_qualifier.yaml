@@ -1,0 +1,243 @@
+#config_version=4
+
+mode:
+  start_events: ball_starting mode_airlock_multiball_stopped
+  stop_events: start_airlock_multiball_request
+  priority: 200
+
+event_player:
+  airlock_qualifying_shots_complete: start_airlock_multiball_request
+
+shots:
+  airlock_qualifying_shot_one:
+    switch: s_drop_1
+    profile: airlock_target_one_profile
+    reset_events: airlock_qualifying_shots_complete
+  airlock_qualifying_shot_two:
+    switch: s_drop_2
+    profile: airlock_target_two_profile
+    reset_events: airlock_qualifying_shots_complete
+  airlock_qualifying_shot_three:
+    switch: s_drop_3
+    profile: airlock_target_three_profile
+    reset_events: airlock_qualifying_shots_complete
+  airlock_qualifying_shot_four:
+    switch: s_drop_4
+    profile: airlock_target_four_profile
+    reset_events: airlock_qualifying_shots_complete
+  airlock_qualifying_shot_five:
+    switch: s_drop_5
+    profile: airlock_target_five_profile
+    reset_events: airlock_qualifying_shots_complete
+
+logic_blocks:
+  accruals:
+    airlock_qualifying_shots:
+      events:
+        - airlock_qualifying_shot_one_ready_hit
+        - airlock_qualifying_shot_two_ready_hit
+        - airlock_qualifying_shot_three_ready_hit
+        - airlock_qualifying_shot_four_ready_hit
+        - airlock_qualifying_shot_five_ready_hit
+      events_when_complete: airlock_qualifying_shots_complete
+
+shot_profiles:
+  airlock_target_one_profile:
+    states:
+      - name: ready
+        show: airlock_one_ready
+        loops: -1
+      - name: lit
+        show: airlock_one_lit
+  airlock_target_two_profile:
+    states:
+      - name: ready
+        show: airlock_two_ready
+        loops: -1
+      - name: lit
+        show: airlock_two_lit
+  airlock_target_three_profile:
+    states:
+      - name: ready
+        show: airlock_three_ready
+        loops: -1
+      - name: lit
+        show: airlock_three_lit
+  airlock_target_four_profile:
+    states:
+      - name: ready
+        show: airlock_four_ready
+        loops: -1
+      - name: lit
+        show: airlock_four_lit
+  airlock_target_five_profile:
+    states:
+      - name: ready
+        show: airlock_five_ready
+        loops: -1
+      - name: lit
+        show: airlock_five_lit
+
+slide_player:
+  airlock_qualifying_shot_one_ready_hit:
+    airlock_one_complete_slide:
+      target: dmd
+      expire: 1
+    airlock_one_complete_slide_king:
+      target: lcd
+      expire: 800ms
+  airlock_qualifying_shot_two_ready_hit:
+    airlock_two_complete_slide:
+      target: dmd
+      expire: 1
+    airlock_two_complete_slide_king:
+      target: lcd
+      expire: 800ms
+  airlock_qualifying_shot_three_ready_hit:
+    airlock_three_complete_slide:
+      target: dmd
+      expire: 1
+    airlock_three_complete_slide_king:
+      target: lcd
+      expire: 800ms
+  airlock_qualifying_shot_four_ready_hit:
+    airlock_four_complete_slide:
+      target: dmd
+      expire: 1
+    airlock_four_complete_slide_king:
+      target: lcd
+      expire: 800ms
+  airlock_qualifying_shot_five_ready_hit:
+    airlock_five_complete_slide:
+      target: dmd
+      expire: 1
+    airlock_five_complete_slide_king:
+      target: lcd
+      expire: 1000ms
+
+scoring:
+  airlock_qualifying_shot_one_ready_hit:
+    score: 50000 * current_player.game_scoring_multiplier
+  airlock_qualifying_shot_two_ready_hit:
+    score: 50000 * current_player.game_scoring_multiplier
+  airlock_qualifying_shot_three_ready_hit:
+    score: 50000 * current_player.game_scoring_multiplier
+  airlock_qualifying_shot_four_ready_hit:
+    score: 50000 * current_player.game_scoring_multiplier
+  airlock_qualifying_shot_five_ready_hit:
+    score: 50000 * current_player.game_scoring_multiplier
+  airlock_qualifying_shots_complete:
+    score: 1000000 * current_player.game_scoring_multiplier
+
+slides:
+  airlock_one_complete_slide_king:
+    widgets:
+      - type: video
+        video: airlock_king_one
+        width: 1280
+        height: 720
+  airlock_one_complete_slide:
+    widgets:
+      - type: text
+        text: 1
+        style: dmd_xl
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+  airlock_two_complete_slide_king:
+    widgets:
+      - type: video
+        video: airlock_king_two
+        width: 1280
+        height: 720
+  airlock_two_complete_slide:
+    widgets:
+      - type: text
+        text: 2
+        style: dmd_xl
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+  airlock_three_complete_slide_king:
+    widgets:
+      - type: video
+        video: airlock_king_three
+        width: 1280
+        height: 720
+  airlock_three_complete_slide:
+    widgets:
+      - type: text
+        text: 3
+        style: dmd_xl
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+  airlock_four_complete_slide_king:
+    widgets:
+      - type: video
+        video: airlock_king_four
+        width: 1280
+        height: 720
+  airlock_four_complete_slide:
+    widgets:
+      - type: text
+        text: 4
+        style: dmd_xl
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+  airlock_five_complete_slide_king:
+    widgets:
+      - type: video
+        video: airlock_king_five
+        width: 1280
+        height: 720
+  airlock_five_complete_slide:
+    widgets:
+      - type: text
+        text: 5
+        style: dmd_xl
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+

@@ -1,10 +1,10 @@
 #show_version=4
 - time: 0
   leds:
-    (targetled): 00ffff
+    rgb_drop_5: ffff00-f50ms
 
 - time: '+350ms'
   leds:
-    (targetled): 000000
+    rgb_drop_5: 000000-f50ms
 
 - time: '+350ms'

@@ -29,17 +29,17 @@ config:
 - images.yaml
 - videos.yaml
 - sounds.yaml
-- shots.yaml
 
 modes:
 - base
 - skillshot_timing
 - bonus
 - high_score
-- warp_ramp_qualifier
-- warp_ramp_multiball
+#- warp_ramp_qualifier
+#- warp_ramp_multiball
 - spinner
 - diner
+- airlock_qualifier
 - airlock_multiball
 - pops_base
 - air_lanes

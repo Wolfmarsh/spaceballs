@@ -46,6 +46,7 @@ drop_target_banks:
      reset_events:
        drop_target_bank_airlock_bank_down: 1s
        player_turn_start: 0s
+       activate_next_airlock_addaball_shot: 1s
 
 ball_devices:
   bd_trough:
