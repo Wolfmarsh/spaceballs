@@ -7,20 +7,69 @@ shots:
   warp_ramp_shot:
     switch_sequence: s_ramp_entry, s_ramp_exit
     time: 3s
-  # warp_ramp_lightspeed_shot:
-    # switch_sequence: s_ramp_entry, s_ramp_exit
-    # time: 3s
-    # profile: warp_ramp_lightspeed_profile
-    # disable_events: airlock_drops_complete
-    # enable_events: multiball_airlock_add_a_ball_ended
+  warp_ramp_lightspeed_shot:
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    time: 3s
+    profile: warp_ramp_lightspeed_profile
+    disable_events: warp_ramp_level_lightspeed_achieved
+    enable_events: warp_ramp_lightspeed_pending_activate
+  warp_ramp_ridiculousspeed_shot:
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    time: 3s
+    profile: warp_ramp_ridiculousspeed_profile
+    disable_events: warp_ramp_level_ridiculousspeed_achieved
+    enable_events: warp_ramp_ridiculousspeed_pending_activate
+  warp_ramp_ludicrousspeed_shot:
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    time: 3s
+    profile: warp_ramp_ludicrousspeed_profile
+    disable_events: warp_ramp_level_ludicrousspeed_achieved
+    enable_events: warp_ramp_ludicrousspeed_pending_activate
+  warp_ramp_plaidspeed_shot:
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    time: 3s
+    profile: warp_ramp_plaidspeed_profile
+    disable_events: warp_ramp_level_plaidspeed_achieved
+    enable_events: warp_ramp_plaidspeed_pending_activate
+
+shot_groups:
+  warp_ramp_shots:
+    shots: warp_ramp_lightspeed_shot, warp_ramp_ridiculousspeed_shot, warp_ramp_ludicrousspeed_shot, warp_ramp_plaidspeed_shot
+    reset_events: warp_ramp_shots_complete
+    enable_events: ball_started
+    disable_events: ball_ending
+
+shot_profiles:
+  warp_ramp_lightspeed_profile:
+    states:
+      - name: unlit
+        show: warp_ramp_lightspeed_pending
+        loops: -1
+      - name: lit
+        show: warp_ramp_lightspeed_complete
+  warp_ramp_ridiculousspeed_profile:
+    states:
+      - name: unlit
+        show: warp_ramp_ridiculousspeed_pending
+        loops: -1
+      - name: lit
+        show: warp_ramp_ridiculousspeed_complete
+  warp_ramp_ludicrousspeed_profile:
+    states:
+      - name: unlit
+        show: warp_ramp_ludicrousspeed_pending
+        loops: -1
+      - name: lit
+        show: warp_ramp_ludicrousspeed_complete
+  warp_ramp_plaidspeed_profile:
+    states:
+      - name: unlit
+        show: warp_ramp_plaidspeed_pending
+        loops: -1
+      - name: lit
+        show: warp_ramp_plaidspeed_complete
 
 show_player:
-  mode_warp_ramp_multiball_started:
-    warp_ramp_level_pending:
-      loops: -1
-      speed: 8
-      show_tokens:
-        ramp_level: rgb_ramplevel_1
   multiball_plaid_multiball_started:
     ball_saver_timer_show:
       loops: 0
@@ -28,48 +77,7 @@ show_player:
   multiball_plaid_multiball_ended:
     ball_saver_timer_show:
       action: stop
-    warp_ramp_lightspeed_complete:
-      action: stop
-    warp_ramp_ridiculous_complete:
-      action: stop
-    warp_ramp_ludicrous_complete:
-      action: stop
-    warp_ramp_plaid_complete:
-      action: stop
-    warp_ramp_level_pending:
-      loops: -1
-      speed: 8
-      show_tokens:
-        ramp_level: rgb_ramplevel_1
-  warp_ramp_level_lightspeed_achieved:
-    warp_ramp_level_pending:
-      loops: -1
-      speed: 8
-      show_tokens:
-        ramp_level: rgb_ramplevel_2
-    warp_ramp_lightspeed_complete:
-      loops: -1
-  warp_ramp_level_ridiculousspeed_achieved:
-    warp_ramp_level_pending:
-      loops: -1
-      speed: 8
-      show_tokens:
-        ramp_level: rgb_ramplevel_3
-    warp_ramp_ridiculous_complete:
-      loops: -1
-  warp_ramp_level_ludicrousspeed_achieved:
-    warp_ramp_level_pending:
-      loops: -1
-      speed: 8
-      show_tokens:
-        ramp_level: rgb_ramplevel_4
-    warp_ramp_ludicrous_complete:
-      loops: -1
-  logicblock_warp_ramp_level_counter_complete:
-    warp_ramp_level_pending:
-      action: stop
-    warp_ramp_plaid_complete:
-      loops: -1
+
 
 sound_player:
   warp_ramp_level_lightspeed_achieved:
@@ -83,9 +91,11 @@ sound_player:
       action: play
 
 event_player:
-  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==1}: warp_ramp_level_lightspeed_achieved
-  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==2}: warp_ramp_level_ridiculousspeed_achieved
-  logicblock_warp_ramp_level_counter_hit{current_player.warp_ramp_level_counter_count==3}: warp_ramp_level_ludicrousspeed_achieved
+  warp_ramp_lightspeed_shot_unlit_hit: warp_ramp_level_lightspeed_achieved warp_ramp_ridiculousspeed_pending_activate
+  warp_ramp_ridiculousspeed_shot_unlit_hit: warp_ramp_level_ridiculousspeed_achieved warp_ramp_ludicrousspeed_pending_activate
+  warp_ramp_ludicrousspeed_shot_unlit_hit: warp_ramp_level_ludicrousspeed_achieved warp_ramp_plaidspeed_pending_activate
+  warp_ramp_plaidspeed_shot_unlit_hit: warp_ramp_level_plaidspeed_achieved
+  mode_warp_ramp_multiball_started: warp_ramp_lightspeed_pending_activate
   
 scoring:
   warp_ramp_level_lightspeed_achieved:
@@ -94,7 +104,7 @@ scoring:
     score: 200000 * current_player.game_scoring_multiplier
   warp_ramp_level_ludicrousspeed_achieved:
     score: 300000 * current_player.game_scoring_multiplier
-  logicblock_warp_ramp_level_counter_complete:
+  warp_ramp_level_plaidspeed_achieved:
     score: 1000000 * current_player.game_scoring_multiplier
 
 slide_player:
@@ -119,7 +129,7 @@ slide_player:
     warp_ramp_ludicrousspeed_achieved_videoslide:
       target: lcd
       expire: 5200ms
-  logicblock_warp_ramp_level_counter_complete:
+  warp_ramp_level_plaidspeed_achieved:
     warp_ramp_plaid_achieved_slide:
       target: dmd
       expire: 2
@@ -132,7 +142,7 @@ multiballs:
     ball_count: 4
     ball_count_type: total
     shoot_again: 10s
-    start_events: logicblock_warp_ramp_level_counter_complete
+    start_events: warp_ramp_level_plaidspeed_achieved
     
 logic_blocks:
   counters:
