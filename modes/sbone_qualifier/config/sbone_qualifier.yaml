@@ -1,0 +1,15 @@
+#config_version=4
+mode:
+  start_events: ball_starting mode_airlock_multiball_stopped mode_warp_ramp_multiball_stopped mode_sbone_multiball_stopped
+  stop_events: start_airlock_multiball_request start_warp_ramp_multiball_request start_sbone_multiball_request
+  priority: 200
+
+event_player:
+  mode_sbone_qualifier_started: sbone_lock_servo_closed
+  multiball_lock_sbone_mb_lock_full: start_sbone_multiball_request
+
+multiball_locks:
+  sbone_mb_lock:
+    balls_to_lock: 3
+    lock_devices: bd_sbone
+

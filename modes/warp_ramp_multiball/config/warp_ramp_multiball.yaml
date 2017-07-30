@@ -6,6 +6,8 @@ mode:
 
 event_player:
   warp_ramp_mb_jackpot_shot_jackpotpending_hit: warp_ramp_mb_award_jackpot
+  balldevice_bd_plunger_ejecting_ball: plaid_multiball_raise_orbit_post|1000ms
+  multiball_plaid_multiball_started: plaid_multiball_raise_orbit_post
 
 show_player:
   multiball_plaid_multiball_started:
@@ -15,6 +17,18 @@ show_player:
   multiball_plaid_multiball_ended:
     ball_saver_timer_show:
       action: stop
+
+coil_player:
+  multiball_plaid_multiball_ended:
+    c_orbit_post:
+      action: disable
+  balldevice_bd_plunger_ejecting_ball:
+    c_orbit_post:
+      action: disable
+  plaid_multiball_raise_orbit_post:
+    c_orbit_post:
+       action: enable
+       power: 0.5
 
 sound_player:
   warp_ramp_mb_award_jackpot:

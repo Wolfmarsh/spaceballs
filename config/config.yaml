@@ -47,7 +47,8 @@ modes:
 - orbits_base
 - dead_flip
 - slings_base
-- sbone_base
+- sbone_qualifier
+- sbone_multiball
 
 
 widget_styles:
