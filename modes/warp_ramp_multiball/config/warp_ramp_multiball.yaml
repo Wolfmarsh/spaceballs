@@ -5,7 +5,8 @@ mode:
   priority: 1000
 
 event_player:
-  warp_ramp_shot_jackpotpending_hit: warp_ramp_mb_award_jackpot
+  warp_ramp_mb_jackpot_shot_jackpotpending_hit: warp_ramp_mb_award_jackpot
+
 show_player:
   multiball_plaid_multiball_started:
     ball_saver_timer_show:
@@ -15,11 +16,12 @@ show_player:
     ball_saver_timer_show:
       action: stop
 
-#start_sbone_multiball_request
-
 sound_player:
   warp_ramp_mb_award_jackpot:
     jackpot_2:
+      action: play
+  multiball_plaid_multiball_started:
+    multiball_callout_sound_pool:
       action: play
 
 scoring:
@@ -34,8 +36,11 @@ multiballs:
     start_events: mode_warp_ramp_multiball_started
 
 shots:
-  warp_ramp_shot:
+  warp_ramp_mb_jackpot_shot:
     profile: warp_ramp_mb_jackpot_shot_profile
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    time: 3s
+    reset_events: warp_ramp_mb_award_jackpot
 
 shot_profiles:
   warp_ramp_mb_jackpot_shot_profile:

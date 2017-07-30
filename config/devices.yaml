@@ -47,6 +47,7 @@ drop_target_banks:
        drop_target_bank_airlock_bank_down: 1s
        player_turn_start: 0s
        activate_next_airlock_addaball_shot: 1s
+       multiball_plaid_multiball_ended: 500ms
 
 ball_devices:
   bd_trough:

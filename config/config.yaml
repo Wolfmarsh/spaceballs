@@ -35,8 +35,8 @@ modes:
 - skillshot_timing
 - bonus
 - high_score
-#- warp_ramp_qualifier
-#- warp_ramp_multiball
+- warp_ramp_qualifier
+- warp_ramp_multiball
 - spinner
 - diner
 - airlock_qualifier
