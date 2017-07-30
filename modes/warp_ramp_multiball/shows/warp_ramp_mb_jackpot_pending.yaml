@@ -1,0 +1,44 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_ramplevel_4: ff007f
+    rgb_ramplevel_3: ff0000
+    rgb_ramplevel_2: ffff00
+    rgb_ramplevel_1: 00ff00
+    
+- time: '+100ms'
+  leds:
+    rgb_ramplevel_4: ff007f
+    rgb_ramplevel_3: ff0000
+    rgb_ramplevel_2: ffff00
+    rgb_ramplevel_1: 000000-f50ms
+
+- time: '+100ms'
+  leds:
+    rgb_ramplevel_4: ff007f
+    rgb_ramplevel_3: ff0000
+    rgb_ramplevel_2: 000000-f50ms
+    rgb_ramplevel_1: 00ff00-f50ms
+
+- time: '+100ms'
+  leds:
+    rgb_ramplevel_4: ff007f
+    rgb_ramplevel_3: 000000-f50ms
+    rgb_ramplevel_2: ffff00-f50ms
+    rgb_ramplevel_1: 00ff00
+
+- time: '+100ms'
+  leds:
+    rgb_ramplevel_4: 000000-f50ms
+    rgb_ramplevel_3: ff0000-f50ms
+    rgb_ramplevel_2: ffff00
+    rgb_ramplevel_1: 00ff00
+
+- time: '+100ms'
+  leds:
+    rgb_ramplevel_4: ff007f-f50ms
+    rgb_ramplevel_3: ff0000
+    rgb_ramplevel_2: ffff00
+    rgb_ramplevel_1: 00ff00
+
+- time: '+100ms'

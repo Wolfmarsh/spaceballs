@@ -29,12 +29,14 @@ config:
 - images.yaml
 - videos.yaml
 - sounds.yaml
+- shots.yaml
 
 modes:
 - base
 - skillshot_timing
 - bonus
 - high_score
+- warp_ramp_qualifier
 - warp_ramp_multiball
 - spinner
 - diner

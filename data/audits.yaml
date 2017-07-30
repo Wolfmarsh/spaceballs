@@ -1,63 +1,63 @@
 events:
-  game_ended: 116
-  game_started: 193
+  game_ended: 123
+  game_started: 206
 player:
   score:
-    average: 957188.4057971013
+    average: 1030455.1724137932
     top:
     - 5236000
+    - 4984000
     - 4479000
     - 4315000
     - 4221000
     - 3504000
     - 3479000
     - 3235000
+    - 3056000
     - 2916000
-    - 2808000
-    - 2438000
-    total: 138
+    total: 145
 shots:
   airlock_addaball_shot_three: 1
   airlock_shot_five: 27
-  airlock_shot_four: 31
-  airlock_shot_one: 30
-  airlock_shot_three: 32
-  airlock_shot_two: 30
+  airlock_shot_four: 32
+  airlock_shot_one: 31
+  airlock_shot_three: 33
+  airlock_shot_two: 31
   lane_a: 13
-  lane_i: 25
+  lane_i: 29
   lane_r: 32
   left_orbit_complete_shot: 27
-  right_orbit_complete_shot: 32
+  right_orbit_complete_shot: 33
   warp_ramp_lightspeed_shot: 3
   warp_ramp_ludicrousspeed_shot: 1
   warp_ramp_plaidspeed_shot: 1
   warp_ramp_ridiculousspeed_shot: 1
-  warp_ramp_shot: 119
+  warp_ramp_shot: 160
 switches:
   s_air_a_lane: 33
-  s_air_i_lane: 49
+  s_air_i_lane: 53
   s_air_r_lane: 44
-  s_drop_1: 86
-  s_drop_2: 77
-  s_drop_3: 85
-  s_drop_4: 81
+  s_drop_1: 87
+  s_drop_2: 78
+  s_drop_3: 86
+  s_drop_4: 82
   s_drop_5: 80
-  s_launch_button: 359
+  s_launch_button: 372
   s_left_flipper: 1035
   s_left_inlane: 66
-  s_left_outlane: 36
-  s_left_spinner: 2577
+  s_left_outlane: 38
+  s_left_spinner: 2673
   s_middle_target: 145
-  s_plunger_lane: 496
-  s_pop_1: 153
-  s_pop_2: 184
-  s_pop_3: 89
-  s_pop_sneak: 103
-  s_ramp_entry: 155
-  s_ramp_exit: 128
+  s_plunger_lane: 532
+  s_pop_1: 159
+  s_pop_2: 193
+  s_pop_3: 94
+  s_pop_sneak: 106
+  s_ramp_entry: 207
+  s_ramp_exit: 174
   s_right_flipper: 1281
-  s_right_inlane: 132
-  s_right_orbit: 141
+  s_right_inlane: 134
+  s_right_orbit: 146
   s_right_outlane: 36
   s_saucer: 131
   s_sbone_entry: 168
@@ -72,15 +72,15 @@ switches:
   s_schwartz_power_4: 0
   s_schwartz_power_5: 0
   s_schwartz_power_6: 0
-  s_schwartz_power_7: 91
+  s_schwartz_power_7: 102
   s_scoop: 122
-  s_sling_left: 186
-  s_sling_right: 180
+  s_sling_left: 189
+  s_sling_right: 181
   s_start: 33
-  s_trough1: 389
-  s_trough2: 380
-  s_trough3: 380
-  s_trough4: 353
-  s_trough5: 359
-  s_trough6: 347
-  s_trough_jam: 402
+  s_trough1: 417
+  s_trough2: 408
+  s_trough3: 408
+  s_trough4: 381
+  s_trough5: 387
+  s_trough6: 369
+  s_trough_jam: 430
