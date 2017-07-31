@@ -88,3 +88,6 @@ videos:
     file: Start_Light_Speed.mp4
   theyve_gone_to_plaid:
     file: Theyve_Gone_To_Plaid.mp4
+  tractor_beam_start:
+    file: Tractor_Beam_Start.mp4
+    events_when_stopped: video_tractor_beam_start_stopped

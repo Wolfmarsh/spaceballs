@@ -6,16 +6,22 @@ mode:
   priority: 1300
 
 event_player:
-  balldevice_bd_sbone_ball_eject_attempt: sbone_lock_servo_open sbone_lock_servo_closed|170ms
-  sbone_lock_servo_closed: sbone_ball_has_probably_been_released|2000ms
+  balldevice_bd_sbone_ball_eject_attempt: sbone_lock_servo_open sbone_lock_servo_closed|90ms
+  sbone_lock_servo_closed: sbone_ball_has_probably_been_released|1000ms
 
 slide_player:
   multiball_sbone_multiball_started:
     sbone_multiball_started_slide:
       target: dmd
+    sbone_multiball_tractorbeam_start_slide:
+      target: lcd
   multiball_sbone_multiball_ended:
     sbone_multiball_started_slide:
       target: dmd
+      action: remove
+  video_tractor_beam_start_stopped:
+    sbone_multiball_tractorbeam_start_slide:
+      target: lcd
       action: remove
 
 sound_player:
@@ -42,3 +48,11 @@ slides:
         y: center
         x: center
         color: ffffff
+  sbone_multiball_tractorbeam_start_slide:
+    widgets:
+      - type: video
+        video: tractor_beam_start
+        width: 1280
+        height: 720
+    
+    

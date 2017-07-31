@@ -69,7 +69,7 @@ ball_devices:
     ball_switches: s_saucer
     entrance_count_delay: 1.0s
     eject_coil: c_saucer_eject
-    exit_count_delay: 250ms
+    exit_count_delay: 200ms
   bd_scoop:
     label: Scoop Kickout
     ball_switches: s_scoop
@@ -78,6 +78,7 @@ ball_devices:
     exit_count_delay: 250ms
   bd_sbone:
     label: Spaceball One
+    entrance_count_delay: 300ms
     eject_coil: c_pop_flasher
     ball_switches: s_sbone_lock_1, s_sbone_lock_2, s_sbone_lock_3
     auto_fire_on_unexpected_ball: false

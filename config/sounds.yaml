@@ -24,13 +24,13 @@ sound_pools:
 
 sounds:
   light_saber_swing_1:
-    volume: 0.50
+    volume: 0.20
   light_saber_swing_2:
-    volume: 0.50
+    volume: 0.20
   light_saber_swing_3:
-    volume: 0.50
+    volume: 0.20
   light_saber_swing_4:
-    volume: 0.50
+    volume: 0.20
   elevator_ding:
     volume: 0.30
   spaceballs_song:
