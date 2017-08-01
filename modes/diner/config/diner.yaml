@@ -59,12 +59,19 @@ slide_player:
 
 coil_player:
   start_diner_scoring:
-      c_backboard_activate:
-         action: enable
-         power: 1.0
+    c_backboard_activate:
+      action: enable
+      power: 1.0
   stop_diner_scoring:
-      c_backboard_activate:
-         action: disable
+    c_backboard_activate:
+      action: disable
+  counter_diner_target_hit_counter_hit:
+    c_tractorbeam_two:
+      action: enable
+      power: 1.08
+  tractorbeam_disable_please:
+    c_tractorbeam_two:
+      action: disable
 
 sound_player:
   start_diner_mode_music:
@@ -81,6 +88,7 @@ event_player:
   timer_diner_scoring_timer_stopped: stop_diner_scoring
   ball_will_end: stop_diner_scoring
   timer_diner_scoring_timer_tick{ticks == 5}: play_diner_chestburster_end_video
+  counter_diner_target_hit_counter_hit: tractorbeam_disable_please|2000ms
 
 scoring:
   s_middle_target_active:
@@ -112,7 +120,7 @@ logic_blocks:
   counters:
     diner_target_hit_counter:
       count_events: s_middle_target_active
-      count_complete_value: 10
+      count_complete_value: 5
       disable_on_complete: true
       enable_events: mode_diner_started stop_diner_scoring
       disable_events: mode_diner_stopped

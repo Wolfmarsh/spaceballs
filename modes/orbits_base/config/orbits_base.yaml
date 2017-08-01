@@ -1,16 +1,51 @@
 #config_version=4
 mode:
-  start_events: ball_starting
-  priority: 900
+  start_events: ball_starting mode_airlock_multiball_stopped mode_warp_ramp_multiball_stopped mode_sbone_multiball_stopped
+  stop_events: start_airlock_multiball_request start_warp_ramp_multiball_request start_sbone_multiball_request
+  priority: 300
 
 shots:
-  left_orbit_complete_shot:
+  left_orbit_base_shot:
     switch_sequence: s_left_spinner, s_right_orbit
-    time: 3s
-  right_orbit_complete_shot:
-    switch_sequence: s_right_orbit, s_left_spinner
-    time: 3s
+    profile: orbit_base_profile
+    time: 2s
+    show_tokens:
+        led: rgb_left_orbit_arrow_1
+  right_orbit_base_shot:
+    switch: s_right_orbit
+    profile: orbit_base_profile
+    time: 2s
+    show_tokens:
+        led: rgb_right_orbit_arrow_1
 
+shot_profiles:
+  orbit_base_profile:
+    states:
+      - name: start
+        show: orbit_base_blinking
+        sync_ms: 500
+        loops: -1
+      - name: lightspeed
+        show: orbit_base_lightspeed
+        sync_ms: 500
+        loops: -1
+      - name: ridiculousspeed
+        show: orbit_base_ridiculousspeed
+        sync_ms: 500
+        loops: -1
+      - name: ludicrousspeed
+        show: orbit_base_ludicrousspeed
+        sync_ms: 500
+        loops: -1
+      - name: plaidspeed
+        show: orbit_base_plaidspeed
+        sync_ms: 500
+        loops: -1
 
-#left_orbit_complete_shot_hit
-#right_orbit_complete_shot_hit
+shot_groups:
+    orbit_base_both_shots:
+        shots: left_orbit_base_shot, right_orbit_base_shot
+        rotate_left_events: s_sling_right_active
+        rotate_right_events: s_sling_left_active
+        enable_events: ball_started
+        disable_events: ball_ending

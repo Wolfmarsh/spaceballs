@@ -1,0 +1,4 @@
+#show_version=4
+- time: 0
+  leds:
+    rgb_left_orbit_arrow_1: df47d5

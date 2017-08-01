@@ -1,9 +1,9 @@
 events:
-  game_ended: 135
-  game_started: 231
+  game_ended: 140
+  game_started: 240
 player:
   score:
-    average: 1045006.3694267514
+    average: 1030364.197530864
     top:
     - 5236000
     - 4984000
@@ -15,7 +15,7 @@ player:
     - 3235000
     - 3056000
     - 2929000
-    total: 157
+    total: 162
 shots:
   airlock_addaball_shot_five: 1
   airlock_addaball_shot_four: 1
@@ -38,9 +38,13 @@ shots:
   airlock_shot_three: 40
   airlock_shot_two: 39
   lane_a: 13
-  lane_i: 29
-  lane_r: 33
+  lane_i: 30
+  lane_r: 36
+  left_orbit_base_complete_shot: 3
+  left_orbit_base_muted_spinner_shot: 5
+  left_orbit_base_shot: 27
   left_orbit_complete_shot: 29
+  right_orbit_base_shot: 11
   right_orbit_complete_shot: 35
   warp_ramp_lightspeed_shot: 3
   warp_ramp_ludicrousspeed_shot: 1
@@ -50,29 +54,29 @@ shots:
   warp_ramp_shot: 162
 switches:
   s_air_a_lane: 33
-  s_air_i_lane: 53
-  s_air_r_lane: 45
+  s_air_i_lane: 54
+  s_air_r_lane: 48
   s_drop_1: 109
   s_drop_2: 100
   s_drop_3: 107
   s_drop_4: 103
   s_drop_5: 101
-  s_launch_button: 399
+  s_launch_button: 409
   s_left_flipper: 1045
   s_left_inlane: 67
   s_left_outlane: 39
-  s_left_spinner: 2939
+  s_left_spinner: 3163
   s_middle_target: 145
-  s_plunger_lane: 604
-  s_pop_1: 161
-  s_pop_2: 201
-  s_pop_3: 95
-  s_pop_sneak: 108
+  s_plunger_lane: 616
+  s_pop_1: 163
+  s_pop_2: 205
+  s_pop_3: 97
+  s_pop_sneak: 114
   s_ramp_entry: 227
   s_ramp_exit: 190
   s_right_flipper: 1290
   s_right_inlane: 141
-  s_right_orbit: 154
+  s_right_orbit: 165
   s_right_outlane: 37
   s_saucer: 136
   s_sbone_entry: 184
@@ -88,14 +92,14 @@ switches:
   s_schwartz_power_5: 0
   s_schwartz_power_6: 0
   s_schwartz_power_7: 102
-  s_scoop: 122
+  s_scoop: 126
   s_sling_left: 195
   s_sling_right: 190
   s_start: 33
-  s_trough1: 474
-  s_trough2: 465
-  s_trough3: 465
-  s_trough4: 438
-  s_trough5: 444
-  s_trough6: 415
-  s_trough_jam: 487
+  s_trough1: 485
+  s_trough2: 476
+  s_trough3: 476
+  s_trough4: 450
+  s_trough5: 456
+  s_trough6: 423
+  s_trough_jam: 498

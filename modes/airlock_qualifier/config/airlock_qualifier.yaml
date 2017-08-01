@@ -46,6 +46,7 @@ shot_profiles:
     states:
       - name: ready
         show: airlock_one_ready
+        sync_ms: 500
         loops: -1
       - name: lit
         show: airlock_one_lit
@@ -53,6 +54,7 @@ shot_profiles:
     states:
       - name: ready
         show: airlock_two_ready
+        sync_ms: 500
         loops: -1
       - name: lit
         show: airlock_two_lit
@@ -60,6 +62,7 @@ shot_profiles:
     states:
       - name: ready
         show: airlock_three_ready
+        sync_ms: 500
         loops: -1
       - name: lit
         show: airlock_three_lit
@@ -67,6 +70,7 @@ shot_profiles:
     states:
       - name: ready
         show: airlock_four_ready
+        sync_ms: 500
         loops: -1
       - name: lit
         show: airlock_four_lit
@@ -74,6 +78,7 @@ shot_profiles:
     states:
       - name: ready
         show: airlock_five_ready
+        sync_ms: 500
         loops: -1
       - name: lit
         show: airlock_five_lit
