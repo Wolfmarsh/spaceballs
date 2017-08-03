@@ -1,8 +1,5 @@
 #config_version=4
 
-game:
-  balls_per_game: 1
-
 hardware:
   platform: fast
   driverboards: fast
@@ -19,66 +16,7 @@ fast:
   #debug: true
   
 config:
-- portconfig.yaml
-- switches.yaml
-- coils.yaml
-- leds.yaml
-- devices.yaml
-- keyboard.yaml
-- virtual.yaml
-- images.yaml
-- videos.yaml
-- sounds.yaml
-
-modes:
-- base
-- skillshot_timing
-- bonus
-- high_score
-- warp_ramp_qualifier
-- warp_ramp_multiball
-- spinner
-- diner
-- airlock_qualifier
-- airlock_multiball
-- pops_base
-- air_lanes
-- orbit_post_launch_behavior
-- orbits_base
-- dead_flip
-- slings_base
-- sbone_qualifier
-- sbone_multiball
-
-
-widget_styles:
-  dmd_xl:
-    font_name: Quadrit
-    font_size: 15
-    adjust_bottom: 7
-    adjust_top: 3
-  large_lcd_text:
-    font_name: Quadrit
-    font_size: 80
-      
-sound_system:
-  buffer: 2048  # previous value was 512
-  frequency: 44100
-  channels: 1
-  master_volume: 1
-  tracks:
-    voice:
-      volume: 1
-      priority: 2
-      simultaneous_sounds: 1
-    sfx:
-      volume: 1
-      priority: 1
-      simultaneous_sounds: 3
-    music:
-      volume: 0.5
-      simultaneous_sounds: 1
-  enabled: true
+- machine-config.yaml
 
 displays:
   lcd:
@@ -88,16 +26,6 @@ displays:
     width: 128
     height: 32
     default: true
-
-servos:
-  sbone_lock_servo:
-    debug: true
-    positions:
-      0.6: sbone_lock_servo_open
-      0.0: sbone_lock_servo_closed
-    reset_position: 0.7
-    reset_events: machine_reset_phase_3 game_ending
-    number: 13
 
 window:
   width: 1360 
@@ -109,136 +37,3 @@ window:
   exit_on_escape: true
   source_display: lcd
 
-player_vars:
-  game_scoring_multiplier:
-    initial_value: 1
-  bonus_multiplier:
-    initial_value: 1
-  pophits:
-    initial_value: 0
-
-random_event_player:
-  player_add_request:
-    - play_player_add_video_1
-    - play_player_add_video_2
-    - play_player_add_video_3
-    - play_player_add_video_4
-    - play_player_add_video_5
-    - play_player_add_video_6
-    - play_player_add_video_7
-    - play_player_add_video_8
-    - play_player_add_video_9
-
-slide_player:
-  play_player_add_video_1:
-    player_add_video_1_slide:
-      target: lcd
-  player_add_video_1_ended:
-    player_add_video_1_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_2:
-    player_add_video_2_slide:
-      target: lcd
-  player_add_video_2_ended:
-    player_add_video_2_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_3:
-    player_add_video_3_slide:
-      target: lcd
-  player_add_video_3_ended:
-    player_add_video_3_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_4:
-    player_add_video_4_slide:
-      target: lcd
-  player_add_video_4_ended:
-    player_add_video_4_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_5:
-    player_add_video_5_slide:
-      target: lcd
-  player_add_video_5_ended:
-    player_add_video_5_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_6:
-    player_add_video_6_slide:
-      target: lcd
-  player_add_video_6_ended:
-    player_add_video_6_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_7:
-    player_add_video_7_slide:
-      target: lcd
-  player_add_video_7_ended:
-    player_add_video_7_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_8:
-    player_add_video_8_slide:
-      target: lcd
-  player_add_video_8_ended:
-    player_add_video_8_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_9:
-    player_add_video_9_slide:
-      target: lcd
-  player_add_video_9_ended:
-    player_add_video_9_slide:
-      target: lcd
-      action: remove
-
-slides:
-  player_add_video_1_slide:
-    widgets:
-      - type: video
-        video: gunners_mate_phillip_asshole
-  player_add_video_2_slide:
-    widgets:
-      - type: video
-        video: hail_skroob
-  player_add_video_3_slide:
-    widgets:
-      - type: video
-        video: hello_lonestar_1
-  player_add_video_4_slide:
-    widgets:
-      - type: video
-        video: hello_lonestar_2
-  player_add_video_5_slide:
-    widgets:
-      - type: video
-        video: hes_an_asshole_sir
-  player_add_video_6_slide:
-    widgets:
-      - type: video
-        video: hes_an_asshole_too
-  player_add_video_7_slide:
-    widgets:
-      - type: video
-        video: how_many_assholes_we_got
-  player_add_video_8_slide:
-    widgets:
-      - type: video
-        video: surrounded_by_assholes
-  player_add_video_9_slide:
-    widgets:
-      - type: video
-        video: major_asshole
-
-ball_saves:
-  default_save:
-    active_time: 10s
-    hurry_up_time: 2s
-    grace_period: 1s
-    enable_events: mode_base_started
-    timer_start_events: skillshot_award_step
-    auto_launch: yes
-    balls_to_save: 1
-#balldevice_bd_trough_ball_eject_success

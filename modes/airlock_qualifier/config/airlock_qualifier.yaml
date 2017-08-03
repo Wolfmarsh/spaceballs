@@ -6,7 +6,7 @@ mode:
   priority: 200
 
 event_player:
-  airlock_qualifying_shots_complete: start_airlock_multiball_request
+  airlock_qualifying_shots_complete: start_airlock_multiball_request|300ms
 
 shots:
   airlock_qualifying_shot_one:

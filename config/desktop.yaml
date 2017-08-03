@@ -1,0 +1,72 @@
+#config_version=4
+
+# Override config for "desktop" mode which renders both the LCD and DMD in a
+# single on-screen window.
+
+# To use, run the mpf like this:
+# mpf both -c desktop
+
+
+displays:
+  # _overwrite: true will completely replace the existing displays: section
+  window:
+    width: 1800
+    height: 1000
+  dmd:
+    width: 128
+    height: 32
+    default: true
+
+hardware:
+  platform: smart_virtual
+  rgb_dmd: smart_virtual
+
+slides:
+  desktop:
+    - type: slide_frame
+      name: lcd
+      width: 1360
+      height: 768
+      y: top-5
+      anchor_y: top
+    - type: rectangle
+      color: aa0000
+      width: 1370
+      height: 778
+      corner_radius: 3
+      anchor_y: top
+      y: top
+    - type: color_dmd
+      width: 640
+      height: 160
+      y: 31
+      anchor_y: bottom
+    - type: rectangle
+      width: 642
+      height: 162
+      anchor_y: bottom
+      y: 30
+
+slide_player:
+  mc_ready:
+    desktop:
+      target: window
+
+config:
+- machine-config.yaml
+
+window:
+  width: 1800
+  height: 1000
+  title: Mission Pinball Framework - Spaceballs
+  resizable: true
+  fullscreen: false
+  borderless: false
+  exit_on_escape: true
+  source_display: window
+
+mpf:
+    default_led_hw_update_hz: 20
+
+led_settings:
+    default_led_fade_ms: 0

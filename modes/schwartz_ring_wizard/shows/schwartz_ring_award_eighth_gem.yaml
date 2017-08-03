@@ -1,0 +1,10 @@
+# show_version=4
+- time: 0
+  leds:
+      rgb_insignia_9: ffffff-f25ms
+    
+- time: '+1'
+  leds:
+      rgb_insignia_9: 000000-f50ms
+      rgb_insignia_8: ffffff-f25ms
+  duration: -1

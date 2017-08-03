@@ -1,0 +1,13 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 500
+
+event_player:
+  shaker_request_long_alternating_tremor: shaker_perform_long_alternating_tremor
+
+show_player:
+  shaker_perform_long_alternating_tremor:
+    shakers_base_left_right_long_alternating_tremor:
+      loops: 0
+      speed: 1

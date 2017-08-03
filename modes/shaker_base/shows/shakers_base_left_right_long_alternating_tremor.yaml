@@ -1,0 +1,55 @@
+#show_version=4
+- time: 0
+  coils:
+    c_left_shaker: enable
+    c_right_shaker: disable
+
+- time: '+100ms'
+  coils:
+    c_left_shaker: disable
+    c_right_shaker: enable
+
+- time: '+100ms'
+  coils:
+    c_left_shaker: enable
+    c_right_shaker: disable
+
+- time: '+100ms'
+  coils:
+    c_left_shaker: disable
+    c_right_shaker: enable
+
+- time: '+100ms'
+  coils:
+    c_left_shaker: enable
+    c_right_shaker: disable
+
+- time: '+100ms'
+  coils:
+    c_left_shaker: disable
+    c_right_shaker: enable
+
+- time: '+100ms'
+  coils:
+    c_left_shaker: enable
+    c_right_shaker: disable
+
+- time: '+100ms'
+  coils:
+    c_left_shaker: disable
+    c_right_shaker: enable
+
+- time: '+100ms'
+  coils:
+    c_left_shaker: enable
+    c_right_shaker: disable
+
+- time: '+100ms'
+  coils:
+    c_left_shaker: disable
+    c_right_shaker: enable
+
+- time: '+100ms'
+  coils:
+    c_left_shaker: disable
+    c_right_shaker: disable

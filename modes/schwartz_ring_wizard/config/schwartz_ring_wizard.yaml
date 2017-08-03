@@ -1,0 +1,68 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 300
+
+event_player:
+  s_left_inlane_active: award_next_schwartz_gem
+  award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==0}: increment_schwartz_gem_counter award_first_schwartz_gem
+  award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==1}: increment_schwartz_gem_counter award_second_schwartz_gem
+  award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==2}: increment_schwartz_gem_counter award_third_schwartz_gem
+  award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==3}: increment_schwartz_gem_counter award_fourth_schwartz_gem
+  award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==4}: increment_schwartz_gem_counter award_fifth_schwartz_gem
+  award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==5}: increment_schwartz_gem_counter award_sixth_schwartz_gem
+  award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==6}: increment_schwartz_gem_counter award_seventh_schwartz_gem
+  award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==7}: increment_schwartz_gem_counter award_eighth_schwartz_gem
+  award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==8}: increment_schwartz_gem_counter award_ninth_schwartz_gem
+
+sound_player:
+  award_next_schwartz_gem:
+    schwartz_gem_award_1:
+      action: play
+
+show_player:
+  award_first_schwartz_gem:
+    schwartz_ring_award_first_gem:
+      loops: 0
+      speed: 10
+  award_second_schwartz_gem:
+    schwartz_ring_award_second_gem:
+      loops: 0
+      speed: 10
+  award_third_schwartz_gem:
+    schwartz_ring_award_third_gem:
+      loops: 0
+      speed: 10
+  award_fourth_schwartz_gem:
+    schwartz_ring_award_fourth_gem:
+      loops: 0
+      speed: 10
+  award_fifth_schwartz_gem:
+    schwartz_ring_award_fifth_gem:
+      loops: 0
+      speed: 10
+  award_sixth_schwartz_gem:
+    schwartz_ring_award_sixth_gem:
+      loops: 0
+      speed: 10
+  award_seventh_schwartz_gem:
+    schwartz_ring_award_seventh_gem:
+      loops: 0
+      speed: 10
+  award_eighth_schwartz_gem:
+    schwartz_ring_award_eighth_gem:
+      loops: 0
+      speed: 10
+  award_ninth_schwartz_gem:
+    schwartz_ring_award_ninth_gem:
+      loops: 0
+      speed: 10
+
+logic_blocks:
+  counters:
+    schwartz_gems_awarded_counter:
+      count_events: increment_schwartz_gem_counter
+      starting_count: 0
+      count_complete_value: 9
+      direction: up
+      events_when_complete: activate_schwartz_ring_wizard_mode

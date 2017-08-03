@@ -10,6 +10,12 @@ sound_player:
     multiball_callout_sound_pool:
       action: play
 
+slide_player:
+  multiball_airlock_add_a_ball_started:
+    airlock_addaball_started_slide:
+      target: dmd
+      expire: 1
+
 shots:
   airlock_mb_shot_one:
     switch: s_drop_1
@@ -150,3 +156,29 @@ multiballs:
     shoot_again: 10s
     add_a_ball_events: airlock_multiball_gimme_another_ball
     start_events: mode_airlock_multiball_started
+
+slides:
+  airlock_addaball_started_slide:
+    widgets:
+      - type: text
+        text: AIRLOCK
+        style: dmd_xl
+        anchor_y: top
+        anchor_x: center
+        y: top - 3
+        x: center
+        color: ffffff
+      - type: text
+        text: MULTIBALL
+        style: dmd_xl
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom + 3
+        x: center
+        color: ffffff
+      - type: image
+        image: planet_druidia
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0

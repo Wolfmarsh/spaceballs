@@ -6,22 +6,19 @@ keyboard:
   /:
     switch: s_right_flipper
   1:
-    switch: s_trough1
+    switch: s_drop_1
     toggle: true
   2:
-    switch: s_trough2
+    switch: s_drop_2
     toggle: true
   3:
-    switch: s_trough3
+    switch: s_drop_3
     toggle: true
   4:
-    switch: s_trough4
+    switch: s_drop_4
     toggle: true
   5:
-    switch: s_trough5
-    toggle: true
-  6:
-    switch: s_trough6
+    switch: s_drop_5
     toggle: true
   p:
     switch: s_plunger_lane
