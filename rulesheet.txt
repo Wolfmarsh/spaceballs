@@ -68,6 +68,10 @@ Summary: This is a 3 ball multiball that starts after you achieve plaid speed.
 	of the jackpot through the same speed levels.   If you raise the jackpot level to Ludicrous
 	and score 5 Ludicrous Jackpots, you will be awarded an extra Schwartz gem when the mode
 	is over.  Otherwise you will only be awarded one Schwartz gem.
+	
+	During warp ramp multiball, the orbit post at the top of the playfield will default to
+	being up, unless a ball is being launched into the playfield.  It will drop temporarily
+	for that.
 
 SPACEBALL ONE MULTIBALL
 =======================

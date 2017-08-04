@@ -58,6 +58,32 @@ show_player:
       loops: 0
       speed: 10
 
+slide_player:
+  award_next_schwartz_gem:
+    schwartz_gem_awarded_slide:
+      target: dmd
+      expire: 1
+
+slides:
+  schwartz_gem_awarded_slide:
+    widgets:
+      - type: text
+        text: 1 SCHWARTZ GEM
+        style: dmd_xl
+        anchor_y: top
+        anchor_x: center
+        y: top - 1
+        x: center
+        color: ffffff
+      - type: text
+        text: AWARDED
+        style: dmd_xl
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom + 1
+        x: center
+        color: ffffff
+
 logic_blocks:
   counters:
     schwartz_gems_awarded_counter:
