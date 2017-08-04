@@ -42,6 +42,12 @@ shots:
     profile: airlock_mb_target_five_profile
     disable_events: activate_airlock_addaball_shot_5
     enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+  airlock_mb_shot_left_orbit:
+    switch_sequence: s_left_spinner, s_right_orbit
+    time: 2s
+    profile: airlock_mb_generic_target_profile
+    show_tokens:
+        targetled: rgb_left_orbit_arrow_1
   airlock_mb_warp_ramp_shot:
     profile: airlock_mb_warpramp_target_profile
     switch_sequence: s_ramp_entry, s_ramp_exit
@@ -112,41 +118,55 @@ shot_profiles:
     states:
       - name: pending
         show: airlock_mb_target_one_pending
+        sync_ms: 500
         loops: -1
   airlock_mb_target_two_profile:
     states:
       - name: pending
         show: airlock_mb_target_two_pending
+        sync_ms: 500
         loops: -1
   airlock_mb_target_three_profile:
     states:
       - name: pending
         show: airlock_mb_target_three_pending
+        sync_ms: 500
         loops: -1
   airlock_mb_target_four_profile:
     states:
       - name: pending
         show: airlock_mb_target_four_pending
+        sync_ms: 500
         loops: -1
   airlock_mb_target_five_profile:
     states:
       - name: pending
         show: airlock_mb_target_five_pending
+        sync_ms: 500
+        loops: -1
+  airlock_mb_generic_target_profile:
+    states:
+      - name: pending
+        show: airlock_mb_target_pending
+        sync_ms: 500
         loops: -1
   airlock_mb_warpramp_target_profile:
     states:
       - name: pending
         show: airlock_mb_warpramp_pending
+        sync_ms: 500
         loops: -1
   airlock_addaball_target_profile:
     states:
       - name: addaball_pending
         show: airlock_addaball_target_pending
+        sync_ms: 500
         loops: -1
   airlock_addaball_warpramp_profile:
     states:
       - name: addaball_pending
         show: airlock_addaball_warpramp_pending
+        sync_ms: 500
         loops: -1
 
 multiballs:

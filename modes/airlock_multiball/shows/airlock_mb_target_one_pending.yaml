@@ -3,8 +3,8 @@
   leds:
     rgb_drop_1: ffff00-f50ms
 
-- time: '+350ms'
+- time: '+250ms'
   leds:
     rgb_drop_1: 000000-f50ms
 
-- time: '+350ms'
+- time: '+250ms'

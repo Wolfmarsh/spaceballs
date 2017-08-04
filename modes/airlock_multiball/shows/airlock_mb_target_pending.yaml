@@ -3,8 +3,8 @@
   leds:
     (targetled): ffff00-f50ms
 
-- time: '+350ms'
+- time: '+250ms'
   leds:
     (targetled): 000000-f50ms
 
-- time: '+350ms'
+- time: '+250ms'
