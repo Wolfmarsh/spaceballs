@@ -1,3 +1,9 @@
+Spaceballs Pinball
+==================
+** MAY THE SCHWARTZ BE WITH YOU **
+
+
+
 SKILLSHOT
 =========
 To Activate:  Skillshot is activated anytime a new ball begins
@@ -7,6 +13,31 @@ Summary:  The three lights in the launch lane will flash in sequence in various 
 		- Red: Skillshot fail
 		- Yellow: award points
 		- Green: Award Bonus Multiplier
+
+END OF BALL BONUS
+=================
+Summary: After each ball is complete, you will be awarded an end of ball bonus.  This
+	bonus depends on several factors from the ball you just played.
+		- Awarded Points for every Spinner hit during the ball
+		- Awarded Points for every pop bumper hit during the ball
+		- Bonus multiplied by a multiplier determined by gameplay, starting at 1X.
+
+AIR LANE BONUS MULTIPLIER
+=========================
+Summary: This mode operates the top "A", "I", and "R" lanes above the pop bumpers.  The
+	goal is to consistently light all three lanes.  Lighting all three lanes awards you
+	+1x to your end of ball bonus.  Use the left and right flipper buttons to rotate the
+	lit lanes.
+
+DINER 2X SCORING
+================
+To Activate: Hit the center standup target to the right of Spaceball one 5 times to qualify
+	the mode.  Once the "DINER" insert in front of the scoop is lit, hit the scoop to
+	activate the 2X scoring for 25 seconds.
+
+Summary: When this mode is active, the chestburster toy at the rear of the playfield will be
+	dancing.  During this 25 second period, all playfield scores will be doubled.  It is
+	useful to save this mode for when you have activated a multiball or a high jackpot mode.
 
 AIRLOCK MULTIBALL
 =================
@@ -18,14 +49,14 @@ Summary: This is an add-a-ball multiball that starts by giving you 1 additional 
 		- Yellow targets will award a point value.
 		- Blue targets will add a ball to your multiball.
 
-	If you add all 3 additional balls to your multiball, you will get awarded an extra
+	If you add all 4 additional balls to your multiball, you will get awarded an extra
 	Schwartz gem when the mode is over.  Otherwise you will only be awarded one Schwartz gem.
 
 WARP RAMP MULTIBALL
 ===================
 To Activate: Shoot the warp ramp 4 times to progress through the warp speeds.
 
-Summary: This is a 4 ball multiball that starts after you achieve plaid speed.
+Summary: This is a 3 ball multiball that starts after you achieve plaid speed.
 
 	The shots up the ramp award the following levels of warp speed:
 		- Light Speed
@@ -37,3 +68,11 @@ Summary: This is a 4 ball multiball that starts after you achieve plaid speed.
 	of the jackpot through the same speed levels.   If you raise the jackpot level to Ludicrous
 	and score 5 Ludicrous Jackpots, you will be awarded an extra Schwartz gem when the mode
 	is over.  Otherwise you will only be awarded one Schwartz gem.
+
+SPACEBALL ONE MULTIBALL
+=======================
+To Activate: Lock 3 balls into the Spaceball One physical ball lock.
+
+Summary: This is a 4 ball multiball that starts once you fill the Spaceball One lock with 3
+	balls.
+

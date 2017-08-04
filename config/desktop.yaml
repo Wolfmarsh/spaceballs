@@ -56,8 +56,8 @@ config:
 - machine-config.yaml
 
 window:
-  width: 1800
-  height: 1000
+  width: 900
+  height: 500
   title: Mission Pinball Framework - Spaceballs
   resizable: true
   fullscreen: false

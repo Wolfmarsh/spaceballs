@@ -44,7 +44,7 @@ scoring:
 
 multiballs:
   plaid_multiball:
-    ball_count: 4
+    ball_count: 3
     ball_count_type: total
     shoot_again: 10s
     start_events: mode_warp_ramp_multiball_started
