@@ -84,4 +84,3 @@ ball_devices:
     auto_fire_on_unexpected_ball: false
     confirm_eject_type: event
     confirm_eject_event: sbone_ball_has_probably_been_released
-    debug: true

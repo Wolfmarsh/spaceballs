@@ -9,6 +9,9 @@ sound_player:
   multiball_airlock_add_a_ball_started:
     multiball_callout_sound_pool:
       action: play
+  airlock_multiball_award_100k_shot:
+    target_hit_1:
+      action: play
 
 slide_player:
   multiball_airlock_add_a_ball_started:
@@ -68,6 +71,11 @@ shots:
     time: 3s
     disable_events: activate_airlock_addaball_shot_6
     enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+  airlock_mb_scoop_shot:
+    profile: airlock_mb_generic_target_profile
+    switch: s_scoop
+    show_tokens:
+        targetled: rgb_scoop_arrow_1
   airlock_addaball_shot_one:
     switch: s_drop_1
     profile: airlock_addaball_target_profile
@@ -123,6 +131,8 @@ event_player:
   airlock_mb_shot_three_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_shot_four_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_shot_five_pending_hit: airlock_multiball_award_100k_shot
+  airlock_mb_warp_ramp_shot_pending_hit: airlock_multiball_award_100k_shot
+  airlock_mb_scoop_shot_pending_hit: airlock_multiball_award_100k_shot
   multiball_airlock_add_a_ball_ended: award_next_schwartz_gem stop_airlock_multiball_request|100ms
   
 random_event_player:

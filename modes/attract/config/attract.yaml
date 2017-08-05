@@ -4,8 +4,12 @@ slide_player:
   dead_flip_code_successfully_activated:
     dead_flip_mode_activated:
       target: dmd
-      expire: 2s
+      expire: 1s
       priority: 2
+    dead_flip_play_pinball:
+      target: dmd
+      expire: 2s
+      priority: 1
 
 slides:
   dead_flip_mode_activated:
@@ -16,6 +20,24 @@ slides:
         anchor_x: left
         y: 0
         x: 0
+  dead_flip_play_pinball:
+    widgets:
+      - type: text
+        text: PLAY PINBALL
+        style: dmd_big
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ff3333
+      - type: rectangle
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        width: 128
+        height: 32
+        color: ffffff
 
 show_player:
   mode_attract_started:

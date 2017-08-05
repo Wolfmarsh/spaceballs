@@ -1,9 +1,9 @@
 events:
-  game_ended: 145
-  game_started: 263
+  game_ended: 146
+  game_started: 264
 player:
   score:
-    average: 1009179.6407185626
+    average: 1022809.5238095237
     top:
     - 5236000
     - 4984000
@@ -12,10 +12,10 @@ player:
     - 4221000
     - 3504000
     - 3479000
+    - 3299000
     - 3235000
     - 3056000
-    - 2929000
-    total: 167
+    total: 168
 shots:
   airlock_addaball_shot_five: 1
   airlock_addaball_shot_four: 1
@@ -23,21 +23,22 @@ shots:
   airlock_addaball_shot_two: 1
   airlock_mb_shot_five: 1
   airlock_mb_shot_four: 2
-  airlock_mb_shot_one: 3
+  airlock_mb_shot_left_orbit: 2
+  airlock_mb_shot_one: 4
   airlock_mb_shot_three: 2
-  airlock_mb_shot_two: 3
-  airlock_mb_warp_ramp_shot: 1
-  airlock_qualifying_shot_five: 9
-  airlock_qualifying_shot_four: 9
-  airlock_qualifying_shot_one: 11
-  airlock_qualifying_shot_three: 9
-  airlock_qualifying_shot_two: 9
+  airlock_mb_shot_two: 4
+  airlock_mb_warp_ramp_shot: 5
+  airlock_qualifying_shot_five: 11
+  airlock_qualifying_shot_four: 11
+  airlock_qualifying_shot_one: 13
+  airlock_qualifying_shot_three: 11
+  airlock_qualifying_shot_two: 11
   airlock_shot_five: 34
   airlock_shot_four: 39
   airlock_shot_one: 39
   airlock_shot_three: 40
   airlock_shot_two: 39
-  lane_a: 13
+  lane_a: 15
   lane_i: 30
   lane_r: 36
   left_orbit_base_complete_shot: 3
@@ -53,32 +54,32 @@ shots:
   warp_ramp_ridiculousspeed_shot: 1
   warp_ramp_shot: 162
 switches:
-  s_air_a_lane: 33
+  s_air_a_lane: 35
   s_air_i_lane: 54
   s_air_r_lane: 48
-  s_drop_1: 111
-  s_drop_2: 101
-  s_drop_3: 108
-  s_drop_4: 104
-  s_drop_5: 102
-  s_launch_button: 423
+  s_drop_1: 114
+  s_drop_2: 104
+  s_drop_3: 110
+  s_drop_4: 106
+  s_drop_5: 104
+  s_launch_button: 425
   s_left_flipper: 1045
   s_left_inlane: 121
   s_left_outlane: 39
-  s_left_spinner: 3215
+  s_left_spinner: 3264
   s_middle_target: 145
-  s_plunger_lane: 646
-  s_pop_1: 163
+  s_plunger_lane: 651
+  s_pop_1: 164
   s_pop_2: 205
   s_pop_3: 97
   s_pop_sneak: 114
-  s_ramp_entry: 227
-  s_ramp_exit: 190
+  s_ramp_entry: 231
+  s_ramp_exit: 194
   s_right_flipper: 1290
-  s_right_inlane: 141
-  s_right_orbit: 165
-  s_right_outlane: 37
-  s_saucer: 136
+  s_right_inlane: 145
+  s_right_orbit: 168
+  s_right_outlane: 38
+  s_saucer: 138
   s_sbone_entry: 185
   s_sbone_left_orbit: 40
   s_sbone_lock_1: 97
@@ -96,10 +97,10 @@ switches:
   s_sling_left: 195
   s_sling_right: 190
   s_start: 33
-  s_trough1: 504
-  s_trough2: 494
-  s_trough3: 496
-  s_trough4: 472
-  s_trough5: 476
-  s_trough6: 435
-  s_trough_jam: 518
+  s_trough1: 508
+  s_trough2: 498
+  s_trough3: 500
+  s_trough4: 476
+  s_trough5: 480
+  s_trough6: 439
+  s_trough_jam: 522
