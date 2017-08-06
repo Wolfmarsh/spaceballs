@@ -6,7 +6,7 @@ mode:
 
 event_player:
   mode_sbone_qualifier_started: sbone_lock_servo_closed
-  multiball_lock_sbone_mb_lock_full: start_sbone_multiball_request
+  multiball_lock_sbone_mb_lock_full: start_sbone_multiball_request|300ms
   player_sbone_mb_lock_locked_balls{value==1}: sbone_ball_one_locked
   player_sbone_mb_lock_locked_balls{value==2}: sbone_ball_two_locked
   player_sbone_mb_lock_locked_balls{value==3}: sbone_ball_three_locked
@@ -15,6 +15,7 @@ multiball_locks:
   sbone_mb_lock:
     balls_to_lock: 3
     lock_devices: bd_sbone
+    reset_count_for_current_player_events: mode_sbone_qualifier_started
 
 slide_player:
   player_sbone_mb_lock_locked_balls:

@@ -2,12 +2,11 @@
 
 mode:
   start_events: start_sbone_multiball_request
-  stop_events: multiball_sbone_multiball_ended
+  stop_events: stop_sbone_multiball_request
   priority: 1300
 
 event_player:
-  balldevice_bd_sbone_ball_eject_attempt: sbone_lock_servo_open sbone_lock_servo_closed|90ms
-  sbone_lock_servo_closed: sbone_ball_has_probably_been_released|1000ms
+  multiball_sbone_multiball_ended: award_next_schwartz_gem stop_sbone_multiball_request|300ms
 
 slide_player:
   multiball_sbone_multiball_started:

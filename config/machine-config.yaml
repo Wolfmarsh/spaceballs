@@ -32,6 +32,8 @@ modes:
 - orbits_base
 - dead_flip
 - slings_base
+- sbone_autoeject
+- sbone_servoactivation
 - sbone_qualifier
 - sbone_multiball
 - schwartz_ring_wizard
@@ -67,11 +69,10 @@ sound_system:
 
 servos:
   sbone_lock_servo:
-    debug: true
     positions:
       0.6: sbone_lock_servo_open
       0.0: sbone_lock_servo_closed
-    reset_position: 0.7
+    reset_position: 0.6
     reset_events: machine_reset_phase_3 game_ending
     number: 13
 

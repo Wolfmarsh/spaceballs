@@ -78,9 +78,10 @@ ball_devices:
     exit_count_delay: 250ms
   bd_sbone:
     label: Spaceball One
-    entrance_count_delay: 300ms
+    entrance_count_delay: 500ms
+    exit_count_delay: 1000ms
     eject_coil: c_pop_flasher
     ball_switches: s_sbone_lock_1, s_sbone_lock_2, s_sbone_lock_3
     auto_fire_on_unexpected_ball: false
-    confirm_eject_type: event
-    confirm_eject_event: sbone_ball_has_probably_been_released
+#    confirm_eject_type: event
+#    confirm_eject_event: sbone_ball_has_probably_been_released
