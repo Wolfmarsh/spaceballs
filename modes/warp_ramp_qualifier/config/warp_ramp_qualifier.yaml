@@ -9,7 +9,7 @@ shots:
     switch_sequence: s_ramp_entry, s_ramp_exit
     time: 3s
     profile: warp_ramp_qualifier_shot_profile
-    reset_events: start_warp_ramp_multiball_request
+    reset_events: warp_ramp_qualifier_complete
 
 shot_profiles:
   warp_ramp_qualifier_shot_profile:
@@ -35,7 +35,7 @@ event_player:
   warp_ramp_qualifier_shot_lightspeed_hit: warp_ramp_level_ridiculousspeed_achieved
   warp_ramp_qualifier_shot_ridiculousspeed_hit: warp_ramp_level_ludicrousspeed_achieved
   warp_ramp_qualifier_shot_ludicrousspeed_hit: warp_ramp_level_plaidspeed_achieved
-  logicblock_warp_ramp_level_counter_complete: start_warp_ramp_multiball_request|300ms
+  warp_ramp_level_plaidspeed_achieved: warp_ramp_qualifier_complete|50ms
   
 scoring:
   warp_ramp_level_lightspeed_achieved:
@@ -46,14 +46,3 @@ scoring:
     score: 300000 * current_player.game_scoring_multiplier
   warp_ramp_level_plaidspeed_achieved:
     score: 1000000 * current_player.game_scoring_multiplier
-
-logic_blocks:
-  counters:
-    warp_ramp_level_counter:
-      count_events: warp_ramp_level_lightspeed_achieved warp_ramp_level_ridiculousspeed_achieved warp_ramp_level_ludicrousspeed_achieved warp_ramp_level_plaidspeed_achieved
-      count_complete_value: 4
-      disable_on_complete: true
-      enable_events: mode_warp_ramp_qualifier_started mode_warp_ramp_multiball_stopped
-      disable_events: mode_warp_ramp_multiball_started
-      reset_events: mode_warp_ramp_multiball_stopped
-      persist_state: true

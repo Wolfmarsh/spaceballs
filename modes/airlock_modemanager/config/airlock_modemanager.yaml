@@ -13,6 +13,6 @@ event_player:
   start_warp_ramp_multiball_mode_request: stop_airlock_qualifier_mode_request
   stop_warp_ramp_multiball_mode_request: start_airlock_qualifier_mode_request
   #if the qualifier is complete, start up multiball
-  airlock_qualifier_complete: stop_airlock_qualifier_mode_request, start_airlock_multiball_mode_request
+  airlock_qualifier_complete: stop_airlock_qualifier_mode_request, start_airlock_multiball_mode_request, start_sbone_autoeject_request
   #if multiball is complete, start up the qualifier and award a gem
-  airlock_multiball_complete: stop_airlock_multiball_mode_request, start_airlock_qualifier_mode_request, award_next_schwartz_gem
+  airlock_multiball_complete: stop_airlock_multiball_mode_request, start_airlock_qualifier_mode_request, award_next_schwartz_gem, stop_sbone_autoeject_request

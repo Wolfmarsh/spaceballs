@@ -13,6 +13,6 @@ event_player:
   start_sbone_multiball_mode_request: stop_warp_ramp_qualifier_mode_request
   stop_sbone_multiball_mode_request: start_warp_ramp_qualifier_mode_request
   #if the qualifier is complete, start up multiball
-  warpramp_qualifier_complete: stop_warp_ramp_qualifier_mode_request, start_warp_ramp_multiball_mode_request
+  warp_ramp_qualifier_complete: stop_warp_ramp_qualifier_mode_request, start_warp_ramp_multiball_mode_request, start_sbone_autoeject_request
   #if multiball is complete, start up the qualifier and award a gem
-  sbone_multiball_complete: stop_warp_ramp_multiball_mode_request, start_warp_ramp_qualifier_mode_request, award_next_schwartz_gem
+  warp_ramp_multiball_complete: stop_warp_ramp_multiball_mode_request, start_warp_ramp_qualifier_mode_request, award_next_schwartz_gem, stop_sbone_autoeject_request

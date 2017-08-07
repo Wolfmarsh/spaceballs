@@ -8,7 +8,7 @@ event_player:
   warp_ramp_mb_jackpot_shot_jackpotpending_hit: warp_ramp_mb_award_jackpot
   balldevice_bd_plunger_ejecting_ball: plaid_multiball_raise_orbit_post|1000ms
   multiball_plaid_multiball_started: plaid_multiball_raise_orbit_post
-  multiball_plaid_multiball_ended: stop_warp_ramp_multiball_request|100ms
+  multiball_plaid_multiball_ended: warp_ramp_multiball_complete|50ms
   stop_warp_ramp_multiball_request: award_next_schwartz_gem
 
 show_player:

@@ -4,43 +4,49 @@ mode:
   priority: 800
 
 shots:
-    lane_a:
-        switch: s_air_a_lane
-        profile: air_lane_profile
-        show_tokens:
-            can: rgb_a_can
-            lane: rgb_a_lane
-    lane_i:
-        switch: s_air_i_lane
-        profile: air_lane_profile
-        show_tokens:
-            can: rgb_i_can
-            lane: rgb_i_lane
-    lane_r:
-        switch: s_air_r_lane
-        profile: air_lane_profile
-        show_tokens:
-            can: rgb_r_can
-            lane: rgb_r_lane
+  lane_a:
+    switch: s_air_a_lane
+    profile: air_lane_profile
+    show_tokens:
+      can: rgb_a_can
+      lane: rgb_a_lane
+  lane_i:
+    switch: s_air_i_lane
+    profile: air_lane_profile
+    show_tokens:
+      can: rgb_i_can
+      lane: rgb_i_lane
+  lane_r:
+    switch: s_air_r_lane
+    profile: air_lane_profile
+    show_tokens:
+       can: rgb_r_can
+       lane: rgb_r_lane
+
+show_player:
+  air_lanes_complete:
+    air_lanes_full_pf_wipe_down_quicker:
+      loops: 0
+      speed: 30
 
 shot_groups:
-    air_lanes:
-        shots: lane_a, lane_i, lane_r
-        rotate_left_events: sw_left_flipper
-        rotate_right_events: sw_right_flipper
-        reset_events: air_lanes_complete
-        enable_events: ball_started
-        disable_events: ball_ending
+  air_lanes:
+    shots: lane_a, lane_i, lane_r
+    rotate_left_events: sw_left_flipper
+    rotate_right_events: sw_right_flipper
+    reset_events: air_lanes_complete
+    enable_events: ball_started
+    disable_events: ball_ending
 
 shot_profiles:
-    air_lane_profile:
-      show: air_lane_selected
-      states:
-        - name: unlit
-          show: air_lane_off
-          loops: 0
-        - name: lit
-          show: air_lane_on
+  air_lane_profile:
+    show: air_lane_selected
+    states:
+      - name: unlit
+        show: air_lane_off
+        loops: 0
+      - name: lit
+        show: air_lane_on
 
 slide_player:
   air_lanes_complete:

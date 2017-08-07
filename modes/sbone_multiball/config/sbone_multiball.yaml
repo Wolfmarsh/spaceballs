@@ -8,3 +8,8 @@ mode:
 event_player:
   multiball_sbone_multiball_ended: sbone_multiball_complete|50ms
 
+multiball_locks:
+  sbone_mb_lock:
+    balls_to_lock: 3
+    lock_devices: bd_sbone
+    reset_count_for_current_player_events: multiball_sbone_multiball_ended

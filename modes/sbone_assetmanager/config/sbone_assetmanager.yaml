@@ -3,12 +3,6 @@ mode:
   start_events: ball_starting
   priority: 700
 
-multiball_locks:
-  sbone_mb_lock:
-    balls_to_lock: 3
-    lock_devices: bd_sbone
-    reset_count_for_current_player_events: mode_sbone_qualifier_started
-
 slide_player:
   player_sbone_mb_lock_locked_balls{value>0}:
     sbone_balls_locked_slide:
