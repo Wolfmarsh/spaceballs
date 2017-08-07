@@ -2,8 +2,6 @@ Spaceballs Pinball
 ==================
 ** MAY THE SCHWARTZ BE WITH YOU **
 
-
-
 SKILLSHOT
 =========
 To Activate:  Skillshot is activated anytime a new ball begins
@@ -80,3 +78,10 @@ To Activate: Lock 3 balls into the Spaceball One physical ball lock.
 Summary: This is a 4 ball multiball that starts once you fill the Spaceball One lock with 3
 	balls.
 
+	During the first phase of the multiball, Princess Vespa's Mercedes will be pulled toward
+	Spaceball One.  Your mission during multiball is to rescue her before the Spaceballs get
+	her.  You have 30 seconds to send three balls through the Spaceball One ball lock.  You
+	can reduce the number of balls your have to send through by hitting both of the flashing
+	red targets on either side of Spaceball One.  You can only reduce the count by 2 this way,
+	by jamming the radar.  If you are successful, you will get two schwartz gems, otherwise
+	the typical one gem award.
