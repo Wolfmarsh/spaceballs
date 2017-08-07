@@ -14,16 +14,21 @@ config:
 - images.yaml
 - videos.yaml
 - sounds.yaml
+- multiballs.yaml
 
 modes:
 - base
 - skillshot_timing
 - bonus
 - high_score
+- warp_ramp_assetmanager
+- warp_ramp_modemanager
 - warp_ramp_qualifier
 - warp_ramp_multiball
 - spinner
 - diner
+- airlock_assetmanager
+- airlock_modemanager
 - airlock_qualifier
 - airlock_multiball
 - pops_base
@@ -32,7 +37,9 @@ modes:
 - orbits_base
 - dead_flip
 - slings_base
+- sbone_assetmanager
 - sbone_autoeject
+- sbone_modemanager
 - sbone_servoactivation
 - sbone_qualifier
 - sbone_multiball

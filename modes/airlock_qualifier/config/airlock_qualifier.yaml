@@ -1,12 +1,12 @@
 #config_version=4
 
 mode:
-  start_events: ball_starting mode_airlock_multiball_stopped mode_warp_ramp_multiball_stopped mode_sbone_multiball_stopped
-  stop_events: start_airlock_multiball_request start_warp_ramp_multiball_request start_sbone_multiball_request
+  start_events: start_airlock_qualifier_mode_request
+  stop_events: stop_airlock_qualifier_mode_request
   priority: 200
 
 event_player:
-  airlock_qualifying_shots_complete: start_airlock_multiball_request|300ms
+  airlock_qualifying_shots_complete: airlock_qualifier_complete|50ms
 
 shots:
   airlock_qualifying_shot_one:
@@ -83,43 +83,6 @@ shot_profiles:
       - name: lit
         show: airlock_five_lit
 
-slide_player:
-  airlock_qualifying_shot_one_ready_hit:
-    airlock_one_complete_slide:
-      target: dmd
-      expire: 1
-    airlock_one_complete_slide_king:
-      target: lcd
-      expire: 800ms
-  airlock_qualifying_shot_two_ready_hit:
-    airlock_two_complete_slide:
-      target: dmd
-      expire: 1
-    airlock_two_complete_slide_king:
-      target: lcd
-      expire: 800ms
-  airlock_qualifying_shot_three_ready_hit:
-    airlock_three_complete_slide:
-      target: dmd
-      expire: 1
-    airlock_three_complete_slide_king:
-      target: lcd
-      expire: 800ms
-  airlock_qualifying_shot_four_ready_hit:
-    airlock_four_complete_slide:
-      target: dmd
-      expire: 1
-    airlock_four_complete_slide_king:
-      target: lcd
-      expire: 800ms
-  airlock_qualifying_shot_five_ready_hit:
-    airlock_five_complete_slide:
-      target: dmd
-      expire: 1
-    airlock_five_complete_slide_king:
-      target: lcd
-      expire: 1000ms
-
 scoring:
   airlock_qualifying_shot_one_ready_hit:
     score: 50000 * current_player.game_scoring_multiplier
@@ -133,116 +96,3 @@ scoring:
     score: 50000 * current_player.game_scoring_multiplier
   airlock_qualifying_shots_complete:
     score: 1000000 * current_player.game_scoring_multiplier
-
-slides:
-  airlock_one_complete_slide_king:
-    widgets:
-      - type: video
-        video: airlock_king_one
-        width: 1280
-        height: 720
-  airlock_one_complete_slide:
-    widgets:
-      - type: text
-        text: 1
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-  airlock_two_complete_slide_king:
-    widgets:
-      - type: video
-        video: airlock_king_two
-        width: 1280
-        height: 720
-  airlock_two_complete_slide:
-    widgets:
-      - type: text
-        text: 2
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-  airlock_three_complete_slide_king:
-    widgets:
-      - type: video
-        video: airlock_king_three
-        width: 1280
-        height: 720
-  airlock_three_complete_slide:
-    widgets:
-      - type: text
-        text: 3
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-  airlock_four_complete_slide_king:
-    widgets:
-      - type: video
-        video: airlock_king_four
-        width: 1280
-        height: 720
-  airlock_four_complete_slide:
-    widgets:
-      - type: text
-        text: 4
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-  airlock_five_complete_slide_king:
-    widgets:
-      - type: video
-        video: airlock_king_five
-        width: 1280
-        height: 720
-  airlock_five_complete_slide:
-    widgets:
-      - type: text
-        text: 5
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-

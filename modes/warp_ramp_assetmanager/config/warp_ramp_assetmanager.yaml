@@ -1,0 +1,209 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 750
+
+sound_player:
+  warp_ramp_mb_award_jackpot:
+    jackpot_2:
+      action: play
+  multiball_plaid_multiball_started:
+    multiball_callout_sound_pool:
+      action: play
+  warp_ramp_level_lightspeed_achieved:
+    lightspeed_2:
+      action: play
+  warp_ramp_level_ridiculousspeed_achieved:
+    ridiculous_speed_1:
+      action: play
+  warp_ramp_level_ludicrousspeed_achieved:
+    ludicrous_speed_1:
+      action: play
+
+slide_player:
+  warp_ramp_mb_award_jackpot:
+    warp_ramp_mb_jackpot_achieved_slide:
+      target: dmd
+      expire: 1
+  warp_ramp_level_lightspeed_achieved:
+    warp_ramp_lightspeed_achieved_slide:
+      target: dmd
+      expire: 2
+    warp_ramp_lightspeed_achieved_videoslide:
+      target: lcd
+      expire: 3200ms
+  warp_ramp_level_ridiculousspeed_achieved:
+    warp_ramp_ridiculousspeed_achieved_slide:
+      target: dmd
+      expire: 2
+    warp_ramp_ridiculousspeed_achieved_videoslide:
+      target: lcd
+      expire: 3300ms
+  warp_ramp_level_ludicrousspeed_achieved:
+    warp_ramp_ludicrousspeed_achieved_slide:
+      target: dmd
+      expire: 2
+    warp_ramp_ludicrousspeed_achieved_videoslide:
+      target: lcd
+      expire: 5200ms
+  warp_ramp_level_plaidspeed_achieved:
+    warp_ramp_plaid_achieved_slide:
+      target: dmd
+      expire: 2
+    warp_ramp_plaid_achieved_videoslide:
+      target: lcd
+      expire: 4300ms
+
+slides:
+  warp_ramp_mb_jackpot_achieved_slide:
+    widgets:
+      - type: text
+        text: JACKPOT
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top - 3
+        x: center
+        color: ffffff
+      - type: text
+        text: 500,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 3
+        x: center
+        color: ffffff
+      - type: rectangle
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        width: 128
+        height: 32
+        color: 00aa00
+  warp_ramp_lightspeed_achieved_videoslide:
+    widgets:
+      - type: video
+        video: start_lightspeed
+        width: 1280
+        height: 720
+  warp_ramp_lightspeed_achieved_slide:
+    widgets:
+      - type: text
+        text: LIGHT SPEED
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top - 3
+        x: center
+        color: ffffff
+      - type: text
+        text: 100,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 3
+        x: center
+        color: ffffff
+      - type: rectangle
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        width: 128
+        height: 32
+        color: 00aa00
+  warp_ramp_ridiculousspeed_achieved_videoslide:
+    widgets:
+      - type: video
+        video: darkhelmet_lightspeed_flying
+        width: 1280
+        height: 720
+  warp_ramp_ridiculousspeed_achieved_slide:
+    widgets:
+      - type: text
+        text: RIDICULOUS SPEED
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top - 3
+        x: center
+        color: ffffff
+      - type: text
+        text: 200,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 3
+        x: center
+        color: ffffff
+      - type: rectangle
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        width: 128
+        height: 32
+        color: a38a18
+  warp_ramp_ludicrousspeed_achieved_videoslide:
+    widgets:
+      - type: video
+        video: brains_in_my_feet
+        width: 1280
+        height: 720
+  warp_ramp_ludicrousspeed_achieved_slide:
+    widgets:
+      - type: text
+        text: LUDICROUS SPEED
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top - 3
+        x: center
+        color: ffffff
+      - type: text
+        text: 300,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 3
+        x: center
+        color: ffffff
+      - type: rectangle
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        width: 128
+        height: 32
+        color: 880000
+  warp_ramp_plaid_achieved_videoslide:
+    widgets:
+      - type: video
+        video: theyve_gone_to_plaid
+        width: 1280
+        height: 720
+  warp_ramp_plaid_achieved_slide:
+    widgets:
+      - type: text
+        text: PLAID MULTIBALL
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top - 3
+        x: center
+        color: ffffff
+      - type: text
+        text: 1,000,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 3
+        x: center
+        color: ffffff
+      - type: image
+        image: goneplaid_frame1
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0

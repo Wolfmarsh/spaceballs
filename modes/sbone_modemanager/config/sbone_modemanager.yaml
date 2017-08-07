@@ -1,0 +1,18 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 800
+
+event_player:
+  #start the qualifier when the mode manager first starts up
+  mode_sbone_modemanager_started: start_sbone_qualifier_mode_request
+  #start/stop the qualifier when airlock multiball happens
+  start_airlock_multiball_mode_request: stop_sbone_qualifier_mode_request
+  stop_airlock_multiball_mode_request: start_sbone_qualifier_mode_request
+  #start/stop the qualifier when warp ramp multiball happens
+  start_warp_ramp_multiball_mode_request: stop_sbone_qualifier_mode_request
+  stop_warp_ramp_multiball_mode_request: start_sbone_qualifier_mode_request
+  #if the qualifier is complete, start up multiball
+  sbone_qualifier_complete: stop_sbone_qualifier_mode_request, start_sbone_multiball_mode_request
+  #if multiball is complete, start up the qualifier and award a gem
+  sbone_multiball_complete: stop_sbone_multiball_mode_request, start_sbone_qualifier_mode_request, award_next_schwartz_gem

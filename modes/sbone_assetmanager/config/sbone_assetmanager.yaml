@@ -1,0 +1,89 @@
+#config_version=4
+mode:
+  start_events: ball_starting
+  priority: 700
+
+multiball_locks:
+  sbone_mb_lock:
+    balls_to_lock: 3
+    lock_devices: bd_sbone
+    reset_count_for_current_player_events: mode_sbone_qualifier_started
+
+slide_player:
+  player_sbone_mb_lock_locked_balls{value>0}:
+    sbone_balls_locked_slide:
+      target: dmd
+      expire: 1
+  multiball_sbone_multiball_started:
+    sbone_multiball_started_slide:
+      target: dmd
+    sbone_multiball_tractorbeam_start_slide:
+      target: lcd
+  multiball_sbone_multiball_ended:
+    sbone_multiball_started_slide:
+      target: dmd
+      action: remove
+  video_tractor_beam_start_stopped:
+    sbone_multiball_tractorbeam_start_slide:
+      target: lcd
+      action: remove
+
+sound_player:
+  sbone_ball_one_locked:
+    ball_one_locked_1:
+      action: play
+  sbone_ball_two_locked:
+    ball_two_locked_1:
+      action: play
+  sbone_ball_three_locked:
+    ball_three_locked_1:
+      action: play
+  multiball_sbone_multiball_started:
+    multiball_callout_sound_pool:
+      action: play
+
+slides:
+  sbone_balls_locked_slide:
+    widgets:
+      - type: text
+        text: BALL (value) LOCKED
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top - 2
+        x: center
+        color: ffffff
+      - type: text
+        text: 100,000
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 2
+        x: center
+        color: ffffff
+      - type: rectangle
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        width: 128
+        height: 32
+        color: 000050
+  sbone_multiball_started_slide:
+    widgets:
+      - type: text
+        text: SBONE MB
+        style: dmd_xl
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+  sbone_multiball_tractorbeam_start_slide:
+    widgets:
+      - type: video
+        video: tractor_beam_start
+        width: 1280
+        height: 720
+    
+    

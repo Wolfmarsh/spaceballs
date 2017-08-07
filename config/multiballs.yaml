@@ -1,0 +1,29 @@
+#config_version=4
+
+multiballs:
+  sbone_multiball:
+    ball_count: 4
+    ball_locks: bd_sbone
+    ball_count_type: total
+    shoot_again: 100ms
+    enable_events: mode_sbone_multiball_starting
+    start_events: mode_sbone_multiball_started
+    stop_events: mode_sbone_multiball_stopping
+    reset_events: machine_reset_phase_3, ball_starting, mode_sbone_qualifier_starting
+  airlock_add_a_ball:
+    ball_count: 1
+    ball_count_type: add
+    shoot_again: 10s
+    add_a_ball_events: airlock_multiball_gimme_another_ball
+    enable_events: mode_airlock_multiball_starting
+    start_events: mode_airlock_multiball_started
+    stop_events: mode_airlock_multiball_stopping
+    reset_events: machine_reset_phase_3, ball_starting, mode_airlock_qualifier_starting
+  plaid_multiball:
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 10s
+    enable_events: mode_warp_ramp_multiball_starting
+    start_events: mode_warp_ramp_multiball_started
+    stop_events: mode_warp_ramp_multiball_stopping
+    reset_events: machine_reset_phase_3, ball_starting, mode_warp_ramp_qualifier_starting

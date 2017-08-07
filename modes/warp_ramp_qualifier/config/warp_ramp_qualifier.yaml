@@ -1,7 +1,7 @@
 #config_version=4
 mode:
-  start_events: ball_starting mode_warp_ramp_multiball_stopped mode_airlock_multiball_stopped mode_sbone_multiball_stopped
-  stop_events: start_warp_ramp_multiball_request start_airlock_multiball_request start_sbone_multiball_request
+  start_events: start_warp_ramp_qualifier_mode_request
+  stop_events: stop_warp_ramp_qualifier_mode_request
   priority: 200
 
 shots:
@@ -30,23 +30,12 @@ shot_profiles:
         show: warp_ramp_plaidspeed_complete
         loops: -1
 
-sound_player:
-  warp_ramp_level_lightspeed_achieved:
-    lightspeed_2:
-      action: play
-  warp_ramp_level_ridiculousspeed_achieved:
-    ridiculous_speed_1:
-      action: play
-  warp_ramp_level_ludicrousspeed_achieved:
-    ludicrous_speed_1:
-      action: play
-
 event_player:
   warp_ramp_qualifier_shot_nospeed_hit: warp_ramp_level_lightspeed_achieved
   warp_ramp_qualifier_shot_lightspeed_hit: warp_ramp_level_ridiculousspeed_achieved
   warp_ramp_qualifier_shot_ridiculousspeed_hit: warp_ramp_level_ludicrousspeed_achieved
   warp_ramp_qualifier_shot_ludicrousspeed_hit: warp_ramp_level_plaidspeed_achieved
-  logicblock_warp_ramp_level_counter_complete: start_warp_ramp_multiball_request
+  logicblock_warp_ramp_level_counter_complete: start_warp_ramp_multiball_request|300ms
   
 scoring:
   warp_ramp_level_lightspeed_achieved:
@@ -58,36 +47,6 @@ scoring:
   warp_ramp_level_plaidspeed_achieved:
     score: 1000000 * current_player.game_scoring_multiplier
 
-slide_player:
-  warp_ramp_level_lightspeed_achieved:
-    warp_ramp_lightspeed_achieved_slide:
-      target: dmd
-      expire: 2
-    warp_ramp_lightspeed_achieved_videoslide:
-      target: lcd
-      expire: 3200ms
-  warp_ramp_level_ridiculousspeed_achieved:
-    warp_ramp_ridiculousspeed_achieved_slide:
-      target: dmd
-      expire: 2
-    warp_ramp_ridiculousspeed_achieved_videoslide:
-      target: lcd
-      expire: 3300ms
-  warp_ramp_level_ludicrousspeed_achieved:
-    warp_ramp_ludicrousspeed_achieved_slide:
-      target: dmd
-      expire: 2
-    warp_ramp_ludicrousspeed_achieved_videoslide:
-      target: lcd
-      expire: 5200ms
-  warp_ramp_level_plaidspeed_achieved:
-    warp_ramp_plaid_achieved_slide:
-      target: dmd
-      expire: 2
-    warp_ramp_plaid_achieved_videoslide:
-      target: lcd
-      expire: 4300ms
-    
 logic_blocks:
   counters:
     warp_ramp_level_counter:
@@ -98,131 +57,3 @@ logic_blocks:
       disable_events: mode_warp_ramp_multiball_started
       reset_events: mode_warp_ramp_multiball_stopped
       persist_state: true
-
-slides:
-  warp_ramp_lightspeed_achieved_videoslide:
-    widgets:
-      - type: video
-        video: start_lightspeed
-        width: 1280
-        height: 720
-  warp_ramp_lightspeed_achieved_slide:
-    widgets:
-      - type: text
-        text: LIGHT SPEED
-        style: dmd_big
-        anchor_y: top
-        anchor_x: center
-        y: top - 3
-        x: center
-        color: ffffff
-      - type: text
-        text: 100,000
-        style: dmd_big
-        anchor_y: bottom
-        anchor_x: center
-        y: 3
-        x: center
-        color: ffffff
-      - type: rectangle
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-        width: 128
-        height: 32
-        color: 00aa00
-  warp_ramp_ridiculousspeed_achieved_videoslide:
-    widgets:
-      - type: video
-        video: darkhelmet_lightspeed_flying
-        width: 1280
-        height: 720
-  warp_ramp_ridiculousspeed_achieved_slide:
-    widgets:
-      - type: text
-        text: RIDICULOUS SPEED
-        style: dmd_big
-        anchor_y: top
-        anchor_x: center
-        y: top - 3
-        x: center
-        color: ffffff
-      - type: text
-        text: 200,000
-        style: dmd_big
-        anchor_y: bottom
-        anchor_x: center
-        y: 3
-        x: center
-        color: ffffff
-      - type: rectangle
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-        width: 128
-        height: 32
-        color: a38a18
-  warp_ramp_ludicrousspeed_achieved_videoslide:
-    widgets:
-      - type: video
-        video: brains_in_my_feet
-        width: 1280
-        height: 720
-  warp_ramp_ludicrousspeed_achieved_slide:
-    widgets:
-      - type: text
-        text: LUDICROUS SPEED
-        style: dmd_big
-        anchor_y: top
-        anchor_x: center
-        y: top - 3
-        x: center
-        color: ffffff
-      - type: text
-        text: 300,000
-        style: dmd_big
-        anchor_y: bottom
-        anchor_x: center
-        y: 3
-        x: center
-        color: ffffff
-      - type: rectangle
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-        width: 128
-        height: 32
-        color: 880000
-  warp_ramp_plaid_achieved_videoslide:
-    widgets:
-      - type: video
-        video: theyve_gone_to_plaid
-        width: 1280
-        height: 720
-  warp_ramp_plaid_achieved_slide:
-    widgets:
-      - type: text
-        text: PLAID MULTIBALL
-        style: dmd_big
-        anchor_y: top
-        anchor_x: center
-        y: top - 3
-        x: center
-        color: ffffff
-      - type: text
-        text: 1,000,000
-        style: dmd_big
-        anchor_y: bottom
-        anchor_x: center
-        y: 3
-        x: center
-        color: ffffff
-      - type: image
-        image: goneplaid_frame1
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0

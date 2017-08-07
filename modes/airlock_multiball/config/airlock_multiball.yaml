@@ -1,31 +1,9 @@
 #config_version=4
 
 mode:
-  start_events: start_airlock_multiball_request
-  stop_events: stop_airlock_multiball_request
+  start_events: start_airlock_multiball_mode_request
+  stop_events: stop_airlock_multiball_mode_request
   priority: 1100
-
-sound_player:
-  multiball_airlock_add_a_ball_started:
-    multiball_callout_sound_pool:
-      action: play
-  airlock_multiball_award_100k_shot:
-    target_hit_1:
-      action: play
-
-slide_player:
-  multiball_airlock_add_a_ball_started:
-    airlock_addaball_started_slide:
-      target: dmd
-      expire: 1
-  airlock_multiball_award_100k_shot:
-    airlock_addaball_100k_award_slide:
-      target: dmd
-      expire: 1
-  airlock_multiball_gimme_another_ball:
-    airlock_addaball_ball_added_slide:
-      target: dmd
-      expire: 1
 
 scoring:
   airlock_multiball_award_100k_shot:
@@ -120,12 +98,12 @@ shots:
 
 event_player:
   multiball_airlock_add_a_ball_started: activate_next_airlock_addaball_shot
-  airlock_addaball_shot_one_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
-  airlock_addaball_shot_two_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
-  airlock_addaball_shot_three_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
-  airlock_addaball_shot_four_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
-  airlock_addaball_shot_five_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
-  airlock_addaball_shot_six_hit: airlock_multiball_gimme_another_ball activate_next_airlock_addaball_shot
+  airlock_addaball_shot_one_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
+  airlock_addaball_shot_two_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
+  airlock_addaball_shot_three_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
+  airlock_addaball_shot_four_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
+  airlock_addaball_shot_five_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
+  airlock_addaball_shot_six_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
   airlock_mb_shot_one_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_shot_two_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_shot_three_pending_hit: airlock_multiball_award_100k_shot
@@ -133,8 +111,8 @@ event_player:
   airlock_mb_shot_five_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_warp_ramp_shot_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_scoop_shot_pending_hit: airlock_multiball_award_100k_shot
-  multiball_airlock_add_a_ball_ended: award_next_schwartz_gem stop_airlock_multiball_request|100ms
-  
+  multiball_airlock_add_a_ball_ended: airlock_multiball_complete|50ms  
+
 random_event_player:
   activate_next_airlock_addaball_shot:
     - activate_airlock_addaball_shot_1
@@ -198,65 +176,3 @@ shot_profiles:
         show: airlock_addaball_warpramp_pending
         sync_ms: 500
         loops: -1
-
-multiballs:
-  airlock_add_a_ball:
-    ball_count: 1
-    ball_count_type: add
-    shoot_again: 10s
-    add_a_ball_events: airlock_multiball_gimme_another_ball
-    start_events: mode_airlock_multiball_started
-
-slides:
-  airlock_addaball_started_slide:
-    widgets:
-      - type: text
-        text: AIRLOCK
-        style: dmd_xl
-        anchor_y: top
-        anchor_x: center
-        y: top - 1
-        x: center
-        color: ffffff
-      - type: text
-        text: MULTIBALL
-        style: dmd_xl
-        anchor_y: bottom
-        anchor_x: center
-        y: bottom + 1
-        x: center
-        color: ffffff
-      - type: image
-        image: planet_druidia
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-  airlock_addaball_100k_award_slide:
-    widgets:
-      - type: text
-        text: 100,000
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-  airlock_addaball_ball_added_slide:
-    widgets:
-      - type: text
-        text: BALL ADDED
-        style: dmd_xl
-        anchor_y: top
-        anchor_x: center
-        y: top - 1
-        x: center
-        color: ffffff
-      - type: text
-        text: 250,000
-        style: dmd_xl
-        anchor_y: bottom
-        anchor_x: center
-        y: bottom + 1
-        x: center
-        color: ffffff

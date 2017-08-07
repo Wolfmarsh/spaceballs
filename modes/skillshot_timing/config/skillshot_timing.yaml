@@ -97,11 +97,11 @@ slide_player:
       action: remove
 
 event_player:
-  sw_launch{current_player.skillshot_level_counter_count==4 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardmax skillshot_award_step
-  sw_launch{current_player.skillshot_level_counter_count==3 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardmax skillshot_award_step
-  sw_launch{current_player.skillshot_level_counter_count==2 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusaward2 skillshot_award_step
-  sw_launch{current_player.skillshot_level_counter_count==1 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusaward1 skillshot_award_step
-  sw_launch{current_player.skillshot_level_counter_count==0 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardfail skillshot_award_step
+  sw_launch{current_player.skillshot_level_counter_count==4 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardmax, skillshot_award_step
+  sw_launch{current_player.skillshot_level_counter_count==3 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardmax, skillshot_award_step
+  sw_launch{current_player.skillshot_level_counter_count==2 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusaward2, skillshot_award_step
+  sw_launch{current_player.skillshot_level_counter_count==1 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusaward1, skillshot_award_step
+  sw_launch{current_player.skillshot_level_counter_count==0 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardfail, skillshot_award_step
 
 logic_blocks:
   counters:

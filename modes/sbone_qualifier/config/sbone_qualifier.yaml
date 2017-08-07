@@ -1,71 +1,17 @@
 #config_version=4
 mode:
-  start_events: ball_starting mode_airlock_multiball_stopped mode_warp_ramp_multiball_stopped mode_sbone_multiball_stopped
-  stop_events: start_airlock_multiball_request start_warp_ramp_multiball_request start_sbone_multiball_request
+  start_events: start_sbone_qualifier_mode_request
+  stop_events: stop_sbone_qualifier_mode_request
   priority: 200
 
 event_player:
   mode_sbone_qualifier_started: sbone_lock_servo_closed
-  multiball_lock_sbone_mb_lock_full: start_sbone_multiball_request|300ms
   player_sbone_mb_lock_locked_balls{value==1}: sbone_ball_one_locked
   player_sbone_mb_lock_locked_balls{value==2}: sbone_ball_two_locked
-  player_sbone_mb_lock_locked_balls{value==3}: sbone_ball_three_locked
-
-multiball_locks:
-  sbone_mb_lock:
-    balls_to_lock: 3
-    lock_devices: bd_sbone
-    reset_count_for_current_player_events: mode_sbone_qualifier_started
-
-slide_player:
-  player_sbone_mb_lock_locked_balls:
-    sbone_balls_locked_slide:
-      target: dmd
-      expire: 1
+  player_sbone_mb_lock_locked_balls{value==3}: sbone_ball_three_locked, sbone_qualifier_complete|50ms
 
 show_player:
   mode_sbone_qualifier_started:
     sbone_qualifier_locks_ready:
       loops: -1
       speed: 1
-
-sound_player:
-  sbone_ball_one_locked:
-    ball_one_locked_1:
-      action: play
-  sbone_ball_two_locked:
-    ball_two_locked_1:
-      action: play
-  sbone_ball_three_locked:
-    ball_three_locked_1:
-      action: play
-
-slides:
-  sbone_balls_locked_slide:
-    widgets:
-      - type: text
-        text: BALL (value) LOCKED
-        style: dmd_big
-        anchor_y: top
-        anchor_x: center
-        y: top - 2
-        x: center
-        color: ffffff
-      - type: text
-        text: 100,000
-        style: dmd_big
-        anchor_y: bottom
-        anchor_x: center
-        y: 2
-        x: center
-        color: ffffff
-      - type: rectangle
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-        width: 128
-        height: 32
-        color: 000050
-
-      

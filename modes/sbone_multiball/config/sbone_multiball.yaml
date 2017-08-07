@@ -1,57 +1,10 @@
 #config_version=4
 
 mode:
-  start_events: start_sbone_multiball_request
-  stop_events: stop_sbone_multiball_request
+  start_events: start_sbone_multiball_mode_request
+  stop_events: stop_sbone_multiball_mode_request
   priority: 1300
 
 event_player:
-  multiball_sbone_multiball_ended: award_next_schwartz_gem stop_sbone_multiball_request|300ms
+  multiball_sbone_multiball_ended: sbone_multiball_complete|50ms
 
-slide_player:
-  multiball_sbone_multiball_started:
-    sbone_multiball_started_slide:
-      target: dmd
-    sbone_multiball_tractorbeam_start_slide:
-      target: lcd
-  multiball_sbone_multiball_ended:
-    sbone_multiball_started_slide:
-      target: dmd
-      action: remove
-  video_tractor_beam_start_stopped:
-    sbone_multiball_tractorbeam_start_slide:
-      target: lcd
-      action: remove
-
-sound_player:
-  multiball_sbone_multiball_started:
-    multiball_callout_sound_pool:
-      action: play
-
-multiballs:
-  sbone_multiball:
-    ball_count: 4
-    ball_locks: bd_sbone
-    ball_count_type: total
-    shoot_again: 100ms
-    start_events: mode_sbone_multiball_started
-
-slides:
-  sbone_multiball_started_slide:
-    widgets:
-      - type: text
-        text: SBONE MB
-        style: dmd_xl
-        anchor_y: center
-        anchor_x: center
-        y: center
-        x: center
-        color: ffffff
-  sbone_multiball_tractorbeam_start_slide:
-    widgets:
-      - type: video
-        video: tractor_beam_start
-        width: 1280
-        height: 720
-    
-    

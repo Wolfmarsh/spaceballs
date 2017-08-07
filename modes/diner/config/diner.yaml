@@ -82,7 +82,7 @@ sound_player:
       action: stop
 
 event_player:
-  balldevice_bd_scoop_ball_entered{current_player.diner_mode_state_counter_count == 1}: play_diner_chestburster_start_video start_diner_mode_music|800ms
+  balldevice_bd_scoop_ball_entered{current_player.diner_mode_state_counter_count == 1}: play_diner_chestburster_start_video, start_diner_mode_music|800ms
   balldevice_bd_scoop_ejecting_ball{current_player.diner_mode_state_counter_count == 1}: start_diner_scoring
   timer_diner_scoring_timer_complete: stop_diner_scoring
   timer_diner_scoring_timer_stopped: stop_diner_scoring
