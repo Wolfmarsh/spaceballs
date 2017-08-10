@@ -10,8 +10,23 @@ slide_player:
       target: dmd
       expire: 2s
       priority: 1
+  mode_attract_started:
+    attract_tpbm_slide:
+      target: lcd
+  mode_attract_stopping:
+    attract_tpbm_slide:
+      target: lcd
+      action: remove
 
 slides:
+  attract_tpbm_slide:
+    widgets:
+      - type: image
+        image: attract_screen_tpbm
+        anchor_x: left
+        anchor_y: bottom
+        x: 0
+        y: 0
   dead_flip_mode_activated:
     widgets:
       - type: image

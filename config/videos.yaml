@@ -78,6 +78,9 @@ videos:
     file: My_Brains_Are_Going_Into_My_Feet.mp4
   oh_shit:
     file: Oh_Shit.mp4
+  perriair_opening:
+    file: Perriair_Opening_Short.mp4
+    events_when_stopped: perriair_opening_video_ended
   pizza_the_hut_intro:
     file: Pizza_The_Hut_Intro.mp4
   skroob_scratching_crotch:

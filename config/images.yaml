@@ -1,6 +1,8 @@
 # config_version=4
 
 images:
+  attract_screen_tpbm:
+    file: attract_screen_tpbm.png
   double_scoring_active:
     file: 2x_scoring_active.png
   dead_flip_center:

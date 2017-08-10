@@ -53,6 +53,12 @@ slide_player:
     airlanes_bonus_award_multiplier:
       target: dmd
       expire: 1s
+    airlane_perriair_opening_slide:
+      target: lcd
+  perriair_opening_video_ended:
+    airlane_perriair_opening_slide:
+      target: lcd
+      action: remove
 
 scoring:
   air_lanes_complete:
@@ -77,3 +83,9 @@ slides:
         anchor_x: middle
         y: bottom
         x: center
+  airlane_perriair_opening_slide:
+    widgets:
+      - type: video
+        video: perriair_opening
+        width: 1280
+        height: 720
