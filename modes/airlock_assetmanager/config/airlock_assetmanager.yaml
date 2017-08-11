@@ -18,6 +18,13 @@ slide_player:
       expire: 1
     airlock_multiball_instructions_slide:
       target: lcd
+    airlock_miltiball_intro_video_slide:
+      target: lcd
+      priority: 2
+  airlock_stupidestcombination_video_stopped:
+    airlock_miltiball_intro_video_slide:
+      target: lcd
+      action: remove
   mode_airlock_multiball_stopping:
     airlock_multiball_instructions_slide:
       target: lcd
@@ -67,6 +74,12 @@ slide_player:
       expire: 1000ms
 
 slides:
+  airlock_miltiball_intro_video_slide:
+    widgets:
+      - type: video
+        video: airlock_stupidestcombination
+        width: 1280
+        height: 720
   airlock_multiball_instructions_slide:
     widgets:
       - type: image

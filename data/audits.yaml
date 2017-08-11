@@ -1,6 +1,6 @@
 events:
   game_ended: 167
-  game_started: 314
+  game_started: 316
 player:
   score:
     average: 1016105.82010582
@@ -64,13 +64,13 @@ switches:
   s_drop_3: 120
   s_drop_4: 115
   s_drop_5: 112
-  s_launch_button: 479
+  s_launch_button: 481
   s_left_flipper: 1073
   s_left_inlane: 123
   s_left_outlane: 39
   s_left_spinner: 3987
   s_middle_target: 146
-  s_plunger_lane: 802
+  s_plunger_lane: 804
   s_pop_1: 178
   s_pop_2: 220
   s_pop_3: 111

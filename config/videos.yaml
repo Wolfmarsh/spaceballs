@@ -22,6 +22,7 @@ videos:
     file: Airlock_Combination_5_King.mp4
   airlock_stupidestcombination:
     file: Airlock_StupidestCombination.mp4
+    events_when_stopped: airlock_stupidestcombination_video_stopped
   allrise_for_darkhelmet:
     file: All_Rise_In_The_Presence_Of_Dark_Helmet.mp4
   barf_intro:
