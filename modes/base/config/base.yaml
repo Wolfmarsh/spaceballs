@@ -3,10 +3,87 @@ mode:
   start_events: ball_starting
   priority: 100
 
+random_event_player:
+  player_add_request:
+    - play_player_add_video_1
+    - play_player_add_video_2
+    - play_player_add_video_3
+    - play_player_add_video_4
+    - play_player_add_video_5
+    - play_player_add_video_6
+    - play_player_add_video_7
+    - play_player_add_video_8
+    - play_player_add_video_9
+
 slide_player:
+  play_player_add_video_1:
+    player_add_video_1_slide:
+      target: lcd
+  player_add_video_1_ended:
+    player_add_video_1_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_2:
+    player_add_video_2_slide:
+      target: lcd
+  player_add_video_2_ended:
+    player_add_video_2_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_3:
+    player_add_video_3_slide:
+      target: lcd
+  player_add_video_3_ended:
+    player_add_video_3_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_4:
+    player_add_video_4_slide:
+      target: lcd
+  player_add_video_4_ended:
+    player_add_video_4_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_5:
+    player_add_video_5_slide:
+      target: lcd
+  player_add_video_5_ended:
+    player_add_video_5_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_6:
+    player_add_video_6_slide:
+      target: lcd
+  player_add_video_6_ended:
+    player_add_video_6_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_7:
+    player_add_video_7_slide:
+      target: lcd
+  player_add_video_7_ended:
+    player_add_video_7_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_8:
+    player_add_video_8_slide:
+      target: lcd
+  player_add_video_8_ended:
+    player_add_video_8_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_9:
+    player_add_video_9_slide:
+      target: lcd
+  player_add_video_9_ended:
+    player_add_video_9_slide:
+      target: lcd
+      action: remove
   mode_base_started:
     player_info_slide:
       target: dmd
+    multiplayer_lcd_slide:
+      target: lcd
   ball_save_default_save_saving_ball:
     ball_saved_slide:
       target: dmd
@@ -29,6 +106,73 @@ sound_player:
     spaceballs_song:
       action: stop
 
+widget_player:
+  player_add_success{num==2}:
+    player_2_lcd_info_widget:
+      slide: multiplayer_lcd_slide
+  player_add_success{num==3}:
+    player_3_lcd_info_widget:
+      slide: multiplayer_lcd_slide
+  player_add_success{num==4}:
+    player_4_lcd_info_widget:
+      slide: multiplayer_lcd_slide
+
+widgets:
+  player_2_lcd_info_widget:
+    - type: text
+      text: "PLAYER 2 -"
+      font_name: atrox
+      font_size: 80
+      anchor_x: left
+      anchor_y: top
+      x: 20
+      y: top-160
+    - type: text
+      text: (player2|score)
+      number_grouping: true
+      font_name: atrox
+      font_size: 80
+      anchor_x: left
+      anchor_y: top
+      x: 350
+      y: top-160
+  player_3_lcd_info_widget:
+    - type: text
+      text: "PLAYER 3 -"
+      font_name: atrox
+      font_size: 80
+      anchor_x: left
+      anchor_y: top
+      x: 20
+      y: top-300
+    - type: text
+      text: (player3|score)
+      number_grouping: true
+      font_name: atrox
+      font_size: 80
+      anchor_x: left
+      anchor_y: top
+      x: 350
+      y: top-300
+  player_4_lcd_info_widget:
+    - type: text
+      text: "PLAYER 4 -"
+      font_name: atrox
+      font_size: 80
+      anchor_x: left
+      anchor_y: top
+      x: 20
+      y: top-440
+    - type: text
+      text: (player4|score)
+      number_grouping: true
+      font_name: atrox
+      font_size: 80
+      anchor_x: left
+      anchor_y: top
+      x: 350
+      y: top-440
+      
 slides:
   ball_saved_slide:
     widgets:
@@ -39,6 +183,25 @@ slides:
         y: center
         anchor_x: center
         anchor_y: center
+  multiplayer_lcd_slide:
+    widgets:
+      - type: text
+        text: "PLAYER 1 -"
+        font_name: atrox
+        font_size: 80
+        anchor_x: left
+        anchor_y: top
+        x: 20
+        y: top-20
+      - type: text
+        text: (player1|score)
+        font_name: atrox
+        number_grouping: true
+        font_size: 80
+        anchor_x: left
+        anchor_y: top
+        x: 350
+        y: top-20
   player_info_slide:
     widgets:
       - type: text
@@ -65,7 +228,39 @@ slides:
         anchor_x: right
         anchor_y: bottom
         style: dmd_small
-#      - type: text
-#        text: "ss: (skillshot_level_counter_count)"
-#        style: dmd_small
-#        y: 40%
+  player_add_video_1_slide:
+    widgets:
+      - type: video
+        video: gunners_mate_phillip_asshole
+  player_add_video_2_slide:
+    widgets:
+      - type: video
+        video: hail_skroob
+  player_add_video_3_slide:
+    widgets:
+      - type: video
+        video: hello_lonestar_1
+  player_add_video_4_slide:
+    widgets:
+      - type: video
+        video: hello_lonestar_2
+  player_add_video_5_slide:
+    widgets:
+      - type: video
+        video: hes_an_asshole_sir
+  player_add_video_6_slide:
+    widgets:
+      - type: video
+        video: hes_an_asshole_too
+  player_add_video_7_slide:
+    widgets:
+      - type: video
+        video: how_many_assholes_we_got
+  player_add_video_8_slide:
+    widgets:
+      - type: video
+        video: surrounded_by_assholes
+  player_add_video_9_slide:
+    widgets:
+      - type: video
+        video: major_asshole

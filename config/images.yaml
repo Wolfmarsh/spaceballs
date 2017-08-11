@@ -1,6 +1,8 @@
 # config_version=4
 
 images:
+  airlock_multiball_instructions:
+    file: airlock_multiball_instructions.png
   attract_screen_tpbm:
     file: attract_screen_tpbm.png
   double_scoring_active:

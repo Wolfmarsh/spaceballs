@@ -16,6 +16,12 @@ slide_player:
     airlock_addaball_started_slide:
       target: dmd
       expire: 1
+    airlock_multiball_instructions_slide:
+      target: lcd
+  mode_airlock_multiball_stopping:
+    airlock_multiball_instructions_slide:
+      target: lcd
+      action: remove
   airlock_multiball_award_100k_shot:
     airlock_addaball_100k_award_slide:
       target: dmd
@@ -61,6 +67,14 @@ slide_player:
       expire: 1000ms
 
 slides:
+  airlock_multiball_instructions_slide:
+    widgets:
+      - type: image
+        image: airlock_multiball_instructions
+        anchor_x: left
+        anchor_y: bottom
+        x: 0
+        y: 0
   airlock_one_complete_slide_king:
     widgets:
       - type: video
