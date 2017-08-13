@@ -28,27 +28,25 @@ autofire_coils:
     switch: s_pop_3
 
 drop_targets:
-   airlock_drop1:
-     switch: s_drop_1
-   airlock_drop2:
-     switch: s_drop_2
-   airlock_drop3:
-     switch: s_drop_3
-   airlock_drop4:
-     switch: s_drop_4
-   airlock_drop5:
-     switch: s_drop_5
+  airlock_drop1:
+    switch: s_drop_1
+  airlock_drop2:
+    switch: s_drop_2
+  airlock_drop3:
+    switch: s_drop_3
+  airlock_drop4:
+    switch: s_drop_4
+  airlock_drop5:
+    switch: s_drop_5
 
 drop_target_banks:
-   airlock_bank:
-     drop_targets: airlock_drop1, airlock_drop2, airlock_drop3, airlock_drop4, airlock_drop5
-     reset_coils: c_drop_reset
-     reset_events:
-       drop_target_bank_airlock_bank_down: 1s
-       player_turn_start: 0s
-       activate_next_airlock_addaball_shot: 1s
-       multiball_plaid_multiball_ended: 500ms
-       multiball_sbone_multiball_ended: 500ms
+  airlock_bank:
+    drop_targets: airlock_drop1, airlock_drop2, airlock_drop3, airlock_drop4, airlock_drop5
+    reset_coils: c_drop_reset
+    reset_events:
+      drop_target_bank_airlock_bank_down: 1s
+      player_turn_start: 0s
+      reset_drop_target_bank_request: 250ms
 
 ball_devices:
   bd_trough:

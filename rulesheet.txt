@@ -41,14 +41,20 @@ AIRLOCK MULTIBALL
 =================
 To Activate:  Knock down all 5 drop targets to activate Airlock Multiball.   
 
-Summary: This is an add-a-ball multiball that starts by giving you 1 additional ball
+Summary: This is an add-a-ball multiball that starts by giving you 1 additional ball and can
+	max out at 6 balls.
 
 	Targets on the playfield will take on different colors depending on their reward:
 		- Yellow targets will award a point value.
 		- Blue targets will add a ball to your multiball.
+		- Purple targets will award a jackpot
 
-	If you add all 4 additional balls to your multiball, you will get awarded an extra
-	Schwartz gem when the mode is over.  Otherwise you will only be awarded one Schwartz gem.
+	Whenever you hit an add-a-ball target or a jackpot target, another random shot will be
+	chosen to replace it.
+
+	If you add 4 more balls, you will get awarded an extra Schwartz gem when the mode
+	is over.  Otherwise you will only be awarded one Schwartz gem.  Jackpots will also
+	change to Ridiculous Jackpots if you add 4 more balls.
 
 WARP RAMP MULTIBALL
 ===================

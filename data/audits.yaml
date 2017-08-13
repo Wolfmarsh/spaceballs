@@ -1,9 +1,9 @@
 events:
-  game_ended: 167
-  game_started: 316
+  game_ended: 169
+  game_started: 327
 player:
   score:
-    average: 1016105.82010582
+    average: 1005706.8062827224
     top:
     - 5236000
     - 4984000
@@ -15,26 +15,30 @@ player:
     - 3330000
     - 3299000
     - 3282000
-    total: 189
+    total: 191
 shots:
-  airlock_addaball_shot_five: 1
-  airlock_addaball_shot_four: 1
+  airlock_addaball_shot_five: 2
+  airlock_addaball_shot_four: 2
   airlock_addaball_shot_one: 1
-  airlock_addaball_shot_three: 3
+  airlock_addaball_shot_three: 4
   airlock_addaball_shot_two: 1
+  airlock_jackpot_sbone_right_orbit_shot: 1
+  airlock_jackpot_shot_right_orbit: 1
+  airlock_jackpot_warp_ramp_shot: 1
+  airlock_mb_sbone_left_orbit_shot: 1
   airlock_mb_scoop_shot: 1
   airlock_mb_shot_five: 1
   airlock_mb_shot_four: 2
-  airlock_mb_shot_left_orbit: 2
-  airlock_mb_shot_one: 6
+  airlock_mb_shot_left_orbit: 3
+  airlock_mb_shot_one: 8
   airlock_mb_shot_three: 3
-  airlock_mb_shot_two: 5
+  airlock_mb_shot_two: 6
   airlock_mb_warp_ramp_shot: 6
-  airlock_qualifying_shot_five: 16
-  airlock_qualifying_shot_four: 17
-  airlock_qualifying_shot_one: 16
-  airlock_qualifying_shot_three: 14
-  airlock_qualifying_shot_two: 15
+  airlock_qualifying_shot_five: 17
+  airlock_qualifying_shot_four: 18
+  airlock_qualifying_shot_one: 17
+  airlock_qualifying_shot_three: 15
+  airlock_qualifying_shot_two: 16
   airlock_shot_five: 34
   airlock_shot_four: 39
   airlock_shot_one: 39
@@ -45,9 +49,9 @@ shots:
   lane_r: 46
   left_orbit_base_complete_shot: 3
   left_orbit_base_muted_spinner_shot: 5
-  left_orbit_base_shot: 31
+  left_orbit_base_shot: 32
   left_orbit_complete_shot: 29
-  right_orbit_base_shot: 18
+  right_orbit_base_shot: 19
   right_orbit_complete_shot: 35
   warp_ramp_lightspeed_shot: 3
   warp_ramp_ludicrousspeed_shot: 1
@@ -59,50 +63,50 @@ switches:
   s_air_a_lane: 41
   s_air_i_lane: 63
   s_air_r_lane: 58
-  s_drop_1: 122
-  s_drop_2: 116
-  s_drop_3: 120
-  s_drop_4: 115
-  s_drop_5: 112
-  s_launch_button: 481
+  s_drop_1: 125
+  s_drop_2: 118
+  s_drop_3: 122
+  s_drop_4: 117
+  s_drop_5: 114
+  s_launch_button: 495
   s_left_flipper: 1073
   s_left_inlane: 123
   s_left_outlane: 39
-  s_left_spinner: 3987
-  s_middle_target: 146
-  s_plunger_lane: 804
+  s_left_spinner: 4040
+  s_middle_target: 147
+  s_plunger_lane: 821
   s_pop_1: 178
-  s_pop_2: 220
+  s_pop_2: 221
   s_pop_3: 111
   s_pop_sneak: 125
-  s_ramp_entry: 247
-  s_ramp_exit: 210
+  s_ramp_entry: 248
+  s_ramp_exit: 211
   s_right_flipper: 1304
   s_right_inlane: 156
-  s_right_orbit: 201
+  s_right_orbit: 203
   s_right_outlane: 43
   s_saucer: 151
-  s_sbone_entry: 259
-  s_sbone_left_orbit: 46
-  s_sbone_lock_1: 213
-  s_sbone_lock_2: 244
-  s_sbone_lock_3: 217
-  s_sbone_right_orbit: 31
+  s_sbone_entry: 263
+  s_sbone_left_orbit: 47
+  s_sbone_lock_1: 218
+  s_sbone_lock_2: 248
+  s_sbone_lock_3: 219
+  s_sbone_right_orbit: 32
   s_schwartz_power_1: 0
   s_schwartz_power_2: 0
   s_schwartz_power_3: 0
   s_schwartz_power_4: 0
   s_schwartz_power_5: 0
   s_schwartz_power_6: 0
-  s_schwartz_power_7: 113
+  s_schwartz_power_7: 117
   s_scoop: 133
   s_sling_left: 208
   s_sling_right: 200
   s_start: 33
-  s_trough1: 620
-  s_trough2: 607
-  s_trough3: 610
-  s_trough4: 586
-  s_trough5: 590
-  s_trough6: 525
-  s_trough_jam: 633
+  s_trough1: 641
+  s_trough2: 626
+  s_trough3: 628
+  s_trough4: 604
+  s_trough5: 610
+  s_trough6: 535
+  s_trough_jam: 654

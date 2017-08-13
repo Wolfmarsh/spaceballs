@@ -10,108 +10,241 @@ scoring:
     score: 100000 * current_player.game_scoring_multiplier
   airlock_multiball_gimme_another_ball:
     score: 250000 * current_player.game_scoring_multiplier
+  airlock_multiball_award_jackpot_shot:
+    score: 1000000 * current_player.game_scoring_multiplier
+
+logic_blocks:
+  counters:
+    airlock_mb_balls_awarded:
+      count_events: airlock_multiball_gimme_another_ball
+      starting_count: 0
+      count_complete_value: 4
+      direction: up
+      events_when_complete: airlock_mb_4_balls_earned
 
 shots:
+#standard drop shots for the add a ball shots
   airlock_mb_shot_one:
     switch: s_drop_1
     profile: airlock_mb_target_one_profile
     disable_events: activate_airlock_addaball_shot_1
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started disable_all_airlock_addaball_shots
   airlock_mb_shot_two:
     switch: s_drop_2
     profile: airlock_mb_target_two_profile
     disable_events: activate_airlock_addaball_shot_2
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started disable_all_airlock_addaball_shots
   airlock_mb_shot_three:
     switch: s_drop_3
     profile: airlock_mb_target_three_profile
     disable_events: activate_airlock_addaball_shot_3
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started disable_all_airlock_addaball_shots
   airlock_mb_shot_four:
     switch: s_drop_4
     profile: airlock_mb_target_four_profile
     disable_events: activate_airlock_addaball_shot_4
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started disable_all_airlock_addaball_shots
   airlock_mb_shot_five:
     switch: s_drop_5
     profile: airlock_mb_target_five_profile
     disable_events: activate_airlock_addaball_shot_5
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
-  airlock_mb_shot_left_orbit:
-    switch_sequence: s_left_spinner, s_right_orbit
-    time: 2s
-    profile: airlock_mb_generic_target_profile
-    show_tokens:
-        targetled: rgb_left_orbit_arrow_1
-  airlock_mb_warp_ramp_shot:
-    profile: airlock_mb_warpramp_target_profile
-    switch_sequence: s_ramp_entry, s_ramp_exit
-    time: 3s
-    disable_events: activate_airlock_addaball_shot_6
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
-  airlock_mb_scoop_shot:
-    profile: airlock_mb_generic_target_profile
-    switch: s_scoop
-    show_tokens:
-        targetled: rgb_scoop_arrow_1
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started disable_all_airlock_addaball_shots
+#the add a ball shots on the drops
   airlock_addaball_shot_one:
     switch: s_drop_1
     profile: airlock_addaball_target_profile
-    disable_events: activate_next_airlock_addaball_shot
+    disable_events: activate_next_airlock_addaball_shot disable_all_airlock_addaball_shots
     enable_events: activate_airlock_addaball_shot_1
     show_tokens:
        targetled: rgb_drop_1
   airlock_addaball_shot_two:
     switch: s_drop_2
     profile: airlock_addaball_target_profile
-    disable_events: activate_next_airlock_addaball_shot
+    disable_events: activate_next_airlock_addaball_shot disable_all_airlock_addaball_shots
     enable_events: activate_airlock_addaball_shot_2
     show_tokens:
        targetled: rgb_drop_2
   airlock_addaball_shot_three:
     switch: s_drop_3
     profile: airlock_addaball_target_profile
-    disable_events: activate_next_airlock_addaball_shot
+    disable_events: activate_next_airlock_addaball_shot disable_all_airlock_addaball_shots
     enable_events: activate_airlock_addaball_shot_3
     show_tokens:
        targetled: rgb_drop_3
   airlock_addaball_shot_four:
     switch: s_drop_4
     profile: airlock_addaball_target_profile
-    disable_events: activate_next_airlock_addaball_shot
+    disable_events: activate_next_airlock_addaball_shot disable_all_airlock_addaball_shots
     enable_events: activate_airlock_addaball_shot_4
     show_tokens:
        targetled: rgb_drop_4
   airlock_addaball_shot_five:
     switch: s_drop_5
     profile: airlock_addaball_target_profile
-    disable_events: activate_next_airlock_addaball_shot
+    disable_events: activate_next_airlock_addaball_shot disable_all_airlock_addaball_shots
     enable_events: activate_airlock_addaball_shot_5
     show_tokens:
        targetled: rgb_drop_5
-  airlock_addaball_shot_six:
+#standard shots for the jackpot shots
+  airlock_mb_shot_left_orbit:
+    switch_sequence: s_left_spinner, s_right_orbit
+    time: 2s
+    profile: airlock_mb_generic_target_profile
+    disable_events: activate_airlock_jackpot_shot_1
+    enable_events: activate_next_airlock_jackpot_shot multiball_airlock_add_a_ball_started
+    show_tokens:
+        targetled: rgb_left_orbit_arrow_1 rgb_left_orbit_arrow_2
+  airlock_mb_shot_right_orbit:
+    switch: s_right_orbit
+    profile: airlock_mb_generic_target_profile
+    disable_events: activate_airlock_jackpot_shot_2
+    enable_events: activate_next_airlock_jackpot_shot multiball_airlock_add_a_ball_started
+    time: 2s
+    delay_switch:
+      s_left_spinner: 1.0s
+    show_tokens:
+        targetled: rgb_right_orbit_arrow_1 rgb_right_orbit_arrow_2
+  airlock_mb_warp_ramp_shot:
+    profile: airlock_mb_warpramp_target_profile
+    disable_events: activate_airlock_jackpot_shot_3
+    enable_events: activate_next_airlock_jackpot_shot multiball_airlock_add_a_ball_started
     switch_sequence: s_ramp_entry, s_ramp_exit
     time: 3s
-    profile: airlock_addaball_warpramp_profile
-    disable_events: activate_next_airlock_addaball_shot
-    enable_events: activate_airlock_addaball_shot_6
+  airlock_mb_scoop_shot:
+    profile: airlock_mb_generic_target_profile
+    disable_events: activate_airlock_jackpot_shot_4
+    enable_events: activate_next_airlock_jackpot_shot multiball_airlock_add_a_ball_started
+    switch: s_scoop
+    show_tokens:
+        targetled: rgb_scoop_arrow_1 rgb_scoop_arrow_2
+  airlock_mb_sbone_left_orbit_shot:
+    profile: airlock_mb_generic_target_profile
+    disable_events: activate_airlock_jackpot_shot_5
+    enable_events: activate_next_airlock_jackpot_shot multiball_airlock_add_a_ball_started
+    switch: s_sbone_left_orbit
+    show_tokens:
+        targetled: rgb_sbone_left_orbit_arrow
+  airlock_mb_sbone_right_orbit_shot:
+    profile: airlock_mb_generic_target_profile
+    disable_events: activate_airlock_jackpot_shot_6
+    enable_events: activate_next_airlock_jackpot_shot multiball_airlock_add_a_ball_started
+    switch: s_sbone_right_orbit
+    show_tokens:
+        targetled: rgb_sbone_right_orbit_arrow
+  airlock_mb_sbone_center_shot:
+    profile: airlock_mb_generic_target_profile
+    disable_events: activate_airlock_jackpot_shot_7
+    enable_events: activate_next_airlock_jackpot_shot multiball_airlock_add_a_ball_started
+    switch_sequence: s_sbone_entry, s_sbone_lock_3
+    time: 2s
+    show_tokens:
+        targetled: rgb_sbone_bottom_right_arrow rgb_sbone_top_arrow rgb_sbone_bottom_left_arrow
+  airlock_mb_saucer_shot:
+    profile: airlock_mb_generic_target_profile
+    disable_events: activate_airlock_jackpot_shot_8
+    enable_events: activate_next_airlock_jackpot_shot multiball_airlock_add_a_ball_started
+    switch: s_saucer
+    show_tokens:
+        targetled: rgb_saucer_arrow_1 rgb_saucer_arrow_2
+#jackpot shots
+  airlock_jackpot_shot_left_orbit:
+    switch_sequence: s_left_spinner, s_right_orbit
+    time: 2s
+    profile: airlock_jackpot_target_profile
+    disable_events: activate_next_airlock_jackpot_shot
+    enable_events: activate_airlock_jackpot_shot_1
+    show_tokens:
+        targetled: rgb_left_orbit_arrow_1 rgb_left_orbit_arrow_2
+  airlock_jackpot_shot_right_orbit:
+    switch: s_right_orbit
+    profile: airlock_jackpot_target_profile
+    disable_events: activate_next_airlock_jackpot_shot
+    enable_events: activate_airlock_jackpot_shot_2
+    time: 2s
+    delay_switch:
+      s_left_spinner: 1.0s
+    show_tokens:
+        targetled: rgb_right_orbit_arrow_1 rgb_right_orbit_arrow_2
+  airlock_jackpot_warp_ramp_shot:
+    profile: airlock_jackpot_target_profile
+    disable_events: activate_next_airlock_jackpot_shot
+    enable_events: activate_airlock_jackpot_shot_3
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    time: 3s
+    show_tokens:
+        targetled: rgb_ramplevel_1 rgb_ramplevel_2 rgb_ramplevel_3 rgb_ramplevel_4
+  airlock_jackpot_scoop_shot:
+    profile: airlock_jackpot_target_profile
+    disable_events: activate_next_airlock_jackpot_shot
+    enable_events: activate_airlock_jackpot_shot_4
+    switch: s_scoop
+    show_tokens:
+        targetled: rgb_scoop_arrow_1 rgb_scoop_arrow_2
+  airlock_jackpot_sbone_left_orbit_shot:
+    profile: airlock_jackpot_target_profile
+    disable_events: activate_next_airlock_jackpot_shot
+    enable_events: activate_airlock_jackpot_shot_5
+    switch: s_sbone_left_orbit
+    show_tokens:
+        targetled: rgb_sbone_left_orbit_arrow
+  airlock_jackpot_sbone_right_orbit_shot:
+    profile: airlock_jackpot_target_profile
+    disable_events: activate_next_airlock_jackpot_shot
+    enable_events: activate_airlock_jackpot_shot_6
+    switch: s_sbone_right_orbit
+    show_tokens:
+        targetled: rgb_sbone_right_orbit_arrow
+  airlock_jackpot_sbone_center_shot:
+    profile: airlock_jackpot_target_profile
+    disable_events: activate_next_airlock_jackpot_shot
+    enable_events: activate_airlock_jackpot_shot_7
+    switch_sequence: s_sbone_entry, s_sbone_lock_3
+    time: 2s
+    show_tokens:
+        targetled: rgb_sbone_bottom_right_arrow rgb_sbone_top_arrow rgb_sbone_bottom_left_arrow
+  airlock_jackpot_saucer_shot:
+    profile: airlock_jackpot_target_profile
+    disable_events: activate_next_airlock_jackpot_shot
+    enable_events: activate_airlock_jackpot_shot_8
+    switch: s_saucer
+    show_tokens:
+        targetled: rgb_saucer_arrow_1 rgb_saucer_arrow_2
+
 
 event_player:
-  multiball_airlock_add_a_ball_started: activate_next_airlock_addaball_shot
-  airlock_addaball_shot_one_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
-  airlock_addaball_shot_two_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
-  airlock_addaball_shot_three_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
-  airlock_addaball_shot_four_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
-  airlock_addaball_shot_five_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
-  airlock_addaball_shot_six_hit: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot
+  multiball_airlock_add_a_ball_started: activate_next_airlock_addaball_shot, activate_next_airlock_jackpot_shot
+  airlock_addaball_shot_one_hit{current_player.airlock_mb_balls_awarded_count<3}: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot, reset_drop_target_bank_request
+  airlock_addaball_shot_two_hit{current_player.airlock_mb_balls_awarded_count<3}: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot, reset_drop_target_bank_request
+  airlock_addaball_shot_three_hit{current_player.airlock_mb_balls_awarded_count<3}: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot, reset_drop_target_bank_request
+  airlock_addaball_shot_four_hit{current_player.airlock_mb_balls_awarded_count<3}: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot, reset_drop_target_bank_request
+  airlock_addaball_shot_five_hit{current_player.airlock_mb_balls_awarded_count<3}: airlock_multiball_gimme_another_ball, activate_next_airlock_addaball_shot, reset_drop_target_bank_request
+  airlock_addaball_shot_one_hit{current_player.airlock_mb_balls_awarded_count==3}: airlock_multiball_gimme_another_ball, disable_all_airlock_addaball_shots, reset_drop_target_bank_request
+  airlock_addaball_shot_two_hit{current_player.airlock_mb_balls_awarded_count==3}: airlock_multiball_gimme_another_ball, disable_all_airlock_addaball_shots, reset_drop_target_bank_request
+  airlock_addaball_shot_three_hit{current_player.airlock_mb_balls_awarded_count==3}: airlock_multiball_gimme_another_ball, disable_all_airlock_addaball_shots, reset_drop_target_bank_request
+  airlock_addaball_shot_four_hit{current_player.airlock_mb_balls_awarded_count==3}: airlock_multiball_gimme_another_ball, disable_all_airlock_addaball_shots, reset_drop_target_bank_request
+  airlock_addaball_shot_five_hit{current_player.airlock_mb_balls_awarded_count==3}: airlock_multiball_gimme_another_ball, disable_all_airlock_addaball_shots, reset_drop_target_bank_request
   airlock_mb_shot_one_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_shot_two_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_shot_three_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_shot_four_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_shot_five_pending_hit: airlock_multiball_award_100k_shot
+  airlock_mb_shot_left_orbit_pending_hit: airlock_multiball_award_100k_shot
+  airlock_mb_shot_right_orbit_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_warp_ramp_shot_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_scoop_shot_pending_hit: airlock_multiball_award_100k_shot
-  multiball_airlock_add_a_ball_ended: airlock_multiball_complete|50ms  
+  airlock_mb_sbone_left_orbit_shot_pending_hit: airlock_multiball_award_100k_shot
+  airlock_mb_sbone_right_orbit_shot_pending_hit: airlock_multiball_award_100k_shot
+  airlock_mb_sbone_center_shot_pending_hit: airlock_multiball_award_100k_shot
+  airlock_mb_saucer_shot_pending_hit: airlock_multiball_award_100k_shot
+  airlock_jackpot_shot_left_orbit_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_shot_right_orbit_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_warp_ramp_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_scoop_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_sbone_left_orbit_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_sbone_right_orbit_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_sbone_center_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_saucer_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  multiball_airlock_add_a_ball_ended: airlock_multiball_complete|50ms
 
 random_event_player:
   activate_next_airlock_addaball_shot:
@@ -120,6 +253,15 @@ random_event_player:
     - activate_airlock_addaball_shot_3
     - activate_airlock_addaball_shot_4
     - activate_airlock_addaball_shot_5
+  activate_next_airlock_jackpot_shot:
+    - activate_airlock_jackpot_shot_1
+    - activate_airlock_jackpot_shot_2
+    - activate_airlock_jackpot_shot_3
+    - activate_airlock_jackpot_shot_4
+    - activate_airlock_jackpot_shot_5
+    - activate_airlock_jackpot_shot_6
+    - activate_airlock_jackpot_shot_7
+    - activate_airlock_jackpot_shot_8
 
 shot_profiles:
   airlock_mb_target_one_profile:
@@ -170,9 +312,9 @@ shot_profiles:
         show: airlock_addaball_target_pending
         sync_ms: 500
         loops: -1
-  airlock_addaball_warpramp_profile:
+  airlock_jackpot_target_profile:
     states:
-      - name: addaball_pending
-        show: airlock_addaball_warpramp_pending
+      - name: jackpot_pending
+        show: airlock_jackpot_target_pending
         sync_ms: 500
         loops: -1

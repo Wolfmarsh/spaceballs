@@ -10,6 +10,9 @@ sound_player:
   airlock_multiball_award_100k_shot:
     target_hit_1:
       action: play
+  airlock_multiball_award_jackpot_shot:
+    jackpot_callout_sound_pool:
+      action: play
 
 slide_player:
   multiball_airlock_add_a_ball_started:
@@ -31,6 +34,10 @@ slide_player:
       action: remove
   airlock_multiball_award_100k_shot:
     airlock_addaball_100k_award_slide:
+      target: dmd
+      expire: 1
+  airlock_multiball_award_jackpot_shot:
+    airlock_addaball_jackpot_award_slide:
       target: dmd
       expire: 1
   airlock_multiball_gimme_another_ball:
@@ -205,7 +212,7 @@ slides:
         style: dmd_xl
         anchor_y: top
         anchor_x: center
-        y: top - 1
+        y: top
         x: center
         color: ffffff
       - type: text
@@ -213,7 +220,7 @@ slides:
         style: dmd_xl
         anchor_y: bottom
         anchor_x: center
-        y: bottom + 1
+        y: bottom
         x: center
         color: ffffff
       - type: image
@@ -232,6 +239,24 @@ slides:
         y: center
         x: center
         color: ffffff
+  airlock_addaball_jackpot_award_slide:
+    widgets:
+      - type: text
+        text: JACKPOT
+        style: dmd_xl
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+        color: ff00ff
+      - type: text
+        text: 1,000,000
+        style: dmd_xl
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+        color: ffffff
   airlock_addaball_ball_added_slide:
     widgets:
       - type: text
@@ -239,15 +264,14 @@ slides:
         style: dmd_xl
         anchor_y: top
         anchor_x: center
-        y: top - 1
+        y: top
         x: center
-        color: ffffff
+        color: 00ffff
       - type: text
         text: 250,000
         style: dmd_xl
         anchor_y: bottom
         anchor_x: center
-        y: bottom + 1
+        y: bottom
         x: center
         color: ffffff
-
