@@ -16,7 +16,7 @@ event_player:
   start_barf_multiball_mode_request: stop_airlock_qualifier_mode_request
   stop_barf_multiball_mode_request: start_airlock_qualifier_mode_request
   #if the qualifier is complete, start up multiball
-  airlock_qualifier_complete: stop_airlock_qualifier_mode_request, stop_orbit_base_mode_request, start_airlock_multiball_mode_request, start_sbone_autoeject_request, stop_base_music_request, start_airlock_multiball_music_request|10ms
+  airlock_qualifier_complete: stop_airlock_qualifier_mode_request, stop_orbit_base_mode_request, start_airlock_multiball_mode_request, start_sbone_autoeject_request, start_airlock_multiball_music_request|10ms
   #if multiball is complete, start up the qualifier and award a gem
   airlock_multiball_complete: stop_airlock_multiball_mode_request, start_orbit_base_mode_request, start_airlock_qualifier_mode_request, award_next_schwartz_gem, stop_sbone_autoeject_request, reset_drop_target_bank_request, resume_base_music_request|10ms, stop_airlock_multiball_music_request
   airlock_mb_4_balls_earned: award_next_schwartz_gem

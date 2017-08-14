@@ -7,15 +7,20 @@ sound_player:
   mode_base_started:
     spaceballs_song:
       action: play
+      priority: 100
   mode_bonus_started:
     spaceballs_song:
       action: stop
+      fade_out: 2.5s
   start_base_music_request:
     spaceballs_song:
       action: play
+      priority: 100
   resume_base_music_request:
     spaceballs_song:
       action: play
+      priority: 100
+      start_at: 7s
   stop_base_music_request:
     spaceballs_song:
       action: stop
@@ -25,4 +30,11 @@ sound_player:
       priority: 150
   stop_airlock_multiball_music_request:
     spaceballs_hot_together:
+      action: stop
+  start_barf_multiball_music_request:
+    spaceballs_raise_your_hands:
+      action: play
+      priority: 151
+  stop_barf_multiball_music_request:
+    spaceballs_raise_your_hands:
       action: stop
