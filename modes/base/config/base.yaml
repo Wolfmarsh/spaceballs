@@ -99,12 +99,6 @@ sound_player:
   ball_save_default_save_saving_ball:
     ball_saved_2:
       action: play
-  mode_base_started:
-    spaceballs_song:
-      action: play
-  mode_bonus_started:
-    spaceballs_song:
-      action: stop
 
 widget_player:
   player_add_success{num==2}:

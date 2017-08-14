@@ -27,6 +27,14 @@ sound_pools:
     sounds:
       - jackpot_1
       - jackpot_2
+  ridiculous_jackpot_callout_sound_pool:
+    load: preload
+    type: random
+    sounds:
+      - ridiculous_jackpot_1
+      - ridiculous_jackpot_2
+      - ridiculous_jackpot_3
+      - ridiculous_jackpot_4
 
 sounds:
   light_saber_swing_1:

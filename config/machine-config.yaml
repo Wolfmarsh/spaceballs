@@ -21,6 +21,7 @@ modes:
 - skillshot_timing
 - bonus
 - high_score
+- music_manager
 - warp_ramp_assetmanager
 - warp_ramp_modemanager
 - warp_ramp_qualifier
@@ -45,7 +46,10 @@ modes:
 - sbone_multiball
 - schwartz_ring_wizard
 - shaker_base
-
+- barf_assetmanager
+- barf_modemanager
+- barf_qualifier
+- barf_multiball
 
 widget_styles:
   dmd_xl:

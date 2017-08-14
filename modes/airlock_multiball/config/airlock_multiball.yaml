@@ -12,6 +12,8 @@ scoring:
     score: 250000 * current_player.game_scoring_multiplier
   airlock_multiball_award_jackpot_shot:
     score: 1000000 * current_player.game_scoring_multiplier
+  airlock_multiball_award_ridiculous_jackpot_shot:
+    score: 2500000 * current_player.game_scoring_multiplier
 
 logic_blocks:
   counters:
@@ -21,34 +23,35 @@ logic_blocks:
       count_complete_value: 4
       direction: up
       events_when_complete: airlock_mb_4_balls_earned
+      reset_on_complete: false
 
 shots:
 #standard drop shots for the add a ball shots
   airlock_mb_shot_one:
     switch: s_drop_1
     profile: airlock_mb_target_one_profile
-    disable_events: activate_airlock_addaball_shot_1
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started disable_all_airlock_addaball_shots
+    disable_events: activate_airlock_addaball_shot_1 activate_mb_complete_shots
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
   airlock_mb_shot_two:
     switch: s_drop_2
     profile: airlock_mb_target_two_profile
-    disable_events: activate_airlock_addaball_shot_2
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started disable_all_airlock_addaball_shots
+    disable_events: activate_airlock_addaball_shot_2 activate_mb_complete_shots
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
   airlock_mb_shot_three:
     switch: s_drop_3
     profile: airlock_mb_target_three_profile
-    disable_events: activate_airlock_addaball_shot_3
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started disable_all_airlock_addaball_shots
+    disable_events: activate_airlock_addaball_shot_3 activate_mb_complete_shots
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
   airlock_mb_shot_four:
     switch: s_drop_4
     profile: airlock_mb_target_four_profile
-    disable_events: activate_airlock_addaball_shot_4
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started disable_all_airlock_addaball_shots
+    disable_events: activate_airlock_addaball_shot_4 activate_mb_complete_shots
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
   airlock_mb_shot_five:
     switch: s_drop_5
     profile: airlock_mb_target_five_profile
-    disable_events: activate_airlock_addaball_shot_5
-    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started disable_all_airlock_addaball_shots
+    disable_events: activate_airlock_addaball_shot_5 activate_mb_complete_shots
+    enable_events: activate_next_airlock_addaball_shot multiball_airlock_add_a_ball_started
 #the add a ball shots on the drops
   airlock_addaball_shot_one:
     switch: s_drop_1
@@ -153,6 +156,7 @@ shots:
     profile: airlock_jackpot_target_profile
     disable_events: activate_next_airlock_jackpot_shot
     enable_events: activate_airlock_jackpot_shot_1
+    reset_events: activate_next_airlock_jackpot_shot
     show_tokens:
         targetled: rgb_left_orbit_arrow_1 rgb_left_orbit_arrow_2
   airlock_jackpot_shot_right_orbit:
@@ -160,6 +164,7 @@ shots:
     profile: airlock_jackpot_target_profile
     disable_events: activate_next_airlock_jackpot_shot
     enable_events: activate_airlock_jackpot_shot_2
+    reset_events: activate_next_airlock_jackpot_shot
     time: 2s
     delay_switch:
       s_left_spinner: 1.0s
@@ -169,6 +174,7 @@ shots:
     profile: airlock_jackpot_target_profile
     disable_events: activate_next_airlock_jackpot_shot
     enable_events: activate_airlock_jackpot_shot_3
+    reset_events: activate_next_airlock_jackpot_shot
     switch_sequence: s_ramp_entry, s_ramp_exit
     time: 3s
     show_tokens:
@@ -177,6 +183,7 @@ shots:
     profile: airlock_jackpot_target_profile
     disable_events: activate_next_airlock_jackpot_shot
     enable_events: activate_airlock_jackpot_shot_4
+    reset_events: activate_next_airlock_jackpot_shot
     switch: s_scoop
     show_tokens:
         targetled: rgb_scoop_arrow_1 rgb_scoop_arrow_2
@@ -184,6 +191,7 @@ shots:
     profile: airlock_jackpot_target_profile
     disable_events: activate_next_airlock_jackpot_shot
     enable_events: activate_airlock_jackpot_shot_5
+    reset_events: activate_next_airlock_jackpot_shot
     switch: s_sbone_left_orbit
     show_tokens:
         targetled: rgb_sbone_left_orbit_arrow
@@ -191,6 +199,7 @@ shots:
     profile: airlock_jackpot_target_profile
     disable_events: activate_next_airlock_jackpot_shot
     enable_events: activate_airlock_jackpot_shot_6
+    reset_events: activate_next_airlock_jackpot_shot
     switch: s_sbone_right_orbit
     show_tokens:
         targetled: rgb_sbone_right_orbit_arrow
@@ -198,6 +207,7 @@ shots:
     profile: airlock_jackpot_target_profile
     disable_events: activate_next_airlock_jackpot_shot
     enable_events: activate_airlock_jackpot_shot_7
+    reset_events: activate_next_airlock_jackpot_shot
     switch_sequence: s_sbone_entry, s_sbone_lock_3
     time: 2s
     show_tokens:
@@ -206,10 +216,51 @@ shots:
     profile: airlock_jackpot_target_profile
     disable_events: activate_next_airlock_jackpot_shot
     enable_events: activate_airlock_jackpot_shot_8
+    reset_events: activate_next_airlock_jackpot_shot
     switch: s_saucer
     show_tokens:
         targetled: rgb_saucer_arrow_1 rgb_saucer_arrow_2
-
+#shots for the part where theyve added 4 balls, each drop will give a jackpot and all 5 down will give a ridiculous jackpot
+  airlock_mb_complete_shot_one:
+    switch: s_drop_1
+    profile: airlock_jackpot_target_profile
+    disable_events: multiball_airlock_add_a_ball_ended
+    enable_events: activate_mb_complete_shots
+    reset_events: reset_airlock_mb_complete_shots_states
+    show_tokens:
+       targetled: rgb_drop_1
+  airlock_mb_complete_shot_two:
+    switch: s_drop_2
+    profile: airlock_jackpot_target_profile
+    disable_events: multiball_airlock_add_a_ball_ended
+    enable_events: activate_mb_complete_shots
+    reset_events: reset_airlock_mb_complete_shots_states
+    show_tokens:
+       targetled: rgb_drop_2
+  airlock_mb_complete_shot_three:
+    switch: s_drop_3
+    profile: airlock_jackpot_target_profile
+    disable_events: multiball_airlock_add_a_ball_ended
+    enable_events: activate_mb_complete_shots
+    reset_events: reset_airlock_mb_complete_shots_states
+    show_tokens:
+       targetled: rgb_drop_3
+  airlock_mb_complete_shot_four:
+    switch: s_drop_4
+    profile: airlock_jackpot_target_profile
+    disable_events: multiball_airlock_add_a_ball_ended
+    enable_events: activate_mb_complete_shots
+    reset_events: reset_airlock_mb_complete_shots_states
+    show_tokens:
+       targetled: rgb_drop_4
+  airlock_mb_complete_shot_five:
+    switch: s_drop_5
+    profile: airlock_jackpot_target_profile
+    disable_events: multiball_airlock_add_a_ball_ended
+    enable_events: activate_mb_complete_shots
+    reset_events: reset_airlock_mb_complete_shots_states
+    show_tokens:
+       targetled: rgb_drop_5
 
 event_player:
   multiball_airlock_add_a_ball_started: activate_next_airlock_addaball_shot, activate_next_airlock_jackpot_shot
@@ -236,15 +287,30 @@ event_player:
   airlock_mb_sbone_right_orbit_shot_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_sbone_center_shot_pending_hit: airlock_multiball_award_100k_shot
   airlock_mb_saucer_shot_pending_hit: airlock_multiball_award_100k_shot
-  airlock_jackpot_shot_left_orbit_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
-  airlock_jackpot_shot_right_orbit_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
-  airlock_jackpot_warp_ramp_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
-  airlock_jackpot_scoop_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
-  airlock_jackpot_sbone_left_orbit_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
-  airlock_jackpot_sbone_right_orbit_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
-  airlock_jackpot_sbone_center_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
-  airlock_jackpot_saucer_shot_jackpot_pending_hit: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_shot_left_orbit_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count<4}: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_shot_right_orbit_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count<4}: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_warp_ramp_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count<4}: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_scoop_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count<4}: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_sbone_left_orbit_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count<4}: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_sbone_right_orbit_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count<4}: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_sbone_center_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count<4}: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_saucer_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count<4}: airlock_multiball_award_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_shot_left_orbit_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count==4}: airlock_multiball_award_ridiculous_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_shot_right_orbit_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count==4}: airlock_multiball_award_ridiculous_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_warp_ramp_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count==4}: airlock_multiball_award_ridiculous_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_scoop_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count==4}: airlock_multiball_award_ridiculous_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_sbone_left_orbit_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count==4}: airlock_multiball_award_ridiculous_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_sbone_right_orbit_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count==4}: airlock_multiball_award_ridiculous_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_sbone_center_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count==4}: airlock_multiball_award_ridiculous_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_jackpot_saucer_shot_jackpot_pending_hit{current_player.airlock_mb_balls_awarded_count==4}: airlock_multiball_award_ridiculous_jackpot_shot, activate_next_airlock_jackpot_shot
+  airlock_mb_complete_shot_one_jackpot_pending_hit: airlock_multiball_award_jackpot_shot
+  airlock_mb_complete_shot_two_jackpot_pending_hit: airlock_multiball_award_jackpot_shot
+  airlock_mb_complete_shot_three_jackpot_pending_hit: airlock_multiball_award_jackpot_shot
+  airlock_mb_complete_shot_four_jackpot_pending_hit: airlock_multiball_award_jackpot_shot
+  airlock_mb_complete_shot_five_jackpot_pending_hit: airlock_multiball_award_jackpot_shot
+  drop_target_bank_airlock_bank_down{current_player.airlock_mb_balls_awarded_count==4}: airlock_multiball_award_ridiculous_jackpot_shot, reset_airlock_mb_complete_shots_states
   multiball_airlock_add_a_ball_ended: airlock_multiball_complete|50ms
+  airlock_mb_4_balls_earned: activate_mb_complete_shots
 
 random_event_player:
   activate_next_airlock_addaball_shot:
@@ -318,3 +384,6 @@ shot_profiles:
         show: airlock_jackpot_target_pending
         sync_ms: 500
         loops: -1
+      - name: jackpot_hit
+        show: airlock_jackpot_target_hit
+        loops: 0

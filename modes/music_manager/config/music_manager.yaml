@@ -1,0 +1,28 @@
+#config_version=4
+mode:
+  start_events: game_starting
+  priority: 100
+
+sound_player:
+  mode_base_started:
+    spaceballs_song:
+      action: play
+  mode_bonus_started:
+    spaceballs_song:
+      action: stop
+  start_base_music_request:
+    spaceballs_song:
+      action: play
+  resume_base_music_request:
+    spaceballs_song:
+      action: play
+  stop_base_music_request:
+    spaceballs_song:
+      action: stop
+  start_airlock_multiball_music_request:
+    spaceballs_hot_together:
+      action: play
+      priority: 150
+  stop_airlock_multiball_music_request:
+    spaceballs_hot_together:
+      action: stop

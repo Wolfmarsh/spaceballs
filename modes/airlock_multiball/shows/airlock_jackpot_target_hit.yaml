@@ -1,0 +1,5 @@
+#show_version=4
+- time: 0
+  leds:
+    (targetled): ff00ff
+  duration: -1

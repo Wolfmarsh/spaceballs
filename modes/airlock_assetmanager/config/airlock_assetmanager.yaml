@@ -13,6 +13,9 @@ sound_player:
   airlock_multiball_award_jackpot_shot:
     jackpot_callout_sound_pool:
       action: play
+  airlock_multiball_award_ridiculous_jackpot_shot:
+    ridiculous_jackpot_callout_sound_pool:
+      action: play
 
 slide_player:
   multiball_airlock_add_a_ball_started:
@@ -38,6 +41,10 @@ slide_player:
       expire: 1
   airlock_multiball_award_jackpot_shot:
     airlock_addaball_jackpot_award_slide:
+      target: dmd
+      expire: 1
+  airlock_multiball_award_ridiculous_jackpot_shot:
+    airlock_addaball_ridiculous_jackpot_award_slide:
       target: dmd
       expire: 1
   airlock_multiball_gimme_another_ball:
@@ -251,6 +258,24 @@ slides:
         color: ff00ff
       - type: text
         text: 1,000,000
+        style: dmd_xl
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+        color: ffffff
+  airlock_addaball_ridiculous_jackpot_award_slide:
+    widgets:
+      - type: text
+        text: RIDICULOUS
+        style: dmd_xl
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+        color: ff00ff
+      - type: text
+        text: 2,500,000
         style: dmd_xl
         anchor_y: bottom
         anchor_x: center

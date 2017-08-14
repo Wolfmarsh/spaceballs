@@ -12,6 +12,9 @@ event_player:
   #start/stop the qualifier when warp ramp multiball happens
   start_warp_ramp_multiball_mode_request: stop_sbone_qualifier_mode_request
   stop_warp_ramp_multiball_mode_request: start_sbone_qualifier_mode_request
+  #start/stop the qualifier when barf multiball happens
+  start_barf_multiball_mode_request: stop_sbone_qualifier_mode_request
+  stop_barf_multiball_mode_request: start_sbone_qualifier_mode_request
   #if the qualifier is complete, start up multiball
   sbone_qualifier_complete: stop_sbone_qualifier_mode_request, stop_orbit_base_mode_request, start_sbone_multiball_mode_request, start_sbone_autoeject_request
   #if multiball is complete, start up the qualifier and award a gem
