@@ -38,3 +38,10 @@ sound_player:
   stop_barf_multiball_music_request:
     spaceballs_raise_your_hands:
       action: stop
+  start_warp_ramp_multiball_music_request:
+    spaceballs_good_enough:
+      action: play
+      priority: 152
+  stop_warp_ramp_multiball_music_request:
+    spaceballs_good_enough:
+      action: stop
