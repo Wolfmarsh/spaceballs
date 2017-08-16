@@ -75,6 +75,7 @@ videos:
     events_when_stopped: player_add_video_9_ended
   make_way_for_darkhelmet:
     file: Make_Way_For_Dark_Helmet.mp4
+    events_when_stopped: player_add_video_10_ended
   brains_in_my_feet:
     file: My_Brains_Are_Going_Into_My_Feet.mp4
   oh_shit:
@@ -84,6 +85,7 @@ videos:
     events_when_stopped: perriair_opening_video_ended
   pizza_the_hut_intro:
     file: Pizza_The_Hut_Intro.mp4
+    events_when_stopped: player_add_video_11_ended
   skroob_scratching_crotch:
     file: Skroob_Scratching_Crotch.mp4
   skroob_shithead:

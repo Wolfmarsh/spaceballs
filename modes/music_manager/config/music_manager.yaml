@@ -8,6 +8,7 @@ sound_player:
     spaceballs_song:
       action: play
       priority: 100
+      fade_in: 2s
   mode_bonus_started:
     spaceballs_song:
       action: stop

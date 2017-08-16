@@ -1,0 +1,217 @@
+#config_version=4
+mode:
+  start_events: game_starting
+  priority: 2000
+
+random_event_player:
+  mode_player_add_assetmanager_started:
+    - play_player_add_video_2
+    - play_player_add_video_3
+    - play_player_add_video_4
+    - play_player_add_video_10
+  player_add_request:
+    - play_player_add_video_1
+    - play_player_add_video_2
+    - play_player_add_video_5
+    - play_player_add_video_6
+    - play_player_add_video_7
+    - play_player_add_video_8
+    - play_player_add_video_9
+    - play_player_add_video_10
+    - play_player_add_video_11
+
+sound_player:
+  player_add_request:
+    coin_up_1:
+      action: play
+    
+slide_player:
+  player_add_success{num==2}:
+    player_2_added_slide:
+      target: dmd
+      expire: 1
+  player_add_success{num==3}:
+    player_3_added_slide:
+      target: dmd
+      expire: 1
+  player_add_success{num==4}:
+    player_4_added_slide:
+      target: dmd
+      expire: 1
+  play_player_add_video_1:
+    player_add_video_1_slide:
+      target: lcd
+  player_add_video_1_ended:
+    player_add_video_1_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_2:
+    player_add_video_2_slide:
+      target: lcd
+  player_add_video_2_ended:
+    player_add_video_2_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_3:
+    player_add_video_3_slide:
+      target: lcd
+  player_add_video_3_ended:
+    player_add_video_3_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_4:
+    player_add_video_4_slide:
+      target: lcd
+  player_add_video_4_ended:
+    player_add_video_4_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_5:
+    player_add_video_5_slide:
+      target: lcd
+  player_add_video_5_ended:
+    player_add_video_5_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_6:
+    player_add_video_6_slide:
+      target: lcd
+  player_add_video_6_ended:
+    player_add_video_6_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_7:
+    player_add_video_7_slide:
+      target: lcd
+  player_add_video_7_ended:
+    player_add_video_7_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_8:
+    player_add_video_8_slide:
+      target: lcd
+  player_add_video_8_ended:
+    player_add_video_8_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_9:
+    player_add_video_9_slide:
+      target: lcd
+  player_add_video_9_ended:
+    player_add_video_9_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_10:
+    player_add_video_10_slide:
+      target: lcd
+  player_add_video_10_ended:
+    player_add_video_10_slide:
+      target: lcd
+      action: remove
+  play_player_add_video_11:
+    player_add_video_11_slide:
+      target: lcd
+  player_add_video_11_ended:
+    player_add_video_11_slide:
+      target: lcd
+      action: remove
+
+slides:
+  player_2_added_slide:
+    widgets:
+      - type: text
+        text: PLAYER 2
+        style: dmd_xl
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+        color: ffffff
+      - type: text
+        text: ADDED
+        style: dmd_xl
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+        color: ffffff      
+  player_3_added_slide:
+    widgets:
+      - type: text
+        text: PLAYER 3
+        style: dmd_xl
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+        color: ffffff
+      - type: text
+        text: ADDED
+        style: dmd_xl
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+        color: ffffff      
+  player_4_added_slide:
+    widgets:
+      - type: text
+        text: PLAYER 4
+        style: dmd_xl
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+        color: ffffff
+      - type: text
+        text: ADDED
+        style: dmd_xl
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+        color: ffffff      
+  player_add_video_1_slide:
+    widgets:
+      - type: video
+        video: gunners_mate_phillip_asshole
+  player_add_video_2_slide:
+    widgets:
+      - type: video
+        video: hail_skroob
+  player_add_video_3_slide:
+    widgets:
+      - type: video
+        video: hello_lonestar_1
+  player_add_video_4_slide:
+    widgets:
+      - type: video
+        video: hello_lonestar_2
+  player_add_video_5_slide:
+    widgets:
+      - type: video
+        video: hes_an_asshole_sir
+  player_add_video_6_slide:
+    widgets:
+      - type: video
+        video: hes_an_asshole_too
+  player_add_video_7_slide:
+    widgets:
+      - type: video
+        video: how_many_assholes_we_got
+  player_add_video_8_slide:
+    widgets:
+      - type: video
+        video: surrounded_by_assholes
+  player_add_video_9_slide:
+    widgets:
+      - type: video
+        video: major_asshole
+  player_add_video_10_slide:
+    widgets:
+      - type: video
+        video: make_way_for_darkhelmet
+  player_add_video_11_slide:
+    widgets:
+      - type: video
+        video: pizza_the_hut_intro

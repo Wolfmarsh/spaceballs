@@ -3,82 +3,8 @@ mode:
   start_events: ball_starting
   priority: 100
 
-random_event_player:
-  player_add_request:
-    - play_player_add_video_1
-    - play_player_add_video_2
-    - play_player_add_video_3
-    - play_player_add_video_4
-    - play_player_add_video_5
-    - play_player_add_video_6
-    - play_player_add_video_7
-    - play_player_add_video_8
-    - play_player_add_video_9
 
 slide_player:
-  play_player_add_video_1:
-    player_add_video_1_slide:
-      target: lcd
-  player_add_video_1_ended:
-    player_add_video_1_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_2:
-    player_add_video_2_slide:
-      target: lcd
-  player_add_video_2_ended:
-    player_add_video_2_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_3:
-    player_add_video_3_slide:
-      target: lcd
-  player_add_video_3_ended:
-    player_add_video_3_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_4:
-    player_add_video_4_slide:
-      target: lcd
-  player_add_video_4_ended:
-    player_add_video_4_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_5:
-    player_add_video_5_slide:
-      target: lcd
-  player_add_video_5_ended:
-    player_add_video_5_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_6:
-    player_add_video_6_slide:
-      target: lcd
-  player_add_video_6_ended:
-    player_add_video_6_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_7:
-    player_add_video_7_slide:
-      target: lcd
-  player_add_video_7_ended:
-    player_add_video_7_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_8:
-    player_add_video_8_slide:
-      target: lcd
-  player_add_video_8_ended:
-    player_add_video_8_slide:
-      target: lcd
-      action: remove
-  play_player_add_video_9:
-    player_add_video_9_slide:
-      target: lcd
-  player_add_video_9_ended:
-    player_add_video_9_slide:
-      target: lcd
-      action: remove
   mode_base_started:
     player_info_slide:
       target: dmd
@@ -222,39 +148,3 @@ slides:
         anchor_x: right
         anchor_y: bottom
         style: dmd_small
-  player_add_video_1_slide:
-    widgets:
-      - type: video
-        video: gunners_mate_phillip_asshole
-  player_add_video_2_slide:
-    widgets:
-      - type: video
-        video: hail_skroob
-  player_add_video_3_slide:
-    widgets:
-      - type: video
-        video: hello_lonestar_1
-  player_add_video_4_slide:
-    widgets:
-      - type: video
-        video: hello_lonestar_2
-  player_add_video_5_slide:
-    widgets:
-      - type: video
-        video: hes_an_asshole_sir
-  player_add_video_6_slide:
-    widgets:
-      - type: video
-        video: hes_an_asshole_too
-  player_add_video_7_slide:
-    widgets:
-      - type: video
-        video: how_many_assholes_we_got
-  player_add_video_8_slide:
-    widgets:
-      - type: video
-        video: surrounded_by_assholes
-  player_add_video_9_slide:
-    widgets:
-      - type: video
-        video: major_asshole

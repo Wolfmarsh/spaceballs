@@ -4,7 +4,6 @@ mode:
   priority: 300
 
 event_player:
-  s_left_inlane_active: award_next_schwartz_gem
   award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==0}: increment_schwartz_gem_counter, award_first_schwartz_gem
   award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==1}: increment_schwartz_gem_counter, award_second_schwartz_gem
   award_next_schwartz_gem{current_player.schwartz_gems_awarded_counter_count==2}: increment_schwartz_gem_counter, award_third_schwartz_gem
