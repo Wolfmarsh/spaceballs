@@ -16,6 +16,6 @@ event_player:
   start_barf_multiball_mode_request: stop_warp_ramp_qualifier_mode_request
   stop_barf_multiball_mode_request: start_warp_ramp_qualifier_mode_request
   #if the qualifier is complete, start up multiball
-  warp_ramp_qualifier_complete: stop_warp_ramp_qualifier_mode_request, stop_orbit_base_mode_request, start_warp_ramp_multiball_mode_request, start_sbone_autoeject_request, stop_base_music_request, start_warp_ramp_multiball_music_request|10ms
+  warp_ramp_qualifier_complete: stop_warp_ramp_qualifier_mode_request, stop_orbit_base_mode_request, start_warp_ramp_multiball_mode_request, start_sbone_autoeject_request, stop_base_music_request, start_warp_ramp_multiball_music_request|100ms
   #if multiball is complete, start up the qualifier and award a gem
   warp_ramp_multiball_complete: stop_warp_ramp_multiball_mode_request, start_orbit_base_mode_request, start_warp_ramp_qualifier_mode_request, award_next_schwartz_gem, stop_sbone_autoeject_request, reset_drop_target_bank_request, resume_base_music_request|10ms, stop_warp_ramp_multiball_music_request

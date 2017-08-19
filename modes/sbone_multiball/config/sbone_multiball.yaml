@@ -5,11 +5,65 @@ mode:
   stop_events: stop_sbone_multiball_mode_request
   priority: 1300
 
+scoring:
+  sbone_multiball_award_100k_shot:
+    score: 100000 * current_player.game_scoring_multiplier
+  sbone_multiball_award_jackpot_shot:
+    score: 1000000 * current_player.game_scoring_multiplier
+
 event_player:
   multiball_sbone_multiball_ended: sbone_multiball_complete|50ms
+  sbone_mb_airlock_shot_one_pending_hit: sbone_multiball_award_100k_shot
+  sbone_mb_airlock_shot_two_pending_hit: sbone_multiball_award_100k_shot
+  sbone_mb_airlock_shot_three_pending_hit: sbone_multiball_award_100k_shot
+  sbone_mb_airlock_shot_four_pending_hit: sbone_multiball_award_100k_shot
+  sbone_mb_airlock_shot_five_pending_hit: sbone_multiball_award_100k_shot
+  drop_target_bank_airlock_bank_down: sbone_multiball_award_jackpot_shot reset_sbone_mb_airlock_shots
+ 
+shots:
+#standard drop shots for the multiball mode
+  sbone_mb_airlock_shot_one:
+    switch: s_drop_1
+    profile: sbone_mb_airlock_target_profile
+    enable_events: multiball_sbone_multiball_started
+    reset_events: reset_sbone_mb_airlock_shots
+    show_tokens:
+       targetled: rgb_drop_1
+  sbone_mb_airlock_shot_two:
+    switch: s_drop_2
+    profile: sbone_mb_airlock_target_profile
+    enable_events: multiball_sbone_multiball_started
+    reset_events: reset_sbone_mb_airlock_shots
+    show_tokens:
+       targetled: rgb_drop_2
+  sbone_mb_airlock_shot_three:
+    switch: s_drop_3
+    profile: sbone_mb_airlock_target_profile
+    enable_events: multiball_sbone_multiball_started
+    reset_events: reset_sbone_mb_airlock_shots
+    show_tokens:
+       targetled: rgb_drop_3
+  sbone_mb_airlock_shot_four:
+    switch: s_drop_4
+    profile: sbone_mb_airlock_target_profile
+    enable_events: multiball_sbone_multiball_started
+    reset_events: reset_sbone_mb_airlock_shots
+    show_tokens:
+       targetled: rgb_drop_4
+  sbone_mb_airlock_shot_five:
+    switch: s_drop_5
+    profile: sbone_mb_airlock_target_profile
+    enable_events: multiball_sbone_multiball_started
+    reset_events: reset_sbone_mb_airlock_shots
+    show_tokens:
+       targetled: rgb_drop_5
 
-multiball_locks:
-  sbone_mb_lock:
-    balls_to_lock: 3
-    lock_devices: bd_sbone
-    reset_count_for_current_player_events: multiball_sbone_multiball_ended
+shot_profiles:
+  sbone_mb_airlock_target_profile:
+    states:
+      - name: pending
+        show: sbone_mb_airlock_shot_pending
+        sync_ms: 500
+        loops: -1
+      - name: hit
+        show: sbone_mb_airlock_shot_hit

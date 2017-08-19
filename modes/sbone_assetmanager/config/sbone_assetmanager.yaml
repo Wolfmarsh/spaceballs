@@ -21,6 +21,15 @@ slide_player:
     sbone_multiball_tractorbeam_start_slide:
       target: lcd
       action: remove
+  sbone_multiball_award_100k_shot:
+    sbone_mb_100k_award_slide:
+      target: dmd
+      expire: 1
+  sbone_multiball_award_jackpot_shot:
+    sbone_mb_jackpot_award_slide:
+      target: dmd
+      expire: 1
+
 
 sound_player:
   sbone_ball_one_locked:
@@ -34,6 +43,12 @@ sound_player:
       action: play
   multiball_sbone_multiball_started:
     multiball_callout_sound_pool:
+      action: play
+  sbone_multiball_award_100k_shot:
+    target_hit_1:
+      action: play
+  sbone_multiball_award_jackpot_shot:
+    jackpot_callout_sound_pool:
       action: play
 
 slides:
@@ -79,5 +94,33 @@ slides:
         video: tractor_beam_start
         width: 1280
         height: 720
-    
+  sbone_mb_100k_award_slide:
+    widgets:
+      - type: text
+        text: 100,000
+        style: dmd_xl
+        anchor_y: center
+        anchor_x: center
+        y: center
+        x: center
+        color: ffffff
+  sbone_mb_jackpot_award_slide:
+    widgets:
+      - type: text
+        text: JACKPOT
+        style: dmd_xl
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+        color: ff00ff
+      - type: text
+        text: 1,000,000
+        style: dmd_xl
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+        color: ffffff
+
     

@@ -15,3 +15,9 @@ show_player:
     sbone_qualifier_locks_ready:
       loops: -1
       speed: 1
+
+multiball_locks:
+  sbone_mb_lock:
+    balls_to_lock: 3
+    lock_devices: bd_sbone
+    reset_count_for_current_player_events: sbone_qualifier_complete

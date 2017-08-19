@@ -16,6 +16,6 @@ event_player:
   start_barf_multiball_mode_request: stop_sbone_qualifier_mode_request
   stop_barf_multiball_mode_request: start_sbone_qualifier_mode_request
   #if the qualifier is complete, start up multiball
-  sbone_qualifier_complete: stop_sbone_qualifier_mode_request, stop_orbit_base_mode_request, start_sbone_multiball_mode_request, start_sbone_autoeject_request
+  sbone_qualifier_complete: stop_sbone_qualifier_mode_request, start_sbone_multiball_mode_request, start_sbone_autoeject_request, stop_base_music_request, start_sbone_multiball_music_request|10ms
   #if multiball is complete, start up the qualifier and award a gem
-  sbone_multiball_complete: stop_sbone_multiball_mode_request, start_orbit_base_mode_request, start_sbone_qualifier_mode_request, award_next_schwartz_gem, stop_sbone_autoeject_request, reset_drop_target_bank_request
+  sbone_multiball_complete: stop_sbone_multiball_mode_request, start_sbone_qualifier_mode_request, award_next_schwartz_gem, stop_sbone_autoeject_request, reset_drop_target_bank_request, resume_base_music_request|10ms, stop_sbone_multiball_music_request
