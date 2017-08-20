@@ -1,10 +1,10 @@
 #config_version=4
 mode:
-  start_events: game_starting
+  start_events: ball_starting
   priority: 100
 
 sound_player:
-  mode_base_started:
+  mode_music_manager_started:
     spaceballs_song:
       action: play
       priority: 100
