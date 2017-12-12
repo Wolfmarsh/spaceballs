@@ -1,9 +1,11 @@
-#config_version=4
-led_settings:
-#  brightness_compensation: 1.0, 1.0, 1.0
-  default_led_fade_ms: 100
+#config_version=5
 
-leds:  
+#REVISIT
+#led_settings:
+#  brightness_compensation: 1.0, 1.0, 1.0
+#  default_led_fade_ms: 100
+
+lights:  
         
   rgb_varitarget:
     label: Vari Target Arrow

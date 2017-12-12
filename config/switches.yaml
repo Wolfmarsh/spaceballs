@@ -1,4 +1,4 @@
-# config_version=4
+# config_version=5
 
 switches:
 #BEGIN 0804 (0-7)
@@ -109,8 +109,9 @@ switches:
     number: 45
   s_left_spinner:
     number: 46
-    debounce_open: 2
-    debounce_close: 2
+    platform_settings:
+      debounce_open: 2
+      debounce_close: 2
   s_schwartz_power_1:
     number: 48
   s_schwartz_power_2:

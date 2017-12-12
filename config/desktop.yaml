@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 # Override config for "desktop" mode which renders both the LCD and DMD in a
 # single on-screen window.

@@ -1,19 +1,18 @@
-#config_version=4
+#config_version=5
 
 hardware:
   platform: fast
   driverboards: fast
   rgb_dmd: smartmatrix
 
-physical_rgb_dmds:
-  my_dmd:
-     platform: smartmatrix
-     brightness: 1.0
+rgb_dmds:
+  smartmatrix_1:
+     hardware_brightness: 1.0
      fps: 20
 
-fast:
-  config_number_format: int
-  #debug: true
+#fast:
+#config_number_format: int
+#debug: true
   
 config:
 - machine-config.yaml
