@@ -13,6 +13,8 @@ slide_player:
   mode_attract_started:
     attract_tpbm_slide:
       target: lcd
+    dead_flip_mode_activated:
+      target: dmd
   mode_attract_stopping:
     attract_tpbm_slide:
       target: lcd

@@ -1,48 +1,48 @@
-#show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
     rgb_schwartzlevel_1: ffffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_2: ffffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_3: ffffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_4: ffffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_5: ffffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_6: ffffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_6: 000000-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_5: 000000-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_4: 000000-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_3: 000000-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_2: 000000-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_schwartzlevel_1: 000000-f50ms

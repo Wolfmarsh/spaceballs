@@ -27,6 +27,7 @@ playfields:
 
 modes:
 - base
+# - attract
 # - player_add_assetmanager
 # - skillshot_timing
 # - bonus

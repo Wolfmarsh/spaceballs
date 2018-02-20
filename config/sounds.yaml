@@ -1,5 +1,4 @@
 #config_version=5
-
 assets:
   sounds:
     default:
@@ -18,18 +17,21 @@ sound_pools:
   multiball_callout_sound_pool:
     load: preload
     type: random
+    track: voice
     sounds:
       - multiball_1
       - multiball_2
   jackpot_callout_sound_pool:
     load: preload
     type: random
+    track: voice
     sounds:
       - jackpot_1
       - jackpot_2
   ridiculous_jackpot_callout_sound_pool:
     load: preload
     type: random
+    track: voice
     sounds:
       - ridiculous_jackpot_1
       - ridiculous_jackpot_2

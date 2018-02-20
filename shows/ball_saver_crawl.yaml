@@ -1,90 +1,90 @@
-#show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
     rgb_ball_saver_left: 000000-f50ms
     rgb_ball_saver_right: 00ff00-f50ms
 
 - time: '+6'
-  leds:
+  lights:
     rgb_ball_saver_left: 00ff00-f50ms
     rgb_ball_saver_right: 000000-f50ms
 
 - time: '+6'
-  leds:
+  lights:
     rgb_ball_saver_left: 000000-f50ms
     rgb_ball_saver_right: 00ff00-f50ms
 
 - time: '+6'
-  leds:
+  lights:
     rgb_ball_saver_left: 00ff00-f50ms
     rgb_ball_saver_right: 000000-f50ms
 
 - time: '+4'
-  leds:
+  lights:
     rgb_ball_saver_left: 000000-f50ms
     rgb_ball_saver_right: 00ff00-f50ms
 
 - time: '+4'
-  leds:
+  lights:
     rgb_ball_saver_left: 00ff00-f50ms
     rgb_ball_saver_right: 000000-f50ms
 
 - time: '+4'
-  leds:
+  lights:
     rgb_ball_saver_left: 000000-f50ms
     rgb_ball_saver_right: 00ff00-f50ms
 
 - time: '+4'
-  leds:
+  lights:
     rgb_ball_saver_left: 00ff00-f50ms
     rgb_ball_saver_right: 000000-f50ms
 
 - time: '+2'
-  leds:
+  lights:
     rgb_ball_saver_left: 000000-f50ms
     rgb_ball_saver_right: 00ff00-f50ms
 
 - time: '+2'
-  leds:
+  lights:
     rgb_ball_saver_left: 00ff00-f50ms
     rgb_ball_saver_right: 000000-f50ms
 
 - time: '+2'
-  leds:
+  lights:
     rgb_ball_saver_left: 000000-f50ms
     rgb_ball_saver_right: 00ff00-f50ms
 
 - time: '+2'
-  leds:
+  lights:
     rgb_ball_saver_left: 00ff00-f50ms
     rgb_ball_saver_right: 000000-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_ball_saver_left: 000000-f50ms
     rgb_ball_saver_right: 00ff00-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_ball_saver_left: 00ff00-f50ms
     rgb_ball_saver_right: 000000-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_ball_saver_left: 000000-f50ms
     rgb_ball_saver_right: 00ff00-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_ball_saver_left: 00ff00-f50ms
     rgb_ball_saver_right: 000000-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_ball_saver_left: 000000-f50ms
     rgb_ball_saver_right: 000000-f50ms
 
 - time: '+20'
-  leds:
+  lights:
     rgb_ball_saver_left: 000000-f50ms
     rgb_ball_saver_right: 000000-f50ms

@@ -1,69 +1,69 @@
-#show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
     rgb_drop_3: 0000ff-f50ms
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_3: 000000-f50ms
     rgb_drop_2: 0000ff-f50ms
     rgb_drop_4: 0000ff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_2: 000000-f50ms
     rgb_drop_4: 000000-f50ms
     rgb_drop_1: 0000ff-f50ms
     rgb_drop_5: 0000ff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_1: 000000-f50ms
     rgb_drop_5: 000000-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_5: 00ffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_5: 000000-f50ms
     rgb_drop_4: 00ffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_4: 000000-f50ms
     rgb_drop_3: 00ffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_3: 000000-f50ms
     rgb_drop_2: 00ffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_2: 000000-f50ms
     rgb_drop_1: 00ffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_1: 000000-f50ms
     rgb_drop_2: 00ffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_2: 000000-f50ms
     rgb_drop_3: 00ffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_3: 000000-f50ms
     rgb_drop_4: 00ffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_4: 000000-f50ms
     rgb_drop_5: 00ffff-f50ms
 
 - time: '+1'
-  leds:
+  lights:
     rgb_drop_5: 000000-f50ms

@@ -9,8 +9,9 @@ rgb_dmds:
   smartmatrix_1:
      hardware_brightness: 1.0
      fps: 20
+     platform: smartmatrix
 
-#fast:
+fast:
 #config_number_format: int
 #debug: true
   

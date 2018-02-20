@@ -46,7 +46,7 @@ lights:
   rgb_right_inlane:
     label: Right Inlane
     number: 12
-  rgb_right_oulane:
+  rgb_right_outlane:
     label: Right Outlane
     number: 13
   rgb_shooter_arrow_1:
@@ -148,7 +148,7 @@ lights:
   rgb_left_inlane:
     label: Left Inlane
     number: 77
-  rgb_left_oulane:
+  rgb_left_outlane:
     label: Left Outlane
     number: 78
   rgb_ball_saver_left:

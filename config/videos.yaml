@@ -22,7 +22,7 @@ videos:
     file: Airlock_Combination_5_King.mp4
   airlock_stupidestcombination:
     file: Airlock_StupidestCombination.mp4
-    events_when_stopped: airlock_stupidestcombination_video_stopped
+#    events_when_stopped: airlock_stupidestcombination_video_stopped
   allrise_for_darkhelmet:
     file: All_Rise_In_The_Presence_Of_Dark_Helmet.mp4
   barf_intro:
@@ -31,7 +31,7 @@ videos:
     file: Chestburster_End.mp4
   chestburster_start:
     file: Chestburster_Start.mp4
-    events_when_stopped: chestburster_start_video_stopped
+#    events_when_stopped: chestburster_start_video_stopped
   darkhelmet_flying_forward:
     file: Dark_Helmet_Flying_Forward.mp4
   darkhelmet_lightspeed_flying:
@@ -42,50 +42,50 @@ videos:
     file: Going_Plaid_Transition.mp4
   gunners_mate_phillip_asshole:
     file: Gunners_Mate_First_Class_Phillip_Asshole.mp4
-    events_when_stopped: player_add_video_1_ended
+#    events_when_stopped: player_add_video_1_ended
   hail_skroob:
     file: Hail_Skroob.mp4
-    events_when_stopped: player_add_video_2_ended
+#    events_when_stopped: player_add_video_2_ended
   hello_lonestar_1:
     file: Hello_Lonestar_1.mp4
-    events_when_stopped: player_add_video_3_ended
+#    events_when_stopped: player_add_video_3_ended
   hello_lonestar_2:
     file: Hello_Lonestar_2.mp4
-    events_when_stopped: player_add_video_4_ended
+#    events_when_stopped: player_add_video_4_ended
   here_it_is_spaceballs:
     file: Here_It_Is_Sir_Spaceballs.mp4
   hes_an_asshole_sir:
     file: Hes_An_Asshole_Sir.mp4
-    events_when_stopped: player_add_video_5_ended
+#    events_when_stopped: player_add_video_5_ended
   hes_an_asshole_too:
     file: Hes_An_Asshole_Too_Sir.mp4
-    events_when_stopped: player_add_video_6_ended
+#    events_when_stopped: player_add_video_6_ended
   how_many_assholes_we_got:
     file: How_Many_Assholes_We_Got_Anyhow.mp4
-    events_when_stopped: player_add_video_7_ended
+#    events_when_stopped: player_add_video_7_ended
   my_own_best_friend:
     file: Im_My_Own_Best_Friend.mp4
   surrounded_by_assholes:
     file: Im_Surrounded_By_Assholes.mp4
-    events_when_stopped: player_add_video_8_ended
+#    events_when_stopped: player_add_video_8_ended
   keep_firing_assholes:
     file: Keep_Firing_Assholes.mp4
   major_asshole:
     file: Major_Asshole.mp4
-    events_when_stopped: player_add_video_9_ended
+#    events_when_stopped: player_add_video_9_ended
   make_way_for_darkhelmet:
     file: Make_Way_For_Dark_Helmet.mp4
-    events_when_stopped: player_add_video_10_ended
+#    events_when_stopped: player_add_video_10_ended
   brains_in_my_feet:
     file: My_Brains_Are_Going_Into_My_Feet.mp4
   oh_shit:
     file: Oh_Shit.mp4
   perriair_opening:
     file: Perriair_Opening_Short.mp4
-    events_when_stopped: perriair_opening_video_ended
+#    events_when_stopped: perriair_opening_video_ended
   pizza_the_hut_intro:
     file: Pizza_The_Hut_Intro.mp4
-    events_when_stopped: player_add_video_11_ended
+#    events_when_stopped: player_add_video_11_ended
   skroob_scratching_crotch:
     file: Skroob_Scratching_Crotch.mp4
   skroob_shithead:
@@ -96,4 +96,4 @@ videos:
     file: Theyve_Gone_To_Plaid.mp4
   tractor_beam_start:
     file: Tractor_Beam_Start.mp4
-    events_when_stopped: video_tractor_beam_start_stopped
+#    events_when_stopped: video_tractor_beam_start_stopped
