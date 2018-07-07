@@ -1,10 +1,1 @@
-# config_version=5
-
-smartmatrix:
-  smartmatrix_1:
-    port: com7
-    baud: 2500000
-    old_cookie: true
-  
-fast:
-  ports: com4, com5
+#config_version=5

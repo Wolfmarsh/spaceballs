@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 mode:
   start_events: game_starting
   priority: 2000
@@ -24,7 +24,7 @@ sound_player:
   player_add_request:
     coin_up_1:
       action: play
-    
+
 slide_player:
   player_add_success{num==2}:
     player_2_added_slide:

@@ -1,9 +1,9 @@
-#config_version=4
+#config_version=5
 mode:
     start_events: ball_starting
     priority: 1500
 
-scoring:
+variable_player:
   skillshot_timing_bonusawardmax:
     bonus_multiplier: 4
   skillshot_timing_bonusaward2:
@@ -13,12 +13,11 @@ scoring:
 
 coil_player:
   mode_skillshot_timing_started:
-      c_launch_light:
-         action: enable
-         power: 1.0
+    c_launch_light:
+      action: enable
   sw_launch:
-      c_launch_light:
-         action: disable
+    c_launch_light:
+      action: disable
 
 sound_player:
   skillshot_timing_bonusawardmax:
@@ -103,19 +102,18 @@ event_player:
   sw_launch{current_player.skillshot_level_counter_count==1 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusaward1, skillshot_award_step
   sw_launch{current_player.skillshot_level_counter_count==0 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardfail, skillshot_award_step
 
-logic_blocks:
-  counters:
-    skillshot_level_counter:
-      count_events: skillshot_timing_step
-      count_complete_value: 4
-      disable_on_complete: false
-      enable_events: mode_skillshot_timing_started
-      disable_events: mode_skillshot_timing_stopped sw_launch
-      reset_events: mode_skillshot_timing_started
-    skillshot_award_counter:
-      count_events: skillshot_award_step
-      enable_events: mode_skillshot_timing_started
-      reset_events: mode_skillshot_timing_started
+counters:
+  skillshot_level_counter:
+    count_events: skillshot_timing_step
+    count_complete_value: 4
+    disable_on_complete: false
+    enable_events: mode_skillshot_timing_started
+    disable_events: mode_skillshot_timing_stopped sw_launch
+    reset_events: mode_skillshot_timing_started
+  skillshot_award_counter:
+    count_events: skillshot_award_step
+    enable_events: mode_skillshot_timing_started
+    reset_events: mode_skillshot_timing_started
 
 slides:
   skillshot_instructions_slide:

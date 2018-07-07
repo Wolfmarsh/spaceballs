@@ -5,15 +5,20 @@ hardware:
   driverboards: fast
   rgb_dmd: smartmatrix
 
+smartmatrix:
+  dmd:
+    port: com7
+    baud: 2500000
+    old_cookie: true
+
 rgb_dmds:
-  smartmatrix_1:
-     hardware_brightness: 1.0
-     fps: 20
-     platform: smartmatrix
+  dmd:
+    hardware_brightness: 0.3
+    fps: 20
+    source_display: dmd
 
 fast:
-#config_number_format: int
-#debug: true
+  ports: com4, com5
   
 config:
 - machine-config.yaml
@@ -25,7 +30,7 @@ displays:
   dmd:
     width: 128
     height: 32
-    default: true
+    default: True
 
 window:
   width: 1360 

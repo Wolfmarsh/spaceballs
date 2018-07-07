@@ -20,6 +20,9 @@ show_player:
     ball_saver_timer_show:
       loops: 0
       speed: 1
+  ball_save_default_save_saving_ball:
+    ball_saver_timer_show:
+      action: stop
 
 sound_player:
   ball_save_default_save_saving_ball:

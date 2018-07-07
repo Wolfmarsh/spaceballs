@@ -8,7 +8,6 @@ machine:
   min_balls: 6
 
 config:
-- portconfig.yaml
 - switches.yaml
 - coils.yaml
 - leds.yaml
@@ -19,6 +18,7 @@ config:
 - videos.yaml
 - sounds.yaml
 - multiballs.yaml
+# - portconfig.yaml
 
 playfields:
   playfield:
@@ -27,9 +27,8 @@ playfields:
 
 modes:
 - base
-# - attract
 # - player_add_assetmanager
-# - skillshot_timing
+- skillshot_timing
 # - bonus
 # - high_score
 # - music_manager

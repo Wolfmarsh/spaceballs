@@ -9,181 +9,241 @@ lights:
         
   rgb_varitarget:
     label: Vari Target Arrow
+    type: grb
     number: 0
   rgb_ramplevel_4:
     label: Ramp Level Plaid
+    type: grb
     number: 1
   rgb_ramplevel_3:
     label: Ramp Level Ludicrous
+    type: grb
     number: 2
   rgb_ramplevel_2:
     label: Ramp Level Ridiculous
+    type: grb
     number: 3
   rgb_ramplevel_1:
     label: Ramp Level Light
+    type: grb
     number: 4
   rgb_schwartzlevel_6:
     label: Schwartz Level 6
+    type: grb
     number: 5
   rgb_schwartzlevel_5:
     label: Schwartz Level 5
+    type: grb
     number: 6
   rgb_schwartzlevel_4:
     label: Schwartz Level 4
+    type: grb
     number: 7
   rgb_schwartzlevel_3:
     label: Schwartz Level 3
+    type: grb
     number: 8
   rgb_schwartzlevel_2:
     label: Schwartz Level 2
+    type: grb
     number: 9
   rgb_schwartzlevel_1:
     label: Schwartz Level 1
+    type: grb
     number: 10
   rgb_saucer_arrow_1:
     label: Saucer Arrow 1
+    type: grb
     number: 11
   rgb_right_inlane:
     label: Right Inlane
+    type: grb
     number: 12
   rgb_right_outlane:
     label: Right Outlane
+    type: grb
     number: 13
   rgb_shooter_arrow_1:
     label: Shooter Arrow 1
+    type: grb
     number: 14
   rgb_shooter_arrow_2:
     label: Shooter Arrow 2
+    type: grb
     number: 15
   rgb_shooter_arrow_3:
-    label: Shooter Arrow 2
+    label: Shooter Arrow 3
+    type: grb
     number: 16
   rgb_saucer_right_circle:
     label: Saucer Right Circle
+    type: grb
     number: 17
   rgb_saucer_arrow_2:
     label: Saucer Arrow 2
+    type: grb
     number: 18
   rgb_saucer_left_circle:
     label: Saucer Left Circle
+    type: grb
     number: 19
   rgb_scoop_arrow_1:
     label: Scoop Arrow 1
+    type: grb
     number: 20
   rgb_scoop_arrow_2:
     label: Scoop Arrow 2
+    type: grb
     number: 21
   rgb_right_orbit_arrow_1:
     label: Right Orbit Arrow 1
+    type: grb
     number: 22
   rgb_right_orbit_arrow_2:
     label: Right Orbit Arrow 2
+    type: grb
     number: 23
   rgb_pop_bottom_right:
     label: Pop Insert Bottom Right
+    type: grb
     number: 24
   rgb_r_lane:
     label: R Lane
+    type: grb
     number: 25
   rgb_r_can:
     label: R Can
+    type: grb
     number: 26
   rgb_i_can:
     label: I Can
+    type: grb
     number: 27
   rgb_a_can:
     label: A Can
+    type: grb
     number: 28
   rgb_i_lane:
     label: I Lane
+    type: grb
     number: 29
   rgb_a_lane:
     label: A Lane
+    type: grb
     number: 30
   rgb_pop_top_middle:
     label: Pop Insert Top Middle
+    type: grb
     number: 31
   rgb_pop_bottom_left:
     label: Pop Insert Bottom Left
+    type: grb
     number: 32
   rgb_center_target_circle:
     label: Center Target Circle
+    type: grb
     number: 64
   rgb_sbone_right_orbit_arrow:
     label: SBOne Right Orbit Arrow
+    type: grb
     number: 65
   rgb_sbone_bottom_right_arrow:
     label: SBOne Bottom Right Arrow
+    type: grb
     number: 66
   rgb_sbone_top_arrow:
     label: SBOne Top Arrow
+    type: grb
     number: 67
   rgb_sbone_bottom_left_arrow:
     label: SBOne Bottom Left Arrow
+    type: grb
     number: 68
   rgb_sbone_left_orbit_arrow:
     label: SBOne Left Orbit Arrow
+    type: grb
     number: 69
   rgb_left_orbit_arrow_2:
     label: Left Orbit Arrow 2
+    type: grb
     number: 70
   rgb_left_orbit_arrow_1:
     label: Left Orbit Arrow 1
+    type: grb
     number: 71
   rgb_drop_5:
     label: Drop 5
+    type: grb
     number: 72
   rgb_drop_4:
     label: Drop 4
+    type: grb
     number: 73
   rgb_drop_3:
     label: Drop 3
+    type: grb
     number: 74
   rgb_drop_2:
     label: Drop 2
+    type: grb
     number: 75
   rgb_drop_1:
     label: Drop 1
+    type: grb
     number: 76
   rgb_left_inlane:
     label: Left Inlane
+    type: grb
     number: 77
   rgb_left_outlane:
     label: Left Outlane
+    type: grb
     number: 78
   rgb_ball_saver_left:
     label: Ball Saver Left
+    type: grb
     number: 79
   rgb_ball_saver_right:
     label: Ball Saver Right
+    type: grb
     number: 80
   rgb_extra_ball:
     label: Extra Ball
+    type: grb
     number: 81
   rgb_insignia_1:
     label: RGB Insignia 1
+    type: grb
     number: 82
   rgb_insignia_2:
     label: RGB Insignia 2
+    type: grb
     number: 83
   rgb_insignia_3:
     label: RGB Insignia 3
+    type: grb
     number: 84
   rgb_insignia_4:
     label: RGB Insignia 4
+    type: grb
     number: 85
   rgb_insignia_5:
     label: RGB Insignia 5
+    type: grb
     number: 86
   rgb_insignia_6:
     label: RGB Insignia 6
+    type: grb
     number: 87
   rgb_insignia_7:
     label: RGB Insignia 7
+    type: grb
     number: 88
   rgb_insignia_8:
     label: RGB Insignia 8
+    type: grb
     number: 90
   rgb_insignia_9:
     label: RGB Insignia 9
+    type: grb
     number: 89

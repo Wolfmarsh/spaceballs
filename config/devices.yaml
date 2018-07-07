@@ -1,4 +1,4 @@
-# config_version=5
+#config_version=5
 
 flippers:
   left_flipper:
@@ -60,7 +60,6 @@ ball_devices:
     ball_switches: s_plunger_lane
     entrance_count_delay: 300ms
     eject_timeouts: 3s
-    tags: ball_add_live
     eject_coil: c_plunger_eject
     player_controlled_eject_event: sw_launch
   bd_saucer:
