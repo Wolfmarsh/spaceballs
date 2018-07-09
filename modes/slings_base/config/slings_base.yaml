@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 mode:
   start_events: ball_starting
   priority: 500
@@ -21,7 +21,7 @@ show_player:
       loops: 0
       speed: 130
 
-scoring:
+variable_player:
   s_sling_right_active:
     score: 10000 * current_player.game_scoring_multiplier
   s_sling_left_active:
@@ -31,6 +31,7 @@ sound_pools:
   light_saber_swing_sound_pool:
     load: preload
     type: random
+    track: sfx
     sounds:
       - light_saber_swing_1
       - light_saber_swing_2

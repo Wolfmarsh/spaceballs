@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 mode_settings:
   display_delay_ms: 1000ms

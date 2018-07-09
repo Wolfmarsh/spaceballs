@@ -1,15 +1,15 @@
 #config_version=5
 mode:
-  start_events: game_starting
+  start_events: ball_starting
   priority: 2000
 
 random_event_player:
-  mode_player_add_assetmanager_started:
-    - play_player_add_video_2
-    - play_player_add_video_3
-    - play_player_add_video_4
-    - play_player_add_video_10
-  player_add_request:
+  # mode_player_add_assetmanager_started:
+    # - play_player_add_video_2
+    # - play_player_add_video_3
+    # - play_player_add_video_4
+    # - play_player_add_video_10
+  player_added:
     - play_player_add_video_1
     - play_player_add_video_2
     - play_player_add_video_5
@@ -21,20 +21,20 @@ random_event_player:
     - play_player_add_video_11
 
 sound_player:
-  player_add_request:
+  player_added:
     coin_up_1:
       action: play
 
 slide_player:
-  player_add_success{num==2}:
+  player_added{num==2}:
     player_2_added_slide:
       target: dmd
       expire: 1
-  player_add_success{num==3}:
+  player_added{num==3}:
     player_3_added_slide:
       target: dmd
       expire: 1
-  player_add_success{num==4}:
+  player_added{num==4}:
     player_4_added_slide:
       target: dmd
       expire: 1

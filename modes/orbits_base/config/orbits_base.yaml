@@ -1,22 +1,29 @@
-#config_version=4
+#config_version=5
 mode:
   start_events: ball_starting start_orbit_base_mode_request
   stop_events: stop_orbit_base_mode_request
   priority: 300
 
+sequence_shots:
+  left_orbit_base_sequence:
+    switch_sequence:
+      - s_left_spinner
+      - s_right_orbit
+    sequence_timeout: 2s
+  right_orbit_base_sequence:
+    switch_sequence: s_right_orbit
+    delay_switch_list:
+      s_left_spinner: 1.0s
+
 shots:
   left_orbit_base_shot:
-    switch_sequence: s_left_spinner, s_right_orbit
     profile: orbit_base_profile
-    time: 2s
+    hit_events: left_orbit_base_sequence_hit
     show_tokens:
         led: rgb_left_orbit_arrow_1
   right_orbit_base_shot:
-    switch: s_right_orbit
+    hit_events: right_orbit_base_sequence_hit
     profile: orbit_base_profile
-    time: 2s
-    delay_switch:
-      s_left_spinner: 1.0s
     show_tokens:
         led: rgb_right_orbit_arrow_1
 

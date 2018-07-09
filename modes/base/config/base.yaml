@@ -30,13 +30,13 @@ sound_player:
       action: play
 
 widget_player:
-  player_add_success{num==2}:
+  player_added{num==2}:
     player_2_lcd_info_widget:
       slide: multiplayer_lcd_slide
-  player_add_success{num==3}:
+  player_added{num==3}:
     player_3_lcd_info_widget:
       slide: multiplayer_lcd_slide
-  player_add_success{num==4}:
+  player_added{num==4}:
     player_4_lcd_info_widget:
       slide: multiplayer_lcd_slide
 

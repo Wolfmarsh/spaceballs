@@ -1,10 +1,10 @@
-#show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
     rgb_right_orbit_arrow_1: 000000-f50ms
 
 - time: '+250ms'
-  leds:
+  lights:
     rgb_right_orbit_arrow_1: df47d5-f50ms
 
 - time: '+250ms'

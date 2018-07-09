@@ -1,5 +1,5 @@
-#show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
     (lane): 000000-f100ms
     (can): 000000-f100ms

@@ -74,7 +74,7 @@ led:
   rgb_left_orbit_arrow_2:
     x: 0.1263893345780215
     y: 0.348302300109529
-  rgb_left_oulane:
+  rgb_left_outlane:
     x: 0.07353561284539434
     y: 0.7426067907995617
   rgb_pop_bottom_left:
@@ -107,7 +107,7 @@ led:
   rgb_right_inlane:
     x: 0.7629319832709662
     y: 0.646221248630887
-  rgb_right_oulane:
+  rgb_right_outlane:
     x: 0.834169608214942
     y: 0.7447973713033953
   rgb_saucer_arrow_1:

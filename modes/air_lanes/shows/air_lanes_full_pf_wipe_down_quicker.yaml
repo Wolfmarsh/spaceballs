@@ -1,6 +1,6 @@
-# show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
       rgb_a_can: '00C200'
       rgb_a_lane: '00F200'
       rgb_i_can: '00C100'
@@ -9,7 +9,7 @@
       rgb_r_lane: '00F300'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_a_can: '009700'
       rgb_a_lane: '00D100'
       rgb_i_can: '009600'
@@ -18,7 +18,7 @@
       rgb_r_lane: '00D200'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_a_can: '006800'
       rgb_a_lane: '00A700'
       rgb_i_can: '006600'
@@ -28,7 +28,7 @@
       rgb_r_lane: '00A800'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_a_can: '003C00'
       rgb_a_lane: '007A00'
       rgb_i_can: '003B00'
@@ -38,7 +38,7 @@
       rgb_r_lane: '007B00'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_a_can: '001700'
       rgb_a_lane: '004D00'
       rgb_i_can: '001700'
@@ -51,7 +51,7 @@
       rgb_sbone_top_arrow: '00EF00'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_a_can: '000000'
       rgb_a_lane: '002400'
       rgb_i_can: '000000'
@@ -66,7 +66,7 @@
       rgb_sbone_top_arrow: '00CB00'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_a_lane: '000700'
       rgb_center_target_circle: '00EE00'
       rgb_i_lane: '000600'
@@ -81,7 +81,7 @@
       rgb_sbone_top_arrow: '00A100'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_a_lane: '000000'
       rgb_center_target_circle: '00CB00'
       rgb_i_lane: '000000'
@@ -97,7 +97,7 @@
       rgb_sbone_top_arrow: '007400'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_center_target_circle: '009F00'
       rgb_left_orbit_arrow_1: '00E200'
       rgb_left_orbit_arrow_2: '00BF00'
@@ -112,7 +112,7 @@
       rgb_varitarget: '00F700'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_center_target_circle: '007200'
       rgb_drop_5: '00EF00'
       rgb_left_orbit_arrow_1: '00BD00'
@@ -130,7 +130,7 @@
       rgb_varitarget: '00D800'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_center_target_circle: '004500'
       rgb_drop_3: '00F400'
       rgb_drop_4: '00E200'
@@ -154,7 +154,7 @@
       rgb_varitarget: '00B100'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_center_target_circle: '001D00'
       rgb_drop_1: '00F900'
       rgb_drop_2: '00EA00'
@@ -182,7 +182,7 @@
       rgb_varitarget: '008200'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_center_target_circle: '000000'
       rgb_drop_1: '00DC00'
       rgb_drop_2: '00C600'
@@ -211,7 +211,7 @@
       rgb_varitarget: '005500'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_drop_1: '00B300'
       rgb_drop_2: '009900'
       rgb_drop_3: '007C00'
@@ -242,7 +242,7 @@
       rgb_varitarget: '002B00'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_drop_1: '008700'
       rgb_drop_2: '006B00'
       rgb_drop_3: '004F00'
@@ -278,7 +278,7 @@
       rgb_varitarget: '000B00'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_drop_1: '005900'
       rgb_drop_2: '003F00'
       rgb_drop_3: '002600'
@@ -317,7 +317,7 @@
       rgb_varitarget: '000000'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_drop_1: '002E00'
       rgb_drop_2: '001900'
       rgb_drop_3: '000700'
@@ -333,12 +333,12 @@
       rgb_insignia_8: '006300'
       rgb_insignia_9: '007300'
       rgb_left_inlane: '00A400'
-      rgb_left_oulane: '00F900'
+      rgb_left_outlane: '00F900'
       rgb_ramplevel_1: '000600'
       rgb_ramplevel_2: '000000'
       rgb_ramplevel_3: '000000'
       rgb_right_inlane: '00A700'
-      rgb_right_oulane: '00FC00'
+      rgb_right_outlane: '00FC00'
       rgb_saucer_arrow_1: '007200'
       rgb_saucer_arrow_2: '005200'
       rgb_saucer_left_circle: '003B00'
@@ -356,7 +356,7 @@
       rgb_shooter_arrow_3: '008900'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_drop_1: '000D00'
       rgb_drop_2: '000000'
       rgb_drop_3: '000000'
@@ -371,10 +371,10 @@
       rgb_insignia_8: '003800'
       rgb_insignia_9: '004700'
       rgb_left_inlane: '007600'
-      rgb_left_oulane: '00DC00'
+      rgb_left_outlane: '00DC00'
       rgb_ramplevel_1: '000000'
       rgb_right_inlane: '007900'
-      rgb_right_oulane: '00E100'
+      rgb_right_outlane: '00E100'
       rgb_saucer_arrow_1: '004500'
       rgb_saucer_arrow_2: '002A00'
       rgb_saucer_left_circle: '001600'
@@ -391,7 +391,7 @@
       rgb_shooter_arrow_3: '005C00'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_drop_1: '000000'
       rgb_extra_ball: '00DF00'
       rgb_insignia_1: '007200'
@@ -404,9 +404,9 @@
       rgb_insignia_8: '001400'
       rgb_insignia_9: '002000'
       rgb_left_inlane: '004A00'
-      rgb_left_oulane: '00B500'
+      rgb_left_outlane: '00B500'
       rgb_right_inlane: '004C00'
-      rgb_right_oulane: '00BB00'
+      rgb_right_outlane: '00BB00'
       rgb_saucer_arrow_1: '002000'
       rgb_saucer_arrow_2: '000A00'
       rgb_saucer_left_circle: '000000'
@@ -419,7 +419,7 @@
       rgb_shooter_arrow_3: '003000'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_ball_saver_left: '00E200'
       rgb_ball_saver_right: '00E300'
       rgb_extra_ball: '00B700'
@@ -433,9 +433,9 @@
       rgb_insignia_8: '000000'
       rgb_insignia_9: '000400'
       rgb_left_inlane: '002100'
-      rgb_left_oulane: '008700'
+      rgb_left_outlane: '008700'
       rgb_right_inlane: '002400'
-      rgb_right_oulane: '008D00'
+      rgb_right_outlane: '008D00'
       rgb_saucer_arrow_1: '000000'
       rgb_saucer_arrow_2: '000000'
       rgb_saucer_right_circle: '000000'
@@ -444,7 +444,7 @@
       rgb_shooter_arrow_3: '000E00'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_ball_saver_left: '00BB00'
       rgb_ball_saver_right: '00BE00'
       rgb_extra_ball: '008900'
@@ -456,15 +456,15 @@
       rgb_insignia_6: '000000'
       rgb_insignia_9: '000000'
       rgb_left_inlane: '000500'
-      rgb_left_oulane: '005800'
+      rgb_left_outlane: '005800'
       rgb_right_inlane: '000600'
-      rgb_right_oulane: '006000'
+      rgb_right_outlane: '006000'
       rgb_shooter_arrow_1: '003400'
       rgb_shooter_arrow_2: '001000'
       rgb_shooter_arrow_3: '000000'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_ball_saver_left: '009100'
       rgb_ball_saver_right: '009200'
       rgb_extra_ball: '005C00'
@@ -474,34 +474,34 @@
       rgb_insignia_4: '000000'
       rgb_insignia_5: '000000'
       rgb_left_inlane: '000000'
-      rgb_left_oulane: '002F00'
+      rgb_left_outlane: '002F00'
       rgb_right_inlane: '000000'
-      rgb_right_oulane: '003400'
+      rgb_right_outlane: '003400'
       rgb_shooter_arrow_1: '001100'
       rgb_shooter_arrow_2: '000000'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_ball_saver_left: '006200'
       rgb_ball_saver_right: '006300'
       rgb_extra_ball: '003100'
       rgb_insignia_1: '000000'
       rgb_insignia_2: '000000'
       rgb_insignia_3: '000000'
-      rgb_left_oulane: '000D00'
-      rgb_right_oulane: '001100'
+      rgb_left_outlane: '000D00'
+      rgb_right_outlane: '001100'
       rgb_shooter_arrow_1: '000000'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_ball_saver_left: '003700'
       rgb_ball_saver_right: '003800'
       rgb_extra_ball: '000F00'
-      rgb_left_oulane: '000000'
-      rgb_right_oulane: '000000'
+      rgb_left_outlane: '000000'
+      rgb_right_outlane: '000000'
     
 - time: '+1'
-  leds:
+  lights:
       rgb_ball_saver_left: '001300'
       rgb_ball_saver_right: '001400'
       rgb_extra_ball: '000000'

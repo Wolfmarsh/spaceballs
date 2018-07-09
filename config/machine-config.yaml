@@ -1,7 +1,7 @@
 #config_version=5
 
 game:
-  balls_per_game: 3
+  balls_per_game: 2
 
 machine:
   balls_installed: 6
@@ -18,7 +18,6 @@ config:
 - videos.yaml
 - sounds.yaml
 - multiballs.yaml
-# - portconfig.yaml
 
 playfields:
   playfield:
@@ -27,27 +26,27 @@ playfields:
 
 modes:
 - base
-# - player_add_assetmanager
+- player_add_assetmanager
 - skillshot_timing
-# - bonus
+- bonus
 # - high_score
-# - music_manager
+- music_manager
 # - warp_ramp_assetmanager
 # - warp_ramp_modemanager
 # - warp_ramp_qualifier
 # - warp_ramp_multiball
-# - spinner
+- spinner
 # - diner
 # - airlock_assetmanager
 # - airlock_modemanager
 # - airlock_qualifier
 # - airlock_multiball
-# - pops_base
-# - air_lanes
+- pops_base
+- air_lanes
 # - orbit_post_launch_behavior
-# - orbits_base
+- orbits_base
 # - dead_flip
-# - slings_base
+- slings_base
 # - sbone_assetmanager
 # - sbone_autoeject
 # - sbone_modemanager

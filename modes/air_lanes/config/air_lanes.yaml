@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 mode:
   start_events: ball_starting
   priority: 800
@@ -60,7 +60,7 @@ slide_player:
       target: lcd
       action: remove
 
-scoring:
+variable_player:
   air_lanes_complete:
     bonus_multiplier: 1
 
