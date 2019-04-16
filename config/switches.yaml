@@ -83,7 +83,7 @@ switches:
   s_sbone_right_standup:
     number: 31
   s_sbone_lock_1:
-    number: 33
+    number: 32
     type: NC
   s_sbone_lock_3:
     number: 33
