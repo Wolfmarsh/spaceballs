@@ -1,12 +1,6 @@
 #show_version=5
 - time: 0
   lights:
-    rgb_saucer_arrow_1: 0000ff-f100ms
-    rgb_saucer_arrow_2: 000000-f100ms
-
-    rgb_saucer_left_circle: ffffff-f100ms
-    rgb_saucer_right_circle: 000000-f100ms
-
     rgb_right_inlane: ff0000-f100ms
     rgb_left_inlane: ff0000-f100ms
 
@@ -23,18 +17,12 @@
 
     rgb_center_target_circle: ffffff-f100ms
 
-    rgb_sbone_right_orbit_arrow: ff0000-f100ms
-    rgb_sbone_left_orbit_arrow: 000000-f100ms
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
     rgb_extra_ball: ffbb00-f100ms
 
 - time: '+1'
   lights:
-    rgb_saucer_arrow_1: 000000-f100ms
-    rgb_saucer_arrow_2: 0000ff-f100ms
-
-    rgb_saucer_left_circle: 000000-f100ms
-    rgb_saucer_right_circle: ffffff-f100ms
-
     rgb_right_inlane: 000000-f100ms
     rgb_left_inlane: 000000-f100ms
 
@@ -51,6 +39,6 @@
 
     rgb_center_target_circle: 000000-f100ms
 
-    rgb_sbone_right_orbit_arrow: 000000-f100ms
-    rgb_sbone_left_orbit_arrow: ff0000-f100ms
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
     rgb_extra_ball: 000000-f100ms

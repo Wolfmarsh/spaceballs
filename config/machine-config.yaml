@@ -26,34 +26,34 @@ playfields:
 
 modes:
 - base
-- player_add_assetmanager
-- skillshot_timing
-- bonus
+#- player_add_assetmanager
+#- skillshot_timing
+#- bonus
 # - high_score
-- music_manager
+#- music_manager
 # - warp_ramp_assetmanager
 # - warp_ramp_modemanager
 # - warp_ramp_qualifier
 # - warp_ramp_multiball
-- spinner
+#- spinner
 # - diner
-- airlock_assetmanager
-- airlock_modemanager
-- airlock_qualifier
-- airlock_multiball
-- pops_base
-- air_lanes
+#- airlock_assetmanager
+#- airlock_modemanager
+#- airlock_qualifier
+#- airlock_multiball
+#- pops_base
+#- air_lanes
 # - orbit_post_launch_behavior
-- orbits_base
+#- orbits_base
 # - dead_flip
-- slings_base
+#- slings_base
 # - sbone_assetmanager
 # - sbone_autoeject
 # - sbone_modemanager
 # - sbone_servoactivation
 # - sbone_qualifier
 # - sbone_multiball
-- schwartz_ring_wizard
+#- schwartz_ring_wizard
 # - shaker_base
 # - barf_assetmanager
 # - barf_modemanager

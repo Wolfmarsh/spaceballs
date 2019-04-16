@@ -7,8 +7,8 @@
       widgets:
         - type: image
           image: splash_screen
-          width: 1280
-          height: 720
+#          width: 1280
+#          height: 720
 
 - time: +30s
   slides:
@@ -28,8 +28,8 @@
       widgets:
         - type: image
           image: splash_screen
-          width: 1280
-          height: 720
+#          width: 1280
+#          height: 720
 
 - time: +30s
   slides:
@@ -48,5 +48,5 @@
       widgets:
         - type: image
           image: splash_screen
-          width: 1280
-          height: 720
+#          width: 1280
+#          height: 720

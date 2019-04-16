@@ -14,6 +14,18 @@ switches:
   s_start:
     number: 3
     tags: start
+  s_service_plus:
+    number: 4
+    tags: service_up
+  s_service_minus:
+    number: 5
+    tags: service_down
+  s_service_enter:
+    number: 6
+    tags: service_enter
+  s_service_escape:
+    number: 7
+    tags: service_esc
 #BEGIN 3208 (8-39)
   s_trough1:
     number: 8
@@ -38,7 +50,7 @@ switches:
     type: NC
   s_plunger_lane:
     number: 15
-  s_saucer:
+  s_yogurt_standup:
     number: 16
   s_scoop:
     number: 17
@@ -52,43 +64,43 @@ switches:
     number: 21
   s_drop_4:
     number: 22
-  s_sbone_left_orbit:
+  s_left_orbit_second:
     number: 23
   s_sling_right:
     number: 24
   s_sling_left:
     number: 25
-  s_left_inlane:
-    number: 26
   s_left_outlane:
+    number: 26
+  s_left_inlane:
     number: 27
-  s_right_inlane:
-    number: 28
   s_right_outlane:
+    number: 28
+  s_right_inlane:
     number: 29
-  s_sbone_right_orbit:
+  s_sbone_left_standup:
     number: 30
-  s_pop_sneak:
+  s_sbone_right_standup:
     number: 31
-  s_sbone_lock_3:
-    number: 32
-    type: NC
-  s_sbone_lock_2:
+  s_sbone_lock_1:
     number: 33
     type: NC
-  s_sbone_lock_1:
+  s_sbone_lock_3:
+    number: 33
+    type: NC
+  s_sbone_entry:
     number: 34
     type: NC
   s_ramp_entry:
     number: 35
     type: NC
-  s_sbone_entry:
+  s_sbone_lock_2:
     number: 36
     type: NC
   s_ramp_exit:
     number: 37
     type: NC
-  s_right_orbit:
+  s_right_orbit_entry:
     number: 38
     type: NC
 #BEGIN 1616 (40-55)
@@ -112,6 +124,8 @@ switches:
     platform_settings:
       debounce_open: 2
       debounce_close: 2
+  s_ramp_sneak:
+    number: 47
   s_schwartz_power_1:
     number: 48
   s_schwartz_power_2:
@@ -128,3 +142,13 @@ switches:
     number: 54
   s_middle_target:
     number: 55
+#BEGIN 0804 (56-63)
+  s_right_orbit_second:
+    number: 60
+  s_tractorbeam_limit:
+    number: 61
+  s_pop_sneak:
+    number: 62
+  s_backboard_limit:
+    number: 63
+

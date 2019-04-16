@@ -6,7 +6,6 @@
 #  default_led_fade_ms: 100
 
 lights:  
-        
   rgb_varitarget:
     label: Vari Target Arrow
     type: grb
@@ -15,235 +14,411 @@ lights:
     label: Ramp Level Plaid
     type: grb
     number: 1
-  rgb_ramplevel_3:
-    label: Ramp Level Ludicrous
-    type: grb
-    number: 2
-  rgb_ramplevel_2:
-    label: Ramp Level Ridiculous
-    type: grb
-    number: 3
-  rgb_ramplevel_1:
-    label: Ramp Level Light
-    type: grb
-    number: 4
-  rgb_schwartzlevel_6:
-    label: Schwartz Level 6
-    type: grb
-    number: 5
-  rgb_schwartzlevel_5:
-    label: Schwartz Level 5
-    type: grb
-    number: 6
-  rgb_schwartzlevel_4:
-    label: Schwartz Level 4
-    type: grb
-    number: 7
-  rgb_schwartzlevel_3:
-    label: Schwartz Level 3
-    type: grb
-    number: 8
-  rgb_schwartzlevel_2:
-    label: Schwartz Level 2
-    type: grb
-    number: 9
-  rgb_schwartzlevel_1:
-    label: Schwartz Level 1
-    type: grb
-    number: 10
-  rgb_saucer_arrow_1:
-    label: Saucer Arrow 1
-    type: grb
-    number: 11
-  rgb_right_inlane:
-    label: Right Inlane
-    type: grb
-    number: 12
-  rgb_right_outlane:
-    label: Right Outlane
-    type: grb
-    number: 13
-  rgb_shooter_arrow_1:
-    label: Shooter Arrow 1
-    type: grb
-    number: 14
-  rgb_shooter_arrow_2:
-    label: Shooter Arrow 2
-    type: grb
-    number: 15
-  rgb_shooter_arrow_3:
-    label: Shooter Arrow 3
-    type: grb
-    number: 16
-  rgb_saucer_right_circle:
-    label: Saucer Right Circle
-    type: grb
-    number: 17
-  rgb_saucer_arrow_2:
-    label: Saucer Arrow 2
-    type: grb
-    number: 18
-  rgb_saucer_left_circle:
-    label: Saucer Left Circle
-    type: grb
-    number: 19
-  rgb_scoop_arrow_1:
-    label: Scoop Arrow 1
-    type: grb
-    number: 20
-  rgb_scoop_arrow_2:
-    label: Scoop Arrow 2
-    type: grb
-    number: 21
-  rgb_right_orbit_arrow_1:
-    label: Right Orbit Arrow 1
-    type: grb
-    number: 22
   rgb_right_orbit_arrow_2:
     label: Right Orbit Arrow 2
     type: grb
+    number: 2
+  rgb_right_orbit_arrow_1:
+    label: Right Orbit Arrow 1
+    type: grb
+    number: 3
+  rgb_scoop_arrow_2:
+    label: Scoop Arrow 2
+    type: grb
+    number: 4
+  rgb_scoop_arrow_1:
+    label: Scoop Arrow 1
+    type: grb
+    number: 5
+  rgb_ramplevel_1:
+    label: Ramp Level Light
+    type: grb
+    number: 6
+  rgb_ramplevel_2:
+    label: Ramp Level Ridiculous
+    type: grb
+    number: 7
+  rgb_ramplevel_3:
+    label: Ramp Level Ludicrous
+    type: grb
+    number: 8
+  rgb_schwartzlevel_6:
+    label: Schwartz Level 6
+    type: grb
+    number: 9
+  rgb_schwartzlevel_5:
+    label: Schwartz Level 5
+    type: grb
+    number: 10
+  rgb_schwartzlevel_4:
+    label: Schwartz Level 4
+    type: grb
+    number: 11
+  rgb_schwartzlevel_3:
+    label: Schwartz Level 3
+    type: grb
+    number: 12
+  rgb_schwartzlevel_2:
+    label: Schwartz Level 2
+    type: grb
+    number: 13
+  rgb_schwartzlevel_1:
+    label: Schwartz Level 1
+    type: grb
+    number: 14
+  rgb_unknowncenter_4:
+    type: grb
+    number: 15
+  rgb_unknowncenter_5:
+    type: grb
+    number: 16
+  rgb_unknowncenter_6:
+    type: grb
+    number: 17
+  rgb_unknowncenter_7:
+    type: grb
+    number: 18
+  rgb_yogurt_arrow:
+    type: grb
+    number: 19
+  rgb_good_schwartz_6:
+    type: grb
+    number: 20
+  rgb_good_schwartz_5:
+    type: grb
+    number: 21
+  rgb_shooter_arrow_3:
+    label: Shooter Arrow 3
+    type: grb
+    number: 22
+  rgb_shooter_arrow_2:
+    label: Shooter Arrow 2
+    type: grb
     number: 23
-  rgb_pop_bottom_right:
-    label: Pop Insert Bottom Right
+  rgb_shooter_arrow_1:
+    label: Shooter Arrow 1
     type: grb
     number: 24
-  rgb_r_lane:
-    label: R Lane
+  rgb_right_outlane:
+    label: Right Outlane
     type: grb
     number: 25
-  rgb_r_can:
-    label: R Can
+  rgb_right_inlane:
+    label: Right Inlane
     type: grb
     number: 26
-  rgb_i_can:
-    label: I Can
+  rgb_good_schwartz_4:
     type: grb
     number: 27
-  rgb_a_can:
-    label: A Can
+  rgb_good_schwartz_3:
     type: grb
     number: 28
-  rgb_i_lane:
-    label: I Lane
+  rgb_good_schwartz_2:
     type: grb
     number: 29
-  rgb_a_lane:
-    label: A Lane
+  rgb_good_schwartz_1:
     type: grb
     number: 30
-  rgb_pop_top_middle:
-    label: Pop Insert Top Middle
+  rgb_insignia_9:
+    label: RGB Insignia 9
     type: grb
     number: 31
-  rgb_pop_bottom_left:
-    label: Pop Insert Bottom Left
+  rgb_insignia_8:
+    label: RGB Insignia 8
     type: grb
     number: 32
+  rgb_insignia_5:
+    label: RGB Insignia 5
+    type: grb
+    number: 33
+  rgb_insignia_4:
+    label: RGB Insignia 4
+    type: grb
+    number: 34
+  rgb_insignia_3:
+    label: RGB Insignia 3
+    type: grb
+    number: 35
+  rgb_insignia_2:
+    label: RGB Insignia 2
+    type: grb
+    number: 36
+  rgb_ball_saver_right:
+    label: Ball Saver Right
+    type: grb
+    number: 37
+  rgb_extra_ball:
+    label: Extra Ball
+    type: grb
+    number: 38
+  rgb_ball_saver_left:
+    label: Ball Saver Left
+    type: grb
+    number: 39
+  rgb_insignia_1:
+    label: RGB Insignia 1
+    type: grb
+    number: 40
+  rgb_insignia_6:
+    label: RGB Insignia 6
+    type: grb
+    number: 41
+  rgb_insignia_7:
+    label: RGB Insignia 7
+    type: grb
+    number: 42
+  rgb_bad_schwartz_1:
+    type: grb
+    number: 43
+  rgb_bad_schwartz_2:
+    type: grb
+    number: 44
+  rgb_bad_schwartz_3:
+    type: grb
+    number: 45
+  rgb_unknowncenter_3:
+    type: grb
+    number: 46
+  rgb_unknowncenter_2:
+    type: grb
+    number: 47
+  rgb_unknowncenter_1:
+    type: grb
+    number: 48
+  rgb_bad_schwartz_5:
+    type: grb
+    number: 49
+  rgb_bad_schwartz_4:
+    type: grb
+    number: 50
+  rgb_left_outlane:
+    label: Left Outlane
+    type: grb
+    number: 51
+  rgb_left_inlane:
+    label: Left Inlane
+    type: grb
+    number: 52
+  rgb_bad_schwartz_full:
+    type: grb
+    number: 53
+  rgb_drop_1:
+    label: Drop 1
+    type: grb
+    number: 54
+  rgb_drop_2:
+    label: Drop 2
+    type: grb
+    number: 55
+  rgb_drop_3:
+    label: Drop 3
+    type: grb
+    number: 56
+  rgb_drop_4:
+    label: Drop 4
+    type: grb
+    number: 57
+  rgb_drop_5:
+    label: Drop 5
+    type: grb
+    number: 58
+  rgb_left_orbit_arrow_1:
+    label: Left Orbit Arrow 1
+    type: grb
+    number: 59
   rgb_center_target_circle:
     label: Center Target Circle
     type: grb
     number: 64
-  rgb_sbone_right_orbit_arrow:
-    label: SBOne Right Orbit Arrow
+  rgb_center_target_arrow_1:
+    label: Center Target Arrow 1
     type: grb
     number: 65
+  rgb_center_target_arrow_2:
+    label: Center Target Arrow 2
+    type: grb
+    number: 66
+  rgb_sbone_right_target_arrow:
+    label: SBOne Right Target Arrow
+    type: grb
+    number: 67
+  rgb_tractorbeam_1:
+    label: Tractorbeam 1
+    type: grb
+    number: 68
+  rgb_tractorbeam_2:
+    label: Tractorbeam 2
+    type: grb
+    number: 69
+  rgb_tractorbeam_3:
+    label: Tractorbeam 3
+    type: grb
+    number: 70
+  rgb_tractorbeam_4:
+    label: Tractorbeam 4
+    type: grb
+    number: 71
+  rgb_tractorbeam_5:
+    label: Tractorbeam 5
+    type: grb
+    number: 72
+  rgb_tractorbeam_6:
+    label: Tractorbeam 6
+    type: grb
+    number: 73
+  rgb_tractorbeam_7:
+    label: Tractorbeam 7
+    type: grb
+    number: 74
+  rgb_tractorbeam_8:
+    label: Tractorbeam 8
+    type: grb
+    number: 75
+  rgb_tractorbeam_9:
+    label: Tractorbeam 9
+    type: grb
+    number: 76
+  rgb_tractorbeam_10:
+    label: Tractorbeam 10
+    type: grb
+    number: 77
+  rgb_tractorbeam_11:
+    label: Tractorbeam 11
+    type: grb
+    number: 78
+  rgb_tractorbeam_12:
+    label: Tractorbeam 12
+    type: grb
+    number: 79
+  rgb_tractorbeam_13:
+    label: Tractorbeam 13
+    type: grb
+    number: 80
+  rgb_tractorbeam_14:
+    label: Tractorbeam 14
+    type: grb
+    number: 81
+  rgb_tractorbeam_15:
+    label: Tractorbeam 15
+    type: grb
+    number: 82
+  rgb_tractorbeam_16:
+    label: Tractorbeam 16
+    type: grb
+    number: 83
+  rgb_tractorbeam_17:
+    label: Tractorbeam 17
+    type: grb
+    number: 84
+  rgb_tractorbeam_18:
+    label: Tractorbeam 18
+    type: grb
+    number: 85
   rgb_sbone_bottom_right_arrow:
     label: SBOne Bottom Right Arrow
     type: grb
-    number: 66
+    number: 86
   rgb_sbone_top_arrow:
     label: SBOne Top Arrow
     type: grb
-    number: 67
-  rgb_sbone_bottom_left_arrow:
-    label: SBOne Bottom Left Arrow
-    type: grb
-    number: 68
-  rgb_sbone_left_orbit_arrow:
-    label: SBOne Left Orbit Arrow
-    type: grb
-    number: 69
+    number: 87
   rgb_left_orbit_arrow_2:
     label: Left Orbit Arrow 2
     type: grb
-    number: 70
-  rgb_left_orbit_arrow_1:
-    label: Left Orbit Arrow 1
-    type: grb
-    number: 71
-  rgb_drop_5:
-    label: Drop 5
-    type: grb
-    number: 72
-  rgb_drop_4:
-    label: Drop 4
-    type: grb
-    number: 73
-  rgb_drop_3:
-    label: Drop 3
-    type: grb
-    number: 74
-  rgb_drop_2:
-    label: Drop 2
-    type: grb
-    number: 75
-  rgb_drop_1:
-    label: Drop 1
-    type: grb
-    number: 76
-  rgb_left_inlane:
-    label: Left Inlane
-    type: grb
-    number: 77
-  rgb_left_outlane:
-    label: Left Outlane
-    type: grb
-    number: 78
-  rgb_ball_saver_left:
-    label: Ball Saver Left
-    type: grb
-    number: 79
-  rgb_ball_saver_right:
-    label: Ball Saver Right
-    type: grb
-    number: 80
-  rgb_extra_ball:
-    label: Extra Ball
-    type: grb
-    number: 81
-  rgb_insignia_1:
-    label: RGB Insignia 1
-    type: grb
-    number: 82
-  rgb_insignia_2:
-    label: RGB Insignia 2
-    type: grb
-    number: 83
-  rgb_insignia_3:
-    label: RGB Insignia 3
-    type: grb
-    number: 84
-  rgb_insignia_4:
-    label: RGB Insignia 4
-    type: grb
-    number: 85
-  rgb_insignia_5:
-    label: RGB Insignia 5
-    type: grb
-    number: 86
-  rgb_insignia_6:
-    label: RGB Insignia 6
-    type: grb
-    number: 87
-  rgb_insignia_7:
-    label: RGB Insignia 7
-    type: grb
     number: 88
-  rgb_insignia_8:
-    label: RGB Insignia 8
-    type: grb
-    number: 90
-  rgb_insignia_9:
-    label: RGB Insignia 9
+  rgb_sbone_left_target_arrow:
+    label: SBOne Left Orbit Arrow
     type: grb
     number: 89
+  rgb_sbone_bottom_left_arrow:
+    label: SBOne Bottom Left Arrow
+    type: grb
+    number: 90
+  rgb_pop_bottom_left_a:
+    label: Pop Insert Bottom Left A
+    type: grb
+    number: 91
+  rgb_pop_bottom_left_b:
+    label: Pop Insert Bottom Left B
+    type: grb
+    number: 92
+  rgb_pop_top_middle_a:
+    label: Pop Insert Top Middle A
+    type: grb
+    number: 93
+  rgb_pop_top_middle_b:
+    label: Pop Insert Top Middle B
+    type: grb
+    number: 94
+  rgb_r_lane:
+    label: R Lane
+    type: grb
+    number: 95
+  rgb_i_lane:
+    label: I Lane
+    type: grb
+    number: 96
+  rgb_a_lane:
+    label: A Lane
+    type: grb
+    number: 97
+  rgb_pop_bottom_right_a:
+    label: Pop Insert Bottom Right A
+    type: grb
+    number: 98
+  rgb_pop_bottom_right_b:
+    label: Pop Insert Bottom Right B
+    type: grb
+    number: 99
+  rgb_backboard_1:
+    label: Backboard 1
+    type: grb
+    number: 128
+  rgb_backboard_2:
+    label: Backboard 2
+    type: grb
+    number: 129
+  rgb_backboard_3:
+    label: Backboard 3
+    type: grb
+    number: 130
+  rgb_backboard_4:
+    label: Backboard 4
+    type: grb
+    number: 131
+  rgb_backboard_5:
+    label: Backboard 5
+    type: grb
+    number: 132
+  rgb_backboard_6:
+    label: Backboard 6
+    type: grb
+    number: 133
+  rgb_backboard_7:
+    label: Backboard 7
+    type: grb
+    number: 134
+  rgb_backboard_8:
+    label: Backboard 8
+    type: grb
+    number: 135
+  rgb_backboard_9:
+    label: Backboard 9
+    type: grb
+    number: 136
+  rgb_backboard_10:
+    label: Backboard 10
+    type: grb
+    number: 137
+  rgb_a_can:
+    label: A Can
+    type: grb
+    number: 138
+  rgb_i_can:
+    label: I Can
+    type: grb
+    number: 139
+  rgb_r_can:
+    label: R Can
+    type: grb
+    number: 140

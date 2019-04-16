@@ -62,12 +62,6 @@ ball_devices:
     eject_timeouts: 3s
     eject_coil: c_plunger_eject
     player_controlled_eject_event: sw_launch
-  bd_saucer:
-    label: Saucer Kickout
-    ball_switches: s_saucer
-    entrance_count_delay: 500ms
-    eject_coil: c_saucer_eject
-    exit_count_delay: 200ms
   bd_scoop:
     label: Scoop Kickout
     ball_switches: s_scoop
