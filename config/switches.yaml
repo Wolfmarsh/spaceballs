@@ -115,10 +115,19 @@ switches:
     tags: pop_hit
   s_air_a_lane:
     number: 43
+    platform_settings:
+      debounce_open: 10
+      debounce_close: 10
   s_air_i_lane:
     number: 44
+    platform_settings:
+      debounce_open: 10
+      debounce_close: 10
   s_air_r_lane:
     number: 45
+    platform_settings:
+      debounce_open: 10
+      debounce_close: 10
   s_left_spinner:
     number: 46
     platform_settings:

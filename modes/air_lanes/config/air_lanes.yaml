@@ -23,8 +23,11 @@ shots:
        can: rgb_r_can
        lane: rgb_r_lane
 
+event_player:
+  air_lanes_complete: award_air_lanes, reset_air_lanes_group|10ms
+
 show_player:
-  air_lanes_complete:
+  award_air_lanes:
     air_lanes_full_pf_wipe_down_quicker:
       loops: 0
       speed: 30
@@ -34,7 +37,7 @@ shot_groups:
     shots: lane_a, lane_i, lane_r
     rotate_left_events: sw_left_flipper
     rotate_right_events: sw_right_flipper
-    reset_events: air_lanes_complete
+    reset_events: reset_air_lanes_group
     enable_events: ball_started
     disable_events: ball_ending
 
@@ -49,7 +52,7 @@ shot_profiles:
         show: air_lane_on
 
 slide_player:
-  air_lanes_complete:
+  award_air_lanes:
     airlanes_bonus_award_multiplier:
       target: dmd
       expire: 1s
@@ -61,7 +64,7 @@ slide_player:
       action: remove
 
 variable_player:
-  air_lanes_complete:
+  award_air_lanes:
     bonus_multiplier: 1
 
 slides:

@@ -66,16 +66,16 @@ lights:
     label: Schwartz Level 1
     type: grb
     number: 14
-  rgb_unknowncenter_4:
+  rgb_mode_sbone:
     type: grb
     number: 15
-  rgb_unknowncenter_5:
+  rgb_mode_merchandising:
     type: grb
     number: 16
-  rgb_unknowncenter_6:
+  rgb_mode_warpramp:
     type: grb
     number: 17
-  rgb_unknowncenter_7:
+  rgb_mode_megamaid:
     type: grb
     number: 18
   rgb_yogurt_arrow:
@@ -176,13 +176,13 @@ lights:
   rgb_bad_schwartz_3:
     type: grb
     number: 45
-  rgb_unknowncenter_3:
+  rgb_mode_combthedesert:
     type: grb
     number: 46
-  rgb_unknowncenter_2:
+  rgb_mode_airlock:
     type: grb
     number: 47
-  rgb_unknowncenter_1:
+  rgb_mode_savevespa:
     type: grb
     number: 48
   rgb_bad_schwartz_5:

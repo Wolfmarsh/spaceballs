@@ -10,6 +10,10 @@ variable_player:
     score: 250000
   skillshot_timing_bonusaward1:
     score: 100000
+  logicblock_skillshot_award_counter_updated:
+    skillshot_award_counter_count:
+      int: value
+      action: set    
 
 coil_player:
   mode_skillshot_timing_started:
