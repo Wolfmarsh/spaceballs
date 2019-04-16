@@ -1,10 +1,10 @@
-#show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
     rgb_drop_5: 00ffff
 
 - time: '+250ms'
-  leds:
+  lights:
     rgb_drop_5: 000000
 
 - time: '+250ms'

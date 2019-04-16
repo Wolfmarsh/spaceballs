@@ -1,15 +1,15 @@
-# show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
       rgb_insignia_9: ffffff-f25ms
     
 - time: '+1'
-  leds:
+  lights:
       rgb_insignia_9: 000000-f50ms
       rgb_insignia_8: ffffff-f25ms
     
 - time: '+1'
-  leds:
+  lights:
       rgb_insignia_8: 000000-f50ms
       rgb_insignia_7: ffffff-f25ms
   duration: -1

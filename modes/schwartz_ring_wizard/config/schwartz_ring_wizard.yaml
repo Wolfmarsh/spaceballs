@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 mode:
   start_events: ball_starting
   priority: 300
@@ -83,11 +83,10 @@ slides:
         x: center
         color: ffffff
 
-logic_blocks:
-  counters:
-    schwartz_gems_awarded_counter:
-      count_events: increment_schwartz_gem_counter
-      starting_count: 0
-      count_complete_value: 9
-      direction: up
-      events_when_complete: activate_schwartz_ring_wizard_mode
+counters:
+  schwartz_gems_awarded_counter:
+    count_events: increment_schwartz_gem_counter
+    starting_count: 0
+    count_complete_value: 9
+    direction: up
+    events_when_complete: activate_schwartz_ring_wizard_mode

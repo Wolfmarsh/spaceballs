@@ -4,8 +4,8 @@ game:
   balls_per_game: 2
 
 machine:
-  balls_installed: 6
-  min_balls: 6
+  balls_installed: 5
+  min_balls: 5
 
 config:
 - switches.yaml
@@ -37,10 +37,10 @@ modes:
 # - warp_ramp_multiball
 - spinner
 # - diner
-# - airlock_assetmanager
-# - airlock_modemanager
-# - airlock_qualifier
-# - airlock_multiball
+- airlock_assetmanager
+- airlock_modemanager
+- airlock_qualifier
+- airlock_multiball
 - pops_base
 - air_lanes
 # - orbit_post_launch_behavior
@@ -53,7 +53,7 @@ modes:
 # - sbone_servoactivation
 # - sbone_qualifier
 # - sbone_multiball
-# - schwartz_ring_wizard
+- schwartz_ring_wizard
 # - shaker_base
 # - barf_assetmanager
 # - barf_modemanager
