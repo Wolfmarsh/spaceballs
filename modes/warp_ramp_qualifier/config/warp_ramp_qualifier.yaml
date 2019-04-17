@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 mode:
   start_events: start_warp_ramp_qualifier_mode_request
   stop_events: stop_warp_ramp_qualifier_mode_request
@@ -6,10 +6,14 @@ mode:
 
 shots:
   warp_ramp_qualifier_shot:
-    switch_sequence: s_ramp_entry, s_ramp_exit
-    time: 3s
+    hit_events: warp_ramp_full_hit
     profile: warp_ramp_qualifier_shot_profile
     reset_events: warp_ramp_qualifier_complete
+
+sequence_shots:
+  warp_ramp_full:
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    sequence_timeout: 3s
 
 shot_profiles:
   warp_ramp_qualifier_shot_profile:
@@ -37,7 +41,7 @@ event_player:
   warp_ramp_qualifier_shot_ludicrousspeed_hit: warp_ramp_level_plaidspeed_achieved
   warp_ramp_level_plaidspeed_achieved: warp_ramp_qualifier_complete|50ms
   
-scoring:
+variable_player:
   warp_ramp_level_lightspeed_achieved:
     score: 100000 * current_player.game_scoring_multiplier
   warp_ramp_level_ridiculousspeed_achieved:

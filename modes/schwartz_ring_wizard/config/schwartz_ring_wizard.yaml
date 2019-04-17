@@ -90,3 +90,9 @@ counters:
     count_complete_value: 9
     direction: up
     events_when_complete: activate_schwartz_ring_wizard_mode
+
+variable_player:
+  logicblock_schwartz_gems_awarded_counter_updated:
+    schwartz_gems_awarded_counter_count:
+      int: value
+      action: set    

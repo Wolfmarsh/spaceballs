@@ -6,11 +6,11 @@ score:
   - KEM
   - 22398000
 - !!python/tuple
+  - JJJ
+  - 16638000
+- !!python/tuple
   - ABC
   - 15312000
 - !!python/tuple
   - BRI
   - 10000000
-- !!python/tuple
-  - GHK
-  - 9500000

@@ -1,0 +1,14 @@
+#config_version=5
+mode:
+  start_events: ball_starting
+  priority: 500
+
+event_player:
+  mode_varitarget_mechanics_started: reset_varitarget
+  s_schwartz_power_7_active: varitarget_maxed
+  varitarget_maxed: reset_varitarget|1000ms
+
+coil_player:
+  reset_varitarget:
+    c_varitarget_reset:
+      pulse_ms: 250

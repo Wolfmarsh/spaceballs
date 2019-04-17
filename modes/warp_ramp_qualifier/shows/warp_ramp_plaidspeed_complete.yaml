@@ -1,6 +1,6 @@
-#show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
     rgb_ramplevel_4: ff007f
     rgb_ramplevel_3: ff0000
     rgb_ramplevel_2: ffff00

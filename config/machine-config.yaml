@@ -28,20 +28,22 @@ modes:
 - base
 - player_add_assetmanager
 - skillshot_timing
-#- bonus
-# - high_score
-#- music_manager
-# - warp_ramp_assetmanager
-# - warp_ramp_modemanager
-# - warp_ramp_qualifier
-# - warp_ramp_multiball
+- varitarget_mechanics
+- service
+- bonus
+- high_score
+- music_manager
+- warp_ramp_assetmanager
+- warp_ramp_modemanager
+- warp_ramp_qualifier
+- warp_ramp_multiball
 - spinner
 # - diner
-#- airlock_assetmanager
-#- airlock_modemanager
-#- airlock_qualifier
-#- airlock_multiball
-#- pops_base
+- airlock_assetmanager
+- airlock_modemanager
+- airlock_qualifier
+- airlock_multiball
+- pops_base
 - air_lanes
 # - orbit_post_launch_behavior
 #- orbits_base
@@ -53,7 +55,7 @@ modes:
 # - sbone_servoactivation
 # - sbone_qualifier
 # - sbone_multiball
-#- schwartz_ring_wizard
+- schwartz_ring_wizard
 # - shaker_base
 # - barf_assetmanager
 # - barf_modemanager
@@ -69,7 +71,13 @@ widget_styles:
   large_lcd_text:
     font_name: Quadrit
     font_size: 80
-      
+  small:
+    font_name: Quadrit
+    font_size: 10
+  medium:
+    font_name: Quadrit
+    font_size: 12
+
 sound_system:
   buffer: 2048  # previous value was 512
   frequency: 44100

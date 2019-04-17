@@ -1,10 +1,10 @@
 #show_version=5
 - time: 0
   lights:
-    rgb_pop_bottom_left: 0000ff
-    rgb_pop_bottom_right: 0000ff
+    rgb_pop_bottom_left_a: 0000ff
+    rgb_pop_bottom_right_a: 0000ff
 
 - time: '+50ms'
   lights:
-    rgb_pop_bottom_left: 000000
-    rgb_pop_bottom_right: 000000
+    rgb_pop_bottom_left_a: 000000
+    rgb_pop_bottom_right_a: 000000

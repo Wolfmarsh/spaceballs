@@ -30,16 +30,16 @@ shots:
     profile: airlock_target_five_profile
     reset_events: airlock_qualifying_shots_complete
 
-logic_blocks:
-  accruals:
-    airlock_qualifying_shots:
-      events:
-        - airlock_qualifying_shot_one_ready_hit
-        - airlock_qualifying_shot_two_ready_hit
-        - airlock_qualifying_shot_three_ready_hit
-        - airlock_qualifying_shot_four_ready_hit
-        - airlock_qualifying_shot_five_ready_hit
-      events_when_complete: airlock_qualifying_shots_complete
+
+accruals:
+  airlock_qualifying_shots:
+    events:
+      - airlock_qualifying_shot_one_ready_hit
+      - airlock_qualifying_shot_two_ready_hit
+      - airlock_qualifying_shot_three_ready_hit
+      - airlock_qualifying_shot_four_ready_hit
+      - airlock_qualifying_shot_five_ready_hit
+    events_when_complete: airlock_qualifying_shots_complete
 
 shot_profiles:
   airlock_target_one_profile:
@@ -83,7 +83,7 @@ shot_profiles:
       - name: lit
         show: airlock_five_lit
 
-scoring:
+variable_player:
   airlock_qualifying_shot_one_ready_hit:
     score: 50000 * current_player.game_scoring_multiplier
   airlock_qualifying_shot_two_ready_hit:

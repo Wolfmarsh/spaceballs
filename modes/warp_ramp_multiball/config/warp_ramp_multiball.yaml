@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 mode:
   start_events: start_warp_ramp_multiball_mode_request
   stop_events: stop_warp_ramp_multiball_mode_request
@@ -30,18 +30,22 @@ coil_player:
   plaid_multiball_raise_orbit_post:
     c_orbit_post:
        action: enable
-       power: 0.5
+       hold_power: 0.5
 
-scoring:
+variable_player:
   warp_ramp_mb_award_jackpot:
     score: 500000 * current_player.game_scoring_multiplier
 
 shots:
   warp_ramp_mb_jackpot_shot:
+    hit_events: warp_ramp_full_jackpot_hit
     profile: warp_ramp_mb_jackpot_shot_profile
-    switch_sequence: s_ramp_entry, s_ramp_exit
-    time: 3s
     reset_events: warp_ramp_mb_award_jackpot
+
+sequence_shots:
+  warp_ramp_full_jackpot:
+    switch_sequence: s_ramp_entry, s_ramp_exit
+    sequence_timeout: 3s
 
 shot_profiles:
   warp_ramp_mb_jackpot_shot_profile:

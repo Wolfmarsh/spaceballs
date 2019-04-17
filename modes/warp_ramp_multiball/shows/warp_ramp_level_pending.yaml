@@ -1,10 +1,10 @@
-#show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
     (ramp_level): ffffff-f100ms
 
 - time: '+2'
-  leds:
+  lights:
     (ramp_level): 000000-f100ms
 
 - time: '+2'

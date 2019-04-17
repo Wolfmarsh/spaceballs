@@ -1,11 +1,11 @@
-#show_version=4
+#show_version=5
 - time: 0
-  leds:
+  lights:
     rgb_ramplevel_3: ffffff-f100ms
     rgb_ramplevel_2: ffff00
     rgb_ramplevel_1: 00ff00
 - time: '+500ms'
-  leds:
+  lights:
     rgb_ramplevel_3: 000000-f100ms
 
 - time: '+500ms'
