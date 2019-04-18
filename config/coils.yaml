@@ -40,12 +40,12 @@ coils:
     number: 11
     default_pulse_ms: 30
 #BEGIN 1616 (12-27)
-  c_tractorbeam_one:
-    number: 14
-    allow_enable: true
-  c_tractorbeam_two:
-    number: 15
-    allow_enable: true
+#  c_tractorbeam_one:
+#    number: 14
+#    allow_enable: true
+#  c_tractorbeam_two:
+#    number: 15
+#    allow_enable: true
   c_pop_flasher:
     number: 16
     allow_enable: true
@@ -55,9 +55,9 @@ coils:
   c_varitarget_reset:
     number: 18
     default_pulse_ms: 50
-  c_backboard_activate:
-    number: 19
-    allow_enable: true
+#  c_backboard_activate:
+#    number: 19
+#    allow_enable: true
   c_orbit_post:
     number: 21
     allow_enable: true
@@ -70,9 +70,9 @@ coils:
   c_pop_3:
     number: 24
     default_pulse_ms: 25
-  c_saucer_eject:
-    number: 25
-    default_pulse_ms: 20
+#  c_saucer_eject:
+#    number: 25
+#    default_pulse_ms: 20
   c_scoop_eject:
     number: 26
     default_pulse_ms: 50

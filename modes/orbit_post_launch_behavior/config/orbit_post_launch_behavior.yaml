@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 mode:
     start_events: ball_starting
     priority: 1900
@@ -12,7 +12,7 @@ coil_player:
   pass_through_launch_combo_both:
       c_orbit_post:
          action: enable
-         power: 0.5
+         hold_power: 0.5
   pass_through_launch_post_drop_request:
       c_orbit_post:
          action: disable  

@@ -12,6 +12,11 @@ Summary:  The three lights in the launch lane will flash in sequence in various 
 		- Yellow: award points
 		- Green: Award Bonus Multiplier
 
+ORBIT POST LAUNCH INTERRUPT
+===========================
+To have the upper orbit post pop up on launch,  hold the left flipper button while
+pressing the launch button.  The post will rise and drop the launched ball into the pops.
+
 END OF BALL BONUS
 =================
 Summary: After each ball is complete, you will be awarded an end of ball bonus.  This
@@ -56,6 +61,14 @@ Summary: This is an add-a-ball multiball that starts by giving you 1 additional 
 	is over.  Otherwise you will only be awarded one Schwartz gem.  Jackpots will also
 	change to Ridiculous Jackpots if you add 4 more balls.
 
+MERCHANDISING
+=============
+Hitting the Yogurt target 5 times will qualify you for a piece of Spaceballs merchandise.
+Once qualified, enter the scoop to pick a piece of merchandise.  Each piece of merchandise
+offers you a different bonus.   The items available will depend on which level of
+the merchandising mode you have reached.  Doing merchandising once will blink the mode insert
+and doing it three times will make the mode insert solid.
+
 WARP RAMP MULTIBALL
 ===================
 To Activate: Shoot the warp ramp 4 times to progress through the warp speeds.
@@ -77,9 +90,19 @@ Summary: This is a 3 ball multiball that starts after you achieve plaid speed.
 	being up, unless a ball is being launched into the playfield.  It will drop temporarily
 	for that.
 
+SAVE VESPA
+==========
+To Activate: The first two balls in any player's game that are locked in Spaceball One will
+activate Save Vespa.
+
+Summary: Save Vespa is a 2-ball multiball that is an add-a-ball as well.   When the multiball
+	starts, Vespa will be drawn toward Spaceball One via the blue tractorbeam.  You have 60
+	seconds to save Vespa from the Spaceballs.  Hit the lit shots to successfully save her.
+	Look out for the radar jamming shot to buy yourself some more time!
+
 SPACEBALL ONE MULTIBALL
 =======================
-To Activate: Lock 3 balls into the Spaceball One physical ball lock.
+To Activate: After Save Vespa has been done, Lock 3 balls into the Spaceball One ball lock.
 
 Summary: This is a 4 ball multiball that starts once you fill the Spaceball One lock with 3
 	balls.

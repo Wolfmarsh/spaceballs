@@ -45,7 +45,9 @@ modes:
 - airlock_multiball
 - pops_base
 - air_lanes
-# - orbit_post_launch_behavior
+- merchandising_modemanager
+- merchandising_qualifier
+- orbit_post_launch_behavior
 #- orbits_base
 # - dead_flip
 #- slings_base
@@ -56,6 +58,7 @@ modes:
 # - sbone_qualifier
 # - sbone_multiball
 - schwartz_ring_wizard
+- wizard_tracker
 # - shaker_base
 # - barf_assetmanager
 # - barf_modemanager

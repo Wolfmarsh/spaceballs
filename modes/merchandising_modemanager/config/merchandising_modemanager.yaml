@@ -1,0 +1,8 @@
+#config_version=5
+mode:
+  start_events: ball_starting
+  priority: 800
+
+event_player:
+  #start the qualifier when the mode manager first starts up
+  mode_merchandising_modemanager_started: start_merchandising_qualifier_mode_request
