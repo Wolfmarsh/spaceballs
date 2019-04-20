@@ -45,11 +45,14 @@ modes:
 - airlock_multiball
 - pops_base
 - air_lanes
+- merchandising_assetmanager
 - merchandising_modemanager
 - merchandising_qualifier
+- merchandising_award
+- merchandising_carousel
 - orbit_post_launch_behavior
 #- orbits_base
-# - dead_flip
+- dead_flip
 #- slings_base
 # - sbone_assetmanager
 # - sbone_autoeject
@@ -64,6 +67,7 @@ modes:
 # - barf_modemanager
 # - barf_qualifier
 # - barf_multiball
+- stepper_testing
 
 widget_styles:
   dmd_xl:

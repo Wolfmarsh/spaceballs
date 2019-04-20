@@ -74,3 +74,43 @@ ball_devices:
     eject_coil: c_pop_flasher
     ball_switches: s_sbone_lock_1, s_sbone_lock_2, s_sbone_lock_3
     auto_fire_on_unexpected_ball: false
+
+steppers:
+  tractorbeam_stepper:
+    number: 00235237
+    pos_min: 0 #steps
+    pos_max: 450000 #steps
+    homing_direction: counterclockwise
+    homing_mode: switch
+    homing_switch: s_tractorbeam_limit
+    homing_set_zero: True
+    reset_position: 0
+    reset_events: tractorbeam_stepper_reset
+    debug: True
+    named_positions:
+      450000: tractorbeam_stepper_farend
+    platform_settings:
+      step_mode: 16
+      max_speed: 200000000
+      starting_speed: 50000000
+      current_limit: 1024
+      max_acceleration: 500000000
+  backboard_stepper:
+    number: 00261315
+    pos_min: 0 #steps
+    pos_max: 200000 #steps
+    homing_direction: counterclockwise
+    homing_mode: switch
+    homing_switch: s_backboard_limit
+    homing_set_zero: True
+    reset_position: 0
+    reset_events: backboard_stepper_reset
+    debug: True
+    named_positions:
+      10000: backboard_stepper_farend
+    platform_settings:
+      step_mode: 8
+      max_speed: 100000000
+      starting_speed: 10000000
+      current_limit: 495
+      max_acceleration: 1200000

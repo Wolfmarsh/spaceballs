@@ -1,0 +1,133 @@
+#config_version=5
+mode:
+  start_events: find_a_merch_award_for_the_player
+  stop_events: stop_merch_carousel
+  code: mpf.modes.carousel.code.carousel.Carousel
+
+mode_settings:
+  selectable_items: tshirt, coloringbook, lunchbox, cereal, flamethrower, yogurtdoll
+  select_item_events: merch_carousel_award_current_item
+  next_item_events: merch_carousel_next_item
+  previous_item_events: merch_carousel_previous_item
+
+slide_player:
+  merchandising_carousel_tshirt_highlighted:
+    select_tshirt:
+      target: dmd
+  merchandising_carousel_coloringbook_highlighted:
+    select_coloringbook:
+      target: dmd
+  merchandising_carousel_cereal_highlighted:
+    select_cereal:
+      target: dmd
+  merchandising_carousel_flamethrower_highlighted:
+    select_flamethrower:
+      target: dmd
+  merchandising_carousel_lunchbox_highlighted:
+    select_lunchbox:
+      target: dmd
+  merchandising_carousel_yogurtdoll_highlighted:
+    select_yogurtdoll:
+      target: dmd
+
+event_player:
+  mode_merchandising_carousel_started: start_merch_carousel_rotate_timer
+  timer_merch_carousel_award_rotate_timer_tick: merch_carousel_next_item
+  merchandising_carousel_tshirt_selected: award_merch_tshirt, stop_merch_carousel
+  merchandising_carousel_coloringbook_selected: award_merch_coloringbook, stop_merch_carousel
+  merchandising_carousel_cereal_selected: award_merch_cereal, stop_merch_carousel
+  merchandising_carousel_flamethrower_selected: award_merch_flamethrower, stop_merch_carousel
+  merchandising_carousel_lunchbox_selected: award_merch_lunchbox, stop_merch_carousel
+  merchandising_carousel_yogurtdoll_selected: award_merch_yogurtdoll, stop_merch_carousel
+  merchandising_carousel_tshirt_highlighted{current_player.merch_ticks_before_award > 6}: determine_if_tshirt_is_awarded|150ms
+  merchandising_carousel_coloringbook_highlighted{current_player.merch_ticks_before_award > 6}: determine_if_coloringbook_is_awarded|150ms
+  merchandising_carousel_cereal_highlighted{current_player.merch_ticks_before_award > 6}: determine_if_cereal_is_awarded|150ms
+  merchandising_carousel_flamethrower_highlighted{current_player.merch_ticks_before_award > 6}: determine_if_flamethrower_is_awarded|150ms
+  merchandising_carousel_lunchbox_highlighted{current_player.merch_ticks_before_award > 6}: determine_if_lunchbox_is_awarded|150ms
+  merchandising_carousel_yogurtdoll_highlighted{current_player.merch_ticks_before_award > 6}: determine_if_yogurtdoll_is_awarded|150ms
+
+variable_player:
+  timer_merch_carousel_award_rotate_timer_tick:
+    merch_ticks_before_award: 1
+  mode_merchandising_carousel_started:
+    merch_ticks_before_award:
+      action: set
+      int: 0
+    
+random_event_player:
+  determine_if_tshirt_is_awarded:
+    events:
+      merch_carousel_award_current_item: 30
+      dont_award_the_merch_item: 70
+  determine_if_coloringbook_is_awarded:
+    events:
+      merch_carousel_award_current_item: 40
+      dont_award_the_merch_item: 60
+  determine_if_cereal_is_awarded:
+    events:
+      merch_carousel_award_current_item: 20
+      dont_award_the_merch_item: 80
+  determine_if_flamethrower_is_awarded:
+    events:
+      merch_carousel_award_current_item: 10
+      dont_award_the_merch_item: 90
+  determine_if_lunchbox_is_awarded:
+    events:
+      merch_carousel_award_current_item: 15
+      dont_award_the_merch_item: 85
+  determine_if_yogurtdoll_is_awarded:
+    events:
+      merch_carousel_award_current_item: 2
+      dont_award_the_merch_item: 98
+
+slides:
+  select_tshirt:
+    widgets:
+      - type: text
+        text: T-SHIRT
+        style: dmd_big
+        color: yellow
+  select_coloringbook:
+    widgets:
+      - type: text
+        text: COLORING BOOK
+        style: dmd_big
+        color: yellow
+  select_cereal:
+    widgets:
+      - type: text
+        text: CEREAL
+        style: dmd_big
+        color: yellow
+  select_flamethrower:
+    widgets:
+      - type: text
+        text: FLAMETHROWER
+        style: dmd_big
+        color: yellow
+  select_lunchbox:
+    widgets:
+      - type: text
+        text: LUNCHBOX
+        style: dmd_big
+        color: yellow
+  select_yogurtdoll:
+    widgets:
+      - type: text
+        text: YOGURT DOLL
+        style: dmd_big
+        color: yellow
+
+timers:
+  merch_carousel_award_rotate_timer:
+    start_value: 0
+    end_value: 100
+    direction: up
+    tick_interval: 250ms
+    start_running: yes
+    restart_on_complete: yes
+    control_events:
+      - event: start_merch_carousel_rotate_timer
+        action: start
+      - event: merch_carousel_award_current_item
+        action: stop

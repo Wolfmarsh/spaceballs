@@ -4,6 +4,10 @@ hardware:
   platform: fast
   driverboards: fast
   rgb_dmd: smartmatrix
+  stepper_controllers: pololu_tic
+
+pololu_tic:
+  debug: True 
 
 smartmatrix:
   dmd:

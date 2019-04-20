@@ -1,0 +1,161 @@
+#config_version=5
+mode:
+  start_events: ball_starting
+  priority: 800
+
+sound_player:
+  timer_merch_carousel_award_rotate_timer_tick:
+    beep_sound_1:
+      action: play
+  
+slide_player:
+  award_merch_tshirt:
+    award_merch_tshirt_slide:
+      target: dmd
+      expire: 1
+  award_merch_coloringbook:
+    award_merch_coloringbook_slide:
+      target: dmd
+      expire: 1
+  award_merch_cereal:
+    award_merch_cereal_slide:
+      target: dmd
+      expire: 1
+  award_merch_flamethrower:
+    award_merch_flamethrower_slide:
+      target: dmd
+      expire: 1
+  award_merch_lunchbox:
+    award_merch_lunchbox_slide:
+      target: dmd
+      expire: 1
+  award_merch_yogurtdoll:
+    award_merch_yogurtdoll_slide:
+      target: dmd
+      expire: 1
+  logicblock_merch_yogurt_hit_counter_hit{remaining > 0}:
+    merch_yogurt_hit_counter_slide:
+      target: dmd
+      expire: 1
+  logicblock_merch_yogurt_hit_counter_hit{remaining == 0}:
+    merch_reward_shot_available_slide:
+      target: dmd
+      expire: 1
+
+slides:
+  award_merch_tshirt_slide:
+    widgets:
+      - type: text
+        text: T-SHIRT
+        style: dmd_big
+        color: white
+        anchor_y: top
+        y: top
+      - type: text
+        text: AWARDED
+        style: dmd_big
+        color: white
+        anchor_y: bottom
+        y: bottom
+  award_merch_coloringbook_slide:
+    widgets:
+      - type: text
+        text: COLORING BOOK
+        style: dmd_big
+        color: white
+        anchor_y: top
+        y: top
+      - type: text
+        text: AWARDED
+        style: dmd_big
+        color: white
+        anchor_y: bottom
+        y: bottom
+  award_merch_cereal_slide:
+    widgets:
+      - type: text
+        text: CEREAL
+        style: dmd_big
+        color: white
+        anchor_y: top
+        y: top
+      - type: text
+        text: AWARDED
+        style: dmd_big
+        color: white
+        anchor_y: bottom
+        y: bottom
+  award_merch_flamethrower_slide:
+    widgets:
+      - type: text
+        text: FLAMETHROWER
+        style: dmd_big
+        color: white
+        anchor_y: top
+        y: top
+      - type: text
+        text: AWARDED
+        style: dmd_big
+        color: white
+        anchor_y: bottom
+        y: bottom
+  award_merch_lunchbox_slide:
+    widgets:
+      - type: text
+        text: LUNCHBOX
+        style: dmd_big
+        color: white
+        anchor_y: top
+        y: top
+      - type: text
+        text: AWARDED
+        style: dmd_big
+        color: white
+        anchor_y: bottom
+        y: bottom
+  award_merch_yogurtdoll_slide:
+    widgets:
+      - type: text
+        text: YOGURT DOLL
+        style: dmd_big
+        color: white
+        anchor_y: top
+        y: top
+      - type: text
+        text: AWARDED
+        style: dmd_big
+        color: white
+        anchor_y: bottom
+        y: bottom
+  merch_yogurt_hit_counter_slide:
+    widgets:
+      - type: text
+        text: (remaining) HITS LEFT
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: TO LIGHT MERCH
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+  merch_reward_shot_available_slide:
+    widgets:
+      - type: text
+        text: STORE OPEN
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: SHOOT SCOOP TO COLLECT
+        style: dmd_med
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center

@@ -39,7 +39,7 @@ slides:
     widgets:
       - type: text
         text: PLAY PINBALL
-        style: dmd_big
+        style: dmd_xl
         anchor_y: center
         anchor_x: center
         y: center
@@ -52,7 +52,7 @@ slides:
         x: 0
         width: 128
         height: 32
-        color: ffffff
+        color: bbbbbb
 
 show_player:
   mode_attract_started:

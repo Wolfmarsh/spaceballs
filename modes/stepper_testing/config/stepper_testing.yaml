@@ -1,0 +1,28 @@
+#config_version=5
+mode:
+  start_events: ball_starting
+  priority: 800
+
+event_player:
+  mode_stepper_testing_started: initialize_return_possible_on_backboard
+  s_sbone_left_standup_active: backboard_stepper_farend, enable_return_possible_on_backboard, tractorbeam_stepper_farend, tractorbeam_stepper_reset|30s
+  stepper_backboard_stepper_ready{position == 10000}: backboard_stepper_reset
+  s_sbone_right_standup_active: backboard_stepper_reset, tractorbeam_stepper_reset
+
+variable_player:
+  disable_return_possible_on_backboard:
+    return_possible_on_backboard:
+      action: set
+      int: 0
+  enable_return_possible_on_backboard:
+    return_possible_on_backboard:
+      action: set
+      int: 1
+
+show_player:
+  tractorbeam_stepper_farend:
+    tractorbeam_all_blue:
+      loops: -1
+  tractorbeam_stepper_reset:
+    tractorbeam_all_white:
+      loops: -1

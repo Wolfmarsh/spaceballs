@@ -6,3 +6,18 @@ mode:
 event_player:
   #start the qualifier when the mode manager first starts up
   mode_merchandising_modemanager_started: start_merchandising_qualifier_mode_request
+  
+  #once the qualifier is complete, start up the award mode
+  merchandising_qualifier_complete: stop_merchandising_qualifier_mode_request, start_merchandising_award_mode_request
+  
+  #once the award is done, go back to the qualifier
+  merchandising_award_complete: stop_merchandising_award_mode_request, start_merchandising_qualifier_mode_request
+
+  merch_award_given: check_completion_level|10ms
+  
+  check_completion_level{current_player.merch_awards_earned >= 3}: merchandising_third_award
+
+
+variable_player:
+  merch_award_given:
+    merch_awards_earned: 1

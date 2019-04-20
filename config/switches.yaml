@@ -156,6 +156,7 @@ switches:
     number: 60
   s_tractorbeam_limit:
     number: 61
+    type: NC
   s_pop_sneak:
     number: 62
   s_backboard_limit:

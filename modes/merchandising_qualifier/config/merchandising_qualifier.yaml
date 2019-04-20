@@ -4,3 +4,49 @@ mode:
   start_events: start_merchandising_qualifier_mode_request
   stop_events: stop_merchandising_qualifier_mode_request
   priority: 200
+
+event_player:
+  mode_merchandising_qualifier_started: enable_merch_yogurt_shot
+  s_yogurt_standup_active: add_merch_yogurt_hit
+  logicblock_merch_yogurt_hit_counter_complete: disable_merch_yogurt_shot, merchandising_qualifier_complete
+
+shots:
+  merch_yogurt_shot:
+    hit_events: add_merch_yogurt_hit
+    profile: merch_yogurt_shot_profile
+    disable_events: disable_merch_yogurt_shot
+    enable_events: enable_merch_yogurt_shot
+    restart_events: enable_merch_yogurt_shot
+
+counters:
+  merch_yogurt_hit_counter:
+    count_events: add_merch_yogurt_hit
+    count_complete_value: 5
+    disable_on_complete: true
+    enable_events: mode_merchandising_qualifier_started
+    disable_events: mode_merchandising_qualifier_stopped
+    restart_events: enable_merch_yogurt_shot
+
+shot_profiles:
+  merch_yogurt_shot_profile:
+    states:
+      - name: zero_merch_hits
+        show: merch_target_flashing
+        loops: -1
+        speed: 1
+      - name: one_merch_hit
+        show: merch_target_flashing
+        loops: -1
+        speed: 2
+      - name: two_merch_hits
+        show: merch_target_flashing
+        loops: -1
+        speed: 3
+      - name: three_merch_hits
+        show: merch_target_flashing
+        loops: -1
+        speed: 4
+      - name: four_merch_hits
+        show: merch_target_flashing
+        loops: -1
+        speed: 5

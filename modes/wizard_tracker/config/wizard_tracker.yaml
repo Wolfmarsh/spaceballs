@@ -16,12 +16,23 @@ variable_player:
     wizard_tracker_airlock_mb_complete:
       action: set
       int: 1
+  wizard_tracker_mark_merchandising_first_award_complete:
+    wizard_tracker_merchandising_first_award_complete:
+      action: set
+      int: 1
+  wizard_tracker_mark_merchandising_third_award_complete:
+    wizard_tracker_merchandising_third_award_complete:
+      action: set
+      int: 1
+      
 
 event_player:
   warp_ramp_qualifier_complete{current_player.wizard_tracker_warp_ramp_qualifier_complete < 1}: wizard_tracker_mark_warp_ramp_qualifier_complete, advance_warp_ramp_mode_tracking_shot
   airlock_qualifier_complete{current_player.wizard_tracker_airlock_qualifier_complete < 1}: wizard_tracker_mark_airlock_qualifier_complete, advance_airlock_mode_tracking_shot
   airlock_mb_4_balls_earned{current_player.wizard_tracker_airlock_mb_complete < 1}: wizard_tracker_mark_airlock_mb_complete, advance_airlock_mode_tracking_shot
-
+  merch_award_given{current_player.wizard_tracker_merchandising_first_award_complete < 1}: wizard_tracker_mark_merchandising_first_award_complete, advance_merchandising_mode_tracking_shot
+  merchandising_third_award{current_player.wizard_tracker_merchandising_third_award_complete < 1}: wizard_tracker_mark_merchandising_third_award_complete, advance_merchandising_mode_tracking_shot
+  
 shots:
   warp_ramp_mode_tracking_shot:
     hit_events: advance_warp_ramp_mode_tracking_shot
@@ -33,6 +44,11 @@ shots:
     profile: airlock_mode_tracking_shot_profile
     show_tokens:
       insert: rgb_mode_airlock
+  merchandising_mode_tracking_shot:
+    hit_events: advance_merchandising_mode_tracking_shot
+    profile: merchandising_mode_tracking_shot_profile
+    show_tokens:
+      insert: rgb_mode_merchandising
 
 shot_profiles:
   warp_ramp_mode_tracking_shot_profile:
@@ -47,6 +63,17 @@ shot_profiles:
         show: wizard_tracker_mode_completed
         loops: -1
   airlock_mode_tracking_shot_profile:
+    states:
+      - name: notstarted
+        show: wizard_tracker_mode_pending
+        loops: -1
+      - name: started
+        show: wizard_tracker_mode_started
+        loops: -1
+      - name: completed
+        show: wizard_tracker_mode_completed
+        loops: -1
+  merchandising_mode_tracking_shot_profile:
     states:
       - name: notstarted
         show: wizard_tracker_mode_pending

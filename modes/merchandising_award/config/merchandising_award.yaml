@@ -1,0 +1,26 @@
+#config_version=5
+
+mode:
+  start_events: start_merchandising_award_mode_request
+  stop_events: stop_merchandising_award_mode_request
+  priority: 200
+
+show_player:
+  mode_merchandising_award_started:
+    merch_award_flashing:
+      loops: -1
+
+queue_relay_player:
+  balldevice_bd_scoop_ball_eject_attempt:
+    post: award_merch_shot
+    wait_for: merch_award_given
+
+event_player:
+  award_merch_shot: find_a_merch_award_for_the_player
+  award_merch_tshirt: merch_award_given|1500ms
+  award_merch_coloringbook: merch_award_given|1500ms
+  award_merch_cereal: merch_award_given|1500ms
+  award_merch_flamethrower: merch_award_given|1500ms
+  award_merch_lunchbox: merch_award_given|1500ms
+  award_merch_yogurtdoll: merch_award_given|1500ms
+  merch_award_given: merchandising_award_complete

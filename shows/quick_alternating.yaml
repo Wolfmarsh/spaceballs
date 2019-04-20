@@ -20,7 +20,18 @@
     rgb_sbone_right_target_arrow: ff0000-f100ms
     rgb_sbone_left_target_arrow: 000000-f100ms
     rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
 
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
 - time: '+1'
   lights:
     rgb_right_inlane: 000000-f100ms
@@ -42,3 +53,15 @@
     rgb_sbone_right_target_arrow: 000000-f100ms
     rgb_sbone_left_target_arrow: ff0000-f100ms
     rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms

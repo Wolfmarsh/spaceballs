@@ -1,0 +1,21 @@
+#show_version=5
+- time: 0
+  lights:
+    rgb_tractorbeam_1: 0000ff
+    rgb_tractorbeam_2: 0000ff
+    rgb_tractorbeam_3: 0000ff
+    rgb_tractorbeam_4: 0000ff
+    rgb_tractorbeam_5: 0000ff
+    rgb_tractorbeam_6: 0000ff
+    rgb_tractorbeam_7: 0000ff
+    rgb_tractorbeam_8: 0000ff
+    rgb_tractorbeam_9: 0000ff
+    rgb_tractorbeam_10: 0000ff
+    rgb_tractorbeam_11: 0000ff
+    rgb_tractorbeam_12: 0000ff
+    rgb_tractorbeam_13: 0000ff
+    rgb_tractorbeam_14: 0000ff
+    rgb_tractorbeam_15: 0000ff
+    rgb_tractorbeam_16: 0000ff
+    rgb_tractorbeam_17: 0000ff
+    rgb_tractorbeam_18: 0000ff

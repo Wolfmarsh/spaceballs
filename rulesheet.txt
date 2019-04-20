@@ -64,10 +64,10 @@ Summary: This is an add-a-ball multiball that starts by giving you 1 additional 
 MERCHANDISING
 =============
 Hitting the Yogurt target 5 times will qualify you for a piece of Spaceballs merchandise.
-Once qualified, enter the scoop to pick a piece of merchandise.  Each piece of merchandise
-offers you a different bonus.   The items available will depend on which level of
-the merchandising mode you have reached.  Doing merchandising once will blink the mode insert
-and doing it three times will make the mode insert solid.
+Once qualified, enter the scoop to be awarded a piece of merchandise.  Each piece of
+merchandise offers you a different bonus.   The items available will depend on which level
+of the merchandising mode you have reached.  Doing merchandising once will blink the mode
+insert and doing it three times will make the mode insert solid.
 
 WARP RAMP MULTIBALL
 ===================
