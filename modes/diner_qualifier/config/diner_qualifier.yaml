@@ -1,0 +1,52 @@
+#config_version=5
+
+mode:
+  start_events: start_diner_qualifier_mode_request
+  stop_events: stop_diner_qualifier_mode_request
+  priority: 200
+
+event_player:
+  mode_diner_qualifier_started: enable_diner_shot
+  s_middle_target_active: add_diner_hit
+  logicblock_diner_hit_counter_complete: disable_diner_shot, diner_qualifier_complete
+
+shots:
+  diner_shot:
+    hit_events: add_diner_hit
+    profile: diner_shot_profile
+    disable_events: disable_diner_shot
+    enable_events: enable_diner_shot
+    restart_events: enable_diner_shot
+
+counters:
+  diner_hit_counter:
+    count_events: add_diner_hit
+    count_complete_value: 5
+    disable_on_complete: true
+    enable_events: mode_diner_qualifier_started
+    disable_events: mode_diner_qualifier_stopped
+    restart_events: enable_diner_shot
+
+shot_profiles:
+  diner_shot_profile:
+    states:
+      - name: zero_diner_hits
+        show: diner_target_flashing
+        loops: -1
+        speed: 1
+      - name: one_diner_hit
+        show: diner_target_flashing
+        loops: -1
+        speed: 2
+      - name: two_diner_hits
+        show: diner_target_flashing
+        loops: -1
+        speed: 3
+      - name: three_diner_hits
+        show: diner_target_flashing
+        loops: -1
+        speed: 4
+      - name: four_diner_hits
+        show: diner_target_flashing
+        loops: -1
+        speed: 5

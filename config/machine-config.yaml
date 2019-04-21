@@ -39,6 +39,10 @@ modes:
 - warp_ramp_multiball
 - spinner
 # - diner
+- diner_assetmanager
+- diner_modemanager
+- diner_qualifier
+- diner_award
 - airlock_assetmanager
 - airlock_modemanager
 - airlock_qualifier
@@ -67,7 +71,7 @@ modes:
 # - barf_modemanager
 # - barf_qualifier
 # - barf_multiball
-- stepper_testing
+#- stepper_testing
 
 widget_styles:
   dmd_xl:

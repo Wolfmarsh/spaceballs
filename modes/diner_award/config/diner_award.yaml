@@ -1,0 +1,37 @@
+#config_version=5
+
+mode:
+  start_events: start_diner_award_mode_request
+  stop_events: stop_diner_award_mode_request
+  priority: 200
+
+show_player:
+  mode_diner_award_started:
+    diner_award_flashing:
+      loops: -1
+      sync_ms: 500
+
+queue_relay_player:
+  balldevice_bd_scoop_ball_eject_attempt:
+    post: play_diner_fanfare
+    wait_for: diner_fanfare_complete
+
+event_player:
+  stop_diner_scoring: diner_award_complete
+  play_diner_fanfare: play_diner_chestburster_start_video, start_diner_mode_music|800ms, diner_fanfare_complete|800ms
+  diner_fanfare_complete: start_diner_scoring
+  timer_diner_scoring_timer_complete: stop_diner_scoring
+
+timers:
+  diner_scoring_timer:
+    start_value: 25
+    end_value: 0
+    tick_interval: 1s
+    direction: down
+    control_events:
+      - action: start
+        event: start_diner_scoring
+      - action: stop
+        event: ball_will_end
+      - action: reset
+        event: stop_diner_scoring

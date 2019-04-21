@@ -20,6 +20,33 @@ sound_player:
       action: play
 
 show_player:
+  mode_schwartz_ring_wizard_started{current_player.schwartz_gems_awarded_counter_count==1}: 
+    schwartz_ring_light_first_gem:
+      loops: 0
+  mode_schwartz_ring_wizard_started{current_player.schwartz_gems_awarded_counter_count==2}: 
+    schwartz_ring_light_second_gem_down:
+      loops: 0
+  mode_schwartz_ring_wizard_started{current_player.schwartz_gems_awarded_counter_count==3}: 
+    schwartz_ring_light_third_gem_down:
+      loops: 0
+  mode_schwartz_ring_wizard_started{current_player.schwartz_gems_awarded_counter_count==4}: 
+    schwartz_ring_light_fourth_gem_down:
+      loops: 0
+  mode_schwartz_ring_wizard_started{current_player.schwartz_gems_awarded_counter_count==5}: 
+    schwartz_ring_light_fifth_gem_down:
+      loops: 0
+  mode_schwartz_ring_wizard_started{current_player.schwartz_gems_awarded_counter_count==6}: 
+    schwartz_ring_light_sixth_gem_down:
+      loops: 0
+  mode_schwartz_ring_wizard_started{current_player.schwartz_gems_awarded_counter_count==7}: 
+    schwartz_ring_light_seventh_gem_down:
+      loops: 0
+  mode_schwartz_ring_wizard_started{current_player.schwartz_gems_awarded_counter_count==8}: 
+    schwartz_ring_light_eighth_gem_down:
+      loops: 0
+  mode_schwartz_ring_wizard_started{current_player.schwartz_gems_awarded_counter_count==9}: 
+    schwartz_ring_light_ninth_gem_down:
+      loops: 0
   award_first_schwartz_gem:
     schwartz_ring_award_first_gem:
       loops: 0

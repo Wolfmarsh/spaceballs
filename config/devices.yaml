@@ -110,7 +110,8 @@ steppers:
       10000: backboard_stepper_farend
     platform_settings:
       step_mode: 8
-      max_speed: 100000000
+      max_speed: 80000000
       starting_speed: 10000000
       current_limit: 495
-      max_acceleration: 1200000
+      max_acceleration: 5000000
+      max_deceleration: 5000000

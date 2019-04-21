@@ -1,0 +1,22 @@
+#config_version=5
+mode:
+  start_events: ball_starting
+  priority: 800
+
+event_player:
+  #start the qualifier when the mode manager first starts up
+  mode_diner_modemanager_started: start_diner_qualifier_mode_request
+  
+  #once the qualifier is complete, start up the award mode
+  diner_qualifier_complete: stop_diner_qualifier_mode_request, start_diner_award_mode_request
+  
+  #once the award is done, go back to the qualifier
+  #diner_award_complete: stop_diner_award_mode_request, start_diner_qualifier_mode_request
+
+  stop_diner_scoring: stop_diner_award_mode_request, start_diner_qualifier_mode_request
+  #diner_award_given: check_completion_level|10ms
+
+# counters:
+  # diner_mode_state_counter:
+    # count_events: logicblock_diner_hit_counter_complete start_diner_scoring
+    # reset_events: mode_diner_modemanager_started stop_diner_scoring

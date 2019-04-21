@@ -1,0 +1,152 @@
+#config_version=5
+mode:
+  start_events: ball_starting
+  priority: 800
+
+show_player:
+  start_diner_mode_music:
+    backboard_diner_show: play
+  stop_diner_scoring:
+    backboard_diner_show: stop
+    
+event_player:
+  mode_diner_assetmanager_started: initialize_return_possible_on_backboard
+  start_diner_mode_music: backboard_stepper_farend, enable_return_possible_on_backboard
+  stepper_backboard_stepper_ready{position == 10000}: backboard_stepper_reset
+  stepper_backboard_stepper_ready{position == 0 and current_player.return_possible_on_backboard == 1}: backboard_stepper_farend
+  timer_diner_scoring_timer_tick{ticks == 5}: play_diner_chestburster_end_video
+  stop_diner_scoring: disable_return_possible_on_backboard, backboard_stepper_reset
+
+variable_player:
+  disable_return_possible_on_backboard:
+    return_possible_on_backboard:
+      action: set
+      int: 0
+  enable_return_possible_on_backboard:
+    return_possible_on_backboard:
+      action: set
+      int: 1
+
+sound_player:
+  start_diner_mode_music:
+    hello_my_baby:
+      action: play
+  stop_diner_scoring:
+    hello_my_baby:
+      action: stop
+
+slide_player:
+  logicblock_diner_hit_counter_hit{remaining > 0}:
+    diner_hit_counter_slide:
+      target: dmd
+      expire: 1
+  logicblock_diner_hit_counter_hit{remaining == 0}:
+    diner_reward_shot_available_slide:
+      target: dmd
+      expire: 1
+  play_diner_chestburster_start_video:
+    diner_chestburster_start_video:
+      target: lcd
+      priority: 4
+  start_diner_scoring:
+    diner_mode_active:
+      target: dmd
+      expire: 2
+  chestburster_start_video_stopped:
+    diner_chestburster_start_video:
+      target: lcd
+      action: remove
+  play_diner_chestburster_end_video:
+    diner_chestburster_end_video:
+      target: lcd
+      expire: 8s
+      priority: 4
+  timer_diner_scoring_timer_tick:
+    diner_scoring_instructions:
+      target: lcd
+      priority: 3
+  timer_diner_scoring_timer_stopped:
+    diner_scoring_instructions:
+      target: lcd
+      action: remove
+
+
+slides:
+  diner_hit_counter_slide:
+    widgets:
+      - type: text
+        text: (remaining) HITS LEFT
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: TO LIGHT DINER
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+  diner_reward_shot_available_slide:
+    widgets:
+      - type: text
+        text: DINER READY
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: SHOOT SCOOP TO COLLECT
+        style: dmd_med
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+  diner_mode_active:
+    widgets:
+      - type: text
+        text: DINER MODE ACTIVE
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top
+        x: center
+      - type: text
+        text: ALL SCORING 2X
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: bottom
+        x: center
+  diner_chestburster_start_video:
+    widgets:
+      - type: video
+        video: chestburster_start
+        width: 1280
+        height: 720
+        volume: 0.08
+  diner_chestburster_end_video:
+    widgets:
+      - type: video
+        video: chestburster_end
+        width: 1280
+        height: 720
+        volume: 0.6
+  diner_scoring_instructions:
+    widgets:
+      - type: text
+        text: (ticks)
+        color: ffffff
+        font_size: 150
+        anchor_y: top
+        anchor_x: center
+        y: center
+        x: center
+      - type: image
+        image: double_scoring_active
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0

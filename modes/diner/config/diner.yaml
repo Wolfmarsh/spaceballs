@@ -1,212 +1,205 @@
-#config_version=4
+#config_version=5
 mode:
     start_events: ball_starting
     priority: 1200
 
-show_player:
-  mode_diner_started:
-    diner_target_blink:
-      loops: -1
-      speed: 1
-  logicblock_diner_target_hit_counter_complete:
-    diner_target_blink:
-      action: stop
-    diner_scoop_light_lit:
-      loops: -1
-      speed: 1
-  start_diner_scoring:
-    diner_scoop_light_lit:
-      action: stop
-  stop_diner_scoring:
-    diner_target_blink:
-      loops: -1
-      speed: 1
+# show_player:
+  # mode_diner_started:
+    # diner_target_blink:
+      # loops: -1
+      # speed: 1
+  # logicblock_diner_target_hit_counter_complete:
+    # diner_target_blink:
+      # action: stop
+    # diner_scoop_light_lit:
+      # loops: -1
+      # speed: 1
+  # start_diner_scoring:
+    # diner_scoop_light_lit:
+      # action: stop
+  # stop_diner_scoring:
+    # diner_target_blink:
+      # loops: -1
+      # speed: 1
 
-slide_player:
-  counter_diner_target_hit_counter_hit:
-    diner_target_hits_remaining:
-      target: dmd
-      expire: 1
-  logicblock_diner_target_hit_counter_complete:
-    diner_mode_lit:
-      target: dmd
-      expire: 1
-  play_diner_chestburster_start_video:
-    diner_chestburster_start_video:
-      target: lcd
-      priority: 4
-  start_diner_scoring:
-    diner_mode_active:
-      target: dmd
-      expire: 2
-  chestburster_start_video_stopped:
-    diner_chestburster_start_video:
-      target: lcd
-      action: remove
-  play_diner_chestburster_end_video{current_player.diner_mode_state_counter_count == 2}:
-    diner_chestburster_end_video:
-      target: lcd
-      expire: 8s
-      priority: 4
-  timer_diner_scoring_timer_tick:
-    diner_scoring_instructions:
-      target: lcd
-      priority: 3
-  timer_diner_scoring_timer_stopped:
-    diner_scoring_instructions:
-      target: lcd
-      action: remove
+# slide_player:
+  # counter_diner_target_hit_counter_hit:
+    # diner_target_hits_remaining:
+      # target: dmd
+      # expire: 1
+  # logicblock_diner_target_hit_counter_complete:
+    # diner_mode_lit:
+      # target: dmd
+      # expire: 1
+  # play_diner_chestburster_start_video:
+    # diner_chestburster_start_video:
+      # target: lcd
+      # priority: 4
+  # start_diner_scoring:
+    # diner_mode_active:
+      # target: dmd
+      # expire: 2
+  # chestburster_start_video_stopped:
+    # diner_chestburster_start_video:
+      # target: lcd
+      # action: remove
+  # play_diner_chestburster_end_video{current_player.diner_mode_state_counter_count == 2}:
+    # diner_chestburster_end_video:
+      # target: lcd
+      # expire: 8s
+      # priority: 4
+  # timer_diner_scoring_timer_tick:
+    # diner_scoring_instructions:
+      # target: lcd
+      # priority: 3
+  # timer_diner_scoring_timer_stopped:
+    # diner_scoring_instructions:
+      # target: lcd
+      # action: remove
 
-coil_player:
-  start_diner_scoring:
-    c_backboard_activate:
-      action: enable
-      power: 1.0
-  stop_diner_scoring:
-    c_backboard_activate:
-      action: disable
-  counter_diner_target_hit_counter_hit:
-    c_tractorbeam_two:
-      action: enable
-      power: 1.08
-  tractorbeam_disable_please:
-    c_tractorbeam_two:
-      action: disable
+# coil_player:
+  # start_diner_scoring:
+    # c_backboard_activate:
+      # action: enable
+      # power: 1.0
+  # stop_diner_scoring:
+    # c_backboard_activate:
+      # action: disable
 
-sound_player:
-  start_diner_mode_music:
-    hello_my_baby:
-      action: play
-  stop_diner_scoring:
-    hello_my_baby:
-      action: stop
+# sound_player:
+  # start_diner_mode_music:
+    # hello_my_baby:
+      # action: play
+  # stop_diner_scoring:
+    # hello_my_baby:
+      # action: stop
 
-event_player:
-  balldevice_bd_scoop_ball_entered{current_player.diner_mode_state_counter_count == 1}: play_diner_chestburster_start_video, start_diner_mode_music|800ms
-  balldevice_bd_scoop_ejecting_ball{current_player.diner_mode_state_counter_count == 1}: start_diner_scoring
-  timer_diner_scoring_timer_complete: stop_diner_scoring
-  timer_diner_scoring_timer_stopped: stop_diner_scoring
-  ball_will_end: stop_diner_scoring
-  timer_diner_scoring_timer_tick{ticks == 5}: play_diner_chestburster_end_video
-  counter_diner_target_hit_counter_hit: tractorbeam_disable_please|2000ms
+# event_player:
+  # balldevice_bd_scoop_ball_entered{current_player.diner_mode_state_counter_count == 1}: play_diner_chestburster_start_video, start_diner_mode_music|800ms
+  # balldevice_bd_scoop_ejecting_ball{current_player.diner_mode_state_counter_count == 1}: start_diner_scoring
+  # timer_diner_scoring_timer_complete: stop_diner_scoring
+  # timer_diner_scoring_timer_stopped: stop_diner_scoring
+  # ball_will_end: stop_diner_scoring
+  # timer_diner_scoring_timer_tick{ticks == 5}: play_diner_chestburster_end_video
+  # counter_diner_target_hit_counter_hit: tractorbeam_disable_please|2000ms
 
-scoring:
-  s_middle_target_active:
-    score: 20000 * current_player.game_scoring_multiplier
-  start_diner_scoring:
-    game_scoring_multiplier:
-      score: 2
-      action: set
-  stop_diner_scoring:
-    game_scoring_multiplier:
-      score: 1
-      action: set
+# scoring:
+  # s_middle_target_active:
+    # score: 20000 * current_player.game_scoring_multiplier
+  # start_diner_scoring:
+    # game_scoring_multiplier:
+      # score: 2
+      # action: set
+  # stop_diner_scoring:
+    # game_scoring_multiplier:
+      # score: 1
+      # action: set
 
-timers:
-  diner_scoring_timer:
-    start_value: 25
-    end_value: 0
-    tick_interval: 1s
-    direction: down
-    control_events:
-      - action: start
-        event: start_diner_scoring
-      - action: stop
-        event: ball_will_end
-      - action: reset
-        event: stop_diner_scoring
+# timers:
+  # diner_scoring_timer:
+    # start_value: 25
+    # end_value: 0
+    # tick_interval: 1s
+    # direction: down
+    # control_events:
+      # - action: start
+        # event: start_diner_scoring
+      # - action: stop
+        # event: ball_will_end
+      # - action: reset
+        # event: stop_diner_scoring
 
-logic_blocks:
-  counters:
-    diner_target_hit_counter:
-      count_events: s_middle_target_active
-      count_complete_value: 5
-      disable_on_complete: true
-      enable_events: mode_diner_started stop_diner_scoring
-      disable_events: mode_diner_stopped
-      reset_events: mode_diner_started stop_diner_scoring
-    diner_mode_state_counter:
-      count_events: logicblock_diner_target_hit_counter_complete start_diner_scoring
-      enable_events: mode_diner_started
-      disable_events: mode_diner_stopped
-      reset_events: mode_diner_started stop_diner_scoring
+# logic_blocks:
+  # counters:
+    # diner_target_hit_counter:
+      # count_events: s_middle_target_active
+      # count_complete_value: 5
+      # disable_on_complete: true
+      # enable_events: mode_diner_started stop_diner_scoring
+      # disable_events: mode_diner_stopped
+      # reset_events: mode_diner_started stop_diner_scoring
+    # diner_mode_state_counter:
+      # count_events: logicblock_diner_target_hit_counter_complete start_diner_scoring
+      # enable_events: mode_diner_started
+      # disable_events: mode_diner_stopped
+      # reset_events: mode_diner_started stop_diner_scoring
 
-slides:
-  diner_target_hits_remaining:
-    widgets:
-      - type: text
-        text: (remaining) HITS LEFT
-        style: dmd_big
-        anchor_y: top
-        anchor_x: center
-        y: top
-        x: center
-      - type: text
-        text: TO LIGHT DINER
-        style: dmd_big
-        anchor_y: bottom
-        anchor_x: center
-        y: bottom
-        x: center
-  diner_mode_lit:
-    widgets:
-      - type: text
-        text: DINER MODE LIT
-        style: dmd_big
-        anchor_y: top
-        anchor_x: center
-        y: top
-        x: center
-      - type: text
-        text: HIT THE SCOOP
-        style: dmd_big
-        anchor_y: bottom
-        anchor_x: center
-        y: bottom
-        x: center
-  diner_mode_active:
-    widgets:
-      - type: text
-        text: DINER MODE ACTIVE
-        style: dmd_big
-        anchor_y: top
-        anchor_x: center
-        y: top
-        x: center
-      - type: text
-        text: ALL SCORING 2X
-        style: dmd_big
-        anchor_y: bottom
-        anchor_x: center
-        y: bottom
-        x: center
-  diner_scoring_instructions:
-    widgets:
-      - type: text
-        text: (ticks)
-        color: ffffff
-        font_size: 150
-        anchor_y: top
-        anchor_x: center
-        y: center
-        x: center
-      - type: image
-        image: double_scoring_active
-        anchor_y: bottom
-        anchor_x: left
-        y: 0
-        x: 0
-  diner_chestburster_start_video:
-    widgets:
-      - type: video
-        video: chestburster_start
-        width: 1280
-        height: 720
-        volume: 0.08
-  diner_chestburster_end_video:
-    widgets:
-      - type: video
-        video: chestburster_end
-        width: 1280
-        height: 720
-        volume: 0.6
+# slides:
+  # diner_target_hits_remaining:
+    # widgets:
+      # - type: text
+        # text: (remaining) HITS LEFT
+        # style: dmd_big
+        # anchor_y: top
+        # anchor_x: center
+        # y: top
+        # x: center
+      # - type: text
+        # text: TO LIGHT DINER
+        # style: dmd_big
+        # anchor_y: bottom
+        # anchor_x: center
+        # y: bottom
+        # x: center
+  # diner_mode_lit:
+    # widgets:
+      # - type: text
+        # text: DINER MODE LIT
+        # style: dmd_big
+        # anchor_y: top
+        # anchor_x: center
+        # y: top
+        # x: center
+      # - type: text
+        # text: HIT THE SCOOP
+        # style: dmd_big
+        # anchor_y: bottom
+        # anchor_x: center
+        # y: bottom
+        # x: center
+  # diner_mode_active:
+    # widgets:
+      # - type: text
+        # text: DINER MODE ACTIVE
+        # style: dmd_big
+        # anchor_y: top
+        # anchor_x: center
+        # y: top
+        # x: center
+      # - type: text
+        # text: ALL SCORING 2X
+        # style: dmd_big
+        # anchor_y: bottom
+        # anchor_x: center
+        # y: bottom
+        # x: center
+  # diner_scoring_instructions:
+    # widgets:
+      # - type: text
+        # text: (ticks)
+        # color: ffffff
+        # font_size: 150
+        # anchor_y: top
+        # anchor_x: center
+        # y: center
+        # x: center
+      # - type: image
+        # image: double_scoring_active
+        # anchor_y: bottom
+        # anchor_x: left
+        # y: 0
+        # x: 0
+  # diner_chestburster_start_video:
+    # widgets:
+      # - type: video
+        # video: chestburster_start
+        # width: 1280
+        # height: 720
+        # volume: 0.08
+  # diner_chestburster_end_video:
+    # widgets:
+      # - type: video
+        # video: chestburster_end
+        # width: 1280
+        # height: 720
+        # volume: 0.6
