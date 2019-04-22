@@ -1,0 +1,144 @@
+#config_version=5
+mode:
+  start_events: ball_starting
+  priority: 100
+
+slide_player:
+  mode_score_display_started:
+    base_game_lcd_slide:
+      target: lcd
+
+widget_player:
+  player_added{num==2}:
+    player_2_lcd_info_widget:
+      slide: base_game_lcd_slide
+  player_added{num==3}:
+    player_3_lcd_info_widget:
+      slide: base_game_lcd_slide
+  player_added{num==4}:
+    player_4_lcd_info_widget:
+      slide: base_game_lcd_slide
+
+widgets:
+  player_2_lcd_info_widget:
+    - type: text
+      text: "P2-"
+      font_name: atrox
+      font_size: 35
+      anchor_x: left
+      anchor_y: top
+      x: 380
+      y: bottom+70
+      color: white
+      z: 5
+    - type: text
+      #text: "9,999,999,999,999"
+      text: (player2|score)
+      number_grouping: true
+      font_name: atrox
+      font_size: 35
+      anchor_x: left
+      anchor_y: top
+      x: 425
+      y: bottom+70
+      color: white
+      z: 5
+  player_3_lcd_info_widget:
+    - type: text
+      text: "P3-"
+      font_name: atrox
+      font_size: 35
+      anchor_x: left
+      anchor_y: top
+      x: 700
+      y: bottom+70
+      color: white
+      z: 5
+    - type: text
+      #text: "9,999,999,999,999"
+      text: (player3|score)
+      number_grouping: true
+      font_name: atrox
+      font_size: 35
+      anchor_x: left
+      anchor_y: top
+      x: 745
+      y: bottom+70
+      color: white
+      z: 5
+  player_4_lcd_info_widget:
+    - type: text
+      text: "P4-"
+      font_name: atrox
+      font_size: 35
+      anchor_x: left
+      anchor_y: top
+      x: 1020
+      y: bottom+70
+      color: white
+      z: 5
+    - type: text
+      #text: "9,999,999,999,999"
+      text: (player4|score)
+      number_grouping: true
+      font_name: atrox
+      font_size: 35
+      anchor_x: left
+      anchor_y: top
+      x: 1065
+      y: bottom+70
+      color: white
+      z: 5
+
+slides:
+  base_game_lcd_slide:
+    widgets:
+      - type: text
+        text: "P1-"
+        font_name: atrox
+        font_size: 35
+        anchor_x: left
+        anchor_y: top
+        x: 60
+        y: bottom+70
+        color: white
+        z: 5
+      - type: text
+        #text: "9,999,999,999,999"
+        text: (player1|score)
+        number_grouping: true
+        font_name: atrox
+        font_size: 35
+        anchor_x: left
+        anchor_y: top
+        x: 105
+        y: bottom+70
+        color: white
+        z: 5
+      - type: text
+        text: "PLAYER 1 -"
+        font_name: atrox
+        font_size: 80
+        anchor_x: left
+        anchor_y: top
+        x: 20
+        y: top-20
+        z: 5
+      - type: text
+        text: (player1|score)
+        font_name: atrox
+        number_grouping: true
+        font_size: 80
+        anchor_x: left
+        anchor_y: top
+        x: 350
+        y: top-20
+        z: 5
+      - type: image
+        image: mister_background
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        z: 1
+    

@@ -43,3 +43,5 @@ images:
     file: spaceballs_spash_screen.jpg
   virgin_alarm:
     file: virgin_alarm.png
+  mister_background:
+    file: MisterBackground.png

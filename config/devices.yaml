@@ -45,7 +45,7 @@ drop_target_banks:
     reset_coils: c_drop_reset
     reset_events:
       drop_target_bank_airlock_bank_down: 1s
-      player_turn_start: 0s
+      player_turn_started: 0s
       reset_drop_target_bank_request: 250ms
 
 ball_devices:
@@ -58,7 +58,7 @@ ball_devices:
     tags: trough, home, drain
   bd_plunger:
     ball_switches: s_plunger_lane
-    entrance_count_delay: 300ms
+    entrance_count_delay: 200ms
     eject_timeouts: 3s
     eject_coil: c_plunger_eject
     player_controlled_eject_event: sw_launch
@@ -95,6 +95,7 @@ steppers:
       starting_speed: 50000000
       current_limit: 1024
       max_acceleration: 500000000
+      max_deceleration: 500000000
   backboard_stepper:
     number: 00261315
     pos_min: 0 #steps

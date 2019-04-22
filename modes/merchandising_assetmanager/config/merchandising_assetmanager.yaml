@@ -13,26 +13,68 @@ slide_player:
     award_merch_tshirt_slide:
       target: dmd
       expire: 1
+    award_merch_tshirt_video:
+      target: lcd
+      priority: 4
+  spaceballs_the_tshirt_video_stopped:
+    award_merch_tshirt_video:
+      target: lcd
+      action: remove
   award_merch_coloringbook:
     award_merch_coloringbook_slide:
       target: dmd
       expire: 1
+    award_merch_coloringbook_video:
+      target: lcd
+      priority: 4
+  spaceballs_the_coloring_book_video_stopped:
+    award_merch_coloringbook_video:
+      target: lcd
+      action: remove
   award_merch_cereal:
     award_merch_cereal_slide:
       target: dmd
       expire: 1
+    award_merch_cereal_video:
+      target: lcd
+      priority: 4
+  spaceballs_the_breakfast_cereal_video_stopped:
+    award_merch_cereal_video:
+      target: lcd
+      action: remove
   award_merch_flamethrower:
     award_merch_flamethrower_slide:
       target: dmd
       expire: 1
+    award_merch_flamethrower_video:
+      target: lcd
+      priority: 4
+  spaceballs_the_flamethrower_video_stopped:
+    award_merch_flamethrower_video:
+      target: lcd
+      action: remove
   award_merch_lunchbox:
     award_merch_lunchbox_slide:
       target: dmd
       expire: 1
+    award_merch_lunchbox_video:
+      target: lcd
+      priority: 4
+  spaceballs_the_lunchbox_video_stopped:
+    award_merch_lunchbox_video:
+      target: lcd
+      action: remove
   award_merch_yogurtdoll:
     award_merch_yogurtdoll_slide:
       target: dmd
       expire: 1
+    award_merch_yogurtdoll_video:
+      target: lcd
+      priority: 4
+  spaceballs_the_doll_video_stopped:
+    award_merch_yogurtdoll_video:
+      target: lcd
+      action: remove
   logicblock_merch_yogurt_hit_counter_hit{remaining > 0}:
     merch_yogurt_hit_counter_slide:
       target: dmd
@@ -159,3 +201,40 @@ slides:
         anchor_x: center
         y: bottom
         x: center
+  award_merch_tshirt_video:
+    widgets:
+      - type: video
+        video: spaceballs_the_tshirt_video
+        width: 1280
+        height: 720
+  award_merch_coloringbook_video:
+    widgets:
+      - type: video
+        video: spaceballs_the_coloring_book_video
+        width: 1280
+        height: 720
+  award_merch_cereal_video:
+    widgets:
+      - type: video
+        video: spaceballs_the_breakfast_cereal_video
+        width: 1280
+        height: 720
+  award_merch_flamethrower_video:
+    widgets:
+      - type: video
+        video: spaceballs_the_flamethrower_video
+        width: 1280
+        height: 720
+  award_merch_lunchbox_video:
+    widgets:
+      - type: video
+        video: spaceballs_the_lunchbox_video
+        width: 1280
+        height: 720
+  award_merch_yogurtdoll_video:
+    widgets:
+      - type: video
+        video: spaceballs_the_doll_video
+        width: 1280
+        height: 720
+

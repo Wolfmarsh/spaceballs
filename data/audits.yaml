@@ -1,6 +1,6 @@
 events:
   game_ended: 249
-  game_started: 467
+  game_started: 493
 player:
   score:
     average: 5302205.035971223
@@ -54,7 +54,7 @@ shots:
   airlock_mode_tracking_shot: 4
   airlock_qualifying_shot_five: 77
   airlock_qualifying_shot_four: 79
-  airlock_qualifying_shot_one: 68
+  airlock_qualifying_shot_one: 69
   airlock_qualifying_shot_three: 70
   airlock_qualifying_shot_two: 74
   airlock_shot_five: 34
@@ -92,19 +92,19 @@ switches:
   s_air_i_lane: 107
   s_air_r_lane: 105
   s_backboard_limit: 90
-  s_drop_1: 204
+  s_drop_1: 205
   s_drop_2: 203
   s_drop_3: 205
   s_drop_4: 206
   s_drop_5: 206
-  s_launch_button: 807
+  s_launch_button: 833
   s_left_flipper: 2333
   s_left_inlane: 210
   s_left_orbit_second: 98
   s_left_outlane: 66
   s_left_spinner: 7140
   s_middle_target: 270
-  s_plunger_lane: 1362
+  s_plunger_lane: 1388
   s_pop_1: 280
   s_pop_2: 304
   s_pop_3: 226
@@ -141,7 +141,7 @@ switches:
   s_service_plus: 0
   s_sling_left: 368
   s_sling_right: 382
-  s_start: 63
+  s_start: 92
   s_tractorbeam_limit: 4
   s_trough1: 1071
   s_trough2: 1057

@@ -97,3 +97,21 @@ videos:
   tractor_beam_start:
     file: Tractor_Beam_Start.mp4
     events_when_stopped: video_tractor_beam_start_stopped
+  spaceballs_the_breakfast_cereal_video:
+    file: Spaceballs_The_Breakfast_Cereal.mp4
+    events_when_stopped: spaceballs_the_breakfast_cereal_video_stopped
+  spaceballs_the_coloring_book_video:
+    file: Spaceballs_The_Coloring_Book.mp4
+    events_when_stopped: spaceballs_the_coloring_book_video_stopped
+  spaceballs_the_doll_video:
+    file: Spaceballs_The_Doll.mp4
+    events_when_stopped: spaceballs_the_doll_video_stopped
+  spaceballs_the_flamethrower_video:
+    file: Spaceballs_The_Flamethrower.mp4
+    events_when_stopped: spaceballs_the_flamethrower_video_stopped
+  spaceballs_the_lunchbox_video:
+    file: Spaceballs_The_Lunchbox.mp4
+    events_when_stopped: spaceballs_the_lunchbox_video_stopped
+  spaceballs_the_tshirt_video:
+    file: Spaceballs_The_TShirt.mp4
+    events_when_stopped: spaceballs_the_tshirt_video_stopped
