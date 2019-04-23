@@ -5,9 +5,6 @@ mode:
 
 
 slide_player:
-  mode_base_started:
-    player_info_slide:
-      target: dmd
   ball_save_default_save_saving_ball:
     ball_saved_slide:
       target: dmd
@@ -27,73 +24,6 @@ sound_player:
     ball_saved_2:
       action: play
 
-# widget_player:
-  # player_added{num==2}:
-    # player_2_lcd_info_widget:
-      # slide: multiplayer_lcd_slide
-  # player_added{num==3}:
-    # player_3_lcd_info_widget:
-      # slide: multiplayer_lcd_slide
-  # player_added{num==4}:
-    # player_4_lcd_info_widget:
-      # slide: multiplayer_lcd_slide
-
-# widgets:
-  # player_2_lcd_info_widget:
-    # - type: text
-      # text: "PLAYER 2 -"
-      # font_name: atrox
-      # font_size: 80
-      # anchor_x: left
-      # anchor_y: top
-      # x: 20
-      # y: top-160
-    # - type: text
-      # text: (player2|score)
-      # number_grouping: true
-      # font_name: atrox
-      # font_size: 80
-      # anchor_x: left
-      # anchor_y: top
-      # x: 350
-      # y: top-160
-  # player_3_lcd_info_widget:
-    # - type: text
-      # text: "PLAYER 3 -"
-      # font_name: atrox
-      # font_size: 80
-      # anchor_x: left
-      # anchor_y: top
-      # x: 20
-      # y: top-300
-    # - type: text
-      # text: (player3|score)
-      # number_grouping: true
-      # font_name: atrox
-      # font_size: 80
-      # anchor_x: left
-      # anchor_y: top
-      # x: 350
-      # y: top-300
-  # player_4_lcd_info_widget:
-    # - type: text
-      # text: "PLAYER 4 -"
-      # font_name: atrox
-      # font_size: 80
-      # anchor_x: left
-      # anchor_y: top
-      # x: 20
-      # y: top-440
-    # - type: text
-      # text: (player4|score)
-      # number_grouping: true
-      # font_name: atrox
-      # font_size: 80
-      # anchor_x: left
-      # anchor_y: top
-      # x: 350
-      # y: top-440
-      
 slides:
   ball_saved_slide:
     widgets:
@@ -104,48 +34,3 @@ slides:
         y: center
         anchor_x: center
         anchor_y: center
-  multiplayer_lcd_slide:
-    widgets:
-      - type: text
-        text: "PLAYER 1 -"
-        font_name: atrox
-        font_size: 80
-        anchor_x: left
-        anchor_y: top
-        x: 20
-        y: top-20
-      - type: text
-        text: (player1|score)
-        font_name: atrox
-        number_grouping: true
-        font_size: 80
-        anchor_x: left
-        anchor_y: top
-        x: 350
-        y: top-20
-  player_info_slide:
-    widgets:
-      - type: text
-        text: (score)
-        number_grouping: true
-        color: ffffff
-        min_digits: 2
-        style: dmd_big
-        x: center
-        y: top - 5
-        anchor_x: center
-        anchor_y: top
-      - type: text
-        text: PLAYER (number)
-        y: 0
-        x: 0
-        style: dmd_small
-        anchor_x: left
-        anchor_y: bottom
-      - type: text
-        text: BALL (ball)
-        y: 0
-        x: right
-        anchor_x: right
-        anchor_y: bottom
-        style: dmd_small

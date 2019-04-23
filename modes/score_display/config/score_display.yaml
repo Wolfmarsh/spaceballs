@@ -7,6 +7,8 @@ slide_player:
   mode_score_display_started:
     base_game_lcd_slide:
       target: lcd
+    base_player_dmd_slide:
+      target: dmd
 
 widget_player:
   player_added{num==2}:
@@ -91,8 +93,44 @@ widgets:
       z: 5
 
 slides:
+  base_player_dmd_slide:
+    widgets:
+      - type: text
+        text: (score)
+        number_grouping: true
+        color: ffffff
+        min_digits: 2
+        style: dmd_big
+        x: center
+        y: top - 5
+        anchor_x: center
+        anchor_y: top
+      - type: text
+        text: PLAYER (number)
+        y: 0
+        x: 0
+        style: dmd_small
+        anchor_x: left
+        anchor_y: bottom
+      - type: text
+        text: BALL (ball)
+        y: 0
+        x: right
+        anchor_x: right
+        anchor_y: bottom
+        style: dmd_small
   base_game_lcd_slide:
     widgets:
+      - type: text
+        text: "MR. DISPLAY"
+        font_name: atrox
+        font_size: 130
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top-20
+        color: black
+        z: 5
       - type: text
         text: "P1-"
         font_name: atrox
@@ -116,23 +154,51 @@ slides:
         color: white
         z: 5
       - type: text
-        text: "PLAYER 1 -"
+        text: "PLAYER"
         font_name: atrox
         font_size: 80
         anchor_x: left
         anchor_y: top
-        x: 20
-        y: top-20
+        x: 145
+        y: top-550
         z: 5
       - type: text
-        text: (player1|score)
+        text: (number)
         font_name: atrox
-        number_grouping: true
         font_size: 80
         anchor_x: left
         anchor_y: top
-        x: 350
-        y: top-20
+        x: 380
+        y: top-550
+        z: 5
+      - type: text
+        text: "BALL"
+        font_name: atrox
+        font_size: 80
+        anchor_x: left
+        anchor_y: top
+        x: 825
+        y: top-550
+        z: 5
+      - type: text
+        text: (ball)
+        font_name: atrox
+        font_size: 80
+        anchor_x: left
+        anchor_y: top
+        x: 990
+        y: top-550
+        z: 5
+      - type: text
+        #text: "9,999,999,999,999"
+        text: (score)
+        font_name: atrox
+        number_grouping: true
+        font_size: 130
+        anchor_x: middle
+        anchor_y: top
+        x: middle-95
+        y: top-200
         z: 5
       - type: image
         image: mister_background
