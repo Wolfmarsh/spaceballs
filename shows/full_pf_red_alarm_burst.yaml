@@ -1,0 +1,320 @@
+#show_version=5
+- time: 0
+  lights:
+    rgb_center_target_arrow_1: 'FF0000'
+    rgb_varitarget: 'FF0000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    rgb_center_target_arrow_1: '000000'
+    rgb_center_target_arrow_2: 'FF0000'
+    rgb_ramplevel_1: 'FF0000'
+    rgb_ramplevel_2: 'FF0000'
+    rgb_ramplevel_3: 'FF0000'
+    rgb_ramplevel_4: 'FF0000'
+    rgb_sbone_right_target_arrow: 'FF0000'
+    rgb_tractorbeam_10: 'FF0000'
+    rgb_tractorbeam_4: '350000'
+    rgb_tractorbeam_5: 'FF0000'
+    rgb_tractorbeam_6: 'FF0000'
+    rgb_tractorbeam_7: 'FF0000'
+    rgb_tractorbeam_8: 'FF0000'
+    rgb_tractorbeam_9: 'FF0000'
+    rgb_varitarget: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_tractorbeam_1: 'FF0000'
+    rgb_tractorbeam_11: 'FF0000'
+    rgb_tractorbeam_12: 'FF0000'
+    rgb_tractorbeam_13: 'FF0000'
+    rgb_tractorbeam_14: 'FF0000'
+    rgb_tractorbeam_15: '070000'
+    rgb_tractorbeam_2: 'FF0000'
+    rgb_tractorbeam_3: 'FF0000'
+    rgb_tractorbeam_4: 'FF0000'
+    rgb_mode_sbone: 'FF0000'
+    rgb_mode_warpramp: 'FF0000'
+    
+- time: '+1'
+  lights:
+    rgb_drop_4: 'CF0000'
+    rgb_drop_5: 'FF0000'
+    rgb_scoop_arrow_1: 'F90000'
+    rgb_tractorbeam_15: 'FF0000'
+    rgb_tractorbeam_16: 'FF0000'
+    rgb_tractorbeam_17: 'FF0000'
+    rgb_mode_airlock: 'FF0000'
+    rgb_mode_combthedesert: '010000'
+    rgb_mode_merchandising: 'FF0000'
+    
+- time: '+1'
+  lights:
+    rgb_center_target_arrow_2: '000000'
+    rgb_drop_3: 'FF0000'
+    rgb_drop_4: 'FF0000'
+    rgb_left_orbit_arrow_1: 'FF0000'
+    rgb_right_orbit_arrow_1: 'FF0000'
+    rgb_sbone_bottom_right_arrow: 'FF0000'
+    rgb_sbone_left_target_arrow: 'FF0000'
+    rgb_scoop_arrow_1: 'FF0000'
+    rgb_scoop_arrow_2: 'FF0000'
+    rgb_tractorbeam_18: 'FF0000'
+    rgb_mode_combthedesert: 'FF0000'
+    rgb_mode_megamaid: 'FF0000'
+    
+- time: '+1'
+  lights:
+    rgb_drop_2: 'FF0000'
+    rgb_good_schwartz_5: 'FF0000'
+    rgb_good_schwartz_6: 'FF0000'
+    rgb_insignia_8: 'FF0000'
+    rgb_left_orbit_arrow_2: 'FF0000'
+    rgb_pop_bottom_left_a: 'F10000'
+    rgb_pop_bottom_left_b: 'FF0000'
+    rgb_ramplevel_2: '000000'
+    rgb_ramplevel_3: '000000'
+    rgb_ramplevel_4: '000000'
+    rgb_sbone_bottom_left_arrow: 'FF0000'
+    rgb_sbone_right_target_arrow: '000000'
+    rgb_tractorbeam_7: '5B0000'
+    rgb_tractorbeam_8: '600000'
+    rgb_mode_savevespa: 'FF0000'
+    rgb_yogurt_arrow: 'FF0000'
+    
+- time: '+1'
+  lights:
+    rgb_drop_1: 'FF0000'
+    rgb_good_schwartz_3: 'FF0000'
+    rgb_good_schwartz_4: 'FF0000'
+    rgb_insignia_7: 'FF0000'
+    rgb_insignia_9: 'FF0000'
+    rgb_pop_bottom_left_a: 'FF0000'
+    rgb_ramplevel_1: '000000'
+    rgb_right_orbit_arrow_2: 'FF0000'
+    rgb_sbone_top_arrow: 'FF0000'
+    rgb_tractorbeam_10: '000000'
+    rgb_tractorbeam_11: '000000'
+    rgb_tractorbeam_12: '000000'
+    rgb_tractorbeam_3: '000000'
+    rgb_tractorbeam_4: '000000'
+    rgb_tractorbeam_5: '000000'
+    rgb_tractorbeam_6: '000000'
+    rgb_tractorbeam_7: '000000'
+    rgb_tractorbeam_8: '000000'
+    rgb_tractorbeam_9: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_bad_schwartz_4: 'FF0000'
+    rgb_bad_schwartz_5: 'FF0000'
+    rgb_bad_schwartz_full: 'FF0000'
+    rgb_good_schwartz_2: 'FF0000'
+    rgb_insignia_6: 'FF0000'
+    rgb_tractorbeam_1: '000000'
+    rgb_tractorbeam_13: '000000'
+    rgb_tractorbeam_14: '000000'
+    rgb_tractorbeam_2: '000000'
+    rgb_mode_sbone: '6A0000'
+    
+- time: '+1'
+  lights:
+    rgb_bad_schwartz_2: 'FF0000'
+    rgb_bad_schwartz_3: 'FF0000'
+    rgb_good_schwartz_1: 'FF0000'
+    rgb_insignia_4: 'FF0000'
+    rgb_insignia_5: 'FF0000'
+    rgb_pop_bottom_right_a: 'FF0000'
+    rgb_pop_bottom_right_b: 'FF0000'
+    rgb_right_inlane: 'FF0000'
+    rgb_tractorbeam_15: '000000'
+    rgb_mode_sbone: '000000'
+    rgb_mode_warpramp: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_bad_schwartz_1: 'FF0000'
+    rgb_drop_5: '000000'
+    rgb_left_inlane: 'FF0000'
+    rgb_pop_top_middle_a: 'FA0000'
+    rgb_tractorbeam_16: '000000'
+    rgb_tractorbeam_17: '0C0000'
+    rgb_mode_airlock: '000000'
+    rgb_mode_merchandising: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_drop_4: '000000'
+    rgb_insignia_1: 'FF0000'
+    rgb_insignia_2: 'FF0000'
+    rgb_insignia_3: 'FF0000'
+    rgb_left_orbit_arrow_1: '0A0000'
+    rgb_pop_top_middle_a: 'FF0000'
+    rgb_pop_top_middle_b: 'FF0000'
+    rgb_sbone_left_target_arrow: '000000'
+    rgb_scoop_arrow_1: '000000'
+    rgb_scoop_arrow_2: '000000'
+    rgb_shooter_arrow_3: 'FF0000'
+    rgb_tractorbeam_17: '000000'
+    rgb_tractorbeam_18: '000000'
+    rgb_mode_combthedesert: '000000'
+    rgb_mode_megamaid: '2B0000'
+    
+- time: '+1'
+  lights:
+    rgb_drop_3: '000000'
+    rgb_left_orbit_arrow_1: '000000'
+    rgb_right_orbit_arrow_1: 'CE0000'
+    rgb_sbone_bottom_right_arrow: '000000'
+    rgb_shooter_arrow_2: 'FF0000'
+    rgb_mode_megamaid: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_drop_2: '000000'
+    rgb_right_orbit_arrow_1: '000000'
+    rgb_sbone_bottom_left_arrow: '000000'
+    rgb_shooter_arrow_1: 'C30000'
+    rgb_mode_savevespa: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_a_lane: 'FF0000'
+    rgb_extra_ball: 'FF0000'
+    rgb_good_schwartz_5: '2A0000'
+    rgb_good_schwartz_6: '000000'
+    rgb_i_lane: 'FF0000'
+    rgb_left_orbit_arrow_2: '000000'
+    rgb_pop_bottom_left_a: 'B50000'
+    rgb_pop_bottom_left_b: '000000'
+    rgb_right_outlane: 'FF0000'
+    rgb_shooter_arrow_1: 'FF0000'
+    rgb_yogurt_arrow: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_backboard_10: '880000'
+    rgb_backboard_6: '0C0000'
+    rgb_backboard_7: '880000'
+    rgb_backboard_8: 'FF0000'
+    rgb_backboard_9: 'FF0000'
+    rgb_ball_saver_left: 'FF0000'
+    rgb_ball_saver_right: 'FF0000'
+    rgb_drop_1: '000000'
+    rgb_good_schwartz_4: '1B0000'
+    rgb_good_schwartz_5: '000000'
+    rgb_insignia_8: '000000'
+    rgb_insignia_9: '500000'
+    rgb_left_outlane: 'FF0000'
+    rgb_pop_bottom_left_a: '000000'
+    rgb_r_lane: 'FF0000'
+    rgb_right_orbit_arrow_2: '000000'
+    rgb_sbone_top_arrow: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_a_can: 'FF0000'
+    rgb_backboard_10: 'FF0000'
+    rgb_backboard_3: '5D0000'
+    rgb_backboard_4: 'FF0000'
+    rgb_backboard_5: 'FF0000'
+    rgb_backboard_6: 'FF0000'
+    rgb_backboard_7: 'FF0000'
+    rgb_good_schwartz_3: '540000'
+    rgb_good_schwartz_4: '000000'
+    rgb_insignia_7: '000000'
+    rgb_insignia_9: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_backboard_1: 'FF0000'
+    rgb_backboard_2: 'FF0000'
+    rgb_backboard_3: 'FF0000'
+    rgb_bad_schwartz_4: 'F90000'
+    rgb_bad_schwartz_5: '000000'
+    rgb_bad_schwartz_full: '000000'
+    rgb_good_schwartz_2: 'B20000'
+    rgb_good_schwartz_3: '000000'
+    rgb_i_can: 'FF0000'
+    rgb_r_can: 'FF0000'
+    
+- time: '+1'
+  lights:
+    rgb_bad_schwartz_3: 'EC0000'
+    rgb_bad_schwartz_4: '000000'
+    rgb_good_schwartz_2: '000000'
+    rgb_insignia_6: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_bad_schwartz_3: '000000'
+    rgb_good_schwartz_1: '000000'
+    rgb_insignia_5: '000000'
+    rgb_pop_bottom_right_a: '000000'
+    rgb_pop_bottom_right_b: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_bad_schwartz_1: 'D10000'
+    rgb_bad_schwartz_2: '000000'
+    rgb_insignia_4: '000000'
+    rgb_right_inlane: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_bad_schwartz_1: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_insignia_1: '780000'
+    rgb_insignia_3: '660000'
+    rgb_left_inlane: '000000'
+    rgb_pop_top_middle_a: '010000'
+    
+- time: '+1'
+  lights:
+    rgb_insignia_1: '000000'
+    rgb_insignia_2: '000000'
+    rgb_insignia_3: '000000'
+    rgb_pop_top_middle_a: '000000'
+    rgb_pop_top_middle_b: '000000'
+    rgb_shooter_arrow_3: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    rgb_shooter_arrow_2: '130000'
+    
+- time: '+1'
+  lights:
+    rgb_shooter_arrow_2: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    rgb_extra_ball: '1F0000'
+    rgb_right_outlane: 'A40000'
+    rgb_shooter_arrow_1: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_a_lane: '000000'
+    rgb_extra_ball: '000000'
+    rgb_i_lane: '210000'
+    rgb_right_outlane: '000000'
+    
+- time: '+1'
+  lights:
+    rgb_i_lane: '000000'
+    rgb_left_outlane: 'A20000'
+    

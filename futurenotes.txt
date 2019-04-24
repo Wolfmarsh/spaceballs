@@ -1,0 +1,4 @@
+High scores
+- potentially add a scrolling list of the top X high scores, like 50
+- potentially add a list of lowest scores
+

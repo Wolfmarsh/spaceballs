@@ -1,0 +1,1018 @@
+#show_version=5
+- time: 0
+  lights:
+    rgb_insignia_1: 00ff00-f200ms
+    rgb_right_inlane: ff0000-f100ms
+    rgb_left_inlane: ff0000-f100ms
+
+    rgb_right_outlane: 000000-f100ms
+    rgb_left_outlane: 000000-f100ms
+
+    rgb_scoop_arrow_1: 00ffff-f100ms
+    rgb_scoop_arrow_2: 000000-f100ms
+
+    rgb_right_orbit_arrow_1: 00ff77-f100ms
+    rgb_right_orbit_arrow_2: 00ff77-f100ms
+    rgb_left_orbit_arrow_1: 00ff77-f100ms
+    rgb_left_orbit_arrow_2: 00ff77-f100ms
+
+    rgb_center_target_circle: ffffff-f100ms
+
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
+    rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
+
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
+
+    rgb_a_lane: 00ff00-f100ms
+    rgb_a_can: ffffff-f100ms
+    rgb_shooter_arrow_1: 00ff00-f100ms
+    rgb_sbone_bottom_left_arrow: 00ff00-f100ms
+    
+    rgb_drop_3: 0000ff-f50ms
+    
+    rgb_ramplevel_1: 00ff00-f100ms
+    
+    rgb_schwartzlevel_1: ffffff-f50ms
+
+
+
+- time: '+1'
+  lights:
+    rgb_insignia_1: 000000-f200ms
+    rgb_insignia_2: 00ff00-f200ms
+    rgb_right_inlane: 000000-f100ms
+    rgb_left_inlane: 000000-f100ms
+
+    rgb_right_outlane: ff0000-f100ms
+    rgb_left_outlane: ff0000-f100ms
+
+    rgb_scoop_arrow_1: 000000-f100ms
+    rgb_scoop_arrow_2: 00ffff-f100ms
+
+    rgb_right_orbit_arrow_1: 000000-f100ms
+    rgb_right_orbit_arrow_2: ff0000-f100ms
+    rgb_left_orbit_arrow_1: 000000-f100ms
+    rgb_left_orbit_arrow_2: ff0000-f100ms
+
+    rgb_center_target_circle: 000000-f100ms
+
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
+    rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms
+
+    rgb_a_lane: 000000-f100ms
+    rgb_i_lane: 00ff00-f100ms
+    rgb_a_can: 000000-f100ms
+    rgb_i_can: ffffff-f100ms
+    rgb_shooter_arrow_2: 00ff00-f100ms
+    rgb_sbone_bottom_right_arrow: 00ff00-f100ms
+    
+    rgb_drop_3: 000000-f50ms
+    rgb_drop_2: 0000ff-f50ms
+    rgb_drop_4: 0000ff-f50ms
+    
+    rgb_ramplevel_2: ffff00-f100ms
+    
+    rgb_schwartzlevel_2: ffffff-f50ms
+    
+
+- time: '+1'
+  lights:
+    rgb_insignia_2: 000000-f200ms
+    rgb_insignia_3: 00ff00-f200ms
+    rgb_right_inlane: ff0000-f100ms
+    rgb_left_inlane: ff0000-f100ms
+
+    rgb_right_outlane: 000000-f100ms
+    rgb_left_outlane: 000000-f100ms
+
+    rgb_scoop_arrow_1: 00ffff-f100ms
+    rgb_scoop_arrow_2: 000000-f100ms
+
+    rgb_right_orbit_arrow_1: 00ff77-f100ms
+    rgb_right_orbit_arrow_2: 00ff77-f100ms
+    rgb_left_orbit_arrow_1: 00ff77-f100ms
+    rgb_left_orbit_arrow_2: 00ff77-f100ms
+
+    rgb_center_target_circle: ffffff-f100ms
+
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
+    rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
+
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
+    
+    rgb_i_lane: 000000-f100ms
+    rgb_r_lane: 00ff00-f100ms
+    rgb_i_can: 000000-f100ms
+    rgb_r_can: ffffff-f100ms
+    rgb_shooter_arrow_3: 00ff00-f100ms
+    rgb_sbone_top_arrow: 00ff00-f100ms
+    
+    rgb_drop_2: 000000-f50ms
+    rgb_drop_4: 000000-f50ms
+    rgb_drop_1: 0000ff-f50ms
+    rgb_drop_5: 0000ff-f50ms
+    
+    rgb_ramplevel_3: ff0000-f100ms
+    
+    rgb_schwartzlevel_3: ffffff-f50ms
+
+- time: '+1'
+  lights:
+    rgb_insignia_3: 000000-f200ms
+    rgb_insignia_4: 00ff00-f200ms
+    rgb_right_inlane: 000000-f100ms
+    rgb_left_inlane: 000000-f100ms
+
+    rgb_right_outlane: ff0000-f100ms
+    rgb_left_outlane: ff0000-f100ms
+
+    rgb_scoop_arrow_1: 000000-f100ms
+    rgb_scoop_arrow_2: 00ffff-f100ms
+
+    rgb_right_orbit_arrow_1: 000000-f100ms
+    rgb_right_orbit_arrow_2: ff0000-f100ms
+    rgb_left_orbit_arrow_1: 000000-f100ms
+    rgb_left_orbit_arrow_2: ff0000-f100ms
+
+    rgb_center_target_circle: 000000-f100ms
+
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
+    rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms
+
+    rgb_r_lane: 000000-f100ms
+    rgb_r_can: 000000-f100ms
+    rgb_shooter_arrow_1: 000000-f100ms
+    rgb_shooter_arrow_2: 000000-f100ms
+    rgb_shooter_arrow_3: 000000-f100ms
+    rgb_sbone_bottom_left_arrow: 000000-f100ms
+    rgb_sbone_bottom_right_arrow: 000000-f100ms
+    rgb_sbone_top_arrow: 000000-f100ms
+    
+    rgb_drop_1: 000000-f50ms
+    rgb_drop_5: 000000-f50ms
+    
+    rgb_ramplevel_4: ff007f-f100ms
+    
+    rgb_schwartzlevel_4: ffffff-f50ms
+    
+
+- time: '+1'
+  lights:
+    rgb_insignia_4: 000000-f200ms
+    rgb_insignia_5: 00ff00-f200ms
+    rgb_right_inlane: ff0000-f100ms
+    rgb_left_inlane: ff0000-f100ms
+
+    rgb_right_outlane: 000000-f100ms
+    rgb_left_outlane: 000000-f100ms
+
+    rgb_scoop_arrow_1: 00ffff-f100ms
+    rgb_scoop_arrow_2: 000000-f100ms
+
+    rgb_right_orbit_arrow_1: 00ff77-f100ms
+    rgb_right_orbit_arrow_2: 00ff77-f100ms
+    rgb_left_orbit_arrow_1: 00ff77-f100ms
+    rgb_left_orbit_arrow_2: 00ff77-f100ms
+
+    rgb_center_target_circle: ffffff-f100ms
+
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
+    rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
+
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
+    
+    rgb_a_lane: 00ff00-f100ms
+    rgb_a_can: ffffff-f100ms
+    rgb_shooter_arrow_1: 00ff00-f100ms
+    rgb_sbone_bottom_left_arrow: 00ff00-f100ms
+    
+    rgb_drop_5: 00ffff-f50ms
+    
+    rgb_ramplevel_1: 000000-f100ms
+    
+    rgb_schwartzlevel_5: ffffff-f50ms
+
+- time: '+1'
+  lights:
+    rgb_insignia_5: 000000-f200ms
+    rgb_insignia_6: 00ff00-f200ms
+    rgb_right_inlane: 000000-f100ms
+    rgb_left_inlane: 000000-f100ms
+
+    rgb_right_outlane: ff0000-f100ms
+    rgb_left_outlane: ff0000-f100ms
+
+    rgb_scoop_arrow_1: 000000-f100ms
+    rgb_scoop_arrow_2: 00ffff-f100ms
+
+    rgb_right_orbit_arrow_1: 000000-f100ms
+    rgb_right_orbit_arrow_2: ff0000-f100ms
+    rgb_left_orbit_arrow_1: 000000-f100ms
+    rgb_left_orbit_arrow_2: ff0000-f100ms
+
+    rgb_center_target_circle: 000000-f100ms
+
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
+    rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms
+    
+    rgb_a_lane: 000000-f100ms
+    rgb_i_lane: 00ff00-f100ms
+    rgb_a_can: 000000-f100ms
+    rgb_i_can: ffffff-f100ms
+    rgb_shooter_arrow_2: 00ff00-f100ms
+    rgb_sbone_bottom_right_arrow: 00ff00-f100ms
+    
+    rgb_drop_5: 000000-f50ms
+    rgb_drop_4: 00ffff-f50ms
+    
+    rgb_ramplevel_2: 000000-f100ms
+    
+    rgb_schwartzlevel_6: ffffff-f50ms
+    
+
+- time: '+1'
+  lights:
+    rgb_insignia_6: 000000-f200ms
+    rgb_insignia_7: 00ff00-f200ms
+    rgb_right_inlane: ff0000-f100ms
+    rgb_left_inlane: ff0000-f100ms
+
+    rgb_right_outlane: 000000-f100ms
+    rgb_left_outlane: 000000-f100ms
+
+    rgb_scoop_arrow_1: 00ffff-f100ms
+    rgb_scoop_arrow_2: 000000-f100ms
+
+    rgb_right_orbit_arrow_1: 00ff77-f100ms
+    rgb_right_orbit_arrow_2: 00ff77-f100ms
+    rgb_left_orbit_arrow_1: 00ff77-f100ms
+    rgb_left_orbit_arrow_2: 00ff77-f100ms
+
+    rgb_center_target_circle: ffffff-f100ms
+
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
+    rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
+
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
+    
+    rgb_i_lane: 000000-f100ms
+    rgb_r_lane: 00ff00-f100ms
+    rgb_i_can: 000000-f100ms
+    rgb_r_can: ffffff-f100ms
+    rgb_shooter_arrow_3: 00ff00-f100ms
+    rgb_sbone_top_arrow: 00ff00-f100ms
+    
+    rgb_drop_4: 000000-f50ms
+    rgb_drop_3: 00ffff-f50ms
+    
+    rgb_ramplevel_3: 000000-f100ms
+    
+    rgb_schwartzlevel_6: 000000-f50ms
+
+- time: '+1'
+  lights:
+    rgb_insignia_7: 000000-f200ms
+    rgb_insignia_8: 00ff00-f200ms
+    rgb_right_inlane: 000000-f100ms
+    rgb_left_inlane: 000000-f100ms
+
+    rgb_right_outlane: ff0000-f100ms
+    rgb_left_outlane: ff0000-f100ms
+
+    rgb_scoop_arrow_1: 000000-f100ms
+    rgb_scoop_arrow_2: 00ffff-f100ms
+
+    rgb_right_orbit_arrow_1: 000000-f100ms
+    rgb_right_orbit_arrow_2: ff0000-f100ms
+    rgb_left_orbit_arrow_1: 000000-f100ms
+    rgb_left_orbit_arrow_2: ff0000-f100ms
+
+    rgb_center_target_circle: 000000-f100ms
+
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
+    rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms
+
+    rgb_r_lane: 000000-f100ms
+    rgb_r_can: 000000-f100ms
+    rgb_shooter_arrow_1: 000000-f100ms
+    rgb_shooter_arrow_2: 000000-f100ms
+    rgb_shooter_arrow_3: 000000-f100ms
+    rgb_sbone_bottom_left_arrow: 000000-f100ms
+    rgb_sbone_bottom_right_arrow: 000000-f100ms
+    rgb_sbone_top_arrow: 000000-f100ms
+    
+    rgb_drop_3: 000000-f50ms
+    rgb_drop_2: 00ffff-f50ms
+    
+    rgb_ramplevel_4: 000000-f100ms
+    
+    rgb_schwartzlevel_5: 000000-f50ms
+    
+
+- time: '+1'
+  lights:
+    rgb_insignia_8: 000000-f200ms
+    rgb_insignia_9: 00ff00-f200ms
+    rgb_right_inlane: ff0000-f100ms
+    rgb_left_inlane: ff0000-f100ms
+
+    rgb_right_outlane: 000000-f100ms
+    rgb_left_outlane: 000000-f100ms
+
+    rgb_scoop_arrow_1: 00ffff-f100ms
+    rgb_scoop_arrow_2: 000000-f100ms
+
+    rgb_right_orbit_arrow_1: 00ff77-f100ms
+    rgb_right_orbit_arrow_2: 00ff77-f100ms
+    rgb_left_orbit_arrow_1: 00ff77-f100ms
+    rgb_left_orbit_arrow_2: 00ff77-f100ms
+
+    rgb_center_target_circle: ffffff-f100ms
+
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
+    rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
+
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
+
+    rgb_a_lane: 00ff00-f100ms
+    rgb_a_can: ffffff-f100ms
+    rgb_shooter_arrow_1: 00ff00-f100ms
+    rgb_sbone_bottom_left_arrow: 00ff00-f100ms
+    
+    rgb_drop_2: 000000-f50ms
+    rgb_drop_1: 00ffff-f50ms
+    
+    rgb_ramplevel_1: 00ff00-f100ms
+    
+    rgb_schwartzlevel_4: 000000-f50ms
+
+- time: '+1'
+  lights:
+    rgb_insignia_9: 000000-f200ms
+    rgb_right_inlane: 000000-f100ms
+    rgb_left_inlane: 000000-f100ms
+
+    rgb_right_outlane: ff0000-f100ms
+    rgb_left_outlane: ff0000-f100ms
+
+    rgb_scoop_arrow_1: 000000-f100ms
+    rgb_scoop_arrow_2: 00ffff-f100ms
+
+    rgb_right_orbit_arrow_1: 000000-f100ms
+    rgb_right_orbit_arrow_2: ff0000-f100ms
+    rgb_left_orbit_arrow_1: 000000-f100ms
+    rgb_left_orbit_arrow_2: ff0000-f100ms
+
+    rgb_center_target_circle: 000000-f100ms
+
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
+    rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms
+    
+    rgb_a_lane: 000000-f100ms
+    rgb_i_lane: 00ff00-f100ms
+    rgb_a_can: 000000-f100ms
+    rgb_i_can: ffffff-f100ms
+    rgb_shooter_arrow_2: 00ff00-f100ms
+    rgb_sbone_bottom_right_arrow: 00ff00-f100ms
+    
+    rgb_drop_1: 000000-f50ms
+    rgb_drop_2: 00ffff-f50ms
+    
+    rgb_ramplevel_2: ffff00-f100ms
+    
+    rgb_schwartzlevel_3: 000000-f50ms
+    
+
+- time: '+1'
+  lights:
+    rgb_insignia_9: ff0000-f200ms
+    rgb_right_inlane: ff0000-f100ms
+    rgb_left_inlane: ff0000-f100ms
+
+    rgb_right_outlane: 000000-f100ms
+    rgb_left_outlane: 000000-f100ms
+
+    rgb_scoop_arrow_1: 00ffff-f100ms
+    rgb_scoop_arrow_2: 000000-f100ms
+
+    rgb_right_orbit_arrow_1: 00ff77-f100ms
+    rgb_right_orbit_arrow_2: 00ff77-f100ms
+    rgb_left_orbit_arrow_1: 00ff77-f100ms
+    rgb_left_orbit_arrow_2: 00ff77-f100ms
+
+    rgb_center_target_circle: ffffff-f100ms
+
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
+    rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
+
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
+    
+    rgb_i_lane: 000000-f100ms
+    rgb_r_lane: 00ff00-f100ms
+    rgb_i_can: 000000-f100ms
+    rgb_r_can: ffffff-f100ms
+    rgb_shooter_arrow_3: 00ff00-f100ms
+    rgb_sbone_top_arrow: 00ff00-f100ms
+    
+    rgb_drop_2: 000000-f50ms
+    rgb_drop_3: 00ffff-f50ms
+    
+    rgb_ramplevel_3: ff0000-f100ms
+    
+    rgb_schwartzlevel_2: 000000-f50ms
+
+- time: '+1'
+  lights:
+    rgb_insignia_9: 000000-f200ms
+    rgb_insignia_8: ff0000-f200ms
+    rgb_right_inlane: 000000-f100ms
+    rgb_left_inlane: 000000-f100ms
+
+    rgb_right_outlane: ff0000-f100ms
+    rgb_left_outlane: ff0000-f100ms
+
+    rgb_scoop_arrow_1: 000000-f100ms
+    rgb_scoop_arrow_2: 00ffff-f100ms
+
+    rgb_right_orbit_arrow_1: 000000-f100ms
+    rgb_right_orbit_arrow_2: ff0000-f100ms
+    rgb_left_orbit_arrow_1: 000000-f100ms
+    rgb_left_orbit_arrow_2: ff0000-f100ms
+
+    rgb_center_target_circle: 000000-f100ms
+
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
+    rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms
+    
+    rgb_r_lane: 000000-f100ms
+    rgb_r_can: 000000-f100ms
+    rgb_shooter_arrow_1: 000000-f100ms
+    rgb_shooter_arrow_2: 000000-f100ms
+    rgb_shooter_arrow_3: 000000-f100ms
+    rgb_sbone_bottom_left_arrow: 000000-f100ms
+    rgb_sbone_bottom_right_arrow: 000000-f100ms
+    rgb_sbone_top_arrow: 000000-f100ms
+    
+    rgb_drop_3: 000000-f50ms
+    rgb_drop_4: 00ffff-f50ms
+    
+    rgb_ramplevel_4: ff007f-f100ms
+    
+    rgb_schwartzlevel_1: 000000-f50ms
+    
+
+- time: '+1'
+  lights:
+    rgb_insignia_8: 000000-f200ms
+    rgb_insignia_7: ff0000-f200ms
+    rgb_right_inlane: ff0000-f100ms
+    rgb_left_inlane: ff0000-f100ms
+
+    rgb_right_outlane: 000000-f100ms
+    rgb_left_outlane: 000000-f100ms
+
+    rgb_scoop_arrow_1: 00ffff-f100ms
+    rgb_scoop_arrow_2: 000000-f100ms
+
+    rgb_right_orbit_arrow_1: 00ff77-f100ms
+    rgb_right_orbit_arrow_2: 00ff77-f100ms
+    rgb_left_orbit_arrow_1: 00ff77-f100ms
+    rgb_left_orbit_arrow_2: 00ff77-f100ms
+
+    rgb_center_target_circle: ffffff-f100ms
+
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
+    rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
+
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
+    
+    rgb_a_lane: 00ff00-f100ms
+    rgb_a_can: ffffff-f100ms
+    rgb_shooter_arrow_1: 00ff00-f100ms
+    rgb_sbone_bottom_left_arrow: 00ff00-f100ms
+    
+    rgb_drop_4: 000000-f50ms
+    rgb_drop_5: 00ffff-f50ms
+    
+    rgb_ramplevel_1: 000000-f100ms
+
+- time: '+1'
+  lights:
+    rgb_insignia_7: 000000-f200ms
+    rgb_insignia_6: ff0000-f200ms
+    rgb_right_inlane: 000000-f100ms
+    rgb_left_inlane: 000000-f100ms
+
+    rgb_right_outlane: ff0000-f100ms
+    rgb_left_outlane: ff0000-f100ms
+
+    rgb_scoop_arrow_1: 000000-f100ms
+    rgb_scoop_arrow_2: 00ffff-f100ms
+
+    rgb_right_orbit_arrow_1: 000000-f100ms
+    rgb_right_orbit_arrow_2: ff0000-f100ms
+    rgb_left_orbit_arrow_1: 000000-f100ms
+    rgb_left_orbit_arrow_2: ff0000-f100ms
+
+    rgb_center_target_circle: 000000-f100ms
+
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
+    rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms
+    
+    rgb_a_lane: 000000-f100ms
+    rgb_i_lane: 00ff00-f100ms
+    rgb_a_can: 000000-f100ms
+    rgb_i_can: ffffff-f100ms
+    rgb_shooter_arrow_2: 00ff00-f100ms
+    rgb_sbone_bottom_right_arrow: 00ff00-f100ms
+    
+    rgb_drop_5: 000000-f50ms
+    
+    rgb_ramplevel_2: 000000-f100ms
+    
+    rgb_schwartzlevel_1: ffffff-f50ms
+    rgb_schwartzlevel_2: ffffff-f50ms
+    rgb_schwartzlevel_3: ffffff-f50ms
+    rgb_schwartzlevel_4: ffffff-f50ms
+    rgb_schwartzlevel_5: ffffff-f50ms
+    rgb_schwartzlevel_6: ffffff-f50ms
+
+- time: '+1'
+  lights:
+    rgb_insignia_6: 000000-f200ms
+    rgb_insignia_5: ff0000-f200ms
+    rgb_right_inlane: ff0000-f100ms
+    rgb_left_inlane: ff0000-f100ms
+
+    rgb_right_outlane: 000000-f100ms
+    rgb_left_outlane: 000000-f100ms
+
+    rgb_scoop_arrow_1: 00ffff-f100ms
+    rgb_scoop_arrow_2: 000000-f100ms
+
+    rgb_right_orbit_arrow_1: 00ff77-f100ms
+    rgb_right_orbit_arrow_2: 00ff77-f100ms
+    rgb_left_orbit_arrow_1: 00ff77-f100ms
+    rgb_left_orbit_arrow_2: 00ff77-f100ms
+
+    rgb_center_target_circle: ffffff-f100ms
+
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
+    rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
+
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
+    
+    rgb_i_lane: 000000-f100ms
+    rgb_r_lane: 00ff00-f100ms
+    rgb_i_can: 000000-f100ms
+    rgb_r_can: ffffff-f100ms
+    rgb_shooter_arrow_3: 00ff00-f100ms
+    rgb_sbone_top_arrow: 00ff00-f100ms
+    
+    rgb_ramplevel_3: 000000-f100ms
+    
+    rgb_schwartzlevel_1: 000000-f50ms
+    rgb_schwartzlevel_2: 000000-f50ms
+    rgb_schwartzlevel_3: 000000-f50ms
+    rgb_schwartzlevel_4: 000000-f50ms
+    rgb_schwartzlevel_5: 000000-f50ms
+    rgb_schwartzlevel_6: 000000-f50ms
+    
+
+- time: '+1'
+  lights:
+    rgb_insignia_5: 000000-f200ms
+    rgb_insignia_4: ff0000-f200ms
+    rgb_right_inlane: 000000-f100ms
+    rgb_left_inlane: 000000-f100ms
+
+    rgb_right_outlane: ff0000-f100ms
+    rgb_left_outlane: ff0000-f100ms
+
+    rgb_scoop_arrow_1: 000000-f100ms
+    rgb_scoop_arrow_2: 00ffff-f100ms
+
+    rgb_right_orbit_arrow_1: 000000-f100ms
+    rgb_right_orbit_arrow_2: ff0000-f100ms
+    rgb_left_orbit_arrow_1: 000000-f100ms
+    rgb_left_orbit_arrow_2: ff0000-f100ms
+
+    rgb_center_target_circle: 000000-f100ms
+
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
+    rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms
+    
+    rgb_r_lane: 000000-f100ms
+    rgb_r_can: 000000-f100ms
+    rgb_shooter_arrow_1: 000000-f100ms
+    rgb_shooter_arrow_2: 000000-f100ms
+    rgb_shooter_arrow_3: 000000-f100ms
+    rgb_sbone_bottom_left_arrow: 000000-f100ms
+    rgb_sbone_bottom_right_arrow: 000000-f100ms
+    rgb_sbone_top_arrow: 000000-f100ms
+    
+    rgb_ramplevel_4: 000000-f100ms
+    
+    rgb_schwartzlevel_1: ffffff-f50ms
+    rgb_schwartzlevel_2: ffffff-f50ms
+    rgb_schwartzlevel_3: ffffff-f50ms
+    rgb_schwartzlevel_4: ffffff-f50ms
+    rgb_schwartzlevel_5: ffffff-f50ms
+    rgb_schwartzlevel_6: ffffff-f50ms    
+    
+
+- time: '+1'
+  lights:
+    rgb_insignia_4: 000000-f200ms
+    rgb_insignia_3: ff0000-f200ms
+    rgb_right_inlane: ff0000-f100ms
+    rgb_left_inlane: ff0000-f100ms
+
+    rgb_right_outlane: 000000-f100ms
+    rgb_left_outlane: 000000-f100ms
+
+    rgb_scoop_arrow_1: 00ffff-f100ms
+    rgb_scoop_arrow_2: 000000-f100ms
+
+    rgb_right_orbit_arrow_1: 00ff77-f100ms
+    rgb_right_orbit_arrow_2: 00ff77-f100ms
+    rgb_left_orbit_arrow_1: 00ff77-f100ms
+    rgb_left_orbit_arrow_2: 00ff77-f100ms
+
+    rgb_center_target_circle: ffffff-f100ms
+
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
+    rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
+
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
+    
+    rgb_a_lane: 00ff00-f100ms
+    rgb_a_can: ffffff-f100ms
+    rgb_shooter_arrow_1: 00ff00-f100ms
+    rgb_sbone_bottom_left_arrow: 00ff00-f100ms
+    
+    rgb_schwartzlevel_1: 000000-f50ms
+    rgb_schwartzlevel_2: 000000-f50ms
+    rgb_schwartzlevel_3: 000000-f50ms
+    rgb_schwartzlevel_4: 000000-f50ms
+    rgb_schwartzlevel_5: 000000-f50ms
+    rgb_schwartzlevel_6: 000000-f50ms
+    
+
+- time: '+1'
+  lights:
+    rgb_insignia_3: 000000-f200ms
+    rgb_insignia_2: ff0000-f200ms
+    rgb_right_inlane: 000000-f100ms
+    rgb_left_inlane: 000000-f100ms
+
+    rgb_right_outlane: ff0000-f100ms
+    rgb_left_outlane: ff0000-f100ms
+
+    rgb_scoop_arrow_1: 000000-f100ms
+    rgb_scoop_arrow_2: 00ffff-f100ms
+
+    rgb_right_orbit_arrow_1: 000000-f100ms
+    rgb_right_orbit_arrow_2: ff0000-f100ms
+    rgb_left_orbit_arrow_1: 000000-f100ms
+    rgb_left_orbit_arrow_2: ff0000-f100ms
+
+    rgb_center_target_circle: 000000-f100ms
+
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
+    rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms
+    
+    rgb_a_lane: 000000-f100ms
+    rgb_i_lane: 00ff00-f100ms
+    rgb_a_can: 000000-f100ms
+    rgb_i_can: ffffff-f100ms
+    rgb_shooter_arrow_2: 00ff00-f100ms
+    rgb_sbone_bottom_right_arrow: 00ff00-f100ms
+    
+    rgb_ramplevel_1: ffffff-f100ms
+    rgb_ramplevel_2: ffffff-f100ms
+    rgb_ramplevel_3: ffffff-f100ms
+    rgb_ramplevel_4: ffffff-f100ms
+    
+    rgb_schwartzlevel_1: ffffff-f50ms
+    rgb_schwartzlevel_2: ffffff-f50ms
+    rgb_schwartzlevel_3: ffffff-f50ms
+    rgb_schwartzlevel_4: ffffff-f50ms
+    rgb_schwartzlevel_5: ffffff-f50ms
+    rgb_schwartzlevel_6: ffffff-f50ms    
+
+- time: '+1'
+  lights:
+    rgb_insignia_2: 000000-f200ms
+    rgb_insignia_1: ff0000-f200ms
+    rgb_right_inlane: ff0000-f100ms
+    rgb_left_inlane: ff0000-f100ms
+
+    rgb_right_outlane: 000000-f100ms
+    rgb_left_outlane: 000000-f100ms
+
+    rgb_scoop_arrow_1: 00ffff-f100ms
+    rgb_scoop_arrow_2: 000000-f100ms
+
+    rgb_right_orbit_arrow_1: 00ff77-f100ms
+    rgb_right_orbit_arrow_2: 00ff77-f100ms
+    rgb_left_orbit_arrow_1: 00ff77-f100ms
+    rgb_left_orbit_arrow_2: 00ff77-f100ms
+
+    rgb_center_target_circle: ffffff-f100ms
+
+    rgb_sbone_right_target_arrow: ff0000-f100ms
+    rgb_sbone_left_target_arrow: 000000-f100ms
+    rgb_extra_ball: ffbb00-f100ms
+    
+    rgb_backboard_1: ffffff-f25ms
+    rgb_backboard_3: ffffff-f25ms
+    rgb_backboard_5: ffffff-f25ms
+    rgb_backboard_7: ffffff-f25ms
+    rgb_backboard_9: ffffff-f25ms
+
+    rgb_backboard_2: 000000-f25ms
+    rgb_backboard_4: 000000-f25ms
+    rgb_backboard_6: 000000-f25ms
+    rgb_backboard_8: 000000-f25ms
+    rgb_backboard_10: 000000-f25ms
+    
+    rgb_i_lane: 000000-f100ms
+    rgb_r_lane: 00ff00-f100ms
+    rgb_i_can: 000000-f100ms
+    rgb_r_can: ffffff-f100ms
+    rgb_shooter_arrow_3: 00ff00-f100ms
+    rgb_sbone_top_arrow: 00ff00-f100ms
+    
+    rgb_schwartzlevel_1: 000000-f50ms
+    rgb_schwartzlevel_2: 000000-f50ms
+    rgb_schwartzlevel_3: 000000-f50ms
+    rgb_schwartzlevel_4: 000000-f50ms
+    rgb_schwartzlevel_5: 000000-f50ms
+    rgb_schwartzlevel_6: 000000-f50ms
+
+    
+- time: '+1'
+  lights:
+    rgb_insignia_1: 000000-f200ms
+    rgb_right_inlane: 000000-f100ms
+    rgb_left_inlane: 000000-f100ms
+
+    rgb_right_outlane: ff0000-f100ms
+    rgb_left_outlane: ff0000-f100ms
+
+    rgb_scoop_arrow_1: 000000-f100ms
+    rgb_scoop_arrow_2: 00ffff-f100ms
+
+    rgb_right_orbit_arrow_1: 000000-f100ms
+    rgb_right_orbit_arrow_2: ff0000-f100ms
+    rgb_left_orbit_arrow_1: 000000-f100ms
+    rgb_left_orbit_arrow_2: ff0000-f100ms
+
+    rgb_center_target_circle: 000000-f100ms
+
+    rgb_sbone_right_target_arrow: 000000-f100ms
+    rgb_sbone_left_target_arrow: ff0000-f100ms
+    rgb_extra_ball: 000000-f100ms
+    
+    rgb_backboard_2: ffffff-f25ms
+    rgb_backboard_4: ffffff-f25ms
+    rgb_backboard_6: ffffff-f25ms
+    rgb_backboard_8: ffffff-f25ms
+    rgb_backboard_10: ffffff-f25ms
+
+    rgb_backboard_1: 000000-f25ms
+    rgb_backboard_3: 000000-f25ms
+    rgb_backboard_5: 000000-f25ms
+    rgb_backboard_7: 000000-f25ms
+    rgb_backboard_9: 000000-f25ms
+    
+    rgb_r_lane: 000000-f100ms
+    rgb_r_can: 000000-f100ms
+    rgb_shooter_arrow_1: 000000-f100ms
+    rgb_shooter_arrow_2: 000000-f100ms
+    rgb_shooter_arrow_3: 000000-f100ms
+    rgb_sbone_bottom_left_arrow: 000000-f100ms
+    rgb_sbone_bottom_right_arrow: 000000-f100ms
+    rgb_sbone_top_arrow: 000000-f100ms
+
+    rgb_ramplevel_1: 000000-f100ms
+    rgb_ramplevel_2: 000000-f100ms
+    rgb_ramplevel_3: 000000-f100ms
+    rgb_ramplevel_4: 000000-f100ms

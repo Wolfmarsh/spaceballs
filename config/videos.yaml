@@ -8,8 +8,10 @@ assets:
 videos:
   introcrawl:
     file: IntroCrawl.mp4
+    events_when_stopped: attract_video_stopped
   introship:
     file: IntroShip.mp4
+    events_when_stopped: attract_video_stopped
   airlock_king_one:
     file: Airlock_Combination_1_King.mp4
   airlock_king_two:

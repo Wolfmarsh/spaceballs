@@ -1,5 +1,128 @@
 #config_version=5
 
+event_player:
+  mode_attract_started: play_main_attract_light_show, play_attract_lcd_slide, play_attract_dmd_slide_1, start_attract_random_video_play_timer
+  play_attract_dmd_slide_1: start_dmd_slide_cycle_timer
+  play_attract_dmd_slide_2: start_dmd_slide_cycle_timer, dmd_slide_cycle_timer_gimme_two_more_seconds|20ms
+  play_attract_dmd_slide_3: start_dmd_slide_cycle_timer
+  play_attract_dmd_slide_4: start_dmd_slide_cycle_timer
+  play_attract_dmd_slide_5: start_dmd_slide_cycle_timer
+  play_attract_dmd_slide_6: start_dmd_slide_cycle_timer, dmd_slide_cycle_timer_gimme_two_more_seconds|20ms
+  play_attract_dmd_slide_7: start_dmd_slide_cycle_timer, dmd_slide_cycle_timer_gimme_one_more_second|20ms
+  play_attract_dmd_slide_8: start_dmd_slide_cycle_timer, dmd_slide_cycle_timer_gimme_one_more_second|20ms
+  play_attract_dmd_slide_9: start_dmd_slide_cycle_timer, dmd_slide_cycle_timer_gimme_one_more_second|20ms
+  play_attract_dmd_slide_10: start_dmd_slide_cycle_timer, dmd_slide_cycle_timer_gimme_one_more_second|20ms
+  timer_attract_dmd_slide_cycle_timer_complete: play_next_attract_dmd_slide_right
+  play_next_attract_dmd_slide_right{machine.current_attract_dmd_slide==1}: play_attract_dmd_slide_2
+  play_next_attract_dmd_slide_right{machine.current_attract_dmd_slide==2}: play_attract_dmd_slide_3
+  play_next_attract_dmd_slide_right{machine.current_attract_dmd_slide==3}: play_attract_dmd_slide_4
+  play_next_attract_dmd_slide_right{machine.current_attract_dmd_slide==4}: play_attract_dmd_slide_5
+  play_next_attract_dmd_slide_right{machine.current_attract_dmd_slide==5}: play_attract_dmd_slide_6
+  play_next_attract_dmd_slide_right{machine.current_attract_dmd_slide==6}: play_attract_dmd_slide_7
+  play_next_attract_dmd_slide_right{machine.current_attract_dmd_slide==7}: play_attract_dmd_slide_8
+  play_next_attract_dmd_slide_right{machine.current_attract_dmd_slide==8}: play_attract_dmd_slide_9
+  play_next_attract_dmd_slide_right{machine.current_attract_dmd_slide==9}: play_attract_dmd_slide_10
+  play_next_attract_dmd_slide_right{machine.current_attract_dmd_slide==10}: play_attract_dmd_slide_1
+  play_next_attract_dmd_slide_left{machine.current_attract_dmd_slide==1}: play_attract_dmd_slide_10
+  play_next_attract_dmd_slide_left{machine.current_attract_dmd_slide==2}: play_attract_dmd_slide_1
+  play_next_attract_dmd_slide_left{machine.current_attract_dmd_slide==3}: play_attract_dmd_slide_2
+  play_next_attract_dmd_slide_left{machine.current_attract_dmd_slide==4}: play_attract_dmd_slide_3
+  play_next_attract_dmd_slide_left{machine.current_attract_dmd_slide==5}: play_attract_dmd_slide_4
+  play_next_attract_dmd_slide_left{machine.current_attract_dmd_slide==6}: play_attract_dmd_slide_5
+  play_next_attract_dmd_slide_left{machine.current_attract_dmd_slide==7}: play_attract_dmd_slide_6
+  play_next_attract_dmd_slide_left{machine.current_attract_dmd_slide==8}: play_attract_dmd_slide_7
+  play_next_attract_dmd_slide_left{machine.current_attract_dmd_slide==9}: play_attract_dmd_slide_8
+  play_next_attract_dmd_slide_left{machine.current_attract_dmd_slide==10}: play_attract_dmd_slide_9
+  
+  s_right_flipper_active: play_next_attract_dmd_slide_right, display_lcd_high_score_attract_slide
+  s_left_flipper_active: play_next_attract_dmd_slide_left, display_lcd_high_score_attract_slide
+  timer_attract_random_video_play_timer_complete: play_random_attract_lcd_video
+  attract_video_stopped: start_attract_random_video_play_timer
+
+random_event_player:
+  play_random_attract_lcd_video:
+    scope: machine
+    events:
+      - play_attract_lcd_video_1
+      - play_attract_lcd_video_2
+  play_random_attract_light_show:
+    scope: machine
+    events:
+      - play_attract_light_show_1
+      - play_attract_light_show_2
+      - play_attract_light_show_3
+      - play_attract_light_show_4
+
+variable_player:
+  play_attract_dmd_slide_1:
+    current_attract_dmd_slide:
+      action: set_machine
+      int: 1
+  play_attract_dmd_slide_2:
+    current_attract_dmd_slide:
+      action: set_machine
+      int: 2
+  play_attract_dmd_slide_3:
+    current_attract_dmd_slide:
+      action: set_machine
+      int: 3
+  play_attract_dmd_slide_4:
+    current_attract_dmd_slide:
+      action: set_machine
+      int: 4
+  play_attract_dmd_slide_5:
+    current_attract_dmd_slide:
+      action: set_machine
+      int: 5
+  play_attract_dmd_slide_6:
+    current_attract_dmd_slide:
+      action: set_machine
+      int: 6
+  play_attract_dmd_slide_7:
+    current_attract_dmd_slide:
+      action: set_machine
+      int: 7
+  play_attract_dmd_slide_8:
+    current_attract_dmd_slide:
+      action: set_machine
+      int: 8
+  play_attract_dmd_slide_9:
+    current_attract_dmd_slide:
+      action: set_machine
+      int: 9
+  play_attract_dmd_slide_10:
+    current_attract_dmd_slide:
+      action: set_machine
+      int: 10
+   
+timers:
+  attract_random_video_play_timer:
+    start_value: 300
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: restart
+        event: start_attract_random_video_play_timer
+      - action: stop
+        event: stop_attract_random_video_play_timer
+  attract_dmd_slide_cycle_timer:
+    start_value: 2
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: restart
+        event: start_dmd_slide_cycle_timer
+      - action: add
+        event: dmd_slide_cycle_timer_gimme_one_more_second
+        value: 1
+      - action: add
+        event: dmd_slide_cycle_timer_gimme_two_more_seconds
+        value: 2
+      - action: stop
+        event: stop_dmd_slide_cycle_timer
+
 slide_player:
   dead_flip_code_successfully_activated:
     dead_flip_mode_activated:
@@ -10,15 +133,198 @@ slide_player:
       target: dmd
       expire: 2s
       priority: 1
-  mode_attract_started:
+  play_attract_lcd_slide:
     attract_tpbm_slide:
       target: lcd
   mode_attract_stopping:
     attract_tpbm_slide:
       target: lcd
       action: remove
+  display_lcd_high_score_attract_slide:
+    lcd_high_score_attract_slide:
+      target: lcd
+      expire: 4s
+  play_attract_dmd_slide_1:
+    attract_dmd_slide_1:
+      target: dmd
+  play_attract_dmd_slide_2:
+    attract_dmd_slide_2:
+      target: dmd
+      transition:
+         type: move_in
+         duration: 1s
+         direction: right
+  play_attract_dmd_slide_3:
+    attract_dmd_slide_3:
+      target: dmd
+  play_attract_dmd_slide_4:
+    attract_dmd_slide_4:
+      target: dmd
+  play_attract_dmd_slide_5:
+    attract_dmd_slide_5:
+      target: dmd
+  play_attract_dmd_slide_6:
+    attract_dmd_slide_6:
+      target: dmd
+  play_attract_dmd_slide_7:
+    attract_dmd_slide_7:
+      target: dmd
+  play_attract_dmd_slide_8:
+    attract_dmd_slide_8:
+      target: dmd
+  play_attract_dmd_slide_9:
+    attract_dmd_slide_9:
+      target: dmd
+  play_attract_dmd_slide_10:
+    attract_dmd_slide_10:
+      target: dmd
+  play_attract_lcd_video_1:
+    attract_lcd_video_1:
+      target: lcd
+  play_attract_lcd_video_2:
+    attract_lcd_video_2:
+      target: lcd
 
 slides:
+  attract_lcd_video_1:
+    widgets:
+      - type: video
+        video: introcrawl
+        width: 1280
+        height: 720
+  attract_lcd_video_2:
+    widgets:
+      - type: video
+        video: introship
+        width: 1280
+        height: 720
+  lcd_high_score_attract_slide:
+    widgets:
+      - type: text
+        text: SPACEBALLS
+        font_name: atrox
+        font_size: 160
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top - 5
+        color: white
+        z: 5
+      - type: text
+        text: THE HIGH SCORES
+        font_name: atrox
+        font_size: 100
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top - 130
+        color: white
+        z: 5
+      - type: text
+        text: (machine|score1_name)
+        font_name: atrox
+        font_size: 60
+        anchor_x: right
+        anchor_y: middle
+        x: middle - 300
+        y: top - 300
+        color: white
+        z: 5
+      - type: text
+        text: (machine|score1_value)
+        number_grouping: true
+        font_name: atrox
+        font_size: 60
+        anchor_x: left
+        anchor_y: middle
+        x: middle
+        y: top - 300
+        color: white
+        z: 5
+      - type: text
+        text: (machine|score2_name)
+        font_name: atrox
+        font_size: 60
+        anchor_x: right
+        anchor_y: middle
+        x: middle - 300
+        y: top - 380
+        color: white
+        z: 5
+      - type: text
+        text: (machine|score2_value)
+        number_grouping: true
+        font_name: atrox
+        font_size: 60
+        anchor_x: left
+        anchor_y: middle
+        x: middle
+        y: top - 380
+        color: white
+        z: 5
+      - type: text
+        text: (machine|score3_name)
+        font_name: atrox
+        font_size: 60
+        anchor_x: right
+        anchor_y: middle
+        x: middle - 300
+        y: top - 460
+        color: white
+        z: 5
+      - type: text
+        text: (machine|score3_value)
+        number_grouping: true
+        font_name: atrox
+        font_size: 60
+        anchor_x: left
+        anchor_y: middle
+        x: middle
+        y: top - 460
+        color: white
+        z: 5
+      - type: text
+        text: (machine|score4_name)
+        font_name: atrox
+        font_size: 60
+        anchor_x: right
+        anchor_y: middle
+        x: middle - 300
+        y: top - 540
+        color: white
+        z: 5
+      - type: text
+        text: (machine|score4_value)
+        number_grouping: true
+        font_name: atrox
+        font_size: 60
+        anchor_x: left
+        anchor_y: middle
+        x: middle
+        y: top - 540
+        color: white
+        z: 5
+      - type: text
+        text: (machine|score5_name)
+        font_name: atrox
+        font_size: 60
+        anchor_x: right
+        anchor_y: middle
+        x: middle - 300
+        y: top - 620
+        color: white
+        z: 5
+      - type: text
+        text: (machine|score5_value)
+        number_grouping: true
+        font_name: atrox
+        font_size: 60
+        anchor_x: left
+        anchor_y: middle
+        x: middle
+        y: top - 620
+        color: white
+        z: 5
   attract_tpbm_slide:
     widgets:
       - type: image
@@ -53,37 +359,202 @@ slides:
         width: 128
         height: 32
         color: bbbbbb
-
+  attract_dmd_slide_1:
+    widgets:
+      - type: image
+        image: sb_logo_1
+  attract_dmd_slide_2:
+    widgets:
+      - type: Text
+        text: PRESS START
+        style: dmd_xl
+        color: 0099ff
+        animations:
+          show_slide:
+            - property: opacity
+              value: 0.5
+              duration: .25s
+            - property: opacity
+              value: 1
+              duration: .5s
+              repeat: -1
+  attract_dmd_slide_3:
+    widgets:
+      - type: Text
+        text: POWERED BY
+        style: dmd_big
+        color: red
+  attract_dmd_slide_4:
+    widgets:
+      - type: image
+        image: mpf_logo
+  attract_dmd_slide_5:
+    widgets:
+      - type: image
+        image: fast_logo    
+  attract_dmd_slide_6:
+    widgets:
+      - type: text
+        text: GRAND CHAMPION
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top - 2
+        style: dmd_big
+        color: white
+      - type: text
+        text: (machine|score1_name)
+        anchor_x: left
+        anchor_y: bottom
+        x: left + 2
+        y: bottom + 2
+        style: dmd_big
+        color: white
+      - type: text
+        text: (machine|score1_value)
+        number_grouping: true
+        anchor_x: right
+        anchor_y: bottom
+        x: right - 2
+        y: bottom + 2
+        style: dmd_big
+        color: white
+  attract_dmd_slide_7:
+    widgets:
+      - type: text
+        text: HIGH SCORE 1
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top - 2
+        style: dmd_big
+        color: white
+      - type: text
+        text: (machine|score2_name)
+        anchor_x: left
+        anchor_y: bottom
+        x: left + 2
+        y: bottom + 2
+        style: dmd_big
+        color: white
+      - type: text
+        text: (machine|score2_value)
+        number_grouping: true
+        anchor_x: right
+        anchor_y: bottom
+        x: right - 2
+        y: bottom + 2
+        style: dmd_big
+        color: white
+  attract_dmd_slide_8:
+    widgets:
+      - type: text
+        text: HIGH SCORE 2
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top - 2
+        style: dmd_big
+        color: white
+      - type: text
+        text: (machine|score3_name)
+        anchor_x: left
+        anchor_y: bottom
+        x: left + 2
+        y: bottom + 2
+        style: dmd_big
+        color: white
+      - type: text
+        text: (machine|score3_value)
+        number_grouping: true
+        anchor_x: right
+        anchor_y: bottom
+        x: right - 2
+        y: bottom + 2
+        style: dmd_big
+        color: white
+  attract_dmd_slide_9:
+    widgets:
+      - type: text
+        text: HIGH SCORE 3
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top - 2
+        style: dmd_big
+        color: white
+      - type: text
+        text: (machine|score4_name)
+        anchor_x: left
+        anchor_y: bottom
+        x: left + 2
+        y: bottom + 2
+        style: dmd_big
+        color: white
+      - type: text
+        text: (machine|score4_value)
+        number_grouping: true
+        anchor_x: right
+        anchor_y: bottom
+        x: right - 2
+        y: bottom + 2
+        style: dmd_big
+        color: white
+  attract_dmd_slide_10:
+    widgets:
+      - type: text
+        text: HIGH SCORE 4
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top - 2
+        style: dmd_big
+        color: white
+      - type: text
+        text: (machine|score5_name)
+        anchor_x: left
+        anchor_y: bottom
+        x: left + 2
+        y: bottom + 2
+        style: dmd_big
+        color: white
+      - type: text
+        text: (machine|score5_value)
+        number_grouping: true
+        anchor_x: right
+        anchor_y: bottom
+        x: right - 2
+        y: bottom + 2
+        style: dmd_big
+        color: white
+    
 show_player:
   mode_attract_started:
     flash_start_button:
       loops: -1
       speed: 1
-    attract_dmd_loop:
-      loops: -1
-      speed: 1
-    flowing_s_loop:
-      loops: -1
-      speed: 1
-    quick_alternating:
-      loops: -1
+  play_main_attract_light_show:
+    long_pf_attract_show:
+      loops: 2
       speed: 2
-    three_crawl:
-      loops: -1
-      speed: 3
-    drop_target_crawl:
-      loops: -1
-      speed: 4
-    ramp_crawl:
-      loops: -1
-      speed: 1
-    schwartz_level_crawl:
-      loops: -1
-      speed: 5
-    ball_saver_crawl:
-      loops: -1
-      speed: 10
-#    attract_lcd_loop:
-#      loops: -1
-#      speed: 1
-
+      events_when_stopped: play_random_attract_light_show
+  play_attract_light_show_1:
+    full_pf_wipe_top_down_blue:
+      loops: 0
+      speed: 35
+      events_when_stopped: play_main_attract_light_show
+  play_attract_light_show_2:
+    full_pf_red_alarm_burst:
+      loops: 0
+      speed: 40
+      events_when_stopped: play_main_attract_light_show
+  play_attract_light_show_3:
+    full_pf_rainbow_wheel:
+      loops: 0
+      speed: 25
+      events_when_stopped: play_main_attract_light_show
+  play_attract_light_show_4:
+    full_pf_green_radar_sweep:
+      loops: 0
+      speed: 25
+      events_when_stopped: play_main_attract_light_show
