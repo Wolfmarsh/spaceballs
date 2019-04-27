@@ -89,6 +89,7 @@ steppers:
     debug: True
     named_positions:
       450000: tractorbeam_stepper_farend
+      500: tractorbeam_stepper_startpos
     platform_settings:
       step_mode: 16
       max_speed: 200000000
@@ -109,6 +110,7 @@ steppers:
     debug: True
     named_positions:
       10000: backboard_stepper_farend
+      50: backboard_stepper_startpos
     platform_settings:
       step_mode: 8
       max_speed: 80000000

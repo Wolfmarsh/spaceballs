@@ -1,0 +1,580 @@
+#config_version=5
+
+event_player:
+  _overwrite: True
+  # adjust this to change the tags
+  sw_service_door_open_active:
+    - service_door_opened
+  sw_service_door_open_inactive:
+    - service_door_closed
+  sw_service_door_closed_active:
+    - service_door_closed
+  sw_service_door_closed_inactive:
+    - service_door_opened
+  sw_power_off_inactive:
+    - service_power_on
+  sw_power_off_active:
+    - service_power_off
+  sw_power_on_inactive:
+    - service_power_off
+  sw_power_on_active:
+    - service_power_on
+
+sounds:
+  _overwrite: True
+
+sound_player:
+  _overwrite: True
+  sw_service_up_active: service_plus
+  sw_service_down_active: service_minus
+  sw_service_esc_active: service_exit
+  sw_service_enter_active: service_enter
+  service_switch_hit: service_switch_hit
+  
+
+slide_player:
+  _overwrite: True
+
+  # door open
+  service_door_opened:
+    service_door_open:
+      action: play
+      target: dmd
+  service_door_closed:
+    service_door_open:
+      action: remove
+      target: dmd
+
+  # menu
+  service_menu_show:
+    service_menu_dmd:
+      action: play
+      priority: 1
+      target: dmd
+    service_menu_lcd:
+      action: play
+      target: lcd
+  service_menu_hide:
+    service_menu_dmd:
+      action: remove
+      target: dmd
+    service_menu_lcd:
+      action: remove
+      target: lcd
+
+  # switch test
+  service_switch_test_start:
+    service_switch_test:
+      action: play
+      priority: 2
+      target: lcd
+  service_switch_test_stop:
+    service_switch_test:
+      action: remove
+      target: lcd
+
+  # coil test:
+  service_coil_test_start:
+    service_coil_test:
+      action: play
+      priority: 2
+      target: lcd
+  service_coil_test_stop:
+    service_coil_test:
+      action: remove
+      target: lcd
+
+  # light test:
+  service_light_test_start:
+    service_light_test:
+      action: play
+      priority: 2
+      target: lcd
+  service_light_test_stop:
+    service_light_test:
+      action: remove
+      target: lcd
+
+  # settings:
+  service_settings_start:
+    service_settings:
+      action: play
+      priority: 2
+      target: lcd
+    service_settings_edit:
+      action: remove
+      target: lcd
+  service_settings_edit:
+    service_settings_edit:
+      action: play
+      priority: 3
+      target: lcd
+  service_settings_stop:
+    service_settings:
+      action: remove
+      target: lcd
+
+widget_player:
+  _overwrite: True
+  # power off
+  service_power_off:
+    service_power_off_door_open:
+      action: add
+      slide: service_door_open
+    service_power_off_coil_test:
+      action: add
+      slide: service_coil_test
+  service_power_on:
+    service_power_off_door_open:
+      action: remove
+      slide: service_door_open
+    service_power_off_coil_test:
+      action: remove
+      slide: service_coil_test
+
+  # menu items
+  service_menu_deselected:
+    service_menu_item_switch:
+      action: remove
+      slide: service_menu_lcd
+    service_menu_item_coil:
+      action: remove
+      slide: service_menu_lcd
+    service_menu_item_light:
+      action: remove
+      slide: service_menu_lcd
+    service_menu_item_settings:
+      action: remove
+      slide: service_menu_lcd
+  service_menu_selected_switch:
+    service_menu_item_switch:
+      action: add
+      slide: service_menu_lcd
+  service_menu_selected_coil:
+    service_menu_item_coil:
+      action: add
+      slide: service_menu_lcd
+  service_menu_selected_light:
+    service_menu_item_light:
+      action: add
+      slide: service_menu_lcd
+  service_menu_selected_settings:
+    service_menu_item_settings:
+      action: add
+      slide: service_menu_lcd
+
+
+slides:
+  _overwrite: True
+
+  # door open
+  service_door_open:
+    widgets:
+      - type: text
+        text: "COIN DOOR OPEN"
+        style: dmd_big
+        anchor_y: top
+        anchor_x: middle
+        x: middle
+        y: top
+        color: RED
+      - type: text
+        text: "PRESS ENTER FOR SERVICE"
+        style: dmd_med
+        anchor_y: bottom
+        anchor_x: middle
+        x: middle
+        y: bottom
+        color: BLUE
+
+  # menu
+  service_menu_dmd:
+    widgets:
+      - type: text
+        text: SERVICE MENU
+        style: dmd_big
+        anchor_y: middle
+        anchor_x: middle
+        x: middle
+        y: middle
+        color: BLUE
+  service_menu_lcd:
+    widgets:
+      - type: text
+        text: "MR. SERVICE MENU"
+        font_name: atrox
+        font_size: 130
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top-20
+        color: black
+        z: 5
+      - type: image
+        image: mister_background
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        z: 1
+
+        # switch test
+  service_switch_test:
+    widgets:
+      - type: text
+        text: SWITCH TEST
+        font_size: 100
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 250
+        color: white
+        z: 5
+      - type: text
+        text: "Last Switch Hit:"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 350
+        color: white
+        z: 5
+      - type: text
+        text: "#(switch_num) - (switch_label)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 500
+        color: white
+        z: 5
+      - type: text
+        text: "(switch_state)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 600
+        color: white
+        z: 5
+      - type: text
+        text: "MR. SERVICE MENU"
+        font_name: atrox
+        font_size: 130
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top-20
+        color: black
+        z: 5
+      - type: image
+        image: mister_background
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        z: 1
+  # coil test
+  service_coil_test:
+    widgets:
+      - type: text
+        text: COIL TEST
+        font_size: 100
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 250
+        color: white
+        z: 5
+      - type: text
+        text: "Board: (board_name)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 350
+        color: white
+        z: 5
+      - type: text
+        text: "#(coil_num) - (coil_label)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 500
+        color: white
+        z: 5
+      - type: text
+        text: "MR. SERVICE MENU"
+        font_name: atrox
+        font_size: 130
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top-20
+        color: black
+        z: 5
+      - type: image
+        image: mister_background
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        z: 1
+  # light test
+  service_light_test:
+    widgets:
+      - type: text
+        text: LIGHT TEST
+        font_size: 100
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 250
+        color: white
+        z: 5
+      - type: text
+        text: "Board: (board_name)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 350
+        color: white
+        z: 5
+      - type: text
+        text: "#(light_num) - (light_label)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 500
+        color: white
+        z: 5
+      - type: text
+        text: "Color: (test_color)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 600
+        color: white
+        z: 5        
+      - type: text
+        text: "MR. SERVICE MENU"
+        font_name: atrox
+        font_size: 130
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top-20
+        color: black
+        z: 5
+      - type: image
+        image: mister_background
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        z: 1
+  # settings
+  service_settings:
+    widgets:
+      - type: text
+        text: "SETTINGS"
+        font_size: 100
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 250
+        color: white
+        z: 5
+      - type: text
+        text: "(settings_label)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 350
+        color: white
+        z: 5
+      - type: text
+        text: "(value_label)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 500
+        color: white
+        opacity: 0.5
+        z: 5
+      - type: text
+        text: "MR. SERVICE MENU"
+        font_name: atrox
+        font_size: 130
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top-20
+        color: black
+        z: 5
+      - type: image
+        image: mister_background
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        z: 1
+  service_settings_edit:
+    widgets:
+      - type: text
+        text: "SETTINGS"
+        font_size: 100
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 250
+        color: white
+        z: 5
+      - type: text
+        text: "(settings_label)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 350
+        color: white
+        z: 5
+      - type: text
+        text: "(value_label)"
+        font_size: 70
+        font_name: atrox
+        anchor_x: middle
+        anchor_y: middle
+        x: middle - 100
+        y: top - 500
+        color: YELLOW
+        z: 5
+      - type: text
+        text: "MR. SERVICE MENU"
+        font_name: atrox
+        font_size: 130
+        anchor_x: middle
+        anchor_y: top
+        x: middle
+        y: top-20
+        color: black
+        z: 5
+      - type: image
+        image: mister_background
+        anchor_y: bottom
+        anchor_x: left
+        y: 0
+        x: 0
+        z: 1
+
+widgets:
+  _overwrite: True
+  # power off on door open slide
+  service_power_off_door_open:
+    type: text
+    text: Coil Power Off
+    anchor_y: bottom
+    x: center
+    y: bottom+4
+    z: 5
+    style: medium
+    animations:
+      add_to_slide:
+      - property: opacity
+        value: 1
+        duration: 0.5s
+      - property: opacity
+        value: 0
+        duration: 0.5s
+        repeat: true
+  # power off on coil test slide
+  service_power_off_coil_test:
+    type: text
+    text: Coil Power Off
+    style: small
+    anchor_y: bottom
+    y: bottom-2
+    z: 5
+    animations:
+      add_to_slide:
+      - property: opacity
+        value: 1
+        duration: 0.5s
+      - property: opacity
+        value: 0
+        duration: 0.5s
+        repeat: true
+
+
+  # menu items
+  service_menu_item_switch:
+    type: text
+    text: SWITCH TEST
+    style: medium
+    font_name: atrox
+    font_size: 130
+    anchor_x: middle
+    anchor_y: middle
+    x: middle - 100
+    y: middle
+    color: white
+    z: 5
+  service_menu_item_coil:
+    type: text
+    text: COIL TEST
+    style: medium
+    font_name: atrox
+    font_size: 130
+    anchor_x: middle
+    anchor_y: middle
+    x: middle - 100
+    y: middle
+    color: white
+    z: 5
+  service_menu_item_light:
+    type: text
+    text: LIGHT TEST
+    style: medium
+    font_name: atrox
+    font_size: 130
+    anchor_x: middle
+    anchor_y: middle
+    x: middle - 100
+    y: middle
+    color: white
+    z: 5
+  service_menu_item_settings:
+    type: text
+    text: SETTINGS
+    style: medium
+    font_name: atrox
+    font_size: 130
+    anchor_x: middle
+    anchor_y: middle
+    x: middle - 100
+    y: middle
+    color: white
+    z: 5
+    

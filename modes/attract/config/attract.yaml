@@ -1,7 +1,9 @@
 #config_version=5
 
 event_player:
-  mode_attract_started: play_main_attract_light_show, play_attract_lcd_slide, play_attract_dmd_slide_1, start_attract_random_video_play_timer
+  mode_attract_started: play_main_attract_light_show, play_attract_lcd_slide, play_attract_dmd_slide_1, tractorbeam_stepper_startpos, backboard_stepper_startpos, start_attract_random_video_play_timer, reset_drop_target_bank_request
+  stepper_tractorbeam_stepper_ready{position==0}: tractorbeam_stepper_startpos
+  stepper_backboard_stepper_ready{position==0}: backboard_stepper_startpos
   play_attract_dmd_slide_1: start_dmd_slide_cycle_timer
   play_attract_dmd_slide_2: start_dmd_slide_cycle_timer, dmd_slide_cycle_timer_gimme_two_more_seconds|20ms
   play_attract_dmd_slide_3: start_dmd_slide_cycle_timer

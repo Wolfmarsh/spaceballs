@@ -1,4 +1,14 @@
+Attract
+- Need to add a few more light show transitions
+- Need to add the unused lights to the long normal show, some didn't exist when it was made
+
 High scores
 - potentially add a scrolling list of the top X high scores, like 50
 - potentially add a list of lowest scores
+
+Service Mode
+- Need to fix up service mode so it works with the LCD slides and display and not the dmd
+
+Ball start
+- decrease the ramp up time of the music volume
 

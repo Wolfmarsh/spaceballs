@@ -39,6 +39,16 @@ sound_pools:
       - ridiculous_jackpot_4
 
 sounds:
+  service_switch_hit:
+    target: sfx
+  service_enter:
+    target: sfx
+  service_exit:
+    target: sfx
+  service_minus:
+    target: sfx
+  service_plus:
+    target: sfx  
   light_saber_swing_1:
     volume: 0.20
   light_saber_swing_2:

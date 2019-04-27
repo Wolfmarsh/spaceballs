@@ -5,40 +5,52 @@ coils:
   c_launch_light:
     number: 0
     allow_enable: true
+    label: "Launch Light"
   c_right_shaker:
     number: 1
     allow_enable: true
+    label: "Right Shaker"
   c_left_shaker:
     number: 2
     allow_enable: true
+    label: "Left Shaker"
   c_start_light:
     number: 3
     allow_enable: true
+    label: "Start Light"
 #BEGIN 3208 (4-11)
   c_flipper_right_main:
     number: 4
     default_pulse_ms: 20ms
+    label: "Right Flipper Main"
   c_flipper_right_hold:
     number: 5
     allow_enable: true
+    label: "Right Flipper Hold"
   c_flipper_left_main:
     number: 6
     default_pulse_ms: 20ms
+    label: "Left Flipper Main"
   c_flipper_left_hold:
     number: 7
     allow_enable: true
+    label: "Left Flipper Hold"
   c_sling_right:
     number: 8
     default_pulse_ms: 15
+    label: "Right Slingshot"
   c_sling_left:
     number: 9
     default_pulse_ms: 15
+    label: "Left Slingshot"
   c_trough_eject:
     number: 10
     default_pulse_ms: 25
+    label: "Trough Eject"
   c_plunger_eject:
     number: 11
     default_pulse_ms: 30
+    label: "Auto Launch"
 #BEGIN 1616 (12-27)
 #  c_tractorbeam_one:
 #    number: 14
@@ -49,33 +61,42 @@ coils:
   c_pop_flasher:
     number: 16
     allow_enable: true
+    label: "Pop Flasher"
   c_left_orbit_flasher:
     number: 17
     allow_enable: true
+    label: "Spinner Flasher"
   c_varitarget_reset:
     number: 18
     default_pulse_ms: 50
+    label: "Vari Reset"
 #  c_backboard_activate:
 #    number: 19
 #    allow_enable: true
   c_orbit_post:
     number: 21
     allow_enable: true
+    label: "Orbit Post"
   c_pop_1:
     number: 22
     default_pulse_ms: 25
+    label: "Pop 1"
   c_pop_2:
     number: 23
     default_pulse_ms: 25
+    label: "Pop 2"
   c_pop_3:
     number: 24
     default_pulse_ms: 25
+    label: "Pop 3"
 #  c_saucer_eject:
 #    number: 25
 #    default_pulse_ms: 20
   c_scoop_eject:
     number: 26
     default_pulse_ms: 50
+    label: "Scoop Eject"
   c_drop_reset:
     number: 27
     default_pulse_ms: 25 
+    label: "Drop Reset"

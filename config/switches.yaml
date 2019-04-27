@@ -5,160 +5,219 @@ switches:
   s_right_flipper:
     number: 0
     tags: right_flipper
+    label: "Right Flipper"
   s_launch_button:
     number: 1
     tags: launch
+    label: "Launch"
   s_left_flipper:
     number: 2
     tags: left_flipper
+    label: "Left Flipper"
   s_start:
     number: 3
     tags: start
+    label: "Start"
   s_service_plus:
     number: 4
     tags: service_up
+    label: "Service Plus"
   s_service_minus:
     number: 5
     tags: service_down
+    label: "Service Minus"
   s_service_enter:
     number: 6
     tags: service_enter
+    label: "Service Enter"
   s_service_escape:
     number: 7
     tags: service_esc
+    label: "Service Escape"
 #BEGIN 3208 (8-39)
   s_trough1:
     number: 8
     type: NC
+    label: "Trough 1"
   s_trough2:
     number: 9
     type: NC
+    label: "Trough 2"
   s_trough3:
     number: 10
     type: NC
+    label: "Trough 3"
   s_trough4:
     number: 11
     type: NC
+    label: "Trough 4"
   s_trough5:
     number: 12
     type: NC
+    label: "Trough 5"
   s_trough6:
     number: 13
     type: NC
+    label: "Trough 6"
   s_trough_jam:
     number: 14
     type: NC
+    label: "Trough Jam"
   s_plunger_lane:
     number: 15
+    label: "Plunger Lane"
   s_yogurt_standup:
     number: 16
+    label: "Yogurt Target"
   s_scoop:
     number: 17
+    label: "Scoop"
   s_drop_2:
     number: 18
+    label: "Drop 2"
   s_drop_1:
     number: 19
+    label: "Drop 1"
   s_drop_3:
     number: 20
+    label: "Drop 3"
   s_drop_5:
     number: 21
+    label: "Drop 5"
   s_drop_4:
     number: 22
+    label: "Drop 4"
   s_left_orbit_second:
     number: 23
+    label: "Left Orbit 2"
   s_sling_right:
     number: 24
+    label: "Right Sling"
   s_sling_left:
     number: 25
+    label: "Left Sling"
   s_left_outlane:
     number: 26
+    label: "Left Outlane"
   s_left_inlane:
     number: 27
+    label: "Left Inlane"
   s_right_outlane:
     number: 28
+    label: "Right Outlane"
   s_right_inlane:
     number: 29
+    label: "Right Inlane"
   s_sbone_left_standup:
     number: 30
+    label: "SB One Left Target"
   s_sbone_right_standup:
     number: 31
+    label: "SB One Right Target"
   s_sbone_lock_1:
     number: 32
     type: NC
+    label: "SB One Lock 1"
   s_sbone_lock_3:
     number: 33
     type: NC
+    label: "SB One Lock 3"
   s_sbone_entry:
     number: 34
     type: NC
+    label: "SB One Entry"
   s_ramp_entry:
     number: 35
     type: NC
+    label: "Ramp Entry"
   s_sbone_lock_2:
     number: 36
     type: NC
+    label: "SB One Lock 2"
   s_ramp_exit:
     number: 37
     type: NC
+    label: "Ramp Exit"
   s_right_orbit_entry:
     number: 38
     type: NC
+    label: "Right Orbit Entry"
 #BEGIN 1616 (40-55)
   s_pop_1:
     number: 40
     tags: pop_hit
+    label: "Pop 1"
   s_pop_2:
     number: 41
     tags: pop_hit
+    label: "Pop 2"
   s_pop_3:
     number: 42
     tags: pop_hit
+    label: "Pop 3"
   s_air_a_lane:
     number: 43
+    label: "A Lane"
     platform_settings:
       debounce_open: 10
       debounce_close: 10
   s_air_i_lane:
     number: 44
+    label: "I Lane"
     platform_settings:
       debounce_open: 10
       debounce_close: 10
   s_air_r_lane:
     number: 45
+    label: "R Lane"
     platform_settings:
       debounce_open: 10
       debounce_close: 10
   s_left_spinner:
     number: 46
+    label: "Spinner"
     platform_settings:
       debounce_open: 2
       debounce_close: 2
   s_ramp_sneak:
     number: 47
+    label: "Ramp Sneak"
   s_schwartz_power_1:
     number: 48
+    label: "Vari 1"
   s_schwartz_power_2:
     number: 49
+    label: "Vari 2"
   s_schwartz_power_3:
     number: 50
+    label: "Vari 3"
   s_schwartz_power_4:
     number: 51
+    label: "Vari 4"
   s_schwartz_power_5:
     number: 52
+    label: "Vari 5"
   s_schwartz_power_6:
     number: 53
+    label: "Vari 6"
   s_schwartz_power_7:
     number: 54
+    label: "Vari 7"
   s_middle_target:
     number: 55
+    label: "Center Target"
 #BEGIN 0804 (56-63)
   s_right_orbit_second:
     number: 60
+    label: "Right Orbit 2"
   s_tractorbeam_limit:
     number: 61
     type: NC
+    label: "Tractorbeam Limit"
   s_pop_sneak:
     number: 62
+    label: "Pop Sneak"
   s_backboard_limit:
     number: 63
+    label: "Backboard Limit"
 

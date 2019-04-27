@@ -1,6 +1,6 @@
 events:
   game_ended: 249
-  game_started: 523
+  game_started: 524
 player:
   score:
     average: 5302205.035971223
@@ -91,20 +91,20 @@ switches:
   s_air_a_lane: 80
   s_air_i_lane: 107
   s_air_r_lane: 105
-  s_backboard_limit: 90
+  s_backboard_limit: 102
   s_drop_1: 206
   s_drop_2: 204
   s_drop_3: 206
   s_drop_4: 206
   s_drop_5: 206
   s_launch_button: 863
-  s_left_flipper: 2333
+  s_left_flipper: 2335
   s_left_inlane: 210
   s_left_orbit_second: 98
   s_left_outlane: 66
   s_left_spinner: 7140
   s_middle_target: 270
-  s_plunger_lane: 1418
+  s_plunger_lane: 1419
   s_pop_1: 280
   s_pop_2: 304
   s_pop_3: 226
@@ -112,7 +112,7 @@ switches:
   s_ramp_entry: 330
   s_ramp_exit: 278
   s_ramp_sneak: 9
-  s_right_flipper: 2621
+  s_right_flipper: 2622
   s_right_inlane: 299
   s_right_orbit: 352
   s_right_orbit_entry: 52
@@ -121,13 +121,13 @@ switches:
   s_saucer: 265
   s_sbone_entry: 486
   s_sbone_left_orbit: 101
-  s_sbone_left_standup: 25
+  s_sbone_left_standup: 26
   s_sbone_lock_1: 348
   s_sbone_lock_2: 386
   s_sbone_lock_3: 323
   s_sbone_right_orbit: 63
   s_sbone_right_standup: 14
-  s_schwartz_power_1: 143
+  s_schwartz_power_1: 144
   s_schwartz_power_2: 14
   s_schwartz_power_3: 10
   s_schwartz_power_4: 14
@@ -143,11 +143,11 @@ switches:
   s_sling_right: 382
   s_start: 98
   s_tractorbeam_limit: 4
-  s_trough1: 1071
-  s_trough2: 1057
-  s_trough3: 1058
-  s_trough4: 1036
+  s_trough1: 1072
+  s_trough2: 1058
+  s_trough3: 1059
+  s_trough4: 1037
   s_trough5: 1023
   s_trough6: 938
-  s_trough_jam: 1084
+  s_trough_jam: 1085
   s_yogurt_standup: 104
