@@ -1,19 +1,50 @@
 #config_version=5
 mode:
-    start_events: ball_starting
-    priority: 1500
+  start_events: ball_starting
+  # stop_events: stop_skillshot_timing_request
+  priority: 1500
+  
+event_player:
+  sw_launch{device.counters.skillshot_level_counter.value>=3 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardmax, skillshot_award_step
+  sw_launch{device.counters.skillshot_level_counter.value==2 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonuspointaward, skillshot_award_step
+  sw_launch{device.counters.skillshot_level_counter.value==1 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardfail, skillshot_award_step
+
+  mode_skillshot_timing_started{current_player.skillshot_total_awards <= 0}: play_skillshot_lightshow_x1
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 1}: play_skillshot_lightshow_x2
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 2}: play_skillshot_lightshow_x3
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 3}: play_skillshot_lightshow_x4
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 4}: play_skillshot_lightshow_x5
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 5}: play_skillshot_lightshow_x6
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 6}: play_skillshot_lightshow_x7
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 7}: play_skillshot_lightshow_x8
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 8}: play_skillshot_lightshow_x9
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 9}: play_skillshot_lightshow_x10
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 10}: play_skillshot_lightshow_x11
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 11}: play_skillshot_lightshow_x12
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 12}: play_skillshot_lightshow_x13
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 13}: play_skillshot_lightshow_x14
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 14}: play_skillshot_lightshow_x15
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 15}: play_skillshot_lightshow_x16
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 16}: play_skillshot_lightshow_x17
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 17}: play_skillshot_lightshow_x18
+  mode_skillshot_timing_started{current_player.skillshot_total_awards == 18}: play_skillshot_lightshow_x19
+  mode_skillshot_timing_started{current_player.skillshot_total_awards >= 19}: play_skillshot_lightshow_x20
+  
+  # skillshot_surrounded_by_assholes_ended: stop_skillshot_timing_request|50ms
+  # skillshot_timing_bonuspointaward: stop_skillshot_timing_request|1500ms
+  # skillshot_timing_bonusawardmax: stop_skillshot_timing_request|1500ms
 
 variable_player:
   skillshot_timing_bonusawardmax:
     bonus_multiplier: 4
-  skillshot_timing_bonusaward2:
+    skillshot_total_awards: 2
+  skillshot_timing_bonuspointaward:
     score: 250000
-  skillshot_timing_bonusaward1:
-    score: 100000
+    skillshot_total_awards: 1
   logicblock_skillshot_award_counter_updated:
     skillshot_award_counter_count:
       int: value
-      action: set    
+      action: set
 
 coil_player:
   mode_skillshot_timing_started:
@@ -27,26 +58,98 @@ sound_player:
   skillshot_timing_bonusawardmax:
     skillshot_2:
       action: play
-  skillshot_timing_bonusaward2:
+  skillshot_timing_bonuspointaward:
     launchboom_1:
-      action: play
-  skillshot_timing_bonusaward1:
-    launchboom_1:
-      action: play
-  
+      action: play  
 
 show_player:
-  mode_skillshot_timing_started:
+  play_skillshot_lightshow_x1:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 4
+  play_skillshot_lightshow_x2:
     skillshot_timing_crawl:
       loops: -1
       speed: 6
+  play_skillshot_lightshow_x3:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 8
+  play_skillshot_lightshow_x4:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 10
+  play_skillshot_lightshow_x5:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 12
+  play_skillshot_lightshow_x6:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 14
+  play_skillshot_lightshow_x7:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 16
+  play_skillshot_lightshow_x8:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 18
+  play_skillshot_lightshow_x9:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 20
+  play_skillshot_lightshow_x10:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 22
+  play_skillshot_lightshow_x11:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 24
+  play_skillshot_lightshow_x12:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 26
+  play_skillshot_lightshow_x13:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 28
+  play_skillshot_lightshow_x14:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 30
+  play_skillshot_lightshow_x15:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 32
+  play_skillshot_lightshow_x16:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 34
+  play_skillshot_lightshow_x17:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 36
+  play_skillshot_lightshow_x18:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 38
+  play_skillshot_lightshow_x19:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 40
+  play_skillshot_lightshow_x20:
+    skillshot_timing_crawl:
+      loops: -1
+      speed: 42
   skillshot_timing_bonusawardmax:
     skillshot_timing_crawl:
       action: stop
     skillshot_maxlevel_flash:
       loops: 0
       speed: 8
-  skillshot_timing_bonusaward2:
+  skillshot_timing_bonuspointaward:
     skillshot_timing_crawl:
       action: stop
     skillshot_award_flash:
@@ -54,15 +157,6 @@ show_player:
       speed: 8
       show_tokens:
         award_led: rgb_shooter_arrow_3
-        award_color: ffff00
-  skillshot_timing_bonusaward1:
-    skillshot_timing_crawl:
-      action: stop
-    skillshot_award_flash:
-      loops: 1
-      speed: 8
-      show_tokens:
-        award_led: rgb_shooter_arrow_2
         award_color: ffff00
   skillshot_timing_bonusawardfail:
     skillshot_timing_crawl:
@@ -82,44 +176,44 @@ slide_player:
     skillshot_bonus_award_multiplier:
       target: dmd
       expire: 1
-  skillshot_timing_bonusaward2:
-    skillshot_bonus_award_secondlevel:
-      target: dmd
-      expire: 1
-  skillshot_timing_bonusaward1:
-    skillshot_bonus_award_firstlevel:
+  skillshot_timing_bonuspointaward:
+    skillshot_bonus_award_points:
       target: dmd
       expire: 1
   skillshot_timing_bonusawardfail:
     skillshot_bonus_award_failure:
       target: dmd
       expire: 1
+    # skillshot_assholes_lcd_slide:
+      # target: lcd
   skillshot_award_step:
     skillshot_instructions_slide:
       target: lcd
       action: remove
-
-event_player:
-  sw_launch{device.counters.skillshot_level_counter.value==4 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardmax, skillshot_award_step
-  sw_launch{device.counters.skillshot_level_counter.value==3 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardmax, skillshot_award_step
-  sw_launch{device.counters.skillshot_level_counter.value==2 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusaward2, skillshot_award_step
-  sw_launch{device.counters.skillshot_level_counter.value==1 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusaward1, skillshot_award_step
-  sw_launch{device.counters.skillshot_level_counter.value==0 and current_player.skillshot_award_counter_count < 1}: skillshot_timing_bonusawardfail, skillshot_award_step
+  skillshot_surrounded_by_assholes_ended:
+    skillshot_assholes_lcd_slide:
+      target: lcd
+      action: remove
 
 counters:
   skillshot_level_counter:
     count_events: skillshot_timing_step
+    starting_count: 1
     count_complete_value: 4
     disable_on_complete: false
     enable_events: mode_skillshot_timing_started
     disable_events: mode_skillshot_timing_stopped sw_launch
-    reset_events: mode_skillshot_timing_started
+    reset_events: mode_skillshot_timing_started, skillshot_timing_reset
   skillshot_award_counter:
     count_events: skillshot_award_step
     enable_events: mode_skillshot_timing_started
     reset_events: mode_skillshot_timing_started
 
 slides:
+  skillshot_assholes_lcd_slide:
+    widgets:
+      - type: video
+        video: surrounded_by_assholes_skillshot
   skillshot_instructions_slide:
     widgets:
       - type: image
@@ -131,46 +225,46 @@ slides:
   skillshot_bonus_award_multiplier:
     widgets:
       - type: text
-        text: SKILL SHOT MAXED
+        text: "MAX SKILL SHOT!"
         style: dmd_big
         anchor_y: top
         anchor_x: middle
         y: top
         x: center
+        color: green
       - type: text
-        text: +4X BONUS
+        text: "+4X BONUS"
         style: dmd_big
         anchor_y: bottom
         anchor_x: middle
         y: bottom
         x: center
-  skillshot_bonus_award_secondlevel:
+        color: white
+  skillshot_bonus_award_points:
     widgets:
       - type: text
-        text: SKILL SHOT LEVEL 2
+        text: "BE FASTER!"
         style: dmd_big
         anchor_y: top
+        y: top
+        color: yellow
       - type: text
-        text: 250,000
+        text: "250,000 POINTS"
         style: dmd_big
         anchor_y: bottom
-  skillshot_bonus_award_firstlevel:
-    widgets:
-      - type: text
-        text: SKILL SHOT LEVEL 1
-        style: dmd_big
-        anchor_y: top
-      - type: text
-        text: 100,000
-        style: dmd_big
-        anchor_y: bottom
+        y: bottom
+        color: white
   skillshot_bonus_award_failure:
     widgets:
       - type: text
-        text: SKILL SHOT MISSED
+        text: "YOU MISSED"
         style: dmd_big
         anchor_y: top
+        y: top
+        color: red
       - type: text
-        text: ASSHOLE
+        text: "ASSHOLE"
         style: dmd_big
         anchor_y: bottom
+        y: bottom
+        color: red

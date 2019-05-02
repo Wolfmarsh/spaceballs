@@ -242,7 +242,7 @@ slides:
         color: white
         z: 5
       - type: text
-        text: "#(switch_num) - (switch_label)"
+        text: "# (switch_num) - (switch_label)"
         font_size: 70
         font_name: atrox
         anchor_x: middle

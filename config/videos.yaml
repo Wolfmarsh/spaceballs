@@ -6,12 +6,6 @@ assets:
       load: preload
 
 videos:
-  introcrawl:
-    file: IntroCrawl.mp4
-    events_when_stopped: attract_video_stopped
-  introship:
-    file: IntroShip.mp4
-    events_when_stopped: attract_video_stopped
   airlock_king_one:
     file: Airlock_Combination_1_King.mp4
   airlock_king_two:
@@ -29,6 +23,8 @@ videos:
     file: All_Rise_In_The_Presence_Of_Dark_Helmet.mp4
   barf_intro:
     file: Barf_Intro.mp4
+  brains_in_my_feet:
+    file: My_Brains_Are_Going_Into_My_Feet.mp4
   chestburster_end:
     file: Chestburster_End.mp4
   chestburster_start:
@@ -65,21 +61,29 @@ videos:
   how_many_assholes_we_got:
     file: How_Many_Assholes_We_Got_Anyhow.mp4
     events_when_stopped: player_add_video_7_ended
-  my_own_best_friend:
-    file: Im_My_Own_Best_Friend.mp4
-  surrounded_by_assholes:
-    file: Im_Surrounded_By_Assholes.mp4
-    events_when_stopped: player_add_video_8_ended
+  introcrawl:
+    file: IntroCrawl.mp4
+    events_when_stopped: attract_video_stopped
+  introship:
+    file: IntroShip.mp4
+    events_when_stopped: attract_video_stopped
   keep_firing_assholes:
     file: Keep_Firing_Assholes.mp4
+    events_when_stopped: keep_firing_assholes_video_ended
+  lonestar_save_my_daughter:
+    file: Lonestar_Save_My_Daughter.mp4
+    events_when_stopped: lonestar_save_my_daughter_video_ended
   major_asshole:
     file: Major_Asshole.mp4
     events_when_stopped: player_add_video_9_ended
   make_way_for_darkhelmet:
     file: Make_Way_For_Dark_Helmet.mp4
     events_when_stopped: player_add_video_10_ended
-  brains_in_my_feet:
-    file: My_Brains_Are_Going_Into_My_Feet.mp4
+  mercedes_taking_off:
+    file: Mercedes_Taking_Off.mp4
+    events_when_stopped: mercedes_taking_off_video_ended
+  my_own_best_friend:
+    file: Im_My_Own_Best_Friend.mp4
   oh_shit:
     file: Oh_Shit.mp4
   perriair_opening:
@@ -92,13 +96,6 @@ videos:
     file: Skroob_Scratching_Crotch.mp4
   skroob_shithead:
     file: Skroob_Shithead.mp4
-  start_lightspeed:
-    file: Start_Light_Speed.mp4
-  theyve_gone_to_plaid:
-    file: Theyve_Gone_To_Plaid.mp4
-  tractor_beam_start:
-    file: Tractor_Beam_Start.mp4
-    events_when_stopped: video_tractor_beam_start_stopped
   spaceballs_the_breakfast_cereal_video:
     file: Spaceballs_The_Breakfast_Cereal.mp4
     events_when_stopped: spaceballs_the_breakfast_cereal_video_stopped
@@ -117,3 +114,19 @@ videos:
   spaceballs_the_tshirt_video:
     file: Spaceballs_The_TShirt.mp4
     events_when_stopped: spaceballs_the_tshirt_video_stopped
+  start_lightspeed:
+    file: Start_Light_Speed.mp4
+  surrounded_by_assholes:
+    file: Im_Surrounded_By_Assholes.mp4
+    events_when_stopped: player_add_video_8_ended
+  surrounded_by_assholes_skillshot:
+    file: Im_Surrounded_By_Assholes.mp4
+    events_when_stopped: skillshot_surrounded_by_assholes_ended
+  theyve_gone_to_plaid:
+    file: Theyve_Gone_To_Plaid.mp4
+  tractor_beam_start:
+    file: Tractor_Beam_Start.mp4
+    events_when_stopped: video_tractor_beam_start_stopped
+  you_forgot_to_get_married:
+    file: You_Forgot_To_Get_Married.mp4
+    events_when_stopped: you_forgot_to_get_married_video_ended

@@ -75,6 +75,17 @@ ball_devices:
     ball_switches: s_sbone_lock_1, s_sbone_lock_2, s_sbone_lock_3
     auto_fire_on_unexpected_ball: false
 
+
+servos:
+  sbone_lock_servo:
+    positions:
+      0.6: sbone_lock_servo_open
+      0.0: sbone_lock_servo_closed
+    reset_position: 0.4
+    reset_events: machine_reset_phase_3 game_ending
+    number: 5
+    debug: True
+
 steppers:
   tractorbeam_stepper:
     number: 00235237

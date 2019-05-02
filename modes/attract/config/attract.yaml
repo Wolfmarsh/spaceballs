@@ -186,6 +186,13 @@ slide_player:
   play_attract_lcd_video_2:
     attract_lcd_video_2:
       target: lcd
+  attract_video_stopped:
+    attract_lcd_video_1:
+      target: lcd
+      action: remove
+    attract_lcd_video_2:
+      target: lcd
+      action: remove
 
 slides:
   attract_lcd_video_1:

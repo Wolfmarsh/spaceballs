@@ -1,9 +1,9 @@
 events:
-  game_ended: 249
-  game_started: 524
+  game_ended: 253
+  game_started: 549
 player:
   score:
-    average: 5302205.035971223
+    average: 5243166.666666667
     top:
     - 1151037000
     - 22398000
@@ -15,7 +15,7 @@ player:
     - 4984000
     - 4732000
     - 4479000
-    total: 278
+    total: 282
 shots:
   airlock_addaball_shot_five: 10
   airlock_addaball_shot_four: 10
@@ -52,25 +52,25 @@ shots:
   airlock_mb_shot_two: 13
   airlock_mb_warp_ramp_shot: 6
   airlock_mode_tracking_shot: 4
-  airlock_qualifying_shot_five: 77
-  airlock_qualifying_shot_four: 79
-  airlock_qualifying_shot_one: 70
-  airlock_qualifying_shot_three: 71
-  airlock_qualifying_shot_two: 75
+  airlock_qualifying_shot_five: 78
+  airlock_qualifying_shot_four: 81
+  airlock_qualifying_shot_one: 71
+  airlock_qualifying_shot_three: 73
+  airlock_qualifying_shot_two: 76
   airlock_shot_five: 34
   airlock_shot_four: 39
   airlock_shot_one: 39
   airlock_shot_three: 40
   airlock_shot_two: 39
-  diner_shot: 54
+  diner_shot: 57
   lane_a: 57
-  lane_i: 78
-  lane_r: 88
+  lane_i: 79
+  lane_r: 89
   left_orbit_base_complete_shot: 3
   left_orbit_base_muted_spinner_shot: 5
   left_orbit_base_shot: 81
   left_orbit_complete_shot: 29
-  merch_yogurt_shot: 99
+  merch_yogurt_shot: 101
   merchandising_mode_tracking_shot: 11
   right_orbit_base_shot: 127
   right_orbit_complete_shot: 35
@@ -81,73 +81,74 @@ shots:
   sbone_mb_airlock_shot_two: 4
   warp_ramp_lightspeed_shot: 3
   warp_ramp_ludicrousspeed_shot: 1
-  warp_ramp_mb_jackpot_shot: 6
-  warp_ramp_mode_tracking_shot: 1
+  warp_ramp_mb_jackpot_shot: 8
+  warp_ramp_mode_tracking_shot: 2
   warp_ramp_plaidspeed_shot: 1
-  warp_ramp_qualifier_shot: 78
+  warp_ramp_qualifier_shot: 82
+  warp_ramp_qualifier_shot_one: 7
   warp_ramp_ridiculousspeed_shot: 1
   warp_ramp_shot: 162
 switches:
   s_air_a_lane: 80
-  s_air_i_lane: 107
-  s_air_r_lane: 105
+  s_air_i_lane: 108
+  s_air_r_lane: 106
   s_backboard_limit: 102
-  s_drop_1: 206
-  s_drop_2: 204
-  s_drop_3: 206
-  s_drop_4: 206
-  s_drop_5: 206
-  s_launch_button: 863
-  s_left_flipper: 2335
-  s_left_inlane: 210
-  s_left_orbit_second: 98
-  s_left_outlane: 66
-  s_left_spinner: 7140
-  s_middle_target: 270
-  s_plunger_lane: 1419
-  s_pop_1: 280
-  s_pop_2: 304
-  s_pop_3: 226
-  s_pop_sneak: 235
-  s_ramp_entry: 330
-  s_ramp_exit: 278
-  s_ramp_sneak: 9
-  s_right_flipper: 2622
-  s_right_inlane: 299
+  s_drop_1: 207
+  s_drop_2: 205
+  s_drop_3: 209
+  s_drop_4: 208
+  s_drop_5: 208
+  s_launch_button: 882
+  s_left_flipper: 2358
+  s_left_inlane: 214
+  s_left_orbit_second: 128
+  s_left_outlane: 70
+  s_left_spinner: 7385
+  s_middle_target: 273
+  s_plunger_lane: 1472
+  s_pop_1: 285
+  s_pop_2: 312
+  s_pop_3: 230
+  s_pop_sneak: 240
+  s_ramp_entry: 346
+  s_ramp_exit: 291
+  s_ramp_sneak: 10
+  s_right_flipper: 2638
+  s_right_inlane: 306
   s_right_orbit: 352
-  s_right_orbit_entry: 52
-  s_right_orbit_second: 101
-  s_right_outlane: 91
+  s_right_orbit_entry: 60
+  s_right_orbit_second: 110
+  s_right_outlane: 93
   s_saucer: 265
-  s_sbone_entry: 486
+  s_sbone_entry: 498
   s_sbone_left_orbit: 101
-  s_sbone_left_standup: 26
-  s_sbone_lock_1: 348
-  s_sbone_lock_2: 386
-  s_sbone_lock_3: 323
+  s_sbone_left_standup: 27
+  s_sbone_lock_1: 354
+  s_sbone_lock_2: 395
+  s_sbone_lock_3: 333
   s_sbone_right_orbit: 63
-  s_sbone_right_standup: 14
-  s_schwartz_power_1: 144
-  s_schwartz_power_2: 14
-  s_schwartz_power_3: 10
-  s_schwartz_power_4: 14
-  s_schwartz_power_5: 19
-  s_schwartz_power_6: 18
-  s_schwartz_power_7: 382
-  s_scoop: 340
+  s_sbone_right_standup: 16
+  s_schwartz_power_1: 176
+  s_schwartz_power_2: 17
+  s_schwartz_power_3: 11
+  s_schwartz_power_4: 16
+  s_schwartz_power_5: 20
+  s_schwartz_power_6: 20
+  s_schwartz_power_7: 391
+  s_scoop: 348
   s_service_enter: 0
   s_service_escape: 0
   s_service_minus: 0
   s_service_plus: 0
-  s_sling_left: 368
-  s_sling_right: 382
+  s_sling_left: 382
+  s_sling_right: 399
   s_start: 98
   s_tractorbeam_limit: 4
-  s_trough1: 1072
-  s_trough2: 1058
-  s_trough3: 1059
-  s_trough4: 1037
-  s_trough5: 1023
-  s_trough6: 938
-  s_trough_jam: 1085
-  s_yogurt_standup: 104
+  s_trough1: 1119
+  s_trough2: 1105
+  s_trough3: 1105
+  s_trough4: 1081
+  s_trough5: 1049
+  s_trough6: 967
+  s_trough_jam: 1132
+  s_yogurt_standup: 106

@@ -1,0 +1,47 @@
+#config_version=5
+mode:
+  start_events: ball_starting
+  priority: 200
+
+
+slide_player:
+  ball_save_bs_initial_launch_saving_ball:
+    ball_saved_slide:
+      target: dmd
+      expire: 1
+    ball_saved_keep_firing_assholes_slide:
+      target: lcd
+  keep_firing_assholes_video_ended:
+    ball_saved_keep_firing_assholes_slide:
+      target: lcd
+      action: remove
+
+show_player:
+  ball_save_bs_initial_launch_timer_start:
+    ball_saver_timer_show:
+      loops: 0
+      speed: 1
+  ball_save_bs_initial_launch_saving_ball:
+    ball_saver_timer_show:
+      action: stop
+
+sound_player:
+  ball_save_bs_initial_launch_saving_ball:
+    ball_saved_2:
+      action: play
+
+slides:
+  ball_saved_slide:
+    widgets:
+      - type: text
+        text: BALL SAVED
+        style: dmd_big
+        x: center
+        y: center
+        anchor_x: center
+        anchor_y: center
+  ball_saved_keep_firing_assholes_slide:
+    widgets:
+      - type: video
+        video: keep_firing_assholes
+

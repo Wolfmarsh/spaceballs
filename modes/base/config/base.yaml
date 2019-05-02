@@ -4,33 +4,3 @@ mode:
   priority: 100
 
 
-slide_player:
-  ball_save_default_save_saving_ball:
-    ball_saved_slide:
-      target: dmd
-      expire: 1
-
-show_player:
-  ball_save_default_save_timer_start:
-    ball_saver_timer_show:
-      loops: 0
-      speed: 1
-  ball_save_default_save_saving_ball:
-    ball_saver_timer_show:
-      action: stop
-
-sound_player:
-  ball_save_default_save_saving_ball:
-    ball_saved_2:
-      action: play
-
-slides:
-  ball_saved_slide:
-    widgets:
-      - type: text
-        text: BALL SAVED
-        style: dmd_big
-        x: center
-        y: center
-        anchor_x: center
-        anchor_y: center

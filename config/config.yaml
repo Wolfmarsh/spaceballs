@@ -5,6 +5,10 @@ hardware:
   driverboards: fast
   rgb_dmd: smartmatrix
   stepper_controllers: pololu_tic
+  servo_controllers: pololu_maestro  
+
+pololu_maestro:
+  port: com8
 
 pololu_tic:
   debug: True 
@@ -23,6 +27,7 @@ rgb_dmds:
 
 fast:
   ports: com4, com5
+  debug: True
   
 config:
 - machine-config.yaml

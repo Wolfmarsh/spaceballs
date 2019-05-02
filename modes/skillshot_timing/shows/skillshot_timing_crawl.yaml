@@ -1,0 +1,27 @@
+#show_version=5
+- time: 0
+  lights:
+    rgb_shooter_arrow_1: ff0000-f0ms
+    rgb_shooter_arrow_2: 000000-f0ms
+    rgb_shooter_arrow_3: 000000-f0ms
+  events:
+    - skillshot_timing_reset
+
+- time: '+2'
+  lights:
+    rgb_shooter_arrow_1: ffff00-f0ms
+    rgb_shooter_arrow_2: ffff00-f0ms
+  events:
+    - skillshot_timing_step
+
+- time: '+2'
+  lights:
+    rgb_shooter_arrow_1: 00ff00-f0ms
+    rgb_shooter_arrow_2: 00ff00-f0ms
+    rgb_shooter_arrow_3: 00ff00-f0ms
+  events:
+    - skillshot_timing_step
+
+- time: '+2'
+  events:
+    - skillshot_timing_step

@@ -27,6 +27,7 @@ playfields:
 modes:
 - base
 - score_display
+- ballsave_assetmanager
 - player_add_assetmanager
 - skillshot_timing
 - varitarget_mechanics
@@ -36,10 +37,11 @@ modes:
 - music_manager
 - warp_ramp_assetmanager
 - warp_ramp_modemanager
-- warp_ramp_qualifier
+- warp_ramp_qualifier_one
+- warp_ramp_qualifier_two
 - warp_ramp_multiball
 - spinner
-# - diner
+# - diner  #dont use this version of diner anymore, i just have it here in case i need something from it
 - diner_assetmanager
 - diner_modemanager
 - diner_qualifier
@@ -59,12 +61,12 @@ modes:
 #- orbits_base
 - dead_flip
 #- slings_base
-# - sbone_assetmanager
-# - sbone_autoeject
-# - sbone_modemanager
-# - sbone_servoactivation
-# - sbone_qualifier
-# - sbone_multiball
+- sbone_assetmanager
+- sbone_autoeject
+- sbone_modemanager
+- sbone_servoactivation
+- sbone_qualifier_one
+- sbone_vespa_multiball
 - schwartz_ring_wizard
 - wizard_tracker
 # - shaker_base
@@ -107,15 +109,6 @@ sound_system:
       simultaneous_sounds: 1
   enabled: true
 
-servos:
-  sbone_lock_servo:
-    positions:
-      0.6: sbone_lock_servo_open
-      0.0: sbone_lock_servo_closed
-    reset_position: 0.6
-    reset_events: machine_reset_phase_3 game_ending
-    number: 13
-
 player_vars:
   game_scoring_multiplier:
     initial_value: 1
@@ -123,8 +116,21 @@ player_vars:
     initial_value: 1
   pophits:
     initial_value: 0
+  skillshot_total_awards:
+    initial_value: 0
+  warp_ramp_times_completed:
+    initial_value: 0
 
 ball_saves:
+  bs_initial_launch:
+    active_time: 10s
+    hurry_up_time: 2s
+    grace_period: 1s
+    enable_events: mode_base_started
+    timer_start_events: skillshot_award_step
+    auto_launch: yes
+    balls_to_save: 1
+    early_ball_save_events: s_left_outlane_active, s_right_outlane_active
   default_save:
     active_time: 10s
     hurry_up_time: 2s

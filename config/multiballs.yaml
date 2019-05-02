@@ -6,10 +6,10 @@ multiballs:
     ball_locks: bd_sbone
     ball_count_type: total
     shoot_again: 100ms
-    enable_events: mode_sbone_multiball_starting
-    start_events: mode_sbone_multiball_started
-    stop_events: mode_sbone_multiball_stopping
-    reset_events: machine_reset_phase_3, ball_starting, mode_sbone_qualifier_starting
+    enable_events: mode_sbone_vespa_multiball_starting
+    start_events: mode_sbone_vespa_multiball_started
+    stop_events: mode_sbone_vespa_multiball_stopping
+    reset_events: machine_reset_phase_3, ball_starting, mode_sbone_qualifier_one_starting
   airlock_add_a_ball:
     ball_count: 1
     ball_count_type: add

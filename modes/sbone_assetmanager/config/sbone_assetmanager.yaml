@@ -1,9 +1,33 @@
-#config_version=4
+#config_version=5
 mode:
   start_events: ball_starting
   priority: 700
 
+event_player:
+  lonestar_save_my_daughter_video_ended: sbone_vespa_qualifier_fanfare_ended
+
 slide_player:
+  sbone_ball_one_locked:
+    sbone_vespa_ball_one_locked_video:
+      target: lcd
+  you_forgot_to_get_married_video_ended:
+    sbone_vespa_ball_one_locked_video:
+      target: lcd
+      action: remove
+  sbone_ball_two_locked:
+    sbone_vespa_ball_two_locked_video:
+      target: lcd
+  mercedes_taking_off_video_ended:
+    sbone_vespa_ball_two_locked_video:
+      target: lcd
+      action: remove
+  play_sbone_vespa_qualifier_complete_fanfare:
+    sbone_vespa_ball_three_locked_video:
+      target: lcd
+  lonestar_save_my_daughter_video_ended:
+    sbone_vespa_ball_three_locked_video:
+      target: lcd
+      action: remove
   player_sbone_mb_lock_locked_balls{value>0}:
     sbone_balls_locked_slide:
       target: dmd
@@ -30,6 +54,10 @@ slide_player:
       target: dmd
       expire: 1
 
+queue_relay_player:
+  initiate_sbone_vespa_qualifier_complete_fanfare:
+    post: play_sbone_vespa_qualifier_complete_fanfare
+    wait_for: sbone_vespa_qualifier_fanfare_ended
 
 sound_player:
   sbone_ball_one_locked:
@@ -52,6 +80,24 @@ sound_player:
       action: play
 
 slides:
+  sbone_vespa_ball_one_locked_video:
+    widgets:
+      - type: video
+        video: you_forgot_to_get_married
+        width: 1280
+        height: 720
+  sbone_vespa_ball_two_locked_video:
+    widgets:
+      - type: video
+        video: mercedes_taking_off
+        width: 1280
+        height: 720
+  sbone_vespa_ball_three_locked_video:
+    widgets:
+      - type: video
+        video: lonestar_save_my_daughter
+        width: 1280
+        height: 720
   sbone_balls_locked_slide:
     widgets:
       - type: text

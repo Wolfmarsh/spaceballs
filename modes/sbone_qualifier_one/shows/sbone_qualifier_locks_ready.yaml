@@ -1,0 +1,14 @@
+#show_version=5
+- time: 0
+  lights:
+    rgb_sbone_bottom_left_arrow: ffffff-f50ms
+    rgb_sbone_bottom_right_arrow: ffffff-f50ms
+    rgb_sbone_top_arrow: 000000-f50ms
+
+- time: '+250ms'
+  lights:
+    rgb_sbone_bottom_left_arrow: 000000-f50ms
+    rgb_sbone_bottom_right_arrow: 000000-f50ms
+    rgb_sbone_top_arrow: ffffff-f50ms
+
+- time: '+250ms'
