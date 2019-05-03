@@ -35,32 +35,29 @@ modes:
 - bonus
 - high_score
 - music_manager
-- warp_ramp_assetmanager
-- warp_ramp_modemanager
-- warp_ramp_qualifier_one
-- warp_ramp_qualifier_two
-- warp_ramp_multiball
+# - warp_ramp_assetmanager
+# - warp_ramp_modemanager
+# - warp_ramp_qualifier_one
+# - warp_ramp_qualifier_two
+# - warp_ramp_multiball
 - spinner
-# - diner  #dont use this version of diner anymore, i just have it here in case i need something from it
-- diner_assetmanager
-- diner_modemanager
-- diner_qualifier
-- diner_award
-- airlock_assetmanager
-- airlock_modemanager
-- airlock_qualifier
-- airlock_multiball
+# - diner_assetmanager
+# - diner_modemanager
+# - diner_qualifier
+# - diner_award
+# - airlock_assetmanager
+# - airlock_modemanager
+# - airlock_qualifier
+# - airlock_multiball
 - pops_base
 - air_lanes
-- merchandising_assetmanager
-- merchandising_modemanager
-- merchandising_qualifier
-- merchandising_award
-- merchandising_carousel
+# - merchandising_assetmanager
+# - merchandising_modemanager
+# - merchandising_qualifier
+# - merchandising_award
+# - merchandising_carousel
 - orbit_post_launch_behavior
-#- orbits_base
 - dead_flip
-#- slings_base
 - sbone_assetmanager
 - sbone_autoeject
 - sbone_modemanager
@@ -69,12 +66,15 @@ modes:
 - sbone_vespa_multiball
 - schwartz_ring_wizard
 - wizard_tracker
+#- slings_base
+#- orbits_base
 # - shaker_base
 # - barf_assetmanager
 # - barf_modemanager
 # - barf_qualifier
 # - barf_multiball
 #- stepper_testing
+# - diner  #dont use this version of diner anymore, i just have it here in case i need something from it
 
 widget_styles:
   dmd_xl:

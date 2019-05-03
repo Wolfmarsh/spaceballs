@@ -12,48 +12,71 @@ variable_player:
     score: 1000000 * current_player.game_scoring_multiplier
 
 event_player:
-  multiball_sbone_multiball_ended: sbone_vespa_multiball_complete|50ms
+  multiball_sbone_vespa_2ball_multiball_started: tractorbeam_stepper_farend
+  multiball_sbone_vespa_2ball_multiball_ended: tractorbeam_stepper_startpos, sbone_vespa_multiball_complete|50ms
+  timer_vespa_tractorbeam_timer_complete: tractorbeam_stepper_startpos
   sbone_mb_airlock_shot_one_pending_hit: sbone_multiball_award_100k_shot
   sbone_mb_airlock_shot_two_pending_hit: sbone_multiball_award_100k_shot
   sbone_mb_airlock_shot_three_pending_hit: sbone_multiball_award_100k_shot
   sbone_mb_airlock_shot_four_pending_hit: sbone_multiball_award_100k_shot
   sbone_mb_airlock_shot_five_pending_hit: sbone_multiball_award_100k_shot
-  drop_target_bank_airlock_bank_down: sbone_multiball_award_jackpot_shot reset_sbone_mb_airlock_shots
- 
+  drop_target_bank_airlock_bank_down: sbone_multiball_award_jackpot_shot, reset_sbone_mb_airlock_shots
+
+timers:
+  vespa_tractorbeam_timer:
+    start_value: 30
+    end_value: 0
+    direction: down
+    control_events:
+      - action: start
+        event: multiball_sbone_vespa_2ball_multiball_started
+
+show_player:
+  multiball_sbone_vespa_2ball_multiball_started:
+    sbone_vespa_mb_tractorbeam_blue_30s:
+      loops: 0
+  timer_vespa_tractorbeam_timer_complete:
+    sbone_vespa_mb_tractorbeam_blue_30s: stop
+    sbone_vespa_mb_tractorbeam_all_white:
+      loops: 0
+  multiball_sbone_vespa_2ball_multiball_ended:
+    sbone_vespa_mb_tractorbeam_blue_30s: stop
+    sbone_vespa_mb_tractorbeam_all_white: stop
+  
 shots:
 #standard drop shots for the multiball mode
   sbone_mb_airlock_shot_one:
     switch: s_drop_1
     profile: sbone_mb_airlock_target_profile
-    enable_events: multiball_sbone_multiball_started
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
     reset_events: reset_sbone_mb_airlock_shots
     show_tokens:
        targetled: rgb_drop_1
   sbone_mb_airlock_shot_two:
     switch: s_drop_2
     profile: sbone_mb_airlock_target_profile
-    enable_events: multiball_sbone_multiball_started
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
     reset_events: reset_sbone_mb_airlock_shots
     show_tokens:
        targetled: rgb_drop_2
   sbone_mb_airlock_shot_three:
     switch: s_drop_3
     profile: sbone_mb_airlock_target_profile
-    enable_events: multiball_sbone_multiball_started
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
     reset_events: reset_sbone_mb_airlock_shots
     show_tokens:
        targetled: rgb_drop_3
   sbone_mb_airlock_shot_four:
     switch: s_drop_4
     profile: sbone_mb_airlock_target_profile
-    enable_events: multiball_sbone_multiball_started
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
     reset_events: reset_sbone_mb_airlock_shots
     show_tokens:
        targetled: rgb_drop_4
   sbone_mb_airlock_shot_five:
     switch: s_drop_5
     profile: sbone_mb_airlock_target_profile
-    enable_events: multiball_sbone_multiball_started
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
     reset_events: reset_sbone_mb_airlock_shots
     show_tokens:
        targetled: rgb_drop_5

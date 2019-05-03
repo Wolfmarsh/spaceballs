@@ -14,3 +14,5 @@ Ball start
 Player adding
 - add more flair to each player add including player 1
 
+backboard Gi
+- add a mode that turns on backboard GI at a lower white level during non diner modes, etc...

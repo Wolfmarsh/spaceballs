@@ -5,39 +5,35 @@ mode:
 
 event_player:
   lonestar_save_my_daughter_video_ended: sbone_vespa_qualifier_fanfare_ended
+  you_forgot_to_get_married_video_ended: sbone_vespa_qualifier_ball_locked_fanfare_ended
+  play_sbone_vespa_qualifier_ball_one_locked_fanfare: play_sbone_ball_locked_1_sound, play_sbone_vespa_qualifier_ball_one_locked_video|1000ms
+  play_sbone_vespa_qualifier_complete_fanfare: play_sbone_ball_locked_2_sound, play_sbone_vespa_qualifier_ball_two_locked_video|1000ms
 
 slide_player:
-  sbone_ball_one_locked:
+  play_sbone_vespa_qualifier_ball_one_locked_video:
     sbone_vespa_ball_one_locked_video:
       target: lcd
   you_forgot_to_get_married_video_ended:
     sbone_vespa_ball_one_locked_video:
       target: lcd
       action: remove
-  sbone_ball_two_locked:
+  play_sbone_vespa_qualifier_ball_two_locked_video:
     sbone_vespa_ball_two_locked_video:
-      target: lcd
-  mercedes_taking_off_video_ended:
-    sbone_vespa_ball_two_locked_video:
-      target: lcd
-      action: remove
-  play_sbone_vespa_qualifier_complete_fanfare:
-    sbone_vespa_ball_three_locked_video:
       target: lcd
   lonestar_save_my_daughter_video_ended:
-    sbone_vespa_ball_three_locked_video:
+    sbone_vespa_ball_two_locked_video:
       target: lcd
       action: remove
   player_sbone_mb_lock_locked_balls{value>0}:
     sbone_balls_locked_slide:
       target: dmd
       expire: 1
-  multiball_sbone_multiball_started:
+  multiball_sbone_vespa_2ball_multiball_started:
     sbone_multiball_started_slide:
       target: dmd
     sbone_multiball_tractorbeam_start_slide:
       target: lcd
-  multiball_sbone_multiball_ended:
+  multiball_sbone_vespa_2ball_multiball_ended:
     sbone_multiball_started_slide:
       target: dmd
       action: remove
@@ -60,16 +56,13 @@ queue_relay_player:
     wait_for: sbone_vespa_qualifier_fanfare_ended
 
 sound_player:
-  sbone_ball_one_locked:
+  play_sbone_ball_locked_1_sound:
     ball_one_locked_1:
       action: play
-  sbone_ball_two_locked:
+  play_sbone_ball_locked_2_sound:
     ball_two_locked_1:
       action: play
-  sbone_ball_three_locked:
-    ball_three_locked_1:
-      action: play
-  multiball_sbone_multiball_started:
+  multiball_sbone_vespa_2ball_multiball_started:
     multiball_callout_sound_pool:
       action: play
   sbone_multiball_award_100k_shot:
@@ -87,12 +80,6 @@ slides:
         width: 1280
         height: 720
   sbone_vespa_ball_two_locked_video:
-    widgets:
-      - type: video
-        video: mercedes_taking_off
-        width: 1280
-        height: 720
-  sbone_vespa_ball_three_locked_video:
     widgets:
       - type: video
         video: lonestar_save_my_daughter

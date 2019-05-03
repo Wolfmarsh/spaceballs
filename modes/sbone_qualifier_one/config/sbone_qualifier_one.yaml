@@ -8,13 +8,21 @@ event_player:
   mode_sbone_qualifier_one_started: sbone_lock_servo_closed
   player_sbone_mb_lock_locked_balls{value==1}: sbone_ball_one_locked
   player_sbone_mb_lock_locked_balls{value==2}: sbone_ball_two_locked
-  player_sbone_mb_lock_locked_balls{value==3}: sbone_ball_three_locked
-  
+  check_for_sbone_vespa_qualifier_fanfare{device.multiball_locks.sbone_mb_lock.locked_balls==0}: sbone_vespa_qualifier_ball_locked_fanfare_ended
+  check_for_sbone_vespa_qualifier_fanfare{device.multiball_locks.sbone_mb_lock.locked_balls==1}: play_sbone_vespa_qualifier_ball_one_locked_fanfare
+  #player_sbone_mb_lock_locked_balls{value==3}: sbone_ball_three_locked
+
+
 queue_event_player:
-  sbone_ball_three_locked:
+  sbone_ball_two_locked:
     queue_event: initiate_sbone_vespa_qualifier_complete_fanfare
     events_when_finished: sbone_qualifier_one_complete
-  
+
+queue_relay_player:
+  balldevice_bd_trough_ball_eject_attempt:
+    post: check_for_sbone_vespa_qualifier_fanfare
+    wait_for: sbone_vespa_qualifier_ball_locked_fanfare_ended
+    
 show_player:
   mode_sbone_qualifier_one_started:
     sbone_qualifier_locks_ready:
@@ -23,6 +31,7 @@ show_player:
 
 multiball_locks:
   sbone_mb_lock:
-    balls_to_lock: 3
+    balls_to_lock: 2
+    balls_to_replace: 1
     lock_devices: bd_sbone
     reset_count_for_current_player_events: sbone_qualifier_one_complete

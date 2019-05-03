@@ -9,11 +9,11 @@ sound_player:
     spaceballs_song:
       action: play
       priority: 100
-      fade_in: 2s
+      fade_in: 1s
   mode_bonus_started:
     spaceballs_song:
       action: stop
-      fade_out: 2.5s
+      fade_out: 2s
   start_base_music_request:
     spaceballs_song:
       action: play

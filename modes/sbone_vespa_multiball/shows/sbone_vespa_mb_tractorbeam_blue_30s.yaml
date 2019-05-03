@@ -1,0 +1,93 @@
+#show_version=5
+- time: 0
+  lights:
+    rgb_tractorbeam_1: 0000ff
+    rgb_tractorbeam_2: 0000ff
+    rgb_tractorbeam_3: 0000ff
+    rgb_tractorbeam_4: 0000ff
+    rgb_tractorbeam_5: 0000ff
+    rgb_tractorbeam_6: 0000ff
+    rgb_tractorbeam_7: 0000ff
+    rgb_tractorbeam_8: 0000ff
+    rgb_tractorbeam_9: 0000ff
+    rgb_tractorbeam_10: 0000ff
+    rgb_tractorbeam_11: 0000ff
+    rgb_tractorbeam_12: 0000ff
+    rgb_tractorbeam_13: 0000ff
+    rgb_tractorbeam_14: 0000ff
+    rgb_tractorbeam_15: 0000ff
+    rgb_tractorbeam_16: 0000ff
+    rgb_tractorbeam_17: 0000ff
+    rgb_tractorbeam_18: 0000ff
+    
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_1: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_2: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_3: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_4: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_5: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_6: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_7: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_8: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_9: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_10: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_11: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_12: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_13: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_14: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_15: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_16: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_17: 000000
+
+- time: '+1667ms'
+  lights:
+    rgb_tractorbeam_18: 000000

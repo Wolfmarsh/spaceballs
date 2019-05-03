@@ -18,13 +18,13 @@ class sbone_servoactivation(Mode):
         self.machine.events.post('sbone_lock_servo_open')
         
         if self.machine.ball_devices.bd_sbone.available_balls == 3:
-            delay = 140
+            delay = 90
         elif self.machine.ball_devices.bd_sbone.available_balls == 2:
-            delay = 160
+            delay = 100
         elif self.machine.ball_devices.bd_sbone.available_balls == 1:
-            delay = 210
+            delay = 180
         else:
-            delay = 250
+            delay = 210
 
         self.delay.add(callback=self._post_event, ms=delay, event='sbone_lock_servo_closed')
         self.delay.add(callback=self._post_event, ms=1200, event='sbone_ball_has_probably_been_released')

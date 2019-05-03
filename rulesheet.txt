@@ -2,6 +2,12 @@ Spaceballs Pinball
 ==================
 ** MAY THE SCHWARTZ BE WITH YOU **
 
+FULL ALARM WIZARD MODE
+===========
+The ultimate goal of the game is to solidly light all the mode inserts and earn at least 9 schwartz gems.
+
+The modes inserts are: Save Vespa, SB One, Merchandising, Warp Ramp, Mega Maid, Comb the Desert, and Airlock
+
 SKILLSHOT
 =========
 To Activate:  Skillshot is activated anytime a new ball begins

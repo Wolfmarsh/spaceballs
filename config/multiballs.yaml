@@ -1,15 +1,16 @@
 #config_version=5
 
 multiballs:
-  sbone_multiball:
-    ball_count: 4
+  sbone_vespa_2ball_multiball:
+    ball_count: 2
     ball_locks: bd_sbone
     ball_count_type: total
-    shoot_again: 100ms
+    shoot_again: 2s
     enable_events: mode_sbone_vespa_multiball_starting
     start_events: mode_sbone_vespa_multiball_started
     stop_events: mode_sbone_vespa_multiball_stopping
     reset_events: machine_reset_phase_3, ball_starting, mode_sbone_qualifier_one_starting
+    replace_balls_in_play: true
   airlock_add_a_ball:
     ball_count: 1
     ball_count_type: add

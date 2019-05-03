@@ -99,11 +99,11 @@ steppers:
     reset_events: tractorbeam_stepper_reset
     debug: True
     named_positions:
-      450000: tractorbeam_stepper_farend
-      500: tractorbeam_stepper_startpos
+      420000: tractorbeam_stepper_farend
+      6000: tractorbeam_stepper_startpos
     platform_settings:
       step_mode: 16
-      max_speed: 200000000
+      max_speed: 190000000
       starting_speed: 50000000
       current_limit: 1024
       max_acceleration: 500000000
