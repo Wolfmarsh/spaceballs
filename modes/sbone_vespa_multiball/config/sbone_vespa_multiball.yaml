@@ -5,6 +5,28 @@ mode:
   stop_events: stop_sbone_vespa_multiball_mode_request
   priority: 1300
 
+counters:
+  jamming_targets_hit_counter:
+    count_events:
+      - sbone_vespa_mb_jamming_left_ship_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_jamming_right_ship_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_jamming_left_orbit_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_jamming_right_orbit_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_jamming_yogurt_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_jamming_ramp_one_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_jamming_ramp_two_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_jamming_ramp_three_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_jamming_ramp_four_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_jamming_scoop_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_airlock_shot_one_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_airlock_shot_two_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_airlock_shot_three_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_airlock_shot_four_sbone_vespa_mb_jamming_target_profile_pending_hit
+      - sbone_vespa_mb_airlock_shot_five_sbone_vespa_mb_jamming_target_profile_pending_hit
+    count_complete_value: 8
+    starting_count: 0
+    reset_on_complete: false
+
 variable_player:
   sbone_multiball_award_100k_shot:
     score: 100000 * current_player.game_scoring_multiplier
@@ -12,81 +34,188 @@ variable_player:
     score: 1000000 * current_player.game_scoring_multiplier
 
 event_player:
-  multiball_sbone_vespa_2ball_multiball_started: tractorbeam_stepper_farend
+  mode_sbone_vespa_multiball_started: reset_drop_target_bank_request
   multiball_sbone_vespa_2ball_multiball_ended: tractorbeam_stepper_startpos, sbone_vespa_multiball_complete|50ms
-  timer_vespa_tractorbeam_timer_complete: tractorbeam_stepper_startpos
+  timer_vespa_tractorbeam_timer_complete: saving_vespa_failed
   sbone_mb_airlock_shot_one_pending_hit: sbone_multiball_award_100k_shot
   sbone_mb_airlock_shot_two_pending_hit: sbone_multiball_award_100k_shot
   sbone_mb_airlock_shot_three_pending_hit: sbone_multiball_award_100k_shot
   sbone_mb_airlock_shot_four_pending_hit: sbone_multiball_award_100k_shot
   sbone_mb_airlock_shot_five_pending_hit: sbone_multiball_award_100k_shot
-  drop_target_bank_airlock_bank_down: sbone_multiball_award_jackpot_shot, reset_sbone_mb_airlock_shots
+  drop_target_bank_airlock_bank_down: sbone_vespa_mb_drops_completed, reset_sbone_mb_airlock_shots
+  timer_radar_sweep_display_timer_complete: play_random_radar_sweep_display
+  logicblock_jamming_targets_hit_counter_complete: saving_vespa_succeeded
+  saving_vespa_succeeded: award_next_schwartz_gem, tractorbeam_stepper_startpos, disable_jamming_shots
+  saving_vespa_failed: tractorbeam_stepper_startpos, disable_jamming_shots
+
+random_event_player:
+  play_random_radar_sweep_display:
+    events:
+      - play_radar_sweep_display_1
+      - play_radar_sweep_display_2
 
 timers:
   vespa_tractorbeam_timer:
-    start_value: 30
+    start_value: 60
     end_value: 0
     direction: down
     control_events:
       - action: start
         event: multiball_sbone_vespa_2ball_multiball_started
-
+  radar_sweep_display_timer:
+    start_value: 0
+    end_value: 5
+    restart_on_complete: true
+    control_events:
+      - action: start
+        event: multiball_sbone_vespa_2ball_multiball_started
+      - action: stop
+        event: saving_vespa_failed
+      - action: stop
+        event: saving_vespa_succeeded
+      
 show_player:
   multiball_sbone_vespa_2ball_multiball_started:
     sbone_vespa_mb_tractorbeam_blue_30s:
       loops: 0
-  timer_vespa_tractorbeam_timer_complete:
+      speed: 0.5
+  saving_vespa_succeeded:
     sbone_vespa_mb_tractorbeam_blue_30s: stop
     sbone_vespa_mb_tractorbeam_all_white:
       loops: 0
+  saving_vespa_failed:
+    sbone_vespa_mb_tractorbeam_blue_30s: stop
   multiball_sbone_vespa_2ball_multiball_ended:
     sbone_vespa_mb_tractorbeam_blue_30s: stop
     sbone_vespa_mb_tractorbeam_all_white: stop
+  play_radar_sweep_display_1:
+    full_pf_green_radar_sweep:
+      loops: 0
+      speed: 30
+  play_radar_sweep_display_2:
+    full_pf_green_radar_sweep:
+      loops: 0
+      speed: 30
   
 shots:
-#standard drop shots for the multiball mode
-  sbone_mb_airlock_shot_one:
+#jamming shots you can do
+  sbone_vespa_mb_jamming_left_ship:
+    switch: s_sbone_left_standup
+    profile: sbone_vespa_mb_jamming_target_profile
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
+    disable_events: disable_jamming_shots
+    show_tokens:
+       targetled: rgb_sbone_left_target_arrow
+  sbone_vespa_mb_jamming_right_ship:
+    switch: s_sbone_right_standup
+    profile: sbone_vespa_mb_jamming_target_profile
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
+    disable_events: disable_jamming_shots
+    show_tokens:
+       targetled: rgb_sbone_right_target_arrow
+  sbone_vespa_mb_jamming_left_orbit:
+    hit_events: left_orbit_sequence_hit
+    profile: sbone_vespa_mb_jamming_target_profile
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
+    disable_events: disable_jamming_shots
+    show_tokens:
+       targetled: rgb_left_orbit_arrow_1
+  sbone_vespa_mb_jamming_right_orbit:
+    hit_events: right_orbit_sequence_hit
+    profile: sbone_vespa_mb_jamming_target_profile
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
+    disable_events: disable_jamming_shots
+    show_tokens:
+       targetled: rgb_right_orbit_arrow_1
+  sbone_vespa_mb_jamming_yogurt:
+    switch: s_yogurt_standup
+    profile: sbone_vespa_mb_jamming_target_profile
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
+    disable_events: disable_jamming_shots
+    show_tokens:
+       targetled: rgb_yogurt_arrow
+  sbone_vespa_mb_jamming_scoop:
+    switch: s_scoop
+    profile: sbone_vespa_mb_jamming_target_profile
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
+    disable_events: disable_jamming_shots
+    show_tokens:
+       targetled: rgb_scoop_arrow_1
+  sbone_vespa_mb_jamming_ramp_one:
+    hit_events: warp_ramp_sequence_hit
+    profile:  sbone_vespa_mb_jamming_target_profile
+    enable_events: multiball_sbone_vespa_2ball_multiball_started
+    disable_events: disable_jamming_shots
+    show_tokens:
+       targetled: rgb_ramplevel_1
+  sbone_vespa_mb_jamming_ramp_two:
+    hit_events: warp_ramp_sequence_hit
+    profile:  sbone_vespa_mb_jamming_target_profile
+    enable_events: sbone_vespa_mb_jamming_ramp_one_sbone_vespa_mb_jamming_target_profile_pending_hit
+    disable_events: disable_jamming_shots
+    show_tokens:
+       targetled: rgb_ramplevel_2
+  sbone_vespa_mb_jamming_ramp_three:
+    hit_events: warp_ramp_sequence_hit
+    profile:  sbone_vespa_mb_jamming_target_profile
+    enable_events: sbone_vespa_mb_jamming_ramp_two_sbone_vespa_mb_jamming_target_profile_pending_hit
+    disable_events: disable_jamming_shots
+    show_tokens:
+       targetled: rgb_ramplevel_3
+  sbone_vespa_mb_jamming_ramp_four:
+    hit_events: warp_ramp_sequence_hit
+    profile:  sbone_vespa_mb_jamming_target_profile
+    enable_events: sbone_vespa_mb_jamming_ramp_three_sbone_vespa_mb_jamming_target_profile_pending_hit
+    disable_events: disable_jamming_shots
+    show_tokens:
+       targetled: rgb_ramplevel_4
+  sbone_vespa_mb_airlock_shot_one:
     switch: s_drop_1
-    profile: sbone_mb_airlock_target_profile
+    profile: sbone_vespa_mb_jamming_target_profile
     enable_events: multiball_sbone_vespa_2ball_multiball_started
     reset_events: reset_sbone_mb_airlock_shots
+    disable_events: disable_jamming_shots
     show_tokens:
        targetled: rgb_drop_1
-  sbone_mb_airlock_shot_two:
+  sbone_vespa_mb_airlock_shot_two:
     switch: s_drop_2
-    profile: sbone_mb_airlock_target_profile
+    profile: sbone_vespa_mb_jamming_target_profile
     enable_events: multiball_sbone_vespa_2ball_multiball_started
     reset_events: reset_sbone_mb_airlock_shots
+    disable_events: disable_jamming_shots
     show_tokens:
        targetled: rgb_drop_2
-  sbone_mb_airlock_shot_three:
+  sbone_vespa_mb_airlock_shot_three:
     switch: s_drop_3
-    profile: sbone_mb_airlock_target_profile
+    profile: sbone_vespa_mb_jamming_target_profile
     enable_events: multiball_sbone_vespa_2ball_multiball_started
     reset_events: reset_sbone_mb_airlock_shots
+    disable_events: disable_jamming_shots
     show_tokens:
        targetled: rgb_drop_3
-  sbone_mb_airlock_shot_four:
+  sbone_vespa_mb_airlock_shot_four:
     switch: s_drop_4
-    profile: sbone_mb_airlock_target_profile
+    profile: sbone_vespa_mb_jamming_target_profile
     enable_events: multiball_sbone_vespa_2ball_multiball_started
     reset_events: reset_sbone_mb_airlock_shots
+    disable_events: disable_jamming_shots
     show_tokens:
        targetled: rgb_drop_4
-  sbone_mb_airlock_shot_five:
+  sbone_vespa_mb_airlock_shot_five:
     switch: s_drop_5
-    profile: sbone_mb_airlock_target_profile
+    profile: sbone_vespa_mb_jamming_target_profile
     enable_events: multiball_sbone_vespa_2ball_multiball_started
     reset_events: reset_sbone_mb_airlock_shots
+    disable_events: disable_jamming_shots
     show_tokens:
        targetled: rgb_drop_5
 
 shot_profiles:
-  sbone_mb_airlock_target_profile:
+  sbone_vespa_mb_jamming_target_profile:
     states:
       - name: pending
-        show: sbone_mb_airlock_shot_pending
-        sync_ms: 500
+        show: sbone_vespa_mb_jamming_target_blinking
         loops: -1
       - name: hit
-        show: sbone_mb_airlock_shot_hit
+        show: sbone_vespa_mb_jamming_target_solid
+        loops: -1

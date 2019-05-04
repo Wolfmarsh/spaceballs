@@ -79,7 +79,7 @@ ball_devices:
 servos:
   sbone_lock_servo:
     positions:
-      0.6: sbone_lock_servo_open
+      0.4: sbone_lock_servo_open
       0.0: sbone_lock_servo_closed
     reset_position: 0.4
     reset_events: machine_reset_phase_3 game_ending
@@ -99,7 +99,25 @@ steppers:
     reset_events: tractorbeam_stepper_reset
     debug: True
     named_positions:
-      420000: tractorbeam_stepper_farend
+      450000: tractorbeam_stepper_farend
+      420000: tractorbeam_stepper_pos_18
+      397000: tractorbeam_stepper_pos_17
+      374000: tractorbeam_stepper_pos_16
+      351000: tractorbeam_stepper_pos_15
+      328000: tractorbeam_stepper_pos_14
+      305000: tractorbeam_stepper_pos_13
+      282200: tractorbeam_stepper_pos_12
+      259000: tractorbeam_stepper_pos_11
+      236000: tractorbeam_stepper_pos_10
+      213000: tractorbeam_stepper_pos_9
+      190000: tractorbeam_stepper_pos_8
+      167000: tractorbeam_stepper_pos_7
+      144000: tractorbeam_stepper_pos_6
+      121000: tractorbeam_stepper_pos_5
+      98000: tractorbeam_stepper_pos_4
+      75000: tractorbeam_stepper_pos_3
+      52000: tractorbeam_stepper_pos_2
+      29000: tractorbeam_stepper_pos_1
       6000: tractorbeam_stepper_startpos
     platform_settings:
       step_mode: 16

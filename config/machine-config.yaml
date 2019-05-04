@@ -18,6 +18,7 @@ config:
 - videos.yaml
 - sounds.yaml
 - multiballs.yaml
+- globalsequenceshots.yaml
 
 playfields:
   playfield:
@@ -131,12 +132,12 @@ ball_saves:
     auto_launch: yes
     balls_to_save: 1
     early_ball_save_events: s_left_outlane_active, s_right_outlane_active
-  default_save:
-    active_time: 10s
-    hurry_up_time: 2s
-    grace_period: 1s
-    enable_events: mode_base_started
-    timer_start_events: skillshot_award_step
-    auto_launch: yes
-    balls_to_save: 1
+  # default_save:
+    # active_time: 10s
+    # hurry_up_time: 2s
+    # grace_period: 1s
+    # enable_events: mode_base_started
+    # timer_start_events: skillshot_award_step
+    # auto_launch: yes
+    # balls_to_save: 1
 #balldevice_bd_trough_ball_eject_success

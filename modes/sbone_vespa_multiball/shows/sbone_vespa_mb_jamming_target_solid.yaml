@@ -1,0 +1,5 @@
+#show_version=5
+- time: 0
+  lights:
+    (targetled): ff0000-f50ms
+  duration: -1

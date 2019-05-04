@@ -47,10 +47,10 @@ sound_player:
   stop_warp_ramp_multiball_music_request:
     spaceballs_good_enough:
       action: stop
-  start_sbone_multiball_music_request:
+  start_sbone_vespa_multiball_music_request:
     spaceballs_heartstrings:
       action: play
       priority: 153
-  stop_sbone_multiball_music_request:
+  stop_sbone_vespa_multiball_music_request:
     spaceballs_heartstrings:
       action: stop

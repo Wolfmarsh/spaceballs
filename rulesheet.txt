@@ -2,11 +2,6 @@ Spaceballs Pinball
 ==================
 ** MAY THE SCHWARTZ BE WITH YOU **
 
-FULL ALARM WIZARD MODE
-===========
-The ultimate goal of the game is to solidly light all the mode inserts and earn at least 9 schwartz gems.
-
-The modes inserts are: Save Vespa, SB One, Merchandising, Warp Ramp, Mega Maid, Comb the Desert, and Airlock
 
 SKILLSHOT
 =========
@@ -103,8 +98,12 @@ activate Save Vespa.
 
 Summary: Save Vespa is a 2-ball multiball that is an add-a-ball as well.   When the multiball
 	starts, Vespa will be drawn toward Spaceball One via the blue tractorbeam.  You have 60
-	seconds to save Vespa from the Spaceballs.  Hit the lit shots to successfully save her.
-	Look out for the radar jamming shot to buy yourself some more time!
+	seconds to save Vespa from the Spaceballs.  Hit the lit red shots to successfully jam the
+	Spaceball One radar and save Vespa!  If you save Vespa before the 60 second timeout is
+	complete, you will add-a-ball, and you will be awarded with 2 schwartz gems instead of 1!
+	
+	You can use some of your time to try and knock down all the drop targets to add-a-ball
+	and increase your balls in play for more chances to hit jamming targets.
 
 SPACEBALL ONE MULTIBALL
 =======================
@@ -120,3 +119,18 @@ Summary: This is a 4 ball multiball that starts once you fill the Spaceball One 
 	red targets on either side of Spaceball One.  You can only reduce the count by 2 this way,
 	by jamming the radar.  If you are successful, you will get two schwartz gems, otherwise
 	the typical one gem award.
+
+MEGAMAID WIZARD MODE
+====================
+To Activate: Collect 9 schwartz gems and Megamaid Wizard Mode will be available to start by
+hitting the scoop.
+
+Summary: MegaMaid wizard mode is a 4 ball multiball where you fight megamaid to turn to turn
+her from suck to blow.  If you successfully beat her, you will activate the Full Alarm
+Wizard mode, which is the highest Wizard Mode in the game.
+
+FULL ALARM WIZARD MODE
+===========
+The ultimate goal of the game is to solidly light all the mode inserts and earn at least 9 schwartz gems.
+
+The modes inserts are: Save Vespa, SB One, Merchandising, Warp Ramp, Mega Maid, Comb the Desert, and Airlock

@@ -1,5 +1,7 @@
 #show_version=5
 - time: 0
+  events:
+    - tractorbeam_stepper_pos_1
   lights:
     rgb_tractorbeam_1: 0000ff
     rgb_tractorbeam_2: 0000ff
@@ -21,70 +23,104 @@
     rgb_tractorbeam_18: 0000ff
     
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_2
   lights:
     rgb_tractorbeam_1: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_3
   lights:
     rgb_tractorbeam_2: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_4
   lights:
     rgb_tractorbeam_3: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_5
   lights:
     rgb_tractorbeam_4: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_6
   lights:
     rgb_tractorbeam_5: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_7
   lights:
     rgb_tractorbeam_6: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_8
   lights:
     rgb_tractorbeam_7: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_9
   lights:
     rgb_tractorbeam_8: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_10
   lights:
     rgb_tractorbeam_9: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_11
   lights:
     rgb_tractorbeam_10: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_12
   lights:
     rgb_tractorbeam_11: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_13
   lights:
     rgb_tractorbeam_12: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_14
   lights:
     rgb_tractorbeam_13: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_15
   lights:
     rgb_tractorbeam_14: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_16
   lights:
     rgb_tractorbeam_15: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_17
   lights:
     rgb_tractorbeam_16: 000000
 
 - time: '+1667ms'
+  events:
+    - tractorbeam_stepper_pos_18
   lights:
     rgb_tractorbeam_17: 000000
 

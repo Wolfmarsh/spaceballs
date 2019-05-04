@@ -4,16 +4,16 @@ mode:
   stop_events: stop_orbit_base_mode_request
   priority: 300
 
-sequence_shots:
-  left_orbit_base_sequence:
-    switch_sequence:
-      - s_left_spinner
-      - s_right_orbit
-    sequence_timeout: 2s
-  right_orbit_base_sequence:
-    switch_sequence: s_right_orbit
-    delay_switch_list:
-      s_left_spinner: 1.0s
+# sequence_shots:
+  # left_orbit_base_sequence:
+    # switch_sequence:
+      # - s_left_spinner
+      # - s_right_orbit
+    # sequence_timeout: 2s
+  # right_orbit_base_sequence:
+    # switch_sequence: s_right_orbit
+    # delay_switch_list:
+      # s_left_spinner: 1.0s
 
 shots:
   left_orbit_base_shot:

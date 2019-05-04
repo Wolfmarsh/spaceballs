@@ -338,22 +338,25 @@ lights:
     label: "SB One Bottom Right Arrow"
     type: grb
     number: 86
+    tags: sbone_arrows
   rgb_sbone_top_arrow:
     label: "SB One Top Arrow"
     type: grb
     number: 87
+    tags: sbone_arrows
   rgb_left_orbit_arrow_2:
     label: "Left Orbit Arrow 2"
     type: grb
     number: 88
   rgb_sbone_left_target_arrow:
-    label: "SB One Left Orbit Arrow"
+    label: "SB One Left Target Arrow"
     type: grb
     number: 89
   rgb_sbone_bottom_left_arrow:
     label: "SB One Bottom Left Arrow"
     type: grb
     number: 90
+    tags: sbone_arrows
   rgb_pop_bottom_left_a:
     label: "Pop Insert Bottom Left A"
     type: grb

@@ -9,7 +9,78 @@ event_player:
   play_sbone_vespa_qualifier_ball_one_locked_fanfare: play_sbone_ball_locked_1_sound, play_sbone_vespa_qualifier_ball_one_locked_video|1000ms
   play_sbone_vespa_qualifier_complete_fanfare: play_sbone_ball_locked_2_sound, play_sbone_vespa_qualifier_ball_two_locked_video|1000ms
 
+widget_player:
+  timer_vespa_tractorbeam_timer_tick:
+    vespa_mb_timer_time_remaining:
+      slide: base_game_lcd_slide
+  sbone_vespa_multiball_complete:
+    vespa_mb_timer_time_remaining:
+      slide: base_game_lcd_slide
+      action: remove
+  timer_vespa_tractorbeam_timer_complete:
+    vespa_mb_timer_time_remaining:
+      slide: base_game_lcd_slide
+      action: remove
+
 slide_player:
+  logicblock_jamming_targets_hit_counter_hit{count==2}:
+    sbone_vespa_mb_jamming_magnetic_beam_video:
+      target: lcd
+  theyve_got_her_in_the_magnetic_beam_video_ended:
+    sbone_vespa_mb_jamming_magnetic_beam_video:
+      target: lcd
+      action: remove
+  logicblock_jamming_targets_hit_counter_hit{count==4}:
+    sbone_vespa_mb_jamming_down_scope_video:
+      target: lcd
+  down_scope_video_ended:
+    sbone_vespa_mb_jamming_down_scope_video:
+      target: lcd
+      action: remove
+  logicblock_jamming_targets_hit_counter_hit{count==6}:
+    sbone_vespa_mb_jamming_periscope_view_video:
+      target: lcd
+  periscope_view_one_video_ended:
+    sbone_vespa_mb_jamming_periscope_view_video:
+      target: lcd
+      action: remove
+  saving_vespa_succeeded:
+    sbone_vespa_mb_jamming_jamming_radar_video:
+      target: lcd
+  jam_hitting_radar_video_stopped:
+    sbone_vespa_mb_jamming_jamming_radar_video:
+      target: lcd
+      action: remove  
+  timer_vespa_tractorbeam_timer_tick{ticks_remaining==45}:
+    sbone_vespa_tractorbeam_timer_seconds_left_dmd:
+      target: dmd
+      expire: 1
+  timer_vespa_tractorbeam_timer_tick{ticks_remaining==30}:
+    sbone_vespa_tractorbeam_timer_seconds_left_dmd:
+      target: dmd
+      expire: 1
+  timer_vespa_tractorbeam_timer_tick{ticks_remaining==15}:
+    sbone_vespa_tractorbeam_timer_seconds_left_dmd:
+      target: dmd
+      expire: 1
+  counter_jamming_targets_hit_counter_hit:
+    sbone_vespa_mb_jamming_hits_left:
+      target: dmd
+      expire: 1
+  play_radar_sweep_display_1:
+    radar_sweep_one_video:
+      target: lcd
+  radar_blip_video_ended:
+    radar_sweep_one_video:
+      target: lcd
+      action: remove    
+  play_radar_sweep_display_2:
+    radar_sweep_two_video:
+      target: lcd
+  the_sweeps_video_ended:
+    radar_sweep_two_video:
+      target: lcd
+      action: remove    
   play_sbone_vespa_qualifier_ball_one_locked_video:
     sbone_vespa_ball_one_locked_video:
       target: lcd
@@ -29,14 +100,11 @@ slide_player:
       target: dmd
       expire: 1
   multiball_sbone_vespa_2ball_multiball_started:
-    sbone_multiball_started_slide:
+    sbone_vespa_multiball_started_slide:
       target: dmd
+      expire: 1
     sbone_multiball_tractorbeam_start_slide:
       target: lcd
-  multiball_sbone_vespa_2ball_multiball_ended:
-    sbone_multiball_started_slide:
-      target: dmd
-      action: remove
   video_tractor_beam_start_stopped:
     sbone_multiball_tractorbeam_start_slide:
       target: lcd
@@ -73,6 +141,78 @@ sound_player:
       action: play
 
 slides:
+  sbone_vespa_mb_jamming_jamming_radar_video:
+    widgets:
+      - type: video
+        video: jam_hitting_radar
+        width: 1280
+        height: 720
+  sbone_vespa_mb_jamming_periscope_view_video:
+    widgets:
+      - type: video
+        video: periscope_view_one
+        width: 1280
+        height: 720
+  sbone_vespa_mb_jamming_magnetic_beam_video:
+    widgets:
+      - type: video
+        video: theyve_got_her_in_the_magnetic_beam
+        width: 1280
+        height: 720
+  sbone_vespa_mb_jamming_down_scope_video:
+    widgets:
+      - type: video
+        video: down_periscope
+        width: 1280
+        height: 720
+  sbone_vespa_tractorbeam_timer_seconds_left_dmd:
+    widgets:
+      - type: text
+        text: (ticks_remaining)
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top - 1
+        x: center
+        color: ff5555
+      - type: text
+        text: SECONDS LEFT
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 1
+        x: center
+        color: ffffff
+  sbone_vespa_mb_jamming_hits_left:
+    widgets:
+      - type: text
+        text: (remaining) HITS
+        style: dmd_big
+        anchor_y: top
+        anchor_x: center
+        y: top - 1
+        x: center
+        color: ff5555
+      - type: text
+        text: TO JAM RADAR
+        style: dmd_big
+        anchor_y: bottom
+        anchor_x: center
+        y: 1
+        x: center
+        color: ff5555
+  radar_sweep_one_video:
+    widgets:
+      - type: video
+        video: radar_blip
+        width: 1280
+        height: 720
+  radar_sweep_two_video:
+    widgets:
+      - type: video
+        video: the_sweeps
+        width: 1280
+        height: 720
   sbone_vespa_ball_one_locked_video:
     widgets:
       - type: video
@@ -111,10 +251,10 @@ slides:
         width: 128
         height: 32
         color: 000050
-  sbone_multiball_started_slide:
+  sbone_vespa_multiball_started_slide:
     widgets:
       - type: text
-        text: SBONE MB
+        text: SAVE VESPA!
         style: dmd_xl
         anchor_y: center
         anchor_x: center
@@ -156,4 +296,16 @@ slides:
         x: center
         color: ffffff
 
-    
+widgets:
+  vespa_mb_timer_time_remaining:
+    - type: text
+      text: (ticks)
+      color: blue
+      font_name: atrox
+      font_size: 130
+      anchor_x: right
+      anchor_y: top
+      x: right-300
+      y: top-300
+      z: 5
+      

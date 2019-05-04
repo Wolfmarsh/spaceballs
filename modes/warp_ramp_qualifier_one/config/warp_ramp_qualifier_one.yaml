@@ -6,14 +6,14 @@ mode:
 
 shots:
   warp_ramp_qualifier_shot_one:
-    hit_events: warp_ramp_full_hit
+    hit_events: warp_ramp_sequence_hit
     profile: warp_ramp_qualifier_shot_one_profile
     reset_events: warp_ramp_qualifier_one_complete
 
-sequence_shots:
-  warp_ramp_full:
-    switch_sequence: s_ramp_entry, s_ramp_exit
-    sequence_timeout: 3s
+# sequence_shots:
+  # warp_ramp_full:
+    # switch_sequence: s_ramp_entry, s_ramp_exit
+    # sequence_timeout: 3s
 
 shot_profiles:
   warp_ramp_qualifier_shot_one_profile:

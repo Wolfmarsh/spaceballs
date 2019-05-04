@@ -34,6 +34,9 @@ videos:
     file: Dark_Helmet_Flying_Forward.mp4
   darkhelmet_lightspeed_flying:
     file: Dark_Helmet_Lightspeed_Flying.mp4
+  down_periscope:
+    file: Down_Scope.mp4
+    events_when_stopped: down_scope_video_ended
   gimme_paw:
     file: Gimme_Paw.mp4
   going_plaid_transition:
@@ -67,6 +70,9 @@ videos:
   introship:
     file: IntroShip.mp4
     events_when_stopped: attract_video_stopped
+  jam_hitting_radar:
+    file: Jam_Hitting_Radar.mp4
+    events_when_stopped: jam_hitting_radar_video_stopped
   keep_firing_assholes:
     file: Keep_Firing_Assholes.mp4
     events_when_stopped: keep_firing_assholes_video_ended
@@ -86,12 +92,18 @@ videos:
     file: Im_My_Own_Best_Friend.mp4
   oh_shit:
     file: Oh_Shit.mp4
+  periscope_view_one:
+    file: Periscope_View_One.mp4
+    events_when_stopped: periscope_view_one_video_ended
   perriair_opening:
     file: Perriair_Opening_Short.mp4
     events_when_stopped: perriair_opening_video_ended
   pizza_the_hut_intro:
     file: Pizza_The_Hut_Intro.mp4
     events_when_stopped: player_add_video_11_ended
+  radar_blip:
+    file: Radar_Blip.mp4
+    events_when_stopped: radar_blip_video_ended
   skroob_scratching_crotch:
     file: Skroob_Scratching_Crotch.mp4
   skroob_shithead:
@@ -122,8 +134,14 @@ videos:
   surrounded_by_assholes_skillshot:
     file: Im_Surrounded_By_Assholes.mp4
     events_when_stopped: skillshot_surrounded_by_assholes_ended
+  the_sweeps:
+    file: The_Sweeps.mp4
+    events_when_stopped: the_sweeps_video_ended
   theyve_gone_to_plaid:
     file: Theyve_Gone_To_Plaid.mp4
+  theyve_got_her_in_the_magnetic_beam:
+    file: Theyve_Already_Got_Her_In_Their_Magnetic_Beam.mp4
+    events_when_stopped: theyve_got_her_in_the_magnetic_beam_video_ended
   tractor_beam_start:
     file: Tractor_Beam_Start.mp4
     events_when_stopped: video_tractor_beam_start_stopped
